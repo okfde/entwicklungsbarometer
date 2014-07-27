@@ -70,3 +70,9 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+activate :deploy do |deploy|
+  deploy.build_before = true # default: false
+  deploy.method = :git
+end
+activate :relative_assets
+set :relative_links, true
