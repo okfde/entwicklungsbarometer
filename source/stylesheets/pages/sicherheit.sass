@@ -1,0 +1,36 @@
+#ruestung
+  @include outer-container
+  h3
+    margin: 40px 0
+  p
+    text-align: left
+  table
+    th
+      text-align: center
+    td
+      &.positive
+        color: $green
+      &.negative
+        color: $red
+  .ruestung-2013-chart
+    @include span-columns(6)
+  .ruestung-2013-table
+    @include span-columns(6)
+    @include omega()
+    table
+      margin: 0
+      width: 99%
+  .export-2013-table
+    @include span-columns(10)
+  .export-2013-explanation
+    @include span-columns(2)
+
+  .axis text
+    font: 10px sans-serif
+
+  .axis path,
+  .axis line
+    fill: none
+    stroke: #000
+    shape-rendering: crispEdges
+
