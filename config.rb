@@ -53,6 +53,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+ready do
+  sprockets.append_path File.join root, 'bower_components'
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -76,3 +80,4 @@ activate :deploy do |deploy|
 end
 activate :relative_assets
 set :relative_links, true
+activate :directory_indexes

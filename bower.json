@@ -1,0 +1,23 @@
+{
+  "name": "Entwicklungsbarometer",
+  "version": "0.0.1",
+  "authors": [
+    "Mila Frerichs"
+  ],
+  "description": "Entwicklungsbarometer",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.11",
+    "underscore": "~1.6.0",
+    "angular": "~1.3.0",
+    "queue-async": ""
+  }
+}
