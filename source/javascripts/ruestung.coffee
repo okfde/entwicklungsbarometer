@@ -5,8 +5,8 @@ changeDiffClass = (value) ->
     if value > 0 then "positive" else "negative"
 
 queue()
-.defer(d3.csv, "/data/exporte_2012_2013.csv")
-.defer(d3.csv, "/data/gesamt_exporte_2013.csv")
+.defer(d3.csv, rootPath+"/data/exporte_2012_2013.csv")
+.defer(d3.csv, rootPath+"/data/gesamt_exporte_2013.csv")
 .await (error, data, gesamt) ->
   ruestung2013 = _.filter(data,(num) -> num.ruestung > 0)
   ruestung2013 = _.sortBy(ruestung2013, (num) -> -num.ruestung)
