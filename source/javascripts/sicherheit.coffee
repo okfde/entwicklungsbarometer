@@ -1,1 +1,1 @@
-cdi_index('.cdi-index-sicherheit','sicherheit')
+cdi_index('.cdi-index-sicherheit','Security')
