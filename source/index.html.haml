@@ -4,20 +4,18 @@ title: Entwicklungsbarometer
 .hero
   .hero-inner
     %a.hero-logo{href: ""}
-      %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png\r\n"}/
     .hero-copy
-      %h1 Short description of Product
-      %p A few reasons why this product is worth using, who it's for and why they need it.
-    %button Learn More
+      %h1 Entwicklungsbarometer
+      %p
 
 .grid-items
-  %a.grid-item{href: "sicherheit"}
+  = link_to '/sicherheit/index.html', class: 'grid-item' do
     %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
     %h1 Sicherheit
-  %a.grid-item.grid-item-big.grid-item-image{href: "javascript:void(0)"}
+  %a.grid-item.grid-item-image{href: "javascript:void(0)"}
     %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png"}/
     %h1 Technologie
-  %a.grid-item.grid-item-big{href: "javascript:void(0)"}
+  %a.grid-item{href: "javascript:void(0)"}
     %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png"}/
     %h1 Umwelt
   %a.grid-item{href: "javascript:void(0)"}
@@ -32,6 +30,9 @@ title: Entwicklungsbarometer
   %a.grid-item{href: "javascript:void(0)"}
     %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
     %h1 Handel
+  %a.grid-item.grid-item-big{href: "javascript:void(0)"}
+    %h1 Diskutieren
+    %p Diskutieren Sie mit uns und anderen
 #cdi-index
   %h2 CDI Overall Ranking
   .cdi-index-overall
