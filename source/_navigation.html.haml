@@ -8,7 +8,10 @@
     %ul.centered-navigation-menu
       %li.nav-link
         = link_to 'Übersicht', '/index.html'
-      %li.nav-link
-        = link_to 'Sicherheit', '/sicherheit/index.html'
+      %li.nav-link.more
+        = link_to 'Indikatoren', '/index.html'
+        %ul.submenu
+          %li
+            = link_to 'Sicherheit', '/sicherheit/index.html'
       %li.nav-link
         %a{href: "javascript:void(0)"} Kontakt
