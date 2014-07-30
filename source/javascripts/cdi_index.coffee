@@ -1,5 +1,5 @@
 @cdi_index = (element, key='overall') ->
-  d3.json '/data/cdi.json', (err, data) ->
+  d3.json rootPath+'/data/cdi.json', (err, data) ->
     gesamt = [10, data[key]]
     heights = [40,20]
     dx = [0,10]
