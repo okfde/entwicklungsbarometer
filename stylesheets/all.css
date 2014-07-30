@@ -1,0 +1,1039 @@
+@charset "UTF-8";
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/extends/_button.scss */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  border-radius: 0.1875em;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: .75em 1em;
+  text-decoration: none; }
+  /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/extends/_button.scss */
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #2c5999;
+    color: white; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+/* line 10, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility; }
+
+/* line 17, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h1 {
+  font-size: 2.25em; }
+
+/* line 21, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h2 {
+  font-size: 2em; }
+
+/* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h3 {
+  font-size: 1.75em; }
+
+/* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h4 {
+  font-size: 1.5em; }
+
+/* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h5 {
+  font-size: 1.25em; }
+
+/* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+h6 {
+  font-size: 1em; }
+
+/* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em; }
+
+/* line 45, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #477dca;
+  text-decoration: none; }
+  /* line 50, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+  a:hover {
+    color: #2c5999; }
+  /* line 54, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+  a:active, a:focus {
+    color: #2c5999;
+    outline: none; }
+
+/* line 60, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+/* line 68, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+img {
+  margin: 0;
+  max-width: 100%; }
+
+/* line 73, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+blockquote {
+  border-left: 2px solid #dddddd;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em; }
+
+/* line 80, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic; }
+  /* line 84, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_typography.scss */
+  cite:before {
+    content: '\2014 \00A0'; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em; }
+
+/* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em; }
+
+/* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em; }
+  /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+  label.required:after {
+    content: "*"; }
+  /* line 24, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+  label abbr {
+    display: none; }
+
+/* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 0.1875em;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%; }
+  /* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+  textarea:hover,
+  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+  select[multiple=multiple]:hover {
+    border-color: #c4c4c4; }
+  /* line 48, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+  textarea:focus,
+  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+  select[multiple=multiple]:focus {
+    border-color: #477dca;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+    outline: none; }
+
+/* line 55, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical; }
+
+/* line 59, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+/* line 63, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+
+/* line 68, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+input[type="file"] {
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
+  width: 100%; }
+
+/* line 74, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_forms.scss */
+select {
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1.5em; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+/* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left; }
+
+/* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 0.75em 0; }
+
+/* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_tables.scss */
+tr, td, th {
+  vertical-align: middle; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_lists.scss */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+/* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em; }
+  /* line 22, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_lists.scss */
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  /* line 27, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_lists.scss */
+  dl dd {
+    margin: 0; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/base/_buttons.scss */
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+.footer {
+  background: #40526b;
+  padding: 3em 1.618em;
+  width: 100%; }
+  /* line 9, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer .footer-logo {
+    text-align: center;
+    margin-bottom: 2em; }
+    /* line 12, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+    .footer .footer-logo img {
+      height: 3em; }
+  /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer .footer-links {
+    margin-bottom: 1.5em; }
+    /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+    .footer .footer-links:after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media screen and (min-width: 40em) {
+      /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+      .footer .footer-links {
+        margin-left: 25.58941%; } }
+  /* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer ul {
+    margin-bottom: 3em; }
+    @media screen and (min-width: 40em) {
+      /* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+      .footer ul {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+        .footer ul:last-child {
+          margin-right: 0; }
+        /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
+        .footer ul:nth-child(3n) {
+          margin-right: 0; }
+        /* line 57, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
+        .footer ul:nth-child(3n+1) {
+          clear: left; }
+        /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+        .footer ul:after {
+          content: "";
+          display: table;
+          clear: both; } }
+  /* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer li {
+    text-align: center; }
+    @media screen and (min-width: 40em) {
+      /* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+      .footer li {
+        text-align: left; } }
+  /* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer li a {
+    color: rgba(255, 255, 255, 0.4); }
+    /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+    .footer li a:hover {
+      color: white; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer li h3 {
+    color: white;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 0.4em; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto 1.5em;
+    width: 12em; }
+  /* line 42, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_footer.sass */
+  .footer p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 35em;
+    text-align: center; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+.centered-navigation {
+  background-color: #e7f1ec;
+  border-bottom: 1px solid #d4e6dd;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  height: 60px;
+  width: 100%;
+  z-index: 9999; }
+  /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation .mobile-logo {
+    display: inline;
+    float: left;
+    max-height: 60px;
+    padding-left: 1em; }
+    /* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation .mobile-logo img {
+      max-height: 60px;
+      opacity: 0.6;
+      padding: 0.8em 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation .mobile-logo {
+        display: none; } }
+  /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation .centered-navigation-menu-button {
+    color: rgba(51, 51, 51, 0.7);
+    display: block;
+    float: right;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 0;
+    padding-right: 1em;
+    text-transform: uppercase; }
+    @media screen and (min-width: 53.75em) {
+      /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation .centered-navigation-menu-button {
+        display: none; } }
+    /* line 43, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation .centered-navigation-menu-button:hover {
+      color: #333333; }
+  /* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation .centered-navigation-wrapper {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 999; }
+    /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+    .centered-navigation .centered-navigation-wrapper:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+    .centered-navigation .centered-navigation-wrapper:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation ul.centered-navigation-menu {
+    -webkit-transform-style: preserve-3d;
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 99999; }
+    @media screen and (min-width: 53.75em) {
+      /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation ul.centered-navigation-menu {
+        display: block;
+        text-align: center; } }
+  @media screen and (min-width: 53.75em) {
+    /* line 65, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation .nav-link:first-child {
+      margin-left: 2.2em; } }
+  /* line 68, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation ul li {
+    background: #e7f1ec;
+    display: block;
+    line-height: 60px;
+    overflow: hidden;
+    padding-right: 1em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999; }
+    @media screen and (min-width: 53.75em) {
+      /* line 68, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation ul li {
+        background: transparent;
+        display: inline;
+        line-height: 60px; }
+        /* line 81, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+        .centered-navigation ul li a {
+          padding-right: 1em; } }
+    /* line 84, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation ul li a {
+      color: rgba(51, 51, 51, 0.7);
+      display: inline-block; }
+      /* line 87, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation ul li a:hover {
+        color: #333333; }
+  /* line 89, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation li.logo {
+    display: none;
+    line-height: 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 89, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation li.logo {
+        display: inline; } }
+  /* line 94, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation .logo img {
+    margin-bottom: -0.66667em;
+    max-height: 2em;
+    opacity: 0.6; }
+  /* line 100, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation li.more.nav-link > ul > li:first-child a {
+    padding-top: 1em; }
+  /* line 102, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation li.more.nav-link a {
+    margin-right: 1em; }
+  /* line 104, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation li.more.nav-link > a {
+    padding-right: 0.6em; }
+  /* line 106, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation li.more.nav-link > a:after {
+    position: absolute;
+    top: auto;
+    right: -0.4em;
+    bottom: auto;
+    left: auto;
+    color: rgba(51, 51, 51, 0.7);
+    content: "\25BE"; }
+  /* line 110, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation li.more {
+    overflow: visible;
+    padding-right: 0; }
+    /* line 113, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation li.more a {
+      padding-right: 1em; }
+    /* line 115, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation li.more > a {
+      padding-right: 1.6em;
+      position: relative; }
+      @media screen and (min-width: 53.75em) {
+        /* line 115, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+        .centered-navigation li.more > a {
+          margin-right: 1em; } }
+      /* line 121, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation li.more > a:after {
+        content: "⟩";
+        position: absolute;
+        right: 0.5em; }
+    /* line 125, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation li.more:hover > .submenu {
+      display: block; }
+    @media screen and (min-width: 53.75em) {
+      /* line 110, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation li.more {
+        padding-right: 1em;
+        position: relative; } }
+  /* line 130, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+  .centered-navigation ul.submenu {
+    display: none;
+    padding-left: 0; }
+    @media screen and (min-width: 53.75em) {
+      /* line 130, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation ul.submenu {
+        left: -1em;
+        position: absolute;
+        top: 1.5em; } }
+    @media screen and (min-width: 53.75em) {
+      /* line 138, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation ul.submenu .submenu {
+        left: 11.8em;
+        top: 0; } }
+    /* line 142, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+    .centered-navigation ul.submenu li {
+      display: block;
+      padding-right: 0; }
+      @media screen and (min-width: 53.75em) {
+        /* line 142, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+        .centered-navigation ul.submenu li {
+          line-height: 46.15385px; }
+          /* line 147, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+          .centered-navigation ul.submenu li:first-child > a {
+            border-top-left-radius: 0.1875em;
+            border-top-right-radius: 0.1875em; }
+          /* line 150, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+          .centered-navigation ul.submenu li:last-child > a {
+            border-bottom-left-radius: 0.1875em;
+            border-bottom-right-radius: 0.1875em;
+            padding-bottom: 0.7em; } }
+      /* line 155, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+      .centered-navigation ul.submenu li a {
+        background-color: #ddebe4;
+        display: inline-block;
+        text-align: right;
+        width: 100%; }
+        @media screen and (min-width: 53.75em) {
+          /* line 155, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_navigation.sass */
+          .centered-navigation ul.submenu li a {
+            background-color: #e7f1ec;
+            padding-left: 1em;
+            text-align: left;
+            width: 12em; } }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+.hero {
+  background: url(""), -webkit-linear-gradient(10deg, #217142, #214271), no-repeat #214271 scroll;
+  background: url(""), linear-gradient(10deg, #217142, #214271), no-repeat #214271 scroll;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 4em; }
+  /* line 12, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+  .hero .hero-logo img {
+    height: 3em;
+    margin-bottom: 2.5em; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+  .hero .hero-inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+    margin: auto;
+    text-align: center;
+    color: white; }
+    /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+    .hero .hero-inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+    .hero .hero-inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 22, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+    .hero .hero-inner button {
+      border: 1px solid #003900;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 0 0 #08c408;
+      color: white;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      background-color: green;
+      background-image: -webkit-linear-gradient(green, #004800);
+      background-image: linear-gradient(green, #004800);
+      padding: 7px 18px;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #002400;
+      background-clip: padding-box;
+      font-size: 1em;
+      outline: none; }
+      /* line 131, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+      .hero .hero-inner button:hover:not(:disabled) {
+        box-shadow: inset 0 1px 0 0 #059405;
+        cursor: pointer;
+        background-color: #026402;
+        background-image: -webkit-linear-gradient(#026402, #003900);
+        background-image: linear-gradient(#026402, #003900); }
+      /* line 147, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+      .hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
+        border: 1px solid #003900;
+        box-shadow: inset 0 0 8px 4px #002900, inset 0 0 8px 4px #002900; }
+      /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+      .hero .hero-inner button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed; }
+    /* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+    .hero .hero-inner .hero-copy {
+      text-align: center; }
+      /* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+      .hero .hero-inner .hero-copy h1 {
+        font-size: 1.6em;
+        margin-bottom: 0.5em; }
+        @media screen and (min-width: 53.75em) {
+          /* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+          .hero .hero-inner .hero-copy h1 {
+            font-size: 1.8em; } }
+      /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+      .hero .hero-inner .hero-copy p {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+        margin: auto;
+        margin-bottom: 3em;
+        font-weight: 200;
+        line-height: 1.4em; }
+        @media screen and (min-width: 53.75em) {
+          /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_hero.sass */
+          .hero .hero-inner .hero-copy p {
+            font-size: 1.1em;
+            max-width: 40%; } }
+
+/* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+.grid-items:after {
+  content: "";
+  display: table;
+  clear: both; }
+/* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+.grid-items .grid-item {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  height: 14em;
+  background: #6b83a6;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+  padding: 2em;
+  border-top: 0;
+  border-bottom: 9px solid green;
+  border-left: 4.5px solid green;
+  border-right: 4.5px solid green;
+  text-align: center;
+  cursor: pointer; }
+  @media screen and (min-width: 53.75em) {
+    /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item {
+      width: 33.33333%; } }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(1) {
+    background-color: #6b83a6;
+    box-shadow: inset 0px 0px 1px 2px #536a8b; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(1):hover {
+      background-color: #536a8b;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(2) {
+    background-color: #3581a5;
+    box-shadow: inset 0px 0px 1px 2px #29637e; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(2):hover {
+      background-color: #29637e;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(3) {
+    background-color: #5fbebe;
+    box-shadow: inset 0px 0px 1px 2px #44a6a6; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(3):hover {
+      background-color: #44a6a6;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(4) {
+    background-color: #98c79a;
+    box-shadow: inset 0px 0px 1px 2px #77b57a; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(4):hover {
+      background-color: #77b57a;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(5) {
+    background-color: #a7a891;
+    box-shadow: inset 0px 0px 1px 2px #909175; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(5):hover {
+      background-color: #909175;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(6) {
+    background-color: #bdcc97;
+    box-shadow: inset 0px 0px 1px 2px #a7bb75; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(6):hover {
+      background-color: #a7bb75;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+  /* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item:nth-child(7) {
+    background-color: #979ea0;
+    box-shadow: inset 0px 0px 1px 2px #7c8588; }
+    /* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item:nth-child(7):hover {
+      background-color: #7c8588;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover; }
+/* line 42, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+.grid-items .grid-item img {
+  display: block;
+  height: 3em;
+  margin: auto;
+  margin-bottom: 1em; }
+/* line 47, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+.grid-items .grid-item h1 {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: 0.4em; }
+/* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+.grid-items .grid-item p {
+  margin: auto;
+  color: rgba(255, 255, 255, 0.7); }
+  @media screen and (min-width: 40em) {
+    /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+    .grid-items .grid-item p {
+      max-width: 70%; } }
+@media screen and (min-width: 53.75em) {
+  /* line 56, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-big {
+    width: 66.66667%; } }
+@media screen and (min-width: 40em) {
+  /* line 60, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-big p {
+    max-width: 60%; } }
+/* line 63, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+.grid-items .grid-item-image {
+  background: url(/images/lake-transparent.png);
+  background-color: #6b83a6;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+.breadcrumb {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 1.5em; }
+  /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+  .breadcrumb a {
+    display: inline-block;
+    background-color: green;
+    border: 1px solid #dddddd;
+    color: #999999;
+    line-height: 2.25em;
+    margin-right: -5px;
+    font-size: 0.8em;
+    padding: 0 0.5625em 0 1.125em;
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 2px; }
+    /* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:first-child {
+      padding-left: 1.125em;
+      border-top-left-radius: 0.1875em;
+      border-bottom-left-radius: 0.1875em; }
+    /* line 30, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:last-child {
+      background-color: green;
+      color: #999999;
+      border-bottom-right-radius: 0.1875em;
+      border-top-right-radius: 0.1875em;
+      padding-right: 1.125em; }
+    /* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:hover {
+      color: #477dca;
+      background-color: green; }
+    /* line 39, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:hover:after {
+      border-left-color: green; }
+    /* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:after, .breadcrumb a:before {
+      position: absolute;
+      top: 0px;
+      right: auto;
+      bottom: 0px;
+      left: 100%;
+      border-bottom: 1.125em solid transparent;
+      border-left: 0.5625em solid transparent;
+      border-top: 1.125em solid transparent;
+      content: "";
+      display: block;
+      margin: auto;
+      z-index: 2; }
+    /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:last-child:after, .breadcrumb a:last-child:before {
+      border: none; }
+    /* line 54, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:before {
+      border-left-color: #dddddd;
+      margin-left: 1px;
+      z-index: 1; }
+    /* line 58, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+    .breadcrumb a:after {
+      border-left-color: green; }
+    @media screen and (min-width: 40em) {
+      /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
+      .breadcrumb a {
+        font-size: 1em;
+        padding: 0 1.125em 0 1.5em; } }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+.table-borders {
+  border: 1px solid #dddddd;
+  border-left: 0px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.1875em; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders tbody {
+    background-color: #f7f7f7; }
+    /* line 17, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+    .table-borders tbody tr:hover > td, .table-borders tbody tr:hover > th {
+      background-color: #eaeaea; }
+    /* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+    .table-borders tbody tr:nth-child(even) {
+      background-color: #ececec; }
+      /* line 21, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+      .table-borders tbody tr:nth-child(even):hover > td {
+        background-color: #e0e0e0; }
+  /* line 24, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders thead:first-of-type tr:first-child > th:first-child {
+    border-top-left-radius: 0.1875em; }
+  /* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders thead:first-of-type tr:first-child > th:last-child {
+    border-top-right-radius: 0.1875em; }
+  /* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders tbody:last-child tr:last-child > td:first-child {
+    border-bottom-left-radius: 0.1875em; }
+  /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders tbody:last-child tr:last-child > td:last-child {
+    border-bottom-right-radius: 0.1875em; }
+  /* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders thead th {
+    background-color: white;
+    padding: 0.5em;
+    border-left: 1px solid #dddddd;
+    border-bottom: 0px; }
+  /* line 39, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+  .table-borders tbody {
+    background-color: #f7f7f7; }
+    /* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+    .table-borders tbody td {
+      padding: 0.5em;
+      border-left: 1px solid #dddddd;
+      border-top: 1px solid #dddddd;
+      border-bottom: 0px; }
+      /* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+      .table-borders tbody td button {
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 0 white;
+        color: #333333;
+        display: inline-block;
+        font-size: inherit;
+        font-weight: bold;
+        background-color: #f7f7f7;
+        background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+        background-image: linear-gradient(#f7f7f7, #dadada);
+        padding: 7px 18px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 white;
+        background-clip: padding-box;
+        border: 1px solid #d7cfcf;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 0 white;
+        color: #333333;
+        display: inline-block;
+        font-size: inherit;
+        font-weight: bold;
+        background-color: #f7f7f7;
+        background-image: -webkit-linear-gradient(#f7f7f7, #ded7d7);
+        background-image: linear-gradient(#f7f7f7, #ded7d7);
+        padding: 7px 18px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 white;
+        background-clip: padding-box;
+        margin-right: 0.5em;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0.3em;
+        outline: none; }
+        /* line 131, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+        .table-borders tbody td button:hover:not(:disabled) {
+          box-shadow: inset 0 1px 0 0 white;
+          cursor: pointer;
+          background-color: #eaeaea;
+          background-image: -webkit-linear-gradient(#eaeaea, lightgray);
+          background-image: linear-gradient(#eaeaea, lightgray); }
+        /* line 147, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+        .table-borders tbody td button:active:not(:disabled), .table-borders tbody td button:focus:not(:disabled) {
+          border: 1px solid lightgray;
+          box-shadow: inset 0 0 8px 4px #cbcbcb, inset 0 0 8px 4px #cbcbcb; }
+        /* line 131, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+        .table-borders tbody td button:hover:not(:disabled) {
+          box-shadow: inset 0 1px 0 0 white;
+          cursor: pointer;
+          background-color: #eaeaea;
+          background-image: -webkit-linear-gradient(#eaeaea, #d6cfcf);
+          background-image: linear-gradient(#eaeaea, #d6cfcf); }
+        /* line 147, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+        .table-borders tbody td button:active:not(:disabled), .table-borders tbody td button:focus:not(:disabled) {
+          border: 1px solid #d7cfcf;
+          box-shadow: inset 0 0 8px 4px #cfc8c8, inset 0 0 8px 4px #cfc8c8; }
+        /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_button.scss */
+        .table-borders tbody td button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed; }
+        @media screen and (min-width: 40em) {
+          /* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_tables.sass */
+          .table-borders tbody td button {
+            width: auto;
+            margin-bottom: 0; } }
+
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
+#cdi-index rect.score {
+  fill: #8a9b0f; }
+/* line 4, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
+#cdi-index rect.max-score {
+  fill: #eeeeee; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #ruestung:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 3, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung h3 {
+    margin: 40px 0; }
+  /* line 5, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung p {
+    text-align: left; }
+  /* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung table th {
+    text-align: center; }
+  /* line 11, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung table td.positive {
+    color: #8a9b0f; }
+  /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung table td.negative {
+    color: #bf4d28; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .ruestung-2013-chart {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #ruestung .ruestung-2013-chart:last-child {
+      margin-right: 0; }
+  /* line 17, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .ruestung-2013-table {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #ruestung .ruestung-2013-table:last-child {
+      margin-right: 0; }
+    /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+    #ruestung .ruestung-2013-table table {
+      margin: 0;
+      width: 99%; }
+  /* line 23, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .export-2013-table {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #ruestung .export-2013-table:last-child {
+      margin-right: 0; }
+  /* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .export-2013-explanation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #ruestung .export-2013-explanation:last-child {
+      margin-right: 0; }
+  /* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .axis text {
+    font: 10px sans-serif; }
+  /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .axis path,
+  #ruestung .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges; }
+
+/* line 21, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+body {
+  background: #d4d4d4 url("../images/background.png");
+  text-align: center;
+  font-family: sans-serif; }
+
+/* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+h1 {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  margin: 0; }
