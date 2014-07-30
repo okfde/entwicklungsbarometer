@@ -1,4 +1,4 @@
-# Entwicklungsbarometer - (http://okfde.github.io/entwicklungsbarometer/)
+# Entwicklungsbarometer - [Preview](http://okfde.github.io/entwicklungsbarometer/)
 
 ## Issues
 [![Stories in
