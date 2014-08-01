@@ -1,5 +1,5 @@
 $ ->
-  cdi_index('.cdi-index-sicherheit','sicherheit')
+  cdi_index('.cdi-index-sicherheit','Security')
 
   $(".js-vertical-tab-content").hide()
   $(".js-vertical-tab-content:first").show()
@@ -24,4 +24,3 @@ $ ->
     $(".js-vertical-tab").removeClass "is-active"
     $(".js-vertical-tab[rel^='" + accordion_activeTab + "']").addClass "is-active"
     return
-
