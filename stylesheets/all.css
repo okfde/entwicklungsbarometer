@@ -757,6 +757,13 @@ input[type="submit"] {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover; }
+  /* line 69, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-image.sicherheit {
+    background: url("/images/panzer.png");
+    background-color: #6b83a6;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover; }
 
 /* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
 .breadcrumb {
