@@ -14,6 +14,7 @@
 @import 'components/grid'
 @import 'components/breadcrump'
 @import 'components/tables'
+@import 'components/vertical_tabs'
 
 @import 'pages/main'
 @import 'pages/sicherheit'
@@ -24,11 +25,18 @@ body
   font-family: sans-serif
 
 h1
-  color: rgba(0, 0, 0, .3)
+  color: rgba(255, 255, 255, .5)
   font-weight: bold
   font-size: 32px
   letter-spacing: -1px
   text-transform: uppercase
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5)
   margin: 0
 
+.axis text
+  font: 10px sans-serif
+
+.axis path,
+.axis line
+  fill: none
+  stroke: #000
+  shape-rendering: crispEdges
