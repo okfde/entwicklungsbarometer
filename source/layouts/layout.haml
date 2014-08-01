@@ -8,7 +8,7 @@
     %title= current_page.data.title || "The Middleman"
     = stylesheet_link_tag "normalize", "all"
     = javascript_include_tag  "all"
-    = partial "navigation"
-    = partial "breadcrump"
+    = partial "partials/navigation"
+    = partial "partials/breadcrump"
     = yield
-    = partial "footer"
+    = partial "partials/footer"
