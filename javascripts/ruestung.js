@@ -1,7 +1,12 @@
 (function() {
-  var changeDiffClass, formatCurrency;
+  var changeDiffClass, export2012_13Path, formatCurrency, gesamt2013Path,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   formatCurrency = d3.numberFormat("$,.2f");
+
+  this.formatCountry = function(countryString) {
+    return countryString.replace(" ", "");
+  };
 
   changeDiffClass = function(value) {
     if (value !== 0) {
@@ -13,9 +18,14 @@
     }
   };
 
-  queue().defer(d3.csv, rootPath + "/data/exporte_2012_2013.csv").defer(d3.csv, rootPath + "/data/gesamt_exporte_2013.csv").await(function(error, data, gesamt) {
-    var bar, barWidth, chart, gesamt2013, gesamtRuestung2013, height, margin, notFreeTable, ruestung2013, ruestungExporte2013, tBody, tHeadTr, trs, width, x, xAxis, y;
-    ruestung2013 = _.filter(data, function(num) {
+  export2012_13Path = rootPath + "/data/exporte_2012_2013.csv";
+
+  gesamt2013Path = rootPath + "/data/gesamt_exporte_2013.csv";
+
+  queue().defer(d3.csv, export2012_13Path).defer(d3.csv, gesamt2013Path).await(function(error, data, gesamt) {
+    var exporte, gesamt2013, gesamtRuestung2013, margin, notFreeTable, options, ruestung2012, ruestung2013, ruestungExporte2013, tBody, tHeadTr, trs, width;
+    this.data = data;
+    ruestung2013 = _.filter(this.data, function(num) {
       return num.ruestung > 0;
     });
     ruestung2013 = _.sortBy(ruestung2013, function(num) {
@@ -27,6 +37,15 @@
     gesamt2013 = _.reduce(gesamt, (function(sum, d) {
       return sum + parseInt(d.ruestung);
     }), 0);
+    ruestung2012 = _.filter(this.data, function(num) {
+      var _ref;
+      return _ref = num.Country, __indexOf.call(ruestung2013.map(function(d) {
+        return d.Country;
+      }), _ref) >= 0;
+    });
+    ruestung2012 = _.sortBy(ruestung2012, function(num) {
+      return -num.ruestung;
+    });
     d3.select('#ruestung .gesamt-ruestung').html(formatCurrency(gesamtRuestung2013));
     d3.select('#ruestung .gesamt').html(formatCurrency(gesamt2013));
     width = parseInt(d3.select('.ruestung-2013-chart').style('width'));
@@ -36,30 +55,41 @@
       bottom: 120,
       left: 40
     };
-    width = width - margin.left - margin.right;
-    height = 300 - margin.top - margin.bottom;
-    y = d3.scale.linear().range([height, 0]);
-    chart = d3.select(".chart").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    y.domain([
+    options = {
+      height: 300,
+      width: width - 20,
+      margin: margin
+    };
+    exporte = new Exporte(ruestung2013, options);
+    exporte.setYDomain([
       0, d3.max(ruestung2013, function(d) {
         return parseInt(d.ruestung);
       })
     ]);
-    x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
-    x.domain(ruestung2013.map(function(d) {
+    exporte.setXDomain(ruestung2013.map(function(d) {
       return d.Country;
     }));
-    barWidth = (width - 20) / ruestung2013.length;
-    bar = chart.selectAll("g").data(ruestung2013).enter().append("g").attr("transform", function(d) {
-      return "translate(" + x(d.Country) + ",0)";
+    exporte.setDataKey();
+    exporte.render('.ruestung-2013-chart .chart');
+    $('.ruestung-2013-chart form input').change(function(e) {
+      if (this.value === '2012') {
+        exporte.setDataKey('Ruestung_2012');
+        exporte.setYDomain([
+          0, d3.max(ruestung2012, function(d) {
+            return parseInt(d.Ruestung_2012);
+          })
+        ]);
+        return exporte.update(ruestung2012);
+      } else {
+        exporte.setDataKey('ruestung');
+        exporte.setYDomain([
+          0, d3.max(ruestung2013, function(d) {
+            return parseInt(d.ruestung);
+          })
+        ]);
+        return exporte.update(ruestung2013);
+      }
     });
-    bar.append("rect").attr("y", function(d) {
-      return y(d.ruestung);
-    }).attr("height", function(d) {
-      return height - y(d.ruestung);
-    }).attr("width", x.rangeBand());
-    xAxis = d3.svg.axis().scale(x).orient("bottom");
-    chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".35em").attr("transform", "rotate(90)").style("text-anchor", "start");
     ruestungExporte2013 = d3.select('#exporte-2013').append('table');
     ruestungExporte2013.attr('class', 'table-borders');
     tHeadTr = ruestungExporte2013.append('thead').append('tr');
@@ -68,7 +98,9 @@
     tHeadTr.append('th').text('Differenz zu 2012');
     tBody = ruestungExporte2013.append('tbody');
     trs = tBody.selectAll('tr').data(ruestung2013);
-    trs.enter().append('tr');
+    trs.enter().append('tr').attr('class', function(d) {
+      return formatCountry(d.Country);
+    });
     trs.append('td').text(function(d) {
       return d.Country;
     });
@@ -89,7 +121,7 @@
     tHeadTr.append('th').text('Differenz Gesamtexporte zu 2012');
     tHeadTr.append('th').text('Differenz Rüstungsexporte zu 2012');
     tBody = notFreeTable.append('tbody');
-    trs = tBody.selectAll('tr').data(data);
+    trs = tBody.selectAll('tr').data(this.data);
     trs.enter().append('tr');
     trs.append('td').text(function(d) {
       return d.Country;

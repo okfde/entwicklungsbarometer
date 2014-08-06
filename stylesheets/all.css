@@ -759,11 +759,19 @@ input[type="submit"] {
   background-size: cover; }
   /* line 69, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
   .grid-items .grid-item-image.sicherheit {
-    background: url("/images/panzer.png");
-    background-color: #6b83a6;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover; }
+    background-image: url("../images/panzer.png"); }
+  /* line 71, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-image.transparenz {
+    background-image: url("../images/sitzungssaal.png"); }
+  /* line 73, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-image.export {
+    background-image: url("../images/waffen.png"); }
+  /* line 75, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-image.un {
+    background-image: url("../images/un.png"); }
+  /* line 77, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
+  .grid-items .grid-item-image.abruestung {
+    background-image: url("../images/abruestung.png"); }
 
 /* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_breadcrump.sass */
 .breadcrumb {

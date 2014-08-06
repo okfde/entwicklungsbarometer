@@ -19862,52 +19862,115 @@ d3.numberFormat = locale_de_DE.numberFormat
   else this.queue = queue;
 })();
 (function() {
-  this.subIndex = function(data, countryName) {
-    var axisSubX, classes, country, indicators, margin, score, subHeight, subSvg, subX, subXAxis, subY, width, _i, _ref, _results;
+  this.CDISubIndex = (function() {
+    function CDISubIndex(data, categories, options) {
+      this.data = data;
+      this.categories = categories;
+      this.options = options != null ? options : {};
+      this.options = _.defaults(this.options, {
+        width: 900,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        }
+      });
+      this.classes = ['max-score', 'score'];
+    }
+
+    CDISubIndex.prototype.createSvg = function() {
+      this.svgSelection || (this.svgSelection = d3.select(this.element).append('svg').attr('width', this.options.width + this.options.margin.left + this.options.margin.right).attr('height', this.options.height + this.options.margin.top + this.options.margin.bottom).append("g").attr("transform", "translate(" + this.options.margin.left + "," + this.options.margin.top + ")"));
+      return this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
+    };
+
+    CDISubIndex.prototype.createAxisAndScales = function(data) {
+      var _i, _ref, _results;
+      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain([0, 12]);
+      this.xScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain((function() {
+        _results = [];
+        for (var _i = 0, _ref = this.categories.length; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--){ _results.push(_i); }
+        return _results;
+      }).apply(this));
+      this.xAxisScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain(this.categories);
+      return this.xAxis = d3.svg.axis().scale(this.xAxisScale).orient("bottom");
+    };
+
+    CDISubIndex.prototype.draw = function(data) {
+      var indicators, label, max, score;
+      indicators = this.svgSelection.selectAll('g.graphs').data(data);
+      indicators.enter().append('g').attr('transform', (function(_this) {
+        return function(d, i) {
+          return "translate(" + (_this.xScale(i)) + ",0)";
+        };
+      })(this)).attr('class', 'graphs');
+      indicators.exit().remove();
+      max = indicators.selectAll("rect." + this.classes[0]).data([1]);
+      max.enter().append('rect');
+      max.attr('y', 0).attr('width', this.xScale.rangeBand()).attr('height', this.options.height).attr('class', this.classes[0]);
+      max.exit().remove();
+      label = indicators.selectAll('text').data(function(d) {
+        return [d];
+      });
+      label.enter().append('text');
+      label.text(function(d) {
+        return d;
+      }).attr('y', (function(_this) {
+        return function(d) {
+          return _this.yScale(d) - 10;
+        };
+      })(this)).attr('x', this.xScale.rangeBand() / 2).attr("text-anchor", "middle");
+      label.exit().remove();
+      score = indicators.selectAll("rect." + this.classes[1]).data(function(d) {
+        return [d];
+      });
+      score.exit().remove();
+      score.enter().append('rect');
+      return score.attr('y', (function(_this) {
+        return function(d) {
+          return _this.yScale(d);
+        };
+      })(this)).attr('width', this.xScale.rangeBand()).attr('height', (function(_this) {
+        return function(d, i) {
+          return _this.options.height - _this.yScale(d);
+        };
+      })(this)).attr('class', (function(_this) {
+        return function(d, i) {
+          return _this.classes[1];
+        };
+      })(this));
+    };
+
+    CDISubIndex.prototype.render = function(element) {
+      this.element = element;
+      this.createAxisAndScales(this.data);
+      this.createSvg();
+      return this.draw(this.data);
+    };
+
+    CDISubIndex.prototype.update = function(data) {
+      this.data = data;
+      return this.draw(data);
+    };
+
+    return CDISubIndex;
+
+  })();
+
+  this.updateSubIndex = function(data, countryName) {
+    var country;
     if (countryName == null) {
       countryName = 'Germany';
     }
-    margin = {
-      top: 10,
-      right: 30,
-      bottom: 150,
-      left: 40
-    };
-    width = 900;
-    subHeight = 200;
-    classes = ['max-score', 'score'];
-    country = _.rest(_.values(_.findWhere(data, {
-      Country: countryName
-    })));
-    subY = d3.scale.linear().range([subHeight, 0]).domain([0, 10]);
-    subX = d3.scale.ordinal().rangeRoundBands([0, width], .1).domain((function() {
-      _results = [];
-      for (var _i = 0, _ref = country.length; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--){ _results.push(_i); }
-      return _results;
-    }).apply(this));
-    axisSubX = d3.scale.ordinal().rangeRoundBands([0, width], .1).domain(_.rest(_.keys(data[0])));
-    d3.select('.cdi-country-sub-index h2').text(countryName);
-    subSvg = d3.select('.cdi-country-sub-index svg').attr("width", width + margin.left + margin.right).attr("height", subHeight + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    indicators = subSvg.selectAll('g').data(country);
-    indicators.enter().append('g').attr('transform', function(d, i) {
-      return "translate(" + (subX(i)) + ",0)";
-    });
-    indicators.append('rect').attr('y', 0).attr('width', subX.rangeBand()).attr('height', subHeight).attr('class', classes[0]);
-    indicators.append('text').text(function(d) {
-      return d;
-    }).attr('y', function(d) {
-      return subY(d) - 10;
-    }).attr('x', subX.rangeBand() / 2).attr("text-anchor", "middle");
-    score = indicators.append('rect');
-    score.attr('y', function(d) {
-      return subY(d);
-    }).attr('width', subX.rangeBand()).attr('height', function(d, i) {
-      return subHeight - subY(d);
-    }).attr('class', function(d, i) {
-      return classes[1];
-    });
-    subXAxis = d3.svg.axis().scale(axisSubX).orient("bottom");
-    return subSvg.append("g").attr("class", "x axis").attr("transform", "translate(0," + subHeight + ")").call(subXAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
+    if ($('.cdi-country-sub-index').length > 0) {
+      country = _.rest(_.values(_.findWhere(data, {
+        Country: countryName
+      })));
+      this.subIndex = $('.cdi-index-overall').data('cdi-sub');
+      $('.cdi-country-sub-index h2').text(countryName);
+      return this.subIndex.update(country);
+    }
   };
 
   this.cdi_index = function(element, key) {
@@ -19915,7 +19978,7 @@ d3.numberFormat = locale_de_DE.numberFormat
       key = 'Overall';
     }
     return d3.csv(rootPath + '/data/cdi.csv', function(err, data) {
-      var classes, countries, dx, height, heights, margin, scale, score, subHeight, svg, width, x, xAxis, y;
+      var categories, classes, countries, country, dx, height, heights, margin, scale, score, subHeight, svg, width, x, xAxis, y;
       data = _.sortBy(data, function(d) {
         return d[key];
       });
@@ -19931,6 +19994,13 @@ d3.numberFormat = locale_de_DE.numberFormat
       width = 900;
       height = 300;
       subHeight = 200;
+      country = _.rest(_.values(_.findWhere(data, {
+        Country: 'Germany'
+      })));
+      categories = _.rest(_.keys(_.findWhere(data, {
+        Country: 'Germany'
+      })));
+      this.subIndex = new CDISubIndex(country, categories);
       scale = d3.scale.linear().domain([0, 10]).range([0, width]);
       y = d3.scale.linear().range([height, 0]).domain([0, 10]);
       x = d3.scale.ordinal().rangeRoundBands([0, width], .1).domain(data.map(function(d) {
@@ -19942,7 +20012,11 @@ d3.numberFormat = locale_de_DE.numberFormat
         return d.Country;
       }).attr('transform', function(d) {
         return "translate(" + (x(d.Country)) + ",0)";
-      });
+      }).on('mouseover', (function(_this) {
+        return function(d) {
+          return _this.updateSubIndex(data, d.Country);
+        };
+      })(this));
       countries.append('rect').attr('y', 0).attr('width', x.rangeBand()).attr('height', height).attr('class', classes[0]);
       score = countries.append('rect');
       score.attr('y', function(d) {
@@ -19960,12 +20034,145 @@ d3.numberFormat = locale_de_DE.numberFormat
       xAxis = d3.svg.axis().scale(x).orient("bottom");
       svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
       if (key === 'Overall') {
-        d3.select('.cdi-country-sub-index').append('h2').text('Germany');
-        d3.select('.cdi-country-sub-index').append('svg');
-        return subIndex(data);
+        this.subIndex.render('.cdi-country-sub-index .graph');
+        return $('.cdi-index-overall').data('cdi-sub', this.subIndex);
       }
     });
   };
+
+}).call(this);
+(function() {
+  this.D3Graph = (function() {
+    function D3Graph(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.options = _.defaults(this.options, {
+        width: 900,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        }
+      });
+    }
+
+    D3Graph.prototype.createSvg = function() {
+      this.svgSelection || (this.svgSelection = d3.select(this.element).append('svg').attr('width', this.options.width + this.options.margin.left + this.options.margin.right).attr('height', this.options.height + this.options.margin.top + this.options.margin.bottom).append("g").attr("transform", "translate(" + this.options.margin.left + "," + this.options.margin.top + ")"));
+      return this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
+    };
+
+    D3Graph.prototype.createAxisAndScales = function(data) {
+      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain(this.yScaleDomain);
+      this.xScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain(this.xScaleDomain);
+      this.xAxisScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain(this.xScaleDomain);
+      return this.xAxis = d3.svg.axis().scale(this.xAxisScale).orient("bottom");
+    };
+
+    D3Graph.prototype.setXDomain = function(domain) {
+      return this.xScaleDomain = domain;
+    };
+
+    D3Graph.prototype.setYDomain = function(domain) {
+      return this.yScaleDomain = domain;
+    };
+
+    D3Graph.prototype.draw = function(data) {
+      var graphGroup;
+      graphGroup = this.svgSelection.selectAll('g.graphs').data(data);
+      graphGroup.enter().append('g').attr('transform', (function(_this) {
+        return function(d, i) {
+          return "translate(" + (_this.xScale(d)) + ",0)";
+        };
+      })(this)).attr('class', 'graphs');
+      return graphGroup.exit().remove();
+    };
+
+    D3Graph.prototype.render = function(element) {
+      this.element = element;
+      this.createAxisAndScales(this.data);
+      this.createSvg();
+      return this.draw(this.data);
+    };
+
+    D3Graph.prototype.update = function(data) {
+      this.data = data;
+      this.createAxisAndScales(this.data);
+      return this.draw(data);
+    };
+
+    return D3Graph;
+
+  })();
+
+}).call(this);
+(function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.Exporte = (function(_super) {
+    __extends(Exporte, _super);
+
+    function Exporte(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.options = _.defaults(this.options, {
+        width: 900,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        }
+      });
+    }
+
+    Exporte.prototype.setDataKey = function(key) {
+      if (key == null) {
+        key = 'ruestung';
+      }
+      return this.dataKey = key;
+    };
+
+    Exporte.prototype.highlightTableForCountry = function(d) {
+      return $("#exporte-2013 tr." + (formatCountry(d.Country))).addClass('active');
+    };
+
+    Exporte.prototype.unhighlightTableForCountry = function(d) {
+      return $("#exporte-2013 tr." + (formatCountry(d.Country))).removeClass('active');
+    };
+
+    Exporte.prototype.draw = function(data) {
+      var bars, graphGroup;
+      graphGroup = this.svgSelection.selectAll('g.graphs').data(data);
+      graphGroup.enter().append('g').attr('transform', (function(_this) {
+        return function(d) {
+          return "translate(" + (_this.xScale(d.Country)) + ",0)";
+        };
+      })(this)).attr('class', 'graphs');
+      graphGroup.exit().remove();
+      bars = graphGroup.selectAll('rect').data(function(d) {
+        return [d];
+      });
+      bars.enter().append('rect');
+      bars.exit().remove();
+      bars.attr("y", (function(_this) {
+        return function(d) {
+          return _this.yScale(d[_this.dataKey]);
+        };
+      })(this)).attr("height", (function(_this) {
+        return function(d) {
+          return _this.options.height - _this.yScale(d[_this.dataKey]);
+        };
+      })(this)).attr("width", this.xScale.rangeBand()).on('mouseover', this.highlightTableForCountry).on('mouseout', this.unhighlightTableForCountry);
+      return this.svgSelection.select('.axis.x').selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".35em").attr("transform", "rotate(90)").style("text-anchor", "start");
+    };
+
+    return Exporte;
+
+  })(this.D3Graph);
 
 }).call(this);
 (function() {
@@ -19973,9 +20180,14 @@ d3.numberFormat = locale_de_DE.numberFormat
 
 }).call(this);
 (function() {
-  var changeDiffClass, formatCurrency;
+  var changeDiffClass, export2012_13Path, formatCurrency, gesamt2013Path,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   formatCurrency = d3.numberFormat("$,.2f");
+
+  this.formatCountry = function(countryString) {
+    return countryString.replace(" ", "");
+  };
 
   changeDiffClass = function(value) {
     if (value !== 0) {
@@ -19987,9 +20199,14 @@ d3.numberFormat = locale_de_DE.numberFormat
     }
   };
 
-  queue().defer(d3.csv, rootPath + "/data/exporte_2012_2013.csv").defer(d3.csv, rootPath + "/data/gesamt_exporte_2013.csv").await(function(error, data, gesamt) {
-    var bar, barWidth, chart, gesamt2013, gesamtRuestung2013, height, margin, notFreeTable, ruestung2013, ruestungExporte2013, tBody, tHeadTr, trs, width, x, xAxis, y;
-    ruestung2013 = _.filter(data, function(num) {
+  export2012_13Path = rootPath + "/data/exporte_2012_2013.csv";
+
+  gesamt2013Path = rootPath + "/data/gesamt_exporte_2013.csv";
+
+  queue().defer(d3.csv, export2012_13Path).defer(d3.csv, gesamt2013Path).await(function(error, data, gesamt) {
+    var exporte, gesamt2013, gesamtRuestung2013, margin, notFreeTable, options, ruestung2012, ruestung2013, ruestungExporte2013, tBody, tHeadTr, trs, width;
+    this.data = data;
+    ruestung2013 = _.filter(this.data, function(num) {
       return num.ruestung > 0;
     });
     ruestung2013 = _.sortBy(ruestung2013, function(num) {
@@ -20001,6 +20218,15 @@ d3.numberFormat = locale_de_DE.numberFormat
     gesamt2013 = _.reduce(gesamt, (function(sum, d) {
       return sum + parseInt(d.ruestung);
     }), 0);
+    ruestung2012 = _.filter(this.data, function(num) {
+      var _ref;
+      return _ref = num.Country, __indexOf.call(ruestung2013.map(function(d) {
+        return d.Country;
+      }), _ref) >= 0;
+    });
+    ruestung2012 = _.sortBy(ruestung2012, function(num) {
+      return -num.ruestung;
+    });
     d3.select('#ruestung .gesamt-ruestung').html(formatCurrency(gesamtRuestung2013));
     d3.select('#ruestung .gesamt').html(formatCurrency(gesamt2013));
     width = parseInt(d3.select('.ruestung-2013-chart').style('width'));
@@ -20010,30 +20236,41 @@ d3.numberFormat = locale_de_DE.numberFormat
       bottom: 120,
       left: 40
     };
-    width = width - margin.left - margin.right;
-    height = 300 - margin.top - margin.bottom;
-    y = d3.scale.linear().range([height, 0]);
-    chart = d3.select(".chart").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    y.domain([
+    options = {
+      height: 300,
+      width: width - 20,
+      margin: margin
+    };
+    exporte = new Exporte(ruestung2013, options);
+    exporte.setYDomain([
       0, d3.max(ruestung2013, function(d) {
         return parseInt(d.ruestung);
       })
     ]);
-    x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
-    x.domain(ruestung2013.map(function(d) {
+    exporte.setXDomain(ruestung2013.map(function(d) {
       return d.Country;
     }));
-    barWidth = (width - 20) / ruestung2013.length;
-    bar = chart.selectAll("g").data(ruestung2013).enter().append("g").attr("transform", function(d) {
-      return "translate(" + x(d.Country) + ",0)";
+    exporte.setDataKey();
+    exporte.render('.ruestung-2013-chart .chart');
+    $('.ruestung-2013-chart form input').change(function(e) {
+      if (this.value === '2012') {
+        exporte.setDataKey('Ruestung_2012');
+        exporte.setYDomain([
+          0, d3.max(ruestung2012, function(d) {
+            return parseInt(d.Ruestung_2012);
+          })
+        ]);
+        return exporte.update(ruestung2012);
+      } else {
+        exporte.setDataKey('ruestung');
+        exporte.setYDomain([
+          0, d3.max(ruestung2013, function(d) {
+            return parseInt(d.ruestung);
+          })
+        ]);
+        return exporte.update(ruestung2013);
+      }
     });
-    bar.append("rect").attr("y", function(d) {
-      return y(d.ruestung);
-    }).attr("height", function(d) {
-      return height - y(d.ruestung);
-    }).attr("width", x.rangeBand());
-    xAxis = d3.svg.axis().scale(x).orient("bottom");
-    chart.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".35em").attr("transform", "rotate(90)").style("text-anchor", "start");
     ruestungExporte2013 = d3.select('#exporte-2013').append('table');
     ruestungExporte2013.attr('class', 'table-borders');
     tHeadTr = ruestungExporte2013.append('thead').append('tr');
@@ -20042,7 +20279,9 @@ d3.numberFormat = locale_de_DE.numberFormat
     tHeadTr.append('th').text('Differenz zu 2012');
     tBody = ruestungExporte2013.append('tbody');
     trs = tBody.selectAll('tr').data(ruestung2013);
-    trs.enter().append('tr');
+    trs.enter().append('tr').attr('class', function(d) {
+      return formatCountry(d.Country);
+    });
     trs.append('td').text(function(d) {
       return d.Country;
     });
@@ -20063,7 +20302,7 @@ d3.numberFormat = locale_de_DE.numberFormat
     tHeadTr.append('th').text('Differenz Gesamtexporte zu 2012');
     tHeadTr.append('th').text('Differenz Rüstungsexporte zu 2012');
     tBody = notFreeTable.append('tbody');
-    trs = tBody.selectAll('tr').data(data);
+    trs = tBody.selectAll('tr').data(this.data);
     trs.enter().append('tr');
     trs.append('td').text(function(d) {
       return d.Country;
