@@ -1,60 +1,46 @@
 formatCurrency = d3.numberFormat("$,.2f")
 
+@formatCountry = (countryString) ->
+  countryString.replace(" ","")
+
 changeDiffClass = (value) ->
   if value != 0
     if value > 0 then "positive" else "negative"
 
+export2012_13Path = rootPath+"/data/exporte_2012_2013.csv"
+gesamt2013Path = rootPath+"/data/gesamt_exporte_2013.csv"
 queue()
-.defer(d3.csv, rootPath+"/data/exporte_2012_2013.csv")
-.defer(d3.csv, rootPath+"/data/gesamt_exporte_2013.csv")
-.await (error, data, gesamt) ->
-  ruestung2013 = _.filter(data,(num) -> num.ruestung > 0)
+.defer(d3.csv, export2012_13Path)
+.defer(d3.csv, gesamt2013Path)
+.await (error, @data, gesamt) ->
+  ruestung2013 = _.filter(@data,(num) -> num.ruestung > 0)
   ruestung2013 = _.sortBy(ruestung2013, (num) -> -num.ruestung)
   gesamtRuestung2013 = _.reduce(ruestung2013,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
   gesamt2013 = _.reduce(gesamt,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
+  ruestung2012 = _.filter(@data, (num) -> num.Country in (ruestung2013.map((d) -> d.Country)))
+  ruestung2012 = _.sortBy(ruestung2012, (num) -> -num.ruestung)
 
   d3.select('#ruestung .gesamt-ruestung').html(formatCurrency(gesamtRuestung2013))
   d3.select('#ruestung .gesamt').html(formatCurrency(gesamt2013))
 
   width = parseInt(d3.select('.ruestung-2013-chart').style('width'))
   margin = {top: 10, right: 30, bottom: 120, left: 40}
-  width = width - margin.left - margin.right
-  height = 300 - margin.top - margin.bottom
+  options = { height: 300, width: width - 20 , margin: margin }
 
-  y = d3.scale.linear()
-    .range([height, 0])
-
-  chart = d3.select(".chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-  y.domain([0, d3.max(ruestung2013, (d) -> parseInt(d.ruestung) )])
-  x = d3.scale.ordinal()
-      .rangeRoundBands([0, width], .1)
-  x.domain(ruestung2013.map((d) -> d.Country))
-  barWidth = (width - 20) / ruestung2013.length
-  bar = chart.selectAll("g")
-        .data(ruestung2013)
-        .enter().append("g")
-        .attr("transform", (d) -> "translate(" + x(d.Country) + ",0)")
-  bar.append("rect")
-      .attr("y", (d) -> y(d.ruestung))
-      .attr("height", (d) -> height - y(d.ruestung))
-      .attr("width", x.rangeBand())
-  xAxis = d3.svg.axis()
-  .scale(x)
-  .orient("bottom")
-  chart.append("g")
-  .attr("class", "x axis")
-  .attr("transform", "translate(0," + height + ")")
-  .call(xAxis)
-  .selectAll("text")
-  .attr("y", 0)
-  .attr("x", 9)
-  .attr("dy", ".35em")
-  .attr("transform", "rotate(90)")
-  .style("text-anchor", "start")
+  exporte = new Exporte(ruestung2013, options)
+  exporte.setYDomain([0, d3.max(ruestung2013, (d) -> parseInt(d.ruestung) )])
+  exporte.setXDomain(ruestung2013.map((d) -> d.Country))
+  exporte.setDataKey()
+  exporte.render('.ruestung-2013-chart .chart')
+  $('.ruestung-2013-chart form input').change (e) ->
+    if(this.value == '2012')
+      exporte.setDataKey('Ruestung_2012')
+      exporte.setYDomain([0, d3.max(ruestung2012, (d) -> parseInt(d.Ruestung_2012) )])
+      exporte.update(ruestung2012)
+    else
+      exporte.setDataKey('ruestung')
+      exporte.setYDomain([0, d3.max(ruestung2013, (d) -> parseInt(d.ruestung) )])
+      exporte.update(ruestung2013)
 
   ruestungExporte2013 = d3.select('#exporte-2013').append('table')
   ruestungExporte2013.attr('class','table-borders')
@@ -64,7 +50,7 @@ queue()
   tHeadTr.append('th').text('Differenz zu 2012')
   tBody = ruestungExporte2013.append('tbody')
   trs = tBody.selectAll('tr').data(ruestung2013)
-  trs.enter().append('tr')
+  trs.enter().append('tr').attr('class', (d) -> formatCountry(d.Country))
   trs.append('td').text((d) -> d.Country)
   trs.append('td').text((d) -> formatCurrency(d.ruestung))
   trs.append('td').text((d) -> formatCurrency(d.ruestung - d.Ruestung_2012)).attr('class', (d) -> changeDiffClass(d.ruestung - d.Ruestung_2012))
@@ -78,7 +64,7 @@ queue()
   tHeadTr.append('th').text('Differenz Gesamtexporte zu 2012')
   tHeadTr.append('th').text('Differenz Rüstungsexporte zu 2012')
   tBody = notFreeTable.append('tbody')
-  trs = tBody.selectAll('tr').data(data)
+  trs = tBody.selectAll('tr').data(@data)
   trs.enter().append('tr')
 
   trs.append('td').text((d) -> d.Country)
