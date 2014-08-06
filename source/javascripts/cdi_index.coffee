@@ -16,7 +16,7 @@ class @CDISubIndex
   createAxisAndScales: (data) ->
     @yScale = d3.scale.linear()
           .range([@options.height, 0])
-          .domain([0, 12])
+          .domain([0, 13])
     @xScale = d3.scale.ordinal()
           .rangeRoundBands([0, @options.width], .1)
           .domain([0...@categories.length])
