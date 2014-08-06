@@ -19887,7 +19887,7 @@ d3.numberFormat = locale_de_DE.numberFormat
 
     CDISubIndex.prototype.createAxisAndScales = function(data) {
       var _i, _ref, _results;
-      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain([0, 12]);
+      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain([0, 13]);
       this.xScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain((function() {
         _results = [];
         for (var _i = 0, _ref = this.categories.length; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--){ _results.push(_i); }
