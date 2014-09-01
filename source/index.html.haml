@@ -6,7 +6,7 @@ title: Entwicklungsbarometer
     %a.hero-logo{href: ""}
     .hero-copy
       %h1 Entwicklungsbarometer
-      %p
+      %h2 Ein Index zum Einluss deutscher Politik auf globale Armtsbekämpfung und Entwicklung
 
 .grid-items
   = link_to '/sicherheit/index.html', class: 'grid-item grid-item-image sicherheit' do
@@ -30,14 +30,15 @@ title: Entwicklungsbarometer
   %a.grid-item{href: "javascript:void(0)"}
     %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
     %h1 Handel
-  %a.grid-item.grid-item-big{href: "javascript:void(0)"}
-    %h1 Diskutieren
-    %p Diskutieren Sie mit uns und anderen
+  = partial 'partials/discuss_grid'
+.explanation
+  = partial 'partials/index-explanaition'
 .description
   = partial 'partials/index-description'
 #cdi-index
-  %h2 CDI Overall Ranking
+  %h2 Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.
   .cdi-index-overall
+  %h2 Bewertung einzelner Länder in den sieben Politikfeldern
   .cdi-country-sub-index
-    %h2 Germany
+    %h4 Germany
     .graph
