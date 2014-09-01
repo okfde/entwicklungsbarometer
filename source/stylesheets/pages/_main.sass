@@ -1,3 +1,13 @@
+.explanation,.description
+  @include outer-container
+  margin: 2em 0
+  .content
+    @include span-columns(9)
+    @include shift(2)
+    text-align: left
+.description .content
+  padding: 0.5em
+  background: #eee
 #cdi-index
   rect.score
     fill: $green
