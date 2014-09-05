@@ -31,14 +31,15 @@ title: Entwicklungsbarometer
     %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png"}/
     %h1 Handel
   = partial 'partials/discuss_grid'
-.explanation
-  = partial 'partials/index-explanaition'
-.description
-  = partial 'partials/index-description'
-#cdi-index
-  %h2 Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.
-  .cdi-index-overall
-  %h2 Bewertung einzelner Länder in den sieben Politikfeldern
-  .cdi-country-sub-index
-    %h4 Germany
-    .graph
+.content-container
+  .explanation
+    = partial 'partials/index-explanaition'
+  .description
+    = partial 'partials/index-description'
+  #cdi-index
+    %h2 Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.
+    .cdi-index-overall
+    %h2 Bewertung einzelner Länder in den sieben Politikfeldern
+    .cdi-country-sub-index
+      %h4 Germany
+      .graph

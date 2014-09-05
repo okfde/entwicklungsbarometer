@@ -1,20 +1,23 @@
-.explanation,.description
+.content-container
   @include outer-container
-  margin: 2em 0
-  .content
-    @include span-columns(9)
-    @include shift(2)
-    text-align: left
-.description .content
-  padding: 0.5em
-  background: #eee
-#cdi-index
-  rect.score
-    fill: $green
-  rect.max-score
-    fill: #eee
-  .axis text
-    font-size: 14px
-  .Germany rect.score
-    fill: $red
-  .Germany text
+  .explanation,.description
+    @include row()
+    margin: 2em 0
+    .content
+      @include span-columns(10)
+      @include shift(1)
+      text-align: left
+  .description .content
+    padding: 0.5em
+    background: #eee
+  #cdi-index
+    margin: 2em 0
+    rect.score
+      fill: $green
+    rect.max-score
+      fill: #eee
+    .axis text
+      font-size: 14px
+    .Germany rect.score
+      fill: $red
+    .Germany text
