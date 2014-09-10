@@ -30,12 +30,21 @@ section
     background: #eee
   #cdi-index
     margin: 2em 0
-    rect.score
-      fill: $green
-    rect.max-score
-      fill: #eee
+    .cdi-index-overall
+      @include row()
+      @include span-columns(8)
+      .label
+        font-size: 0.7em
+    .cdi-country-sub-index
+      @include span-columns(3)
+      text
+        font-size: 0.7em
     .axis text
       font-size: 14px
     .Germany rect.score
       fill: $red
     .Germany text
+    rect.score
+      fill: $green
+    rect.max-score
+      fill: #eee
