@@ -19,19 +19,19 @@
 
     CDISubIndex.prototype.createSvg = function() {
       this.svgSelection || (this.svgSelection = d3.select(this.element).append('svg').attr('width', this.options.width + this.options.margin.left + this.options.margin.right).attr('height', this.options.height + this.options.margin.top + this.options.margin.bottom).append("g").attr("transform", "translate(" + this.options.margin.left + "," + this.options.margin.top + ")"));
-      return this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
+      return this.svgSelection.append("g").attr("class", "y axis").attr("transform", "translate(-2,0)").call(this.yAxis);
     };
 
     CDISubIndex.prototype.createAxisAndScales = function(data) {
       var _i, _ref, _results;
-      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain([0, 13]);
-      this.xScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain((function() {
+      this.yScale = d3.scale.ordinal().rangeRoundBands([0, this.options.height], .1).domain((function() {
         _results = [];
         for (var _i = 0, _ref = this.categories.length; 0 <= _ref ? _i < _ref : _i > _ref; 0 <= _ref ? _i++ : _i--){ _results.push(_i); }
         return _results;
       }).apply(this));
-      this.xAxisScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain(this.categories);
-      return this.xAxis = d3.svg.axis().scale(this.xAxisScale).orient("bottom");
+      this.xScale = d3.scale.linear().range([0, this.options.width]).domain([0, 13]);
+      this.yAxisScale = d3.scale.ordinal().rangeRoundBands([0, this.options.height], .1).domain(this.categories);
+      return this.yAxis = d3.svg.axis().scale(this.yAxisScale).orient("left");
     };
 
     CDISubIndex.prototype.draw = function(data) {
@@ -39,13 +39,13 @@
       indicators = this.svgSelection.selectAll('g.graphs').data(data);
       indicators.enter().append('g').attr('transform', (function(_this) {
         return function(d, i) {
-          return "translate(" + (_this.xScale(i)) + ",0)";
+          return "translate(0," + (_this.yScale(i)) + ")";
         };
       })(this)).attr('class', 'graphs');
       indicators.exit().remove();
       max = indicators.selectAll("rect." + this.classes[0]).data([1]);
       max.enter().append('rect');
-      max.attr('y', 0).attr('width', this.xScale.rangeBand()).attr('height', this.options.height).attr('class', this.classes[0]);
+      max.attr('x', 0).attr('height', this.yScale.rangeBand()).attr('width', this.options.width).attr('class', this.classes[0]);
       max.exit().remove();
       label = indicators.selectAll('text').data(function(d) {
         return [d];
@@ -53,11 +53,11 @@
       label.enter().append('text');
       label.text(function(d) {
         return d;
-      }).attr('y', (function(_this) {
+      }).attr('x', (function(_this) {
         return function(d) {
-          return _this.yScale(d) - 10;
+          return _this.xScale(d) + 15;
         };
-      })(this)).attr('x', this.xScale.rangeBand() / 2).attr("text-anchor", "middle");
+      })(this)).attr('y', this.yScale.rangeBand() / 2 + 2).attr("text-anchor", "middle");
       label.exit().remove();
       score = indicators.selectAll("rect." + this.classes[1]).data(function(d) {
         return [d];
@@ -68,9 +68,9 @@
         return function(d) {
           return _this.yScale(d);
         };
-      })(this)).attr('width', this.xScale.rangeBand()).attr('height', (function(_this) {
+      })(this)).attr('height', this.yScale.rangeBand()).attr('width', (function(_this) {
         return function(d, i) {
-          return _this.options.height - _this.yScale(d);
+          return _this.xScale(d);
         };
       })(this)).attr('class', (function(_this) {
         return function(d, i) {
@@ -105,7 +105,7 @@
         Country: countryName
       })));
       this.subIndex = $('.cdi-index-overall').data('cdi-sub');
-      $('.cdi-country-sub-index h2').text(countryName);
+      $('.cdi-country-sub-index .country-sub-label').text(countryName);
       return this.subIndex.update(country);
     }
   };
@@ -115,7 +115,7 @@
       key = 'Overall';
     }
     return d3.csv(rootPath + '/data/cdi.csv', function(err, data) {
-      var categories, classes, countries, country, dx, height, heights, margin, scale, score, subHeight, svg, width, x, xAxis, y;
+      var categories, classes, countries, country, dx, height, heights, margin, scale, score, subHeight, subIndexoptions, subindexMargin, svg, width, x, xAxis, y;
       data = _.sortBy(data, function(d) {
         return d[key];
       });
@@ -128,7 +128,7 @@
         bottom: 150,
         left: 40
       };
-      width = 900;
+      width = $(element).width() - margin.left - margin.right;
       height = 300;
       subHeight = 200;
       country = _.rest(_.values(_.findWhere(data, {
@@ -137,7 +137,18 @@
       categories = _.rest(_.keys(_.findWhere(data, {
         Country: 'Germany'
       })));
-      this.subIndex = new CDISubIndex(country, categories);
+      subindexMargin = {
+        left: 80,
+        right: 25,
+        top: 20,
+        bottom: 1
+      };
+      subIndexoptions = {
+        height: 250,
+        width: $('.cdi-country-sub-index').width() - margin.left - margin.right,
+        margin: subindexMargin
+      };
+      this.subIndex = new CDISubIndex(country, categories, subIndexoptions);
       scale = d3.scale.linear().domain([0, 10]).range([0, width]);
       y = d3.scale.linear().range([height, 0]).domain([0, 10]);
       x = d3.scale.ordinal().rangeRoundBands([0, width], .1).domain(data.map(function(d) {
@@ -167,7 +178,7 @@
         return d[key];
       }).attr('y', function(d) {
         return y(d[key]) - 10;
-      }).attr('x', x.rangeBand() / 2).attr('text-anchor', 'middle');
+      }).attr('x', x.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
       xAxis = d3.svg.axis().scale(x).orient("bottom");
       svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
       if (key === 'Overall') {
