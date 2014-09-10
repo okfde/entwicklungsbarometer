@@ -6,16 +6,20 @@ section
   height: 100%
   display: block
   position: relative
+  h1
+    @include span-columns(8)
+    @include shift(4)
+    background: #fff
+    padding: 10px
+    color: #000
+    text-transform: none
   &#hebel
     padding: 50px
     background-image: url(../images/gearshift.jpg)
     h1
-      @include span-columns(8)
-      @include shift(4)
-      background: #fff
-      padding: 10px
-      color: #000
-      text-transform: none
+      margin-top: 40px
+h2.sub-header
+  padding: 20px
 .content-container
   @include outer-container
   .explanation,.description
