@@ -1,33 +1,41 @@
 ---
 title: Entwicklungsbarometer
 ---
-%section#hebel
+#main
   %h1 In der deutschen Politik gibt es viele Hebel globale Armut zu bekämpfen, aber werden sie genutzt?
-%h2.sub-header Entdecke die wichtigsten Hebel für Armutsbekämpfung in 7 Politikbereichen
-
-.grid-items
-  = link_to '/sicherheit/index.html', class: 'grid-item grid-item-image sicherheit' do
-    %h1 Sicherheit
-  %a.grid-item.grid-item-image.technologie{href: "javascript:void(0)"}
-    %h1 Technologie
-  %a.grid-item.grid-item-image.umwelt{href: "javascript:void(0)"}
-    %h1 Umwelt
-  %a.grid-item.grid-item-image.migration{href: "javascript:void(0)"}
-    %h1 Migration
-  %a.grid-item.grid-item-image.finanzen{href: "javascript:void(0)"}
-    %h1 Investitionspolitik
-  %a.grid-item.grid-item-image.zusammenarbeit{href: "javascript:void(0)"}
-    %h1 Entwicklungszusammenarbeit
-  %a.grid-item.grid-item-image.handel{href: "javascript:void(0)"}
-    %h1 Handel
-  = partial 'partials/discuss_grid'
-.content-container
-  .explanation
-    = partial 'partials/index-explanaition'
+  #map
+    = image_tag "map.svg"
+  %h2 Entdecke die wichtigsten Hebel für Armutsbekämpfung in 7 Politikbereichen
   .description
-    = partial 'partials/index-description'
+    = partial 'partials/index-explanaition'
+
+  .grid-items
+    = link_to '/sicherheit/index.html', class: 'grid-item' do
+      %h5.sicherheit Sicherheit
+      %p Wie gut ist Sicherheitspolitik für die Welt?
+    %a.grid-item{href: "javascript:void(0)"}
+      %h5.technologie Technologie
+    %a.grid-item{href: "javascript:void(0)"}
+      %h5.umwelt Umwelt
+    %a.grid-item{href: "javascript:void(0)"}
+      %h5.migration Migration
+    %a.grid-item{href: "javascript:void(0)"}
+      %h5.investition Investitionspolitik
+    %a.grid-item{href: "javascript:void(0)"}
+      %h5.entwicklungszusammenarbeit Entwicklungszusammenarbeit
+    %a.grid-item{href: "javascript:void(0)"}
+      %h5.handel Handel
+  .experten-interview
+    %h3 Experten Interview
+    .interview.last
+      .interview-image
+        = image_tag 'interviews/grebe.png'
+      .interview-content
+        %h4 First interview Title or Author
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.
   #cdi-index
-    %h2 Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.
+    %h4 Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.
+    = partial 'partials/index-description'
     .cdi-index-overall
     .cdi-country-sub-index
       %h4.country-sub-label Germany

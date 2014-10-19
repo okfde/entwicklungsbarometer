@@ -1,46 +1,84 @@
-section
-  background-size: cover
-  background-position: center center
-  background-repeat: no-repeat
-  width: 100%
-  height: 100%
-  display: block
-  position: relative
+#main
   h1
+    margin-top: 40px
     @include span-columns(8)
-    @include shift(4)
-    background: #fff
-    padding: 10px
-    color: #000
-    text-transform: none
-  &#hebel
-    padding: 50px
-    background-image: url(../images/gearshift.jpg)
-    h1
-      margin-top: 40px
-h2.sub-header
-  padding: 20px
-.content-container
-  @include outer-container
-  .explanation,.description
+    @include shift(2)
     @include row()
-    margin: 2em 0
-    .content
-      @include span-columns(10)
-      @include shift(1)
-      text-align: left
-  .description .content
-    padding: 0.5em
-    background: #eee
+  #map
+    border-bottom: 1px dashed $base-border-color
+    @include span-columns(12)
+    @include row()
+    margin-top: 30px
+  h2
+    padding: 20px
+    margin-top: 55px
+    @include span-columns(8)
+    @include shift(2)
+    @include row()
+  .description
+    @include span-columns(10)
+    @include shift(1)
+    @include row()
+  .grid-items
+    @include span-columns(12)
+    @include row()
+    padding: 0 0 20px 0
+    border-bottom: 1px dashed $base-border-color
+    .grid-item
+      h5
+        padding-top: 70px
+        background: none
+        text-transform: uppercase
+        color: $light-blue
+        font-weight: normal
+        &.sicherheit
+          background: transparent url(../images/icons/1.svg) top center no-repeat
+        &.technologie
+          background: transparent url(../images/icons/2.svg) top center no-repeat
+        &.umwelt
+          background: transparent url(../images/icons/3.svg) top center no-repeat
+        &.migration
+          background: transparent url(../images/icons/4.svg) top center no-repeat
+        &.investition
+          background: transparent url(../images/icons/5.svg) top center no-repeat
+        &.handel
+          background: transparent url(../images/icons/6.svg) top center no-repeat
+        &.entwicklungszusammenarbeit
+          background: transparent url(../images/icons/7.svg) top center no-repeat
+      p
+        color: $black
+        margin: 0
+  .experten-interview
+    @include span-columns(12)
+    @include row()
+    margin-top: 30px
+    border-bottom: 1px dashed $base-border-color
+    h3
+      background: $light-blue
+      text-transform: uppercase
+      color: $base-color
+      display: inline-block
+      padding: 15px 25px
+      font-weight: normal
+      @include clearfix
+      margin: 0 0 5px
+    .interview
+      @include row()
+      @include span-columns(8)
+      @include shift(2)
+  #cdi-index
+    @include span-columns(10)
+    @include row()
+    margin-top: 30px
+
   #cdi-index
     margin: 2em 0
     .cdi-index-overall
-      @include row()
-      @include span-columns(8)
+      @include span-columns(8 of 10)
       .label
         font-size: 0.7em
     .cdi-country-sub-index
-      @include span-columns(3)
+      @include span-columns(2 of 10)
       text
         font-size: 0.7em
     .axis text

@@ -1,4 +1,5 @@
-@import "globals/grid"
+//$visual-grid: true !global
+
 @import "globals/colors"
 @import "globals/typography"
 
@@ -15,6 +16,7 @@
 @import 'components/breadcrump'
 @import 'components/tables'
 @import 'components/vertical_tabs'
+@import 'components/interview'
 
 @import 'pages/main'
 @import 'pages/sicherheit'
@@ -22,19 +24,13 @@
 html
   height: 100%
 body
-  background: #d4d4d4 url("../images/background.png")
+  background: $base-color
   text-align: center
   font-family: sans-serif
   height: 100%
 
-h1
-  color: rgba(255, 255, 255, .5)
-  font-weight: bold
-  font-size: 32px
-  letter-spacing: -1px
-  text-transform: uppercase
-  margin: 0
-
+.content
+  @include outer-container()
 .axis text
   font: 10px sans-serif
 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="72.835px" height="50px" viewBox="0 0 72.835 50" enable-background="new 0 0 72.835 50" xml:space="preserve">
+<g id="Grid" display="none" opacity="0.8">
+	<rect x="-32.157" y="-1186.2" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="48.843" y="-1186.2" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="-113.157" y="-1186.2" display="inline" opacity="0.1" fill="#28AAE2" width="213" height="2372.2"/>
+</g>
+<g id="Header" display="none">
+</g>
+<g id="Landingpage" display="none">
+	<path display="inline" fill="#FFFFFF" d="M180.557,115c0,11.046-8.954,20-20,20H-93.157c-11.046,0-20-8.954-20-20V-3
+		c0-11.046,8.954-20,20-20h253.714c11.046,0,20,8.954,20,20V115z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M175.064,111.588c0,10.407-8.437,18.844-18.844,18.844H-88.821c-10.406,0-18.843-8.437-18.843-18.844V0.412
+		c0-10.407,8.437-18.844,18.843-18.844H156.22c10.407,0,18.844,8.437,18.844,18.844V111.588z"/>
+	<path display="inline" fill="#00B5F1" d="M71.438,11.758H50.229C48.627,5.006,43.051,0,36.417,0s-12.21,5.006-13.812,11.758H1.399
+		C0.626,11.758,0,12.406,0,13.208v35.341C0,49.351,0.626,50,1.399,50h70.039c0.772,0,1.398-0.649,1.398-1.451V13.208
+		C72.835,12.406,72.209,11.758,71.438,11.758z M38.958,30.557h-5.095V18.254h5.095V30.557z M27.697,11.758
+		c1.375-4.006,4.761-6.85,8.721-6.85s7.346,2.844,8.72,6.85H27.697z"/>
+</g>
+<g id="INDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M808.631-21h-19.788H554.917h-394.36H-65.157h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20V-1C828.631-12.046,819.677-21,808.631-21z"/>
+
+		<path display="inline" opacity="0.2" fill="#00B5F1" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M-43.157-16.432h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176c0,10.407,8.437,18.844,18.843,18.844h45.664h546.694v-88.863
+		H-43.157z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M804.294-16.432h-39.451h-205.59H156.22H-43.157h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176
+		c0,10.407,8.437,18.844,18.843,18.844h45.664H156.22h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844V2.412
+		C823.138-7.995,814.702-16.432,804.294-16.432z"/>
+	<g display="inline">
+		<rect x="-113.975" y="20.068" fill="none" width="940.804" height="49.994"/>
+		<text transform="matrix(1 0 0 1 221 36.833)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="22">Transparenz des Waffenexports</text>
+	</g>
+</g>
+<g id="SUBINDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M808.843-741.824h-19.788H68.233h92.324H-65.157h-28c-11.046,0-20,8.954-20,20v905.938
+		c0,11.046,8.954,20,20,20h28h225.714H68.233h720.822h19.788c11.046,0,20-8.954,20-20v-905.938
+		C828.843-732.87,819.889-741.824,808.843-741.824z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M72.569,199.546h205.59h526.348c10.407,0,18.844-8.437,18.844-18.844v-899.114c0-10.407-8.437-18.844-18.844-18.844H278.159H72.569
+		H-43.157h-45.664c-10.406,0-18.843,8.437-18.843,18.844v899.114c0,10.407,8.437,18.844,18.843,18.844h45.664H72.569z"/>
+</g>
+<g id="EXPERTEN" display="none">
+	<path display="inline" fill="#FFFFFF" d="M-113.157-47.702v321h456v-321H-113.157z M113.978,94.869
+		c-34.005,0-61.571-27.566-61.571-61.571s27.566-61.571,61.571-61.571s61.571,27.566,61.571,61.571S147.983,94.869,113.978,94.869z"
+		/>
+	<g display="inline">
+		<rect x="-95.887" y="25.297" fill="none" width="419.73" height="49.994"/>
+		<text transform="matrix(1 0 0 1 89.9604 44.3467)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="25">Logo</text>
+	</g>
+</g>
+<g id="INTERVIEW" display="none">
+	<path display="inline" fill="#FFFFFF" d="M808.631-64.1h-19.788H554.917h-394.36H-65.157h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20v-58C828.631-55.146,819.677-64.1,808.631-64.1
+		z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M804.294-59.531h-39.451h-205.59H156.22H-43.157h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176
+		c0,10.407,8.437,18.844,18.843,18.844h45.664H156.22h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844v-51.176
+		C823.138-51.095,814.702-59.531,804.294-59.531z"/>
+	<g display="inline">
+		<rect x="-33.975" y="-23.031" fill="none" width="940.804" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -33.9751 -6.2666)" fill="#00B5F1" font-family="'RobotoCondensed-Regular'" font-size="22">Welches sind die größten Datenlücken im Sicherheitsbereich?</text>
+	</g>
+</g>
+<g id="Icons">
+	<path fill="#00B5F1" d="M71.438,11.758H50.229C48.627,5.006,43.051,0,36.417,0s-12.21,5.006-13.812,11.758H1.399
+		C0.626,11.758,0,12.406,0,13.208v35.341C0,49.351,0.626,50,1.399,50h70.039c0.772,0,1.398-0.649,1.398-1.451V13.208
+		C72.835,12.406,72.209,11.758,71.438,11.758z M38.958,30.557h-5.095V18.254h5.095V30.557z M27.697,11.758
+		c1.375-4.006,4.761-6.85,8.721-6.85s7.346,2.844,8.72,6.85H27.697z"/>
+</g>
+</svg>
