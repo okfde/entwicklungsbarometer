@@ -1215,16 +1215,13 @@ h3 {
     width: 48.40764%;
     padding: 20px;
     background: white;
-    margin: 0 0 10px 0; }
+    margin-bottom: 10px; }
     /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
     .ngos ul li:last-child {
       margin-right: 0; }
     /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
-    .ngos ul li:nth-child(2n) {
+    .ngos ul li:nth-child(even) {
       margin-right: 0; }
-    /* line 57, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
-    .ngos ul li:nth-child(2n+1) {
-      clear: left; }
 
 /* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
 #main h1 {
