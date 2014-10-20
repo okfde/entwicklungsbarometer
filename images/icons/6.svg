@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="126.809px" height="50px" viewBox="0 0 126.809 50" enable-background="new 0 0 126.809 50" xml:space="preserve">
+<g id="Grid" display="none" opacity="0.8">
+	<rect x="-5.927" y="-1190.2" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="75.073" y="-1190.2" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="-5.927" y="-1190.2" display="inline" opacity="0.1" fill="#28AAE2" width="213" height="2372.2"/>
+</g>
+<g id="Header" display="none">
+</g>
+<g id="Landingpage" display="none">
+	<path display="inline" fill="#FFFFFF" d="M206.861,111c0,11.046-8.954,20-20,20H-66.853c-11.046,0-20-8.954-20-20V-7
+		c0-11.046,8.954-20,20-20h253.714c11.046,0,20,8.954,20,20V111z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M201.368,107.588c0,10.407-8.437,18.844-18.844,18.844H-62.517c-10.406,0-18.843-8.437-18.843-18.844V-3.588
+		c0-10.407,8.437-18.844,18.843-18.844h245.041c10.407,0,18.844,8.437,18.844,18.844V107.588z"/>
+	<g display="inline">
+		<rect x="29.122" y="16.816" fill="#00B5F1" width="12.611" height="13.064"/>
+		<rect x="43.114" y="12.205" fill="#00B5F1" width="12.612" height="17.676"/>
+		<rect x="57.108" y="16.816" fill="#00B5F1" width="12.61" height="13.09"/>
+		<rect x="71.1" y="12.205" fill="#00B5F1" width="12.613" height="17.684"/>
+		<rect x="96.885" y="16.816" fill="#00B5F1" width="12.61" height="8.645"/>
+		<path fill="#00B5F1" d="M96.54,26.841l-13.301,4.412H26.37V18.584l0.641-2.688H16.897v-4.344h11.147l0.617-2.599H0l4.355,26.143
+			c0,0,2.981,14.904,16.282,14.904c13.3,0,89.432,0,89.432,0s9.63-18.495,16.739-23.159H96.54z"/>
+		<rect x="10.098" y="2.867" fill="#00B5F1" width="1.26" height="13.284"/>
+		<rect x="6.59" fill="#00B5F1" width="2.517" height="16.151"/>
+	</g>
+</g>
+<g id="INDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M186.861-25h-19.788H-66.853h-394.36h-225.714h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20V-5C206.861-16.046,197.907-25,186.861-25z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M182.524-20.432h-39.451h-205.59H-465.55h-199.377h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176
+		c0,10.407,8.437,18.844,18.843,18.844h45.664h199.377h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844V-1.588
+		C201.368-11.995,192.932-20.432,182.524-20.432z"/>
+	<g display="inline">
+		<rect x="-735.745" y="16.068" fill="none" width="940.804" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -400.77 32.833)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="22">Transparenz des Waffenexports</text>
+	</g>
+</g>
+<g id="SUBINDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M187.073-745.824h-19.788h-720.822h92.324h-225.714h-28c-11.046,0-20,8.954-20,20v905.938
+		c0,11.046,8.954,20,20,20h28h225.714h-92.324h720.822h19.788c11.046,0,20-8.954,20-20v-905.938
+		C207.073-736.87,198.119-745.824,187.073-745.824z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M-549.201,195.546h205.59h526.348c10.407,0,18.844-8.437,18.844-18.844v-899.114c0-10.407-8.437-18.844-18.844-18.844h-526.348
+		h-205.59h-115.726h-45.664c-10.406,0-18.843,8.437-18.843,18.844v899.114c0,10.407,8.437,18.844,18.843,18.844h45.664H-549.201z"/>
+</g>
+<g id="EXPERTEN" display="none">
+	<path display="inline" fill="#FFFFFF" d="M-248.927-51.702v321h456v-321H-248.927z M-18.457,90.869
+		c-34.005,0-61.571-27.566-61.571-61.571s27.566-61.571,61.571-61.571S43.114-4.707,43.114,29.298S15.548,90.869-18.457,90.869z"/>
+	<g display="inline">
+		<rect x="-230.792" y="21.297" fill="none" width="419.73" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -44.9443 40.3467)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="25">Logo</text>
+	</g>
+</g>
+<g id="INTERVIEW" display="none">
+	<path display="inline" fill="#FFFFFF" d="M186.861-68.1h-19.788H-66.853h-394.36h-225.714h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20v-58C206.861-59.146,197.907-68.1,186.861-68.1
+		z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M182.524-63.531h-39.451h-205.59H-465.55h-199.377h-45.664c-10.406,0-18.843,8.437-18.843,18.844V6.488
+		c0,10.407,8.437,18.844,18.843,18.844h45.664h199.377h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844v-51.176
+		C201.368-55.095,192.932-63.531,182.524-63.531z"/>
+	<g display="inline">
+		<rect x="-655.745" y="-27.031" fill="none" width="940.804" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -655.7451 -10.2666)" fill="#00B5F1" font-family="'RobotoCondensed-Regular'" font-size="22">Welches sind die größten Datenlücken im Sicherheitsbereich?</text>
+	</g>
+</g>
+<g id="Icons">
+	<g>
+		<rect x="29.122" y="16.816" fill="#00B5F1" width="12.611" height="13.064"/>
+		<rect x="43.114" y="12.205" fill="#00B5F1" width="12.612" height="17.676"/>
+		<rect x="57.108" y="16.816" fill="#00B5F1" width="12.61" height="13.09"/>
+		<rect x="71.1" y="12.205" fill="#00B5F1" width="12.613" height="17.684"/>
+		<rect x="96.885" y="16.816" fill="#00B5F1" width="12.61" height="8.645"/>
+		<path fill="#00B5F1" d="M96.54,26.841l-13.301,4.412H26.37V18.584l0.641-2.688H16.897v-4.344h11.147l0.617-2.599H0l4.355,26.143
+			c0,0,2.981,14.904,16.282,14.904c13.3,0,89.432,0,89.432,0s9.63-18.495,16.739-23.159H96.54z"/>
+		<rect x="10.098" y="2.867" fill="#00B5F1" width="1.26" height="13.284"/>
+		<rect x="6.59" fill="#00B5F1" width="2.517" height="16.151"/>
+	</g>
+</g>
+</svg>

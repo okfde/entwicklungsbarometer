@@ -9,16 +9,17 @@
     <title>Entwicklungsbarometer</title>
     <link href="stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="javascripts/all.js" type="text/javascript"></script>
-    <header class='centered-navigation'>
-      <div class='centered-navigation-wrapper'>
+    <header class='navigation'>
+      <div class='navigation-wrapper'>
+        <div class='logo'>
+          <a href="./"><img src="images/logo.svg" />
+          </a>
+        </div>
         <a class='mobile-logo' href='javascript:void(0)'>
           <img alt='' src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png'>
         </a>
-        <a class='centered-navigation-menu-button' href=''>MENU</a>
-        <ul class='centered-navigation-menu'>
-          <li class='nav-link'>
-            <a href="./">Übersicht</a>
-          </li>
+        <a class='navigation-menu-button' href=''>MENU</a>
+        <ul class='navigation-menu'>
           <li class='nav-link more'>
             <a href="./">Indikatoren</a>
             <ul class='submenu'>
@@ -46,63 +47,73 @@
             </ul>
           </li>
           <li class='nav-link'>
-            <a href='javascript:void(0)'>Kontakt</a>
+            <a href='javascript:void(0)'>Experten</a>
           </li>
           <li class='nav-link'>
-            <a href='javascript:void(0)'>Über uns</a>
+            <a href='javascript:void(0)'>Kontakt</a>
           </li>
         </ul>
       </div>
     </header>
     <div class='breadcrump'></div>
-    <section id='hebel'>
-      <h1>In der deutschen Politik gibt es viele Hebel globale Armut zu bekämpfen, aber werden sie genutzt?</h1>
-    </section>
-    <h2 class='sub-header'>Entdecke die wichtigsten Hebel für Armutsbekämpfung in 7 Politikbereichen</h2>
-    <div class='grid-items'>
-      <a class="grid-item grid-item-image sicherheit" href="sicherheit/"><h1>Sicherheit</h1>
-      </a>
-      <a class='grid-item grid-item-image technologie' href='javascript:void(0)'>
-        <h1>Technologie</h1>
-      </a>
-      <a class='grid-item grid-item-image umwelt' href='javascript:void(0)'>
-        <h1>Umwelt</h1>
-      </a>
-      <a class='grid-item grid-item-image migration' href='javascript:void(0)'>
-        <h1>Migration</h1>
-      </a>
-      <a class='grid-item grid-item-image finanzen' href='javascript:void(0)'>
-        <h1>Investitionspolitik</h1>
-      </a>
-      <a class='grid-item grid-item-image zusammenarbeit' href='javascript:void(0)'>
-        <h1>Entwicklungszusammenarbeit</h1>
-      </a>
-      <a class='grid-item grid-item-image handel' href='javascript:void(0)'>
-        <h1>Handel</h1>
-      </a>
-      <a class='grid-item grid-item-big grid-item-image diskussion' href='javascript:void(0)'>
-        <h1>Diskutieren</h1>
-        <p>Woran sollen wir entwicklungsfreundliche Politik in Deutschland messen? Diskutieren Sie mit!</p>
-      </a>
-    </div>
-    <div class='content-container'>
-      <div class='explanation'>
-        <div class='content'>
-          <p>Tut Deutschland gut? Deutsche Politik hat auf vielfältige Weise Einfluss auf die Bekämpfung von globaler Armut und auf nachhaltige Entwicklung weltweit. Dieser Einfluss ist teils positiv, teils negativ. Der Deutschland-tut-gut Index zeigt die unterschiedlichen Einflussbereichen deutscher Politik übersichtlich und anhand konkreter Indikatoren in sieben Politikfeldern auf. Zu jedem Politikfeld stellen wir Detailanalysen und Daten bereit.</p>
-          <p>Wissenschaftliche Grundlage des Deutschland-tut-gut Indizes ist der Commitment to Development Index des Centers for Global Development sowie die Arbeit von zahlreichen weiteren Organisationen, die zu Einzelthemen arbeiten.</p>
+    <div class='content'>
+      <div id='main'>
+        <h1>In der deutschen Politik gibt es viele Hebel globale Armut zu bekämpfen, aber werden sie genutzt?</h1>
+        <div id='map'>
+          <img src="images/map.svg" />
         </div>
-      </div>
-      <div class='description'>
-        <div class='content'>
-          <p>Ausgangspunkt des Deutschland-tut-gut-Indizes ist der Commitment to Development Index des Centers for Global Development. Dieser Index besteht seit 2003 und vergleicht den Einfluss von 27 OECD Ländern auf globale Armutsbekämpfung und Entwicklung in den Politikbereichen Handel, Migration, Internationale Finanzen, Umwelt, Sicherheit, Technologietransfer und Entwicklungszusammenarbeit. Nach den aktuellen Daten des CDI von 2013 steht Deutschland an 14 Stelle. Der Deutschland-tut-gut übernimmt nur Teile des CDI, stellt aber die Bewertung Deutschlands zu jedem Politikbereich als zusätzliche Information dar.</p>
+        <h2>Entdecke die wichtigsten Hebel für Armutsbekämpfung in 7 Politikbereichen</h2>
+        <div class='description'>
+          <div class='content'>
+            <p>Tut Deutschland gut? Deutsche Politik hat auf vielfältige Weise Einfluss auf die Bekämpfung von globaler Armut und auf nachhaltige Entwicklung weltweit. Dieser Einfluss ist teils positiv, teils negativ. Der Deutschland-tut-gut Index zeigt die unterschiedlichen Einflussbereichen deutscher Politik übersichtlich und anhand konkreter Indikatoren in sieben Politikfeldern auf. Zu jedem Politikfeld stellen wir Detailanalysen und Daten bereit.</p>
+            <p>Wissenschaftliche Grundlage des Deutschland-tut-gut Indizes ist der Commitment to Development Index des Centers for Global Development sowie die Arbeit von zahlreichen weiteren Organisationen, die zu Einzelthemen arbeiten.</p>
+          </div>
         </div>
-      </div>
-      <div id='cdi-index'>
-        <h2>Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.</h2>
-        <div class='cdi-index-overall'></div>
-        <div class='cdi-country-sub-index'>
-          <h4 class='country-sub-label'>Germany</h4>
-          <div class='graph'></div>
+        <div class='grid-items'>
+          <a class="grid-item" href="sicherheit/"><h5 class='sicherheit'>Sicherheit</h5>
+          <p>Wie gut ist Sicherheitspolitik für die Welt?</p>
+          </a>
+          <a class='grid-item' href='javascript:void(0)'>
+            <h5 class='technologie'>Technologie</h5>
+          </a>
+          <a class='grid-item' href='javascript:void(0)'>
+            <h5 class='umwelt'>Umwelt</h5>
+          </a>
+          <a class='grid-item' href='javascript:void(0)'>
+            <h5 class='migration'>Migration</h5>
+          </a>
+          <a class='grid-item' href='javascript:void(0)'>
+            <h5 class='investition'>Investitionspolitik</h5>
+          </a>
+          <a class='grid-item' href='javascript:void(0)'>
+            <h5 class='entwicklungszusammenarbeit'>Entwicklungszusammenarbeit</h5>
+          </a>
+          <a class='grid-item' href='javascript:void(0)'>
+            <h5 class='handel'>Handel</h5>
+          </a>
+        </div>
+        <div class='experten-interview'>
+          <h3>Experten Interview</h3>
+          <div class='interview last'>
+            <div class='interview-image'>
+              <img src="images/interviews/grebe.png" />
+            </div>
+            <div class='interview-content'>
+              <h4>First interview Title or Author</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
+            </div>
+          </div>
+        </div>
+        <div id='cdi-index'>
+          <h4>Bewertung Deutschlands im Commitment to Development Index im internationalen Vergleich.</h4>
+          <div class='content'>
+            <p>Ausgangspunkt des Deutschland-tut-gut-Indizes ist der Commitment to Development Index des Centers for Global Development. Dieser Index besteht seit 2003 und vergleicht den Einfluss von 27 OECD Ländern auf globale Armutsbekämpfung und Entwicklung in den Politikbereichen Handel, Migration, Internationale Finanzen, Umwelt, Sicherheit, Technologietransfer und Entwicklungszusammenarbeit. Nach den aktuellen Daten des CDI von 2013 steht Deutschland an 14 Stelle. Der Deutschland-tut-gut übernimmt nur Teile des CDI, stellt aber die Bewertung Deutschlands zu jedem Politikbereich als zusätzliche Information dar.</p>
+          </div>
+          <div class='cdi-index-overall'></div>
+          <div class='cdi-country-sub-index'>
+            <h4 class='country-sub-label'>Germany</h4>
+            <div class='graph'></div>
+          </div>
         </div>
       </div>
     </div>
