@@ -1,0 +1,70 @@
+.indikator
+  h1
+    @include reset-all
+    @include row()
+    @include span-columns(12)
+    padding-top: 60px
+    &.sicherheit
+      background: url(../images/icons/1.svg) top center no-repeat
+    margin: 0
+  h2
+    margin: 0
+  h3
+    margin: 0 0 1.2em 0
+  #graphic
+    @include row()
+    @include span-columns(12)
+    border-bottom: 1px dashed $dark-grey
+    padding: 0 0 20px 0
+  .sub-indikatoren
+    @include span-columns(12)
+    @include row()
+    +clearfix
+    border-bottom: 1px dashed $dark-grey
+    padding: 0 0 50px 0
+    .description
+      @include span-columns(10 of 12)
+      @include shift(1)
+      @include row()
+      +clearfix
+    ul
+      @include row()
+      @include span-columns(12)
+      +clearfix
+      li
+        border: 1px dashed $dark-grey
+        padding: 25px
+        border-radius: 15px
+        margin: 20px 0 0
+        background: $white
+  .ngos
+    margin-top: 55px
+    @include row()
+    @include span-columns(12)
+    border-bottom: 1px dashed $dark-grey
+    +clearfix
+    ul
+      li
+        @include span-columns(6)
+        @include omega(even)
+        padding: 20px
+        background: $white
+        margin-bottom: 10px
+        h5
+          margin: em(20) 0
+        img
+          border-radius: 50%
+          width: 7em
+          height: 7em
+          background: #ccc
+        p
+          text-align: left
+  .experten-interview
+    margin-top: 30px
+    @include row()
+    @include span-columns(12)
+    border-bottom: 1px dashed $base-border-color
+    .interview
+      @include row()
+      @include span-columns(8)
+      @include shift(2)

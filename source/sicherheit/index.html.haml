@@ -1,51 +1,52 @@
 ---
 title: Entwicklungsbarometer - Sicherheit
 ---
-%section#panzer
-  %h1 Wie gut ist Sicherheitspolitik für die Welt?
-#sicherheit
-  %h2.sub-header Woran messen wir Entwicklungsfreundlichkeit?
-  .grid-items
-    = link_to '/sicherheit/ruestung.html', class: 'grid-item grid-item-image export' do
-      %h1 Waffenexporte in nicht-demokratische Staaten
-    %a.grid-item.grid-item-image.un{href: "javascript:void(0)"}
-      %h1 Militärausgaben für UN mandantierte Peacekeeping Einsätze
-    %a.grid-item.grid-item-image.transparenz{href: "javascript:void(0)"}
-      %h1 Transparenz des Waffenexports
-    %a.grid-item.grid-item-image.abruestung{href: "javascript:void(0)"}
-      %h1 Finanzierung von Abrüstung, Rüstungskontrollle und friedlicher Konfliklösung
-    = partial 'partials/discuss_grid'
+#sicherheit.indikator
+  %h1.sicherheit Sicherheit
+  %h4 Wie gut ist Sicherheitspolitik für die Welt?
+  #graphic
+    Infographic
+  .sub-indikatoren
+    %h1
+      Indikatoren der Sicherheitspolitik
+    = partial 'partials/security/description'
+    %ul
+      %li 
+        = link_to "/sicherheit/ruestung.html" do
+          %h5 Waffenexporte in nicht demokratische Staaten
+      %li 
+        %a
+          %h5 Militärausgaben für UN mandantierte Peacekeeping Einsätze
+      %li 
+        %a
+          %h5 Transparenz des Waffenexports
+      %li 
+        %a
+          %h5 Finanzierung von Abrüstung, Rüstungskontrollle und friedlicher Konfliklösung
+  .ngos
+    %h3 NGOs im Bereich Sicherheit
+    %ul
+      %li
+        %img
+        = partial 'partials/security/bicc'
+      %li
+        %img
+        = partial 'partials/security/gkke'
+      %li
+        %img
+        = partial 'partials/security/aa'
+      %li
+        %img
+        = partial 'partials/security/saferworld'
+  = partial 'partials/interviews'
   #details
     .content-container
-      = partial 'partials/security/description'
       #cdi-index
         %h3 CDI Ranking Sicherheit
         .cdi-index-sicherheit
         .explanation
           .content
             %p Im Deutschland-tut-gut-Projekt halten wir die beiden ersteren Indikatoren nicht für sinnvoll im Hinblick auf Armutsbekämpfung und Entwicklung. Insbesondere militärische Friedensmissionen ohne UN Mandat sind schwer zu bewerten im Hinblick auf ihren entwicklungsfördernden Einfluss. Die Ratifizierung von internationalen Sicherheitsabkommen ist durchaus wichtig für Stabilität und Entwicklung, allerdings haben fast alle OECD Länder fast alle Abkommen ratifiziert, so dass dieser Indikator nicht sinnvoll ist, um Potentiale für eine stärkere Entwicklungsorientierung der Sicherheitspolitik aufzuzeigen.
-      .explanation
-        #ngos
-          %h3 NGOs im Bereich Sicherheit
-          .vertical-tabs-container
-            .vertical-tabs
-              %a.js-vertical-tab.vertical-tab.is-active{href: "#", rel: "tab1"} BICC
-              %a.js-vertical-tab.vertical-tab{href: "#", rel: "tab2"} GKKE
-              %a.js-vertical-tab.vertical-tab{href: "#", rel: "tab3"} Aktion Aufschrei
-              %a.js-vertical-tab.vertical-tab{href: "#", rel: "tab4"} Saferworld
-            .vertical-tab-content-container
-              %a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading.is-active{href: "", rel: "tab1"} Item 1
-              #tab1.js-vertical-tab-content.vertical-tab-content
-                = partial 'partials/security/bicc'
-              %a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading{href: "", rel: "tab2"} Item 2
-              #tab2.js-vertical-tab-content.vertical-tab-content
-                = partial 'partials/security/gkke'
-              %a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading{href: "", rel: "tab3"} Item 3
-              #tab3.js-vertical-tab-content.vertical-tab-content
-                = partial 'partials/security/aa'
-              %a.js-vertical-tab-accordion-heading.vertical-tab-accordion-heading{href: "", rel: "tab4"} Item 4
-              #tab4.js-vertical-tab-content.vertical-tab-content
-                = partial 'partials/security/saferworld'
           %h4 Weitere relevante Organisationen
           %p
             Neben den hier genannten Organisationen gibt es eine Reihe weiterer Organisationen, die sich durch Öffentlichkeitsarbeit, Recherche und Aktionen gegen Waffenexporte einsetzen. Eine Liste relevanter Organisationen findet sich
