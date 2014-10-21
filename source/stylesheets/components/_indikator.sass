@@ -4,6 +4,7 @@
     @include row()
     @include span-columns(12)
     padding-top: 60px
+    color: $red
     &.sicherheit
       background: url(../images/icons/1.svg) top center no-repeat
     margin: 0
@@ -22,6 +23,8 @@
     +clearfix
     border-bottom: 1px dashed $dark-grey
     padding: 0 0 50px 0
+    h1
+      color: $light-blue
     .description
       @include span-columns(10 of 12)
       @include shift(1)
@@ -36,7 +39,11 @@
         padding: 25px
         border-radius: 15px
         margin: 20px 0 0
-        background: $white
+        background: $red
+        a
+          color: $white
+          &:hover
+            color: $mid-grey
   .ngos
     margin-top: 55px
     @include row()
