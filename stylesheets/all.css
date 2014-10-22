@@ -758,7 +758,7 @@ h3 {
   margin-bottom: 1em; }
 /* line 43, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
 .grid-items .grid-item h1 {
-  color: #01b5f0;
+  color: #cd2400;
   font-size: 1.3em;
   margin-top: 3em;
   margin-bottom: 0.4em;
@@ -766,7 +766,7 @@ h3 {
 /* line 49, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
 .grid-items .grid-item p {
   margin: auto;
-  color: rgba(1, 181, 240, 0.7); }
+  color: rgba(205, 36, 0, 0.7); }
 @media screen and (min-width: 53.75em) {
   /* line 53, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_grid.sass */
   .grid-items .grid-item-big {
@@ -1142,6 +1142,7 @@ h3 {
   margin-right: 3.18471%;
   width: 100%;
   padding-top: 60px;
+  color: #cd2400;
   margin: 0; }
   /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
   .indikator h1:after {
@@ -1151,16 +1152,16 @@ h3 {
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
   .indikator h1:last-child {
     margin-right: 0; }
-  /* line 7, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator h1.sicherheit {
     background: url(../images/icons/1.svg) top center no-repeat; }
-/* line 10, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 11, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator h2 {
   margin: 0; }
-/* line 12, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator h3 {
   margin: 0 0 1.2em 0; }
-/* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator #graphic {
   display: block;
   float: left;
@@ -1177,7 +1178,7 @@ h3 {
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
   .indikator #graphic:last-child {
     margin-right: 0; }
-/* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator .sub-indikatoren {
   float: left;
   display: block;
@@ -1199,7 +1200,11 @@ h3 {
     content: "";
     display: table;
     clear: both; }
-  /* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  .indikator .sub-indikatoren h1 {
+    padding: 0.75em 0;
+    color: #01b5f0; }
+  /* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .sub-indikatoren .description {
     float: left;
     display: block;
@@ -1220,7 +1225,7 @@ h3 {
       content: "";
       display: table;
       clear: both; }
-  /* line 30, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .sub-indikatoren ul {
     display: block;
     float: left;
@@ -1240,14 +1245,20 @@ h3 {
       content: "";
       display: table;
       clear: both; }
-    /* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
     .indikator .sub-indikatoren ul li {
       border: 1px dashed lightgray;
       padding: 25px;
       border-radius: 15px;
       margin: 20px 0 0;
-      background: white; }
-/* line 40, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+      background: #cd2400; }
+      /* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+      .indikator .sub-indikatoren ul li a {
+        color: white; }
+        /* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+        .indikator .sub-indikatoren ul li a:hover {
+          color: #f3f3f3; }
+/* line 48, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator .ngos {
   margin-top: 55px;
   display: block;
@@ -1269,7 +1280,7 @@ h3 {
     content: "";
     display: table;
     clear: both; }
-  /* line 47, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 55, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .ngos ul li {
     float: left;
     display: block;
@@ -1284,19 +1295,19 @@ h3 {
     /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
     .indikator .ngos ul li:nth-child(even) {
       margin-right: 0; }
-    /* line 53, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+    /* line 61, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
     .indikator .ngos ul li h5 {
       margin: 1.25em 0; }
-    /* line 55, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+    /* line 63, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
     .indikator .ngos ul li img {
       border-radius: 50%;
       width: 7em;
       height: 7em;
       background: #cccccc; }
-    /* line 60, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+    /* line 68, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
     .indikator .ngos ul li p {
       text-align: left; }
-/* line 62, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 70, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator .experten-interview {
   margin-top: 30px;
   display: block;
@@ -1313,7 +1324,7 @@ h3 {
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
   .indikator .experten-interview:last-child {
     margin-right: 0; }
-  /* line 67, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 75, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .experten-interview .interview {
     display: block;
     float: left;
@@ -1329,6 +1340,94 @@ h3 {
     /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
     .indikator .experten-interview .interview:last-child {
       margin-right: 0; }
+/* line 80, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+.indikator #cdi-index .explanation {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 48.40764%;
+  text-align: left; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  .indikator #cdi-index .explanation:last-child {
+    margin-right: 0; }
+  /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
+  .indikator #cdi-index .explanation:nth-child(even) {
+    margin-right: 0; }
+
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+.sub-indikator h1 {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.75em;
+  border-bottom: 1px dashed lightgray; }
+/* line 6, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+.sub-indikator h2 {
+  padding: 0.5em;
+  margin: 0 0 0.75em 0;
+  border-bottom: 1px dashed lightgray;
+  font-size: 1.75em;
+  color: #01b5f0; }
+/* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+.sub-indikator .nav .prev, .sub-indikator .nav .next {
+  width: 80px;
+  height: 1.75em;
+  margin: 0.25em;
+  background: url(../images/pfeil.png) center left no-repeat; }
+  /* line 18, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+  .sub-indikator .nav .prev.hidden, .sub-indikator .nav .next.hidden {
+    visibility: hidden; }
+/* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+.sub-indikator .nav .prev {
+  float: left; }
+/* line 22, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+.sub-indikator .nav .next {
+  float: right;
+  background: url(../images/pfeil_next.png) center left no-repeat; }
+/* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_sub-indikator.sass */
+.sub-indikator .chart rect {
+  fill: #01b5f0; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+#cdi-index {
+  margin: 2em 0; }
+  /* line 3, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index .cdi-index-overall {
+    float: left;
+    display: block;
+    margin-right: 3.18471%;
+    width: 74.20382%; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #cdi-index .cdi-index-overall:last-child {
+      margin-right: 0; }
+    /* line 5, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+    #cdi-index .cdi-index-overall .label {
+      font-size: 0.7em; }
+  /* line 7, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index .cdi-country-sub-index {
+    float: left;
+    display: block;
+    margin-right: 3.18471%;
+    width: 22.61146%; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #cdi-index .cdi-country-sub-index:last-child {
+      margin-right: 0; }
+    /* line 9, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+    #cdi-index .cdi-country-sub-index text {
+      font-size: 0.7em; }
+  /* line 11, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index .axis text {
+    font-size: 14px; }
+  /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index .Germany rect.score {
+    fill: #cd2400; }
+  /* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index rect.score {
+    fill: #01b5f0; }
+  /* line 18, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index rect.max-score {
+    fill: #f3f3f3; }
+  /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
+  #cdi-index h2 {
+    padding: 0 0 1em 0; }
 
 /* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
 #main h1 {
@@ -1420,7 +1519,7 @@ h3 {
     padding-top: 70px;
     background: none;
     text-transform: uppercase;
-    color: #01b5f0;
+    color: #cd2400;
     font-weight: normal; }
     /* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
     #main .grid-items .grid-item h5.sicherheit {
@@ -1499,7 +1598,7 @@ h3 {
   float: left;
   display: block;
   margin-right: 3.18471%;
-  width: 82.80255%;
+  width: 100%;
   display: block;
   margin-top: 30px; }
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
@@ -1510,131 +1609,84 @@ h3 {
     content: "";
     display: table;
     clear: both; }
-/* line 74, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-#main #cdi-index {
-  margin: 2em 0; }
-  /* line 76, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-  #main #cdi-index .cdi-index-overall {
-    float: left;
-    display: block;
-    margin-right: 3.84615%;
-    width: 79.23077%; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    #main #cdi-index .cdi-index-overall:last-child {
-      margin-right: 0; }
-    /* line 78, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-    #main #cdi-index .cdi-index-overall .label {
-      font-size: 0.7em; }
-  /* line 80, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-  #main #cdi-index .cdi-country-sub-index {
-    float: left;
-    display: block;
-    margin-right: 3.84615%;
-    width: 16.92308%; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    #main #cdi-index .cdi-country-sub-index:last-child {
-      margin-right: 0; }
-    /* line 82, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-    #main #cdi-index .cdi-country-sub-index text {
-      font-size: 0.7em; }
-  /* line 84, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-  #main #cdi-index .axis text {
-    font-size: 14px; }
-  /* line 86, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-  #main #cdi-index .Germany rect.score {
-    fill: red; }
-  /* line 89, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-  #main #cdi-index rect.score {
-    fill: green; }
-  /* line 91, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
-  #main #cdi-index rect.max-score {
-    fill: #eeeeee; }
 
-/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-#ruestung {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
-  #ruestung:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 3, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung h3 {
-    margin: 40px 0; }
-  /* line 5, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung p {
-    text-align: left; }
-  /* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung table th {
-    text-align: center; }
-  /* line 11, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung table td.positive {
-    color: green; }
-  /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung table td.negative {
-    color: red; }
-  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung .ruestung-2013-chart {
-    float: left;
-    display: block;
-    margin-right: 3.18471%;
-    width: 48.40764%; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    #ruestung .ruestung-2013-chart:last-child {
-      margin-right: 0; }
-  /* line 17, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung .ruestung-2013-table {
-    float: left;
-    display: block;
-    margin-right: 3.18471%;
-    width: 48.40764%;
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung h3 {
+  margin: 40px 0; }
+/* line 4, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung p {
+  text-align: left; }
+/* line 7, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung table th {
+  text-align: center; }
+/* line 10, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung table td.positive {
+  color: #98bc5c; }
+/* line 12, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung table td.negative {
+  color: #cd2400; }
+/* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung .ruestung-2013-chart {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 48.40764%; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #ruestung .ruestung-2013-chart:last-child {
     margin-right: 0; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    #ruestung .ruestung-2013-table:last-child {
-      margin-right: 0; }
-    /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-    #ruestung .ruestung-2013-table table {
-      margin: 0;
-      width: 99%; }
-  /* line 23, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung .export-2013-table {
-    float: left;
-    display: block;
-    margin-right: 3.18471%;
-    width: 82.80255%; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    #ruestung .export-2013-table:last-child {
-      margin-right: 0; }
-  /* line 25, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung .export-2013-explanation {
-    float: left;
-    display: block;
-    margin-right: 3.18471%;
-    width: 14.01274%; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    #ruestung .export-2013-explanation:last-child {
-      margin-right: 0; }
-  /* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung .axis text {
-    font: 10px sans-serif; }
-  /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #ruestung .axis path,
-  #ruestung .axis line {
-    fill: none;
-    stroke: black;
-    shape-rendering: crispEdges; }
+/* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung .ruestung-2013-table {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 48.40764%;
+  margin-right: 0; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #ruestung .ruestung-2013-table:last-child {
+    margin-right: 0; }
+  /* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  #ruestung .ruestung-2013-table table {
+    margin: 0;
+    width: 99%; }
+/* line 22, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung .export-2013-table {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 82.80255%; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #ruestung .export-2013-table:last-child {
+    margin-right: 0; }
+/* line 24, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung .export-2013-explanation {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 14.01274%;
+  margin-right: 0;
+  margin-top: 0.75em; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #ruestung .export-2013-explanation:last-child {
+    margin-right: 0; }
+/* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung .axis text {
+  font: 10px sans-serif; }
+/* line 32, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#ruestung .axis path,
+#ruestung .axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges; }
 
-/* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+/* line 37, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
 section#panzer {
   padding: 50px;
   background-image: url(../images/panzer.jpg); }
-  /* line 39, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+  /* line 40, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
   section#panzer h1 {
     margin-top: 30%; }
 
-/* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+/* line 45, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
 .explanation #ngos {
   float: left;
   display: block;
@@ -1645,18 +1697,18 @@ section#panzer {
   .explanation #ngos:last-child {
     margin-right: 0; }
 
-/* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 html {
   height: 100%; }
 
-/* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 30, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 body {
   background: #f9f9f9;
   text-align: center;
   font-family: sans-serif;
   height: 100%; }
 
-/* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .content {
   max-width: 68em;
   margin-left: auto;
@@ -1667,11 +1719,11 @@ body {
     display: table;
     clear: both; }
 
-/* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .axis text {
   font: 10px sans-serif; }
 
-/* line 39, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .axis path,
 .axis line {
   fill: none;

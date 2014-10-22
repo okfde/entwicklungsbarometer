@@ -18,15 +18,15 @@
 		M201.368,107.588c0,10.407-8.437,18.844-18.844,18.844H-62.517c-10.406,0-18.843-8.437-18.843-18.844V-3.588
 		c0-10.407,8.437-18.844,18.843-18.844h245.041c10.407,0,18.844,8.437,18.844,18.844V107.588z"/>
 	<g display="inline">
-		<rect x="29.122" y="16.816" fill="#00B5F1" width="12.611" height="13.064"/>
-		<rect x="43.114" y="12.205" fill="#00B5F1" width="12.612" height="17.676"/>
-		<rect x="57.108" y="16.816" fill="#00B5F1" width="12.61" height="13.09"/>
-		<rect x="71.1" y="12.205" fill="#00B5F1" width="12.613" height="17.684"/>
-		<rect x="96.885" y="16.816" fill="#00B5F1" width="12.61" height="8.645"/>
-		<path fill="#00B5F1" d="M96.54,26.841l-13.301,4.412H26.37V18.584l0.641-2.688H16.897v-4.344h11.147l0.617-2.599H0l4.355,26.143
+		<rect x="29.122" y="16.816" fill="#CD2400" width="12.611" height="13.064"/>
+		<rect x="43.114" y="12.205" fill="#CD2400" width="12.612" height="17.676"/>
+		<rect x="57.108" y="16.816" fill="#CD2400" width="12.61" height="13.09"/>
+		<rect x="71.1" y="12.205" fill="#CD2400" width="12.613" height="17.684"/>
+		<rect x="96.885" y="16.816" fill="#CD2400" width="12.61" height="8.645"/>
+		<path fill="#CD2400" d="M96.54,26.841l-13.301,4.412H26.37V18.584l0.641-2.688H16.897v-4.344h11.147l0.617-2.599H0l4.355,26.143
 			c0,0,2.981,14.904,16.282,14.904c13.3,0,89.432,0,89.432,0s9.63-18.495,16.739-23.159H96.54z"/>
-		<rect x="10.098" y="2.867" fill="#00B5F1" width="1.26" height="13.284"/>
-		<rect x="6.59" fill="#00B5F1" width="2.517" height="16.151"/>
+		<rect x="10.098" y="2.867" fill="#CD2400" width="1.26" height="13.284"/>
+		<rect x="6.59" fill="#CD2400" width="2.517" height="16.151"/>
 	</g>
 </g>
 <g id="INDIKATOR" display="none">
@@ -70,20 +70,20 @@
 		C201.368-55.095,192.932-63.531,182.524-63.531z"/>
 	<g display="inline">
 		<rect x="-655.745" y="-27.031" fill="none" width="940.804" height="49.994"/>
-		<text transform="matrix(1 0 0 1 -655.7451 -10.2666)" fill="#00B5F1" font-family="'RobotoCondensed-Regular'" font-size="22">Welches sind die größten Datenlücken im Sicherheitsbereich?</text>
+		<text transform="matrix(1 0 0 1 -655.7451 -10.2666)" fill="#CD2400" font-family="'RobotoCondensed-Regular'" font-size="22">Welches sind die größten Datenlücken im Sicherheitsbereich?</text>
 	</g>
 </g>
 <g id="Icons">
 	<g>
-		<rect x="29.122" y="16.816" fill="#00B5F1" width="12.611" height="13.064"/>
-		<rect x="43.114" y="12.205" fill="#00B5F1" width="12.612" height="17.676"/>
-		<rect x="57.108" y="16.816" fill="#00B5F1" width="12.61" height="13.09"/>
-		<rect x="71.1" y="12.205" fill="#00B5F1" width="12.613" height="17.684"/>
-		<rect x="96.885" y="16.816" fill="#00B5F1" width="12.61" height="8.645"/>
-		<path fill="#00B5F1" d="M96.54,26.841l-13.301,4.412H26.37V18.584l0.641-2.688H16.897v-4.344h11.147l0.617-2.599H0l4.355,26.143
+		<rect x="29.122" y="16.816" fill="#CD2400" width="12.611" height="13.064"/>
+		<rect x="43.114" y="12.205" fill="#CD2400" width="12.612" height="17.676"/>
+		<rect x="57.108" y="16.816" fill="#CD2400" width="12.61" height="13.09"/>
+		<rect x="71.1" y="12.205" fill="#CD2400" width="12.613" height="17.684"/>
+		<rect x="96.885" y="16.816" fill="#CD2400" width="12.61" height="8.645"/>
+		<path fill="#CD2400" d="M96.54,26.841l-13.301,4.412H26.37V18.584l0.641-2.688H16.897v-4.344h11.147l0.617-2.599H0l4.355,26.143
 			c0,0,2.981,14.904,16.282,14.904c13.3,0,89.432,0,89.432,0s9.63-18.495,16.739-23.159H96.54z"/>
-		<rect x="10.098" y="2.867" fill="#00B5F1" width="1.26" height="13.284"/>
-		<rect x="6.59" fill="#00B5F1" width="2.517" height="16.151"/>
+		<rect x="10.098" y="2.867" fill="#CD2400" width="1.26" height="13.284"/>
+		<rect x="6.59" fill="#CD2400" width="2.517" height="16.151"/>
 	</g>
 </g>
 </svg>
