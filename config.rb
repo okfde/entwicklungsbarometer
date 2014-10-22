@@ -47,6 +47,10 @@ end
 #   end
 # end
 
+data.experten.each do |experte|
+  proxy "/experten/#{experte.slug}.html", "/experten/experte.html", locals: { experte: experte }
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

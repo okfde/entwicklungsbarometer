@@ -1,0 +1,23 @@
+---
+title: Entwicklungsbarometer - Experten
+---
+#interview
+  .headline
+    %h3 Experten Interview
+  .nav
+    = partial "partials/interview", locals: experte
+  .experten-interview
+    - data.interviews[experte.slug].questions.each do |interview_questions|
+      .interview-question
+        .question
+          %h5= interview_questions.question
+        .answer= interview_questions.answer
+  .ngos
+    %h3 NGOs im Bereich Sicherheit
+    %ul
+      %li
+        %img
+        = partial 'partials/security/bicc'
+      %li
+        %img
+        = partial 'partials/security/gkke'
