@@ -1,0 +1,10 @@
+- name: Jan Grebe S
+  image: grebe.png
+  text: grebe
+  block: sicherheit
+  toplevel: true
+- name: Jan Grebe T
+  image: grebe.png
+  text: grebe
+  block: technologie
+  toplevel: true

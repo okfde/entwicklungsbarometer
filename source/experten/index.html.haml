@@ -6,11 +6,8 @@ title: Entwicklungsbarometer - Experten
     %h3 Experten Interviews
   .interview-container
     .interviews
-      = partial "partials/interview"
-      = partial "partials/interview"
-      = partial "partials/interview"
-      = partial "partials/interview"
-      = partial "partials/interview"
+      - data.experten.each do |experte|
+        = partial "partials/interview", locals: experte
 .ngos
   %h3 Unsere Partner
   %ul

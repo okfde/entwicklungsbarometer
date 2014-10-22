@@ -1,6 +1,6 @@
 .interview.last
   .interview-image
-    = image_tag 'interviews/grebe.png'
+    = image_tag "interviews/#{image}"
   .interview-content
-    %h4 First interview Title or Author
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.
+    %h4= name
+    = partial "partials/experten/#{text}"
