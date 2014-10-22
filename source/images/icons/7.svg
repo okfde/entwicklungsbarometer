@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="78.207px" height="57.604px" viewBox="0 0 78.207 57.604" enable-background="new 0 0 78.207 57.604" xml:space="preserve">
+<g id="Grid" display="none" opacity="0.8">
+	<rect x="-27.517" y="-1361.209" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="53.483" y="-1361.209" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="-189.517" y="-1361.209" display="inline" opacity="0.1" fill="#28AAE2" width="213" height="2372.2"/>
+	<rect x="53.483" y="-1361.209" display="inline" opacity="0.1" fill="#28AAE2" width="213" height="2372.2"/>
+</g>
+<g id="Header" display="none">
+</g>
+<g id="Landingpage" display="none">
+	<path display="inline" fill="#FFFFFF" d="M185.148,117.99c0,11.046-8.954,20-20,20H-88.566c-11.046,0-20-8.954-20-20v-118
+		c0-11.046,8.954-20,20-20h253.714c11.046,0,20,8.954,20,20V117.99z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M179.655,114.578c0,10.407-8.437,18.844-18.844,18.844H-84.229c-10.407,0-18.843-8.437-18.843-18.844V3.402
+		c0-10.407,8.437-18.844,18.843-18.844h245.041c10.407,0,18.844,8.437,18.844,18.844V114.578z"/>
+	<g display="inline">
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.2252" stroke-miterlimit="10" d="M57.838,8.383
+			c-2.662-5.166-16.507,0.42-20.735,0.798C30.02,9.812,23.842,5.014,17.988,1.838c-0.42-0.227-0.885-0.732-1.261-1.023
+			C13.864,3.66,3.586,16.193,0.875,19.316c2.62,2.162,4.872,4.49,6.669,7.437c1.83,3,3.77,4.938,6.392,7.388
+			c3.092,2.893,5.429,6.522,8.438,9.481c3.139,3.087,6.513,5.688,9.767,8.616c2.664,2.391,10.279,6.317,10.694,0.337
+			c1.96,2.504,7.66,1.796,8.294-1.74c1.491,1.279,4.609,1.146,6.298,0.188c2.411-1.367,2.197-3.443,2.347-5.882
+			c5.81,1.312,7.274-5.256,4.663-9.744c-3.407-5.854-9.607-8.389-6.177-16.25"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.2252" stroke-miterlimit="10" d="M61.847,2.475
+			c-2.706,2.621-3.344,7.626-7.82,7.806c-1.991,0.083-3.522-0.174-5.057-1.477c-1.574-1.34-2.136-3.606-4.015-4.602
+			c-7.28-3.859-11.609,6.938-17.093,9.669c-2.225,1.109-7.845,1.458-6.501,5.44c1.115,3.311,6.518,2.474,8.871,1.993
+			c1.849-0.373,3.483-0.941,5.181-1.793c1.051-0.524,3.291-2.156,4.489-1.856c1.063,0.268,2.399,2.339,3.318,3.024
+			c1.4,1.044,2.954,1.866,4.686,2.322c1.905,0.497,3.335,0.154,4.813,1.27c1.208,0.914,2.298,2.361,3.275,3.482
+			c2.08,2.39,3.949,4.886,5.802,7.443c0.996,1.374,1.451,2.728,2.849,1.26c0.947-0.996,1.047-3.421,1.589-4.646
+			c1.685-3.795,4.913-5.541,8.289-7.552c0.918-0.545,1.787-1.084,2.735-1.523L61.847,2.475z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.2252" stroke-miterlimit="10" d="M9.039,37.619
+			c1.501,2.11,4.835,0.476,6.647-0.7c1.883-1.224,3.784-3.498,2.218-5.769c-1.288-1.868-4.15-1.667-5.906-0.921
+			C11.999,30.229,5.769,33.01,9.039,37.619z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.3755" stroke-miterlimit="10" d="M12.969,44.401
+			c2.156,2.471,5.447,0.258,7.506-1.046c2.136-1.358,4.337-3.613,2.558-6.136c-1.462-2.074-4.081-1.593-6.076-0.762
+			C16.957,36.458,8.811,39.636,12.969,44.401z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.3755" stroke-miterlimit="10" d="M19.161,50.452
+			c2.158,2.471,5.447,0.258,7.505-1.048c2.139-1.357,4.337-3.612,2.56-6.13c-1.462-2.077-4.083-1.596-6.078-0.766
+			C23.148,42.509,15.001,45.689,19.161,50.452z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.3755" stroke-miterlimit="10" d="M25.917,55.798
+			c2.157,2.473,5.447,0.263,7.504-1.048c2.137-1.354,4.337-3.609,2.559-6.131c-1.461-2.076-4.082-1.593-6.078-0.763
+			C29.903,47.856,21.757,51.038,25.917,55.798z"/>
+	</g>
+</g>
+<g id="INDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M489.271-86.01h-19.788H235.557h-394.36h-225.714h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20v-58
+		C509.271-77.056,500.317-86.01,489.271-86.01z"/>
+
+		<path display="inline" opacity="0.2" fill="#CD2400" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M-362.517-81.441h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176c0,10.407,8.437,18.844,18.843,18.844h45.664h367v-88.863
+		H-362.517z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M484.934-81.441h-39.451h-205.59H-163.14h-199.377h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176
+		c0,10.407,8.437,18.844,18.843,18.844h45.664h199.377h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844v-51.176
+		C503.778-73.005,495.341-81.441,484.934-81.441z"/>
+	<g display="inline">
+		<rect x="-433.335" y="-45.274" fill="none" width="940.804" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -293.2935 -28.5107)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="22">Finanzierung von Abrüstung, Rüstungskontrollle und friedlicher Konfliklösung</text>
+	</g>
+</g>
+<g id="SUBINDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M489.483-916.834h-19.788h-720.822h92.324h-225.714h-28c-11.046,0-20,8.954-20,20V9.104
+		c0,11.046,8.954,20,20,20h28h225.714h-92.324h720.822h19.788c11.046,0,20-8.954,20-20v-905.938
+		C509.483-907.88,500.529-916.834,489.483-916.834z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M-246.792,24.536h205.59h526.348c10.407,0,18.844-8.437,18.844-18.844v-899.114c0-10.407-8.437-18.844-18.844-18.844H-41.202
+		h-205.59h-115.726h-45.664c-10.406,0-18.843,8.437-18.843,18.844V5.692c0,10.407,8.437,18.844,18.843,18.844h45.664H-246.792z"/>
+</g>
+<g id="EXPERTEN" display="none">
+	<path display="inline" fill="#FFFFFF" d="M53.483-222.712v321h456v-321H53.483z M283.953-80.141
+		c-34.005,0-61.571-27.566-61.571-61.571s27.566-61.571,61.571-61.571s61.571,27.566,61.571,61.571S317.958-80.141,283.953-80.141z"
+		/>
+	<path display="inline" fill="#FFFFFF" d="M-432.517-222.712v321h456v-321H-432.517z M-205.382-80.141
+		c-34.005,0-61.571-27.566-61.571-61.571s27.566-61.571,61.571-61.571s61.571,27.566,61.571,61.571S-171.377-80.141-205.382-80.141z
+		"/>
+	<g display="inline">
+		<rect x="-415.248" y="-49.713" fill="none" width="419.73" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -270.0796 -30.6631)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="25">Stiftung für...</text>
+	</g>
+	<g display="inline">
+		<rect x="71.618" y="-49.713" fill="none" width="419.73" height="49.994"/>
+		<text transform="matrix(1 0 0 1 233.9185 -30.6631)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="25">NGO für...</text>
+	</g>
+	<g display="inline">
+		<rect x="-415.248" y="-4.713" fill="none" width="419.73" height="139.001"/>
+		<text transform="matrix(1 0 0 1 -415.2476 5.9551)"><tspan x="0" y="0" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonanti</tspan><tspan x="415.229" y="0" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">-</tspan><tspan x="0" y="21" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">en leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der </tspan><tspan x="0" y="42" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein </tspan><tspan x="0" y="63" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">namens Duden fließt durch ihren Ort und </tspan></text>
+	</g>
+	<g display="inline">
+		<rect x="71.618" y="-4.713" fill="none" width="419.73" height="139.001"/>
+		<text transform="matrix(1 0 0 1 71.6177 5.9551)"><tspan x="0" y="0" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonanti</tspan><tspan x="415.229" y="0" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">-</tspan><tspan x="0" y="21" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">en leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der </tspan><tspan x="0" y="42" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein </tspan><tspan x="0" y="63" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="14">namens Duden fließt durch ihren Ort und versorgt sie mit den n</tspan></text>
+	</g>
+</g>
+<g id="INTERVIEW" display="none">
+	<g display="inline">
+		<rect x="-351.35" y="-117.435" fill="none" width="776.833" height="374.952"/>
+		<text transform="matrix(1 0 0 1 -351.3501 -105.2422)"><tspan x="0" y="0" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen </tspan><tspan x="0" y="24" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt </tspan><tspan x="0" y="48" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene </tspan><tspan x="0" y="72" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein gera</tspan><tspan x="758.938" y="72" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">-</tspan><tspan x="0" y="96" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">dezu unorthographisches Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu </tspan><tspan x="0" y="120" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezei</tspan><tspan x="764.094" y="120" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">-</tspan><tspan x="0" y="144" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">chen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren. Es packte seine sieben Versalien, schob sich </tspan><tspan x="0" y="168" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">sein Initial in den Gürtel und machte sich auf den Weg. Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es </tspan><tspan x="0" y="192" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline </tspan><tspan x="0" y="216" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg </tspan><tspan x="0" y="240" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sierklommen hatte, warf es </tspan><tspan x="0" y="264" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline </tspan><tspan x="0" y="288" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg </tspan><tspan x="0" y="312" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie</tspan></text>
+	</g>
+</g>
+<g id="Icons">
+	<g>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.2252" stroke-miterlimit="10" d="M57.838,8.383
+			c-2.662-5.166-16.507,0.42-20.735,0.798C30.02,9.812,23.842,5.014,17.988,1.838c-0.42-0.227-0.885-0.732-1.261-1.023
+			C13.864,3.66,3.586,16.193,0.875,19.316c2.62,2.162,4.872,4.49,6.669,7.437c1.83,3,3.77,4.938,6.392,7.388
+			c3.092,2.893,5.429,6.522,8.438,9.481c3.139,3.087,6.513,5.688,9.767,8.616c2.664,2.391,10.279,6.317,10.694,0.337
+			c1.96,2.504,7.66,1.796,8.294-1.74c1.491,1.279,4.609,1.146,6.298,0.188c2.411-1.367,2.197-3.443,2.347-5.882
+			c5.81,1.312,7.274-5.256,4.663-9.744c-3.407-5.854-9.607-8.389-6.177-16.25"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.2252" stroke-miterlimit="10" d="M61.847,2.475
+			c-2.706,2.621-3.344,7.626-7.82,7.806c-1.991,0.083-3.522-0.174-5.057-1.477c-1.574-1.34-2.136-3.606-4.015-4.602
+			c-7.28-3.859-11.609,6.938-17.093,9.669c-2.225,1.109-7.845,1.458-6.501,5.44c1.115,3.311,6.518,2.474,8.871,1.993
+			c1.849-0.373,3.483-0.941,5.181-1.793c1.051-0.524,3.291-2.156,4.489-1.856c1.063,0.268,2.399,2.339,3.318,3.024
+			c1.4,1.044,2.954,1.866,4.686,2.322c1.905,0.497,3.335,0.154,4.813,1.27c1.208,0.914,2.298,2.361,3.275,3.482
+			c2.08,2.39,3.949,4.886,5.802,7.443c0.996,1.374,1.451,2.728,2.849,1.26c0.947-0.996,1.047-3.421,1.589-4.646
+			c1.685-3.795,4.913-5.541,8.289-7.552c0.918-0.545,1.787-1.084,2.735-1.523L61.847,2.475z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.2252" stroke-miterlimit="10" d="M9.039,37.619
+			c1.501,2.11,4.835,0.476,6.647-0.7c1.883-1.224,3.784-3.498,2.218-5.769c-1.288-1.868-4.15-1.667-5.906-0.921
+			C11.999,30.229,5.769,33.01,9.039,37.619z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.3755" stroke-miterlimit="10" d="M12.969,44.401
+			c2.156,2.471,5.447,0.258,7.506-1.046c2.136-1.358,4.337-3.613,2.558-6.136c-1.462-2.074-4.081-1.593-6.076-0.762
+			C16.957,36.458,8.811,39.636,12.969,44.401z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.3755" stroke-miterlimit="10" d="M19.161,50.452
+			c2.158,2.471,5.447,0.258,7.505-1.048c2.139-1.357,4.337-3.612,2.56-6.13c-1.462-2.077-4.083-1.596-6.078-0.766
+			C23.148,42.509,15.001,45.689,19.161,50.452z"/>
+		<path fill="#CD2400" stroke="#FFFFFF" stroke-width="1.3755" stroke-miterlimit="10" d="M25.917,55.798
+			c2.157,2.473,5.447,0.263,7.504-1.048c2.137-1.354,4.337-3.609,2.559-6.131c-1.461-2.076-4.082-1.593-6.078-0.763
+			C29.903,47.856,21.757,51.038,25.917,55.798z"/>
+	</g>
+</g>
+</svg>

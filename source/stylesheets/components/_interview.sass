@@ -1,0 +1,48 @@
+.interview
+  $interview-gutter: 1.4em
+  $interview-image-padding: 0.3em
+  $interview-image-width: 10em
+  $interview-color: $base-font-color
+  $interview-background: none
+  $interview-detail-color: transparentize($interview-color, 0.5)
+  $interview-image-vert-alignment: top
+  display: table
+  width: 100%
+  margin-bottom: $base-spacing
+  padding-bottom: 1em
+  border-bottom: 1px solid transparentize($interview-color, 0.9)
+  &.last
+    border-bottom: none
+  .interview-image,
+  .interview-content
+    display: table-cell
+    vertical-align: $interview-image-vert-alignment
+  .interview-image
+    padding-right: $interview-gutter
+    > img
+      width: $interview-image-width
+      height: auto
+      border-radius: 50%
+      padding: $interview-image-padding
+      background: $interview-background
+      border: 1px dashed $dark-grey
+      display: block
+      max-width: none
+    .interview-reverse-order &
+      padding-right: 0
+      padding-left: 10px
+  .interview-content
+    width: 100%
+    h4
+      font-size: 1em
+      margin-bottom: .5em
+      margin-top: 1.5em
+      text-align: left
+    p
+      margin-bottom: .5em
+      text-align: left
+    p.interview-detail
+      font-style: italic
+      font-size: .9em
+      color: $interview-detail-color
+

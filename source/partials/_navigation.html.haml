@@ -1,13 +1,14 @@
 --
 --
-%header.centered-navigation
-  .centered-navigation-wrapper
+%header.navigation
+  .navigation-wrapper
+    .logo
+      = link_to '/index.html' do
+        = image_tag "logo.svg"
     %a.mobile-logo{href: "javascript:void(0)"}
       %img{alt: "", src: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
-    %a.centered-navigation-menu-button{href: ""} MENU
-    %ul.centered-navigation-menu
-      %li.nav-link
-        = link_to 'Übersicht', '/index.html'
+    %a.navigation-menu-button{href: ""} MENU
+    %ul.navigation-menu
       %li.nav-link.more
         = link_to 'Indikatoren', '/index.html'
         %ul.submenu
@@ -26,6 +27,6 @@
           %li
             %a Handel
       %li.nav-link
-        %a{href: "javascript:void(0)"} Kontakt
+        %a{href: "javascript:void(0)"} Experten
       %li.nav-link
-        %a{href: "javascript:void(0)"} Über uns
+        %a{href: "javascript:void(0)"} Kontakt

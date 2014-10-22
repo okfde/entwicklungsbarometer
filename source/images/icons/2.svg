@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="58.774px" height="58.774px" viewBox="0 0 58.774 58.774" enable-background="new 0 0 58.774 58.774" xml:space="preserve">
+<g id="Grid" display="none" opacity="0.8">
+	<rect x="-37.896" y="-1011.981" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="43.104" y="-1011.981" display="inline" opacity="0.1" fill="#28AAE2" width="51" height="2372.2"/>
+	<rect x="-199.896" y="-1011.981" display="inline" opacity="0.1" fill="#28AAE2" width="213" height="2372.2"/>
+	<rect x="43.104" y="-1011.981" display="inline" opacity="0.1" fill="#28AAE2" width="213" height="2372.2"/>
+</g>
+<g id="Header" display="none">
+</g>
+<g id="Landingpage" display="none">
+	<path display="inline" fill="#FFFFFF" d="M174.769,111.219c0,11.046-8.954,20-20,20H-98.945c-11.046,0-20-8.954-20-20v-118
+		c0-11.046,8.954-20,20-20h253.714c11.046,0,20,8.954,20,20V111.219z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M169.276,107.807c0,10.407-8.437,18.844-18.844,18.844H-94.608c-10.407,0-18.843-8.437-18.843-18.844V-3.369
+		c0-10.407,8.437-18.844,18.843-18.844h245.041c10.407,0,18.844,8.437,18.844,18.844V107.807z"/>
+	<g display="inline">
+		<path fill="#CD2400" d="M57.397,26.327l-7.516-1.432c-0.137-0.632-0.297-1.259-0.493-1.873l5.79-4.992
+			c0.581-0.502,0.743-1.46,0.357-2.125l-1.398-2.424c-0.385-0.668-1.296-1.004-2.021-0.749l-7.241,2.521
+			c-0.431-0.471-0.882-0.924-1.354-1.352l2.523-7.243c0.253-0.726-0.085-1.637-0.752-2.021l-2.424-1.399
+			c-0.665-0.383-1.623-0.223-2.125,0.358l-4.992,5.79c-0.611-0.196-1.237-0.36-1.871-0.494l-1.431-7.517
+			C32.302,0.616,31.556,0,30.787,0h-2.798c-0.77,0-1.518,0.616-1.662,1.376l-1.432,7.517c-0.633,0.134-1.258,0.298-1.87,0.494
+			l-4.995-5.79c-0.501-0.581-1.459-0.741-2.125-0.358l-2.424,1.399c-0.665,0.384-1.005,1.295-0.751,2.021l2.523,7.243
+			c-0.472,0.428-0.923,0.881-1.354,1.352l-7.242-2.521c-0.728-0.255-1.637,0.081-2.022,0.749l-1.398,2.424
+			c-0.384,0.665-0.224,1.623,0.359,2.125l5.788,4.992c-0.195,0.614-0.358,1.241-0.494,1.873l-7.517,1.432
+			C0.618,26.473,0,27.218,0,27.986v2.799c0,0.771,0.618,1.518,1.375,1.664l7.517,1.43c0.136,0.635,0.299,1.258,0.494,1.872
+			l-5.788,4.993c-0.583,0.503-0.744,1.46-0.359,2.125l1.398,2.425c0.385,0.664,1.294,1.003,2.022,0.75l7.242-2.523
+			c0.43,0.475,0.882,0.923,1.354,1.356l-2.523,7.238c-0.254,0.729,0.086,1.637,0.751,2.022l2.424,1.401
+			c0.666,0.38,1.624,0.22,2.125-0.363l4.995-5.786c0.612,0.196,1.237,0.355,1.87,0.49l1.432,7.518
+			c0.144,0.759,0.893,1.377,1.662,1.377h2.798c0.77,0,1.516-0.618,1.662-1.377l1.431-7.518c0.634-0.135,1.26-0.294,1.871-0.49
+			l4.992,5.786c0.502,0.583,1.46,0.743,2.125,0.363l2.424-1.401c0.667-0.386,1.005-1.294,0.752-2.022l-2.523-7.238
+			c0.473-0.434,0.924-0.882,1.354-1.356l7.241,2.523c0.726,0.253,1.637-0.086,2.021-0.75l1.398-2.425
+			c0.386-0.665,0.224-1.622-0.357-2.125l-5.79-4.993c0.196-0.614,0.356-1.237,0.493-1.872l7.516-1.43
+			c0.759-0.146,1.377-0.893,1.377-1.664v-2.799C58.774,27.218,58.156,26.473,57.397,26.327z M29.386,39.182
+			c-5.409,0-9.795-4.383-9.795-9.794c0-5.41,4.386-9.796,9.795-9.796c5.41,0,9.796,4.386,9.796,9.796
+			C39.182,34.799,34.796,39.182,29.386,39.182z"/>
+	</g>
+</g>
+<g id="INDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M478.892-66.781h-19.788H225.178h-394.36h-225.714h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20v-58
+		C498.892-57.827,489.938-66.781,478.892-66.781z"/>
+	<path display="inline" fill="#FFFFFF" d="M478.892,43.219h-19.788H225.178h-394.36h-225.714h-28c-11.046,0-20,8.954-20,20v58
+		c0,11.046,8.954,20,20,20h28h225.714h394.36h233.926h19.788c11.046,0,20-8.954,20-20v-58
+		C498.892,52.173,489.938,43.219,478.892,43.219z"/>
+
+		<path display="inline" opacity="0.2" fill="#CD2400" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M-372.896-62.213h-45.664c-10.406,0-18.843,8.437-18.843,18.844V7.807c0,10.407,8.437,18.844,18.843,18.844h45.664h746v-88.863
+		H-372.896z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M474.555-62.213h-39.451h-205.59h-403.033h-199.377h-45.664c-10.406,0-18.843,8.437-18.843,18.844V7.807
+		c0,10.407,8.437,18.844,18.843,18.844h45.664h199.377h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844v-51.176
+		C493.399-53.776,484.962-62.213,474.555-62.213z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M474.555,47.787h-39.451h-205.59h-403.033h-199.377h-45.664c-10.406,0-18.843,8.437-18.843,18.844v51.176
+		c0,10.407,8.437,18.844,18.843,18.844h45.664h199.377h403.033h205.59h39.451c10.407,0,18.844-8.437,18.844-18.844V66.631
+		C493.399,56.224,484.962,47.787,474.555,47.787z"/>
+	<g display="inline">
+		<rect x="-443.714" y="-25.046" fill="none" width="940.804" height="49.994"/>
+		<text transform="matrix(1 0 0 1 -172.2256 -8.2822)" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="22">Waffenexporte in nicht-demokratische Staaten</text>
+	</g>
+</g>
+<g id="SUBINDIKATOR" display="none">
+	<path display="inline" fill="#FFFFFF" d="M479.104-567.605h-19.788h-720.822h92.324h-225.714h-28c-11.046,0-20,8.954-20,20v905.938
+		c0,11.046,8.954,20,20,20h28h225.714h-92.324h720.822h19.788c11.046,0,20-8.954,20-20v-905.938
+		C499.104-558.651,490.15-567.605,479.104-567.605z"/>
+
+		<path display="inline" fill="none" stroke="#3C3C3B" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2" d="
+		M-257.17,373.765h205.59h526.348c10.407,0,18.844-8.437,18.844-18.844v-899.114c0-10.407-8.437-18.844-18.844-18.844H-51.581
+		h-205.59h-115.726h-45.664c-10.406,0-18.843,8.437-18.843,18.844v899.114c0,10.407,8.437,18.844,18.843,18.844h45.664H-257.17z"/>
+</g>
+<g id="EXPERTEN" display="none">
+	<rect x="-119.037" y="21.877" display="inline" fill="#CD2400" width="292.835" height="50"/>
+	<rect x="-118.417" y="37.796" display="inline" fill="none" width="292.215" height="37.644"/>
+
+		<text transform="matrix(1 0 0 1 -66.6509 56.084)" display="inline" fill="#FFFFFF" font-family="'RobotoCondensed-Regular'" font-size="24">UNSERE PARTNERS</text>
+</g>
+<g id="INTERVIEW" display="none">
+	<g display="inline">
+		<rect x="-361.729" y="-182.186" fill="none" width="776.833" height="311.404"/>
+		<text transform="matrix(1 0 0 1 -361.729 -169.9941)"><tspan x="0" y="0" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen </tspan><tspan x="0" y="24" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt </tspan><tspan x="0" y="48" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene </tspan><tspan x="0" y="72" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein gera</tspan><tspan x="758.938" y="72" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">-</tspan><tspan x="0" y="96" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">dezu unorthographisches Leben. Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu </tspan><tspan x="0" y="120" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">gehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezei</tspan><tspan x="764.094" y="120" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">-</tspan><tspan x="0" y="144" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">chen und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren. Es packte seine sieben Versalien, schob sich </tspan><tspan x="0" y="168" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">sein Initial in den Gürtel und machte sich auf den Weg. Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es </tspan><tspan x="0" y="192" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline </tspan><tspan x="0" y="216" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg </tspan><tspan x="0" y="240" fill="#414042" font-family="'RobotoCondensed-Regular'" font-size="16">fort. Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie</tspan></text>
+	</g>
+</g>
+<g id="Icons">
+	<g>
+		<path fill="#CD2400" d="M57.397,26.327l-7.516-1.432c-0.137-0.632-0.297-1.259-0.493-1.873l5.79-4.992
+			c0.581-0.502,0.743-1.46,0.357-2.125l-1.398-2.424c-0.385-0.668-1.296-1.004-2.021-0.749l-7.241,2.521
+			c-0.431-0.471-0.882-0.924-1.354-1.352l2.523-7.243c0.253-0.726-0.085-1.637-0.752-2.021l-2.424-1.399
+			c-0.665-0.383-1.623-0.223-2.125,0.358l-4.992,5.79c-0.611-0.196-1.237-0.36-1.871-0.494l-1.431-7.517
+			C32.302,0.616,31.556,0,30.787,0h-2.798c-0.77,0-1.518,0.616-1.662,1.376l-1.432,7.517c-0.633,0.134-1.258,0.298-1.87,0.494
+			l-4.995-5.79c-0.501-0.581-1.459-0.741-2.125-0.358l-2.424,1.399c-0.665,0.384-1.005,1.295-0.751,2.021l2.523,7.243
+			c-0.472,0.428-0.923,0.881-1.354,1.352l-7.242-2.521c-0.728-0.255-1.637,0.081-2.022,0.749l-1.398,2.424
+			c-0.384,0.665-0.224,1.623,0.359,2.125l5.788,4.992c-0.195,0.614-0.358,1.241-0.494,1.873l-7.517,1.432
+			C0.618,26.473,0,27.218,0,27.986v2.799c0,0.771,0.618,1.518,1.375,1.664l7.517,1.43c0.136,0.635,0.299,1.258,0.494,1.872
+			l-5.788,4.993c-0.583,0.503-0.744,1.46-0.359,2.125l1.398,2.425c0.385,0.664,1.294,1.003,2.022,0.75l7.242-2.523
+			c0.43,0.475,0.882,0.923,1.354,1.356l-2.523,7.238c-0.254,0.729,0.086,1.637,0.751,2.022l2.424,1.401
+			c0.666,0.38,1.624,0.22,2.125-0.363l4.995-5.786c0.612,0.196,1.237,0.355,1.87,0.49l1.432,7.518
+			c0.144,0.759,0.893,1.377,1.662,1.377h2.798c0.77,0,1.516-0.618,1.662-1.377l1.431-7.518c0.634-0.135,1.26-0.294,1.871-0.49
+			l4.992,5.786c0.502,0.583,1.46,0.743,2.125,0.363l2.424-1.401c0.667-0.386,1.005-1.294,0.752-2.022l-2.523-7.238
+			c0.473-0.434,0.924-0.882,1.354-1.356l7.241,2.523c0.726,0.253,1.637-0.086,2.021-0.75l1.398-2.425
+			c0.386-0.665,0.224-1.622-0.357-2.125l-5.79-4.993c0.196-0.614,0.356-1.237,0.493-1.872l7.516-1.43
+			c0.759-0.146,1.377-0.893,1.377-1.664v-2.799C58.774,27.218,58.156,26.473,57.397,26.327z M29.386,39.182
+			c-5.409,0-9.795-4.383-9.795-9.794c0-5.41,4.386-9.796,9.795-9.796c5.41,0,9.796,4.386,9.796,9.796
+			C39.182,34.799,34.796,39.182,29.386,39.182z"/>
+	</g>
+</g>
+</svg>
