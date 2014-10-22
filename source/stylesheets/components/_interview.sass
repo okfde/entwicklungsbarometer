@@ -48,4 +48,25 @@
       font-style: italic
       font-size: .9em
       color: $interview-detail-color
-
+.interview-question
+  @include span-columns(12)
+  @include row()
+  +clearfix
+  margin-top: 0.25em
+  .question
+    @include span-columns(12 of 12)
+    @include row()
+    border: 1px dashed $dark-grey
+    border-radius: 15px
+    background: $white
+    padding: 1.25em
+    text-align: left
+    color: $light-blue
+    margin-bottom: 1.25em
+    h5
+      font-weight: normal
+  .answer
+    @include span-columns(10 of 12)
+    @include shift(1)
+    text-align: left
+    margin-bottom: 1.25em
