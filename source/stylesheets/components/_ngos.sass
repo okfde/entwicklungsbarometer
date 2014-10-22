@@ -1,0 +1,22 @@
+.ngos
+  margin-top: 55px
+  @include row()
+  @include span-columns(12)
+  border-bottom: 1px dashed $dark-grey
+  +clearfix
+  ul
+    li
+      @include span-columns(6)
+      @include omega(even)
+      padding: 20px
+      background: $white
+      margin-bottom: 10px
+      h5
+        margin: em(20) 0
+      img
+        border-radius: 50%
+        width: 7em
+        height: 7em
+        background: #ccc
+      p
+        text-align: left
