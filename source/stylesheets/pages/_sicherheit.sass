@@ -1,5 +1,4 @@
 #ruestung
-  @include outer-container
   h3
     margin: 40px 0
   p
@@ -24,6 +23,8 @@
     @include span-columns(10)
   .export-2013-explanation
     @include span-columns(2)
+    @include omega()
+    margin-top: 0.75em
 
   .axis text
     font: 10px sans-serif

@@ -1,0 +1,27 @@
+.sub-indikator
+  h1
+    margin-bottom: 0.5em
+    padding-bottom: 0.75em
+    border-bottom: 1px dashed $dark-grey
+  h2
+    padding: 0.5em
+    margin: 0 0 0.75em 0
+    border-bottom: 1px dashed $dark-grey
+    font-size: 1.75em
+    color: $light-blue
+  .nav
+    .prev, .next
+      width: 80px
+      height: 1.75em
+      margin: 0.25em
+      background: url(../images/pfeil.png) center left no-repeat
+      &.hidden
+        visibility: hidden
+    .prev
+      float: left
+    .next
+      float: right
+      background: url(../images/pfeil_next.png) center left no-repeat
+  .chart
+    rect
+      fill: $light-blue
