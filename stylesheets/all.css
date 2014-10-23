@@ -303,7 +303,7 @@ h3 {
   display: inline-block;
   padding: 0.9375em 1.5625em;
   font-weight: normal;
-  margin: 0 0 5px; }
+  margin: 0 0 1.2em 0; }
   /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
   h3:after {
     content: "";
@@ -1083,25 +1083,30 @@ h3 {
       .vertical-tabs-container .vertical-tab-accordion-heading {
         display: none; } }
 
-/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+.experten-interview h3 {
+  margin: 0 0 0.25em; }
+
+/* line 4, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
 .interview {
   display: table;
   width: 100%;
   margin-bottom: 30px;
   padding-bottom: 1em;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1); }
-  /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+  /* line 17, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
   .interview.last {
     border-bottom: none; }
-  /* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+  /* line 19, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
   .interview .interview-image,
   .interview .interview-content {
     display: table-cell;
-    vertical-align: top; }
-  /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    vertical-align: top;
+    text-align: left; }
+  /* line 24, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
   .interview .interview-image {
     padding-right: 1.4em; }
-    /* line 22, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    /* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
     .interview .interview-image > img {
       width: 10em;
       height: auto;
@@ -1111,28 +1116,87 @@ h3 {
       border: 1px dashed lightgray;
       display: block;
       max-width: none; }
-    /* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    /* line 35, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
     .interview-reverse-order .interview .interview-image {
       padding-right: 0;
       padding-left: 10px; }
-  /* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
   .interview .interview-content {
     width: 100%; }
-    /* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    /* line 40, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
     .interview .interview-content h4 {
       font-size: 1em;
       margin-bottom: 0.5em;
       margin-top: 1.5em;
       text-align: left; }
-    /* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    /* line 45, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
     .interview .interview-content p {
       margin-bottom: 0.5em;
       text-align: left; }
-    /* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    /* line 48, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
     .interview .interview-content p.interview-detail {
       font-style: italic;
       font-size: 0.9em;
       color: rgba(51, 51, 51, 0.5); }
+
+/* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+.interview-question {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  display: block;
+  margin-top: 0.25em; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  .interview-question:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .interview-question:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .interview-question:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 57, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+  .interview-question .question {
+    float: left;
+    display: block;
+    margin-right: 3.18471%;
+    width: 100%;
+    display: block;
+    border: 1px dashed lightgray;
+    border-radius: 15px;
+    background: white;
+    padding: 1.25em;
+    text-align: left;
+    color: #01b5f0;
+    margin-bottom: 1.25em; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    .interview-question .question:last-child {
+      margin-right: 0; }
+    /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+    .interview-question .question:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 67, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+    .interview-question .question h5 {
+      font-weight: normal; }
+  /* line 69, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_interview.sass */
+  .interview-question .answer {
+    float: left;
+    display: block;
+    margin-right: 3.18471%;
+    width: 82.80255%;
+    margin-left: 8.59873%;
+    text-align: left;
+    margin-bottom: 1.25em; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    .interview-question .answer:last-child {
+      margin-right: 0; }
 
 /* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator h1 {
@@ -1159,9 +1223,6 @@ h3 {
 .indikator h2 {
   margin: 0; }
 /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
-.indikator h3 {
-  margin: 0 0 1.2em 0; }
-/* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator #graphic {
   display: block;
   float: left;
@@ -1178,7 +1239,7 @@ h3 {
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
   .indikator #graphic:last-child {
     margin-right: 0; }
-/* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 18, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator .sub-indikatoren {
   float: left;
   display: block;
@@ -1200,11 +1261,11 @@ h3 {
     content: "";
     display: table;
     clear: both; }
-  /* line 26, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 24, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .sub-indikatoren h1 {
     padding: 0.75em 0;
     color: #01b5f0; }
-  /* line 29, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 27, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .sub-indikatoren .description {
     float: left;
     display: block;
@@ -1225,7 +1286,7 @@ h3 {
       content: "";
       display: table;
       clear: both; }
-  /* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 32, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .sub-indikatoren ul {
     display: block;
     float: left;
@@ -1245,69 +1306,20 @@ h3 {
       content: "";
       display: table;
       clear: both; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+    /* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
     .indikator .sub-indikatoren ul li {
       border: 1px dashed lightgray;
       padding: 25px;
       border-radius: 15px;
       margin: 20px 0 0;
       background: #cd2400; }
-      /* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+      /* line 42, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
       .indikator .sub-indikatoren ul li a {
         color: white; }
-        /* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+        /* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
         .indikator .sub-indikatoren ul li a:hover {
           color: #f3f3f3; }
-/* line 48, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
-.indikator .ngos {
-  margin-top: 55px;
-  display: block;
-  float: left;
-  display: block;
-  margin-right: 3.18471%;
-  width: 100%;
-  border-bottom: 1px dashed lightgray; }
-  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .indikator .ngos:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-  .indikator .ngos:last-child {
-    margin-right: 0; }
-  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
-  .indikator .ngos:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 55, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
-  .indikator .ngos ul li {
-    float: left;
-    display: block;
-    margin-right: 3.18471%;
-    width: 48.40764%;
-    padding: 20px;
-    background: white;
-    margin-bottom: 10px; }
-    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
-    .indikator .ngos ul li:last-child {
-      margin-right: 0; }
-    /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
-    .indikator .ngos ul li:nth-child(even) {
-      margin-right: 0; }
-    /* line 61, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
-    .indikator .ngos ul li h5 {
-      margin: 1.25em 0; }
-    /* line 63, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
-    .indikator .ngos ul li img {
-      border-radius: 50%;
-      width: 7em;
-      height: 7em;
-      background: #cccccc; }
-    /* line 68, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
-    .indikator .ngos ul li p {
-      text-align: left; }
-/* line 70, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator .experten-interview {
   margin-top: 30px;
   display: block;
@@ -1324,7 +1336,7 @@ h3 {
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
   .indikator .experten-interview:last-child {
     margin-right: 0; }
-  /* line 75, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .experten-interview .interview {
     display: block;
     float: left;
@@ -1340,7 +1352,7 @@ h3 {
     /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
     .indikator .experten-interview .interview:last-child {
       margin-right: 0; }
-/* line 80, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 56, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator #cdi-index .explanation {
   float: left;
   display: block;
@@ -1428,6 +1440,56 @@ h3 {
   /* line 20, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
   #cdi-index h2 {
     padding: 0 0 1em 0; }
+
+/* line 1, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_ngos.sass */
+.ngos {
+  margin-top: 55px;
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  border-bottom: 1px dashed lightgray; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .ngos:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  .ngos:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  .ngos:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_ngos.sass */
+  .ngos ul li {
+    float: left;
+    display: block;
+    margin-right: 3.18471%;
+    width: 48.40764%;
+    padding: 20px;
+    background: white;
+    margin-bottom: 10px; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    .ngos ul li:last-child {
+      margin-right: 0; }
+    /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
+    .ngos ul li:nth-child(even) {
+      margin-right: 0; }
+    /* line 14, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_ngos.sass */
+    .ngos ul li h5 {
+      margin: 1.25em 0; }
+    /* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_ngos.sass */
+    .ngos ul li img {
+      border-radius: 50%;
+      width: 7em;
+      height: 7em;
+      background: #cccccc; }
+    /* line 21, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_ngos.sass */
+    .ngos ul li p {
+      text-align: left; }
 
 /* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_main.sass */
 #main h1 {
@@ -1697,18 +1759,135 @@ section#panzer {
   .explanation #ngos:last-child {
     margin-right: 0; }
 
-/* line 28, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_experten.sass */
+#experten .headline {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  display: block;
+  border-bottom: 1px dashed lightgray; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #experten .headline:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #experten .headline:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #experten .headline:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 7, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_experten.sass */
+#experten .interview-container {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  margin-top: 1.2em;
+  border-bottom: 1px dashed lightgray; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #experten .interview-container:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #experten .interview-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 12, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_experten.sass */
+#experten .interviews {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 65.6051%;
+  margin-left: 17.19745%; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #experten .interviews:last-child {
+    margin-right: 0; }
+
+/* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_interview.sass */
+#interview .headline {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  display: block;
+  border-bottom: 1px dashed lightgray;
+  margin-top: 1.25em; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #interview .headline:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #interview .headline:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #interview .headline:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 8, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_interview.sass */
+#interview .nav {
+  margin-top: 1.25em;
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  display: block; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #interview .nav:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #interview .nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #interview .nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_interview.sass */
+  #interview .nav .interview {
+    float: left;
+    display: block;
+    margin-right: 3.18471%;
+    width: 65.6051%;
+    margin-left: 17.19745%; }
+    /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+    #interview .nav .interview:last-child {
+      margin-right: 0; }
+/* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_interview.sass */
+#interview .experten-interview {
+  float: left;
+  display: block;
+  margin-right: 3.18471%;
+  width: 100%;
+  border-bottom: 1px dashed lightgray; }
+  /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+  #interview .experten-interview:last-child {
+    margin-right: 0; }
+  /* line 15, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/bourbon/addons/_clearfix.scss */
+  #interview .experten-interview:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 html {
   height: 100%; }
 
-/* line 30, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 body {
   background: #f9f9f9;
   text-align: center;
   font-family: sans-serif;
   height: 100%; }
 
-/* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 39, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .content {
   max-width: 68em;
   margin-left: auto;
@@ -1719,11 +1898,11 @@ body {
     display: table;
     clear: both; }
 
-/* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .axis text {
   font: 10px sans-serif; }
 
-/* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .axis path,
 .axis line {
   fill: none;
