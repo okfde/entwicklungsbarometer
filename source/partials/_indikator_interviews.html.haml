@@ -1,0 +1,4 @@
+.experten-interview
+  %h3 Experten Interview
+  - data.experten.select{ |e| e.toplevel? && e.block == current_page.data.block }.each do |experte|
+    = partial "partials/interview", locals: experte

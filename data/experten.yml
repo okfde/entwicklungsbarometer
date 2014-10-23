@@ -1,0 +1,12 @@
+- name: Jan Grebe S
+  slug: grebe
+  image: grebe.png
+  text: grebe
+  block: sicherheit
+  toplevel: true
+- name: Jan Grebe T
+  slug: grebe-t
+  image: grebe.png
+  text: grebe
+  block: technologie
+  toplevel: true

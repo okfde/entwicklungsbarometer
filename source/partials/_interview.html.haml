@@ -1,0 +1,8 @@
+.interview.last
+  .interview-image
+    = image_tag "interviews/#{image}"
+  .interview-content
+    = link_to "/experten/#{slug}.html" do
+      %h4= name
+    = partial "partials/experten/#{text}"
+    = link_to "zum Interview", "/experten/#{slug}.html" unless current_page.data.interviews
