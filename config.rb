@@ -48,7 +48,7 @@ end
 # end
 
 data.experten.each do |experte|
-  proxy "/experten/#{experte.slug}.html", "/experten/experte.html", locals: { experte: experte }
+  proxy "/experten/#{experte.slug}.html", "/experten/experte.html", locals: { experte: experte }, ignore: true
 end
 
 set :css_dir, 'stylesheets'
