@@ -42,12 +42,16 @@
         margin-bottom: 1.25em
         height: 8em
         background: $white
+        display: table
         a
+          display: table-cell
+          vertical-align: middle
           color: $red
           &:hover
             color: $red
           h5
-            margin-top: 1em
+            margin: 0
+            padding: 0
   .experten-interview
     margin-top: 30px
     @include row()
