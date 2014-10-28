@@ -1308,18 +1308,36 @@ h3 {
       clear: both; }
     /* line 36, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
     .indikator .sub-indikatoren ul li {
+      float: left;
+      display: block;
+      margin-right: 3.18471%;
+      width: 48.40764%;
       border: 1px dashed lightgray;
       padding: 25px;
       border-radius: 15px;
-      margin: 20px 0 0;
-      background: #cd2400; }
-      /* line 42, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+      margin-bottom: 1.25em;
+      height: 10em;
+      background: white;
+      display: table; }
+      /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
+      .indikator .sub-indikatoren ul li:last-child {
+        margin-right: 0; }
+      /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_omega.scss */
+      .indikator .sub-indikatoren ul li:nth-child(even) {
+        margin-right: 0; }
+      /* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
       .indikator .sub-indikatoren ul li a {
-        color: white; }
-        /* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+        display: table-cell;
+        vertical-align: middle;
+        color: #cd2400; }
+        /* line 50, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
         .indikator .sub-indikatoren ul li a:hover {
-          color: #f3f3f3; }
-/* line 46, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+          color: #cd2400; }
+        /* line 52, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+        .indikator .sub-indikatoren ul li a h5 {
+          margin: 0;
+          padding: 0; }
+/* line 55, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator .experten-interview {
   margin-top: 30px;
   display: block;
@@ -1336,7 +1354,7 @@ h3 {
   /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
   .indikator .experten-interview:last-child {
     margin-right: 0; }
-  /* line 51, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+  /* line 60, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
   .indikator .experten-interview .interview {
     display: block;
     float: left;
@@ -1352,7 +1370,7 @@ h3 {
     /* line 38, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/neat/grid/_span-columns.scss */
     .indikator .experten-interview .interview:last-child {
       margin-right: 0; }
-/* line 56, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
+/* line 65, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_indikator.sass */
 .indikator #cdi-index .explanation {
   float: left;
   display: block;
@@ -1876,18 +1894,18 @@ section#panzer {
     display: table;
     clear: both; }
 
-/* line 31, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 32, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 html {
   height: 100%; }
 
-/* line 33, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 34, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 body {
   background: #f9f9f9;
   text-align: center;
   font-family: sans-serif;
   height: 100%; }
 
-/* line 39, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 40, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .content {
   max-width: 68em;
   margin-left: auto;
@@ -1898,11 +1916,11 @@ body {
     display: table;
     clear: both; }
 
-/* line 41, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 42, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .axis text {
   font: 10px sans-serif; }
 
-/* line 44, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
+/* line 45, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/all.sass */
 .axis path,
 .axis line {
   fill: none;
