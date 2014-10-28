@@ -34,15 +34,24 @@
       @include span-columns(12)
       +clearfix
       li
+        @include span-columns(6)
+        @include omega(even)
         border: 1px dashed $dark-grey
         padding: 25px
         border-radius: 15px
-        margin: 20px 0 0
-        background: $red
+        margin-bottom: 1.25em
+        height: 10em
+        background: $white
+        display: table
         a
-          color: $white
+          display: table-cell
+          vertical-align: middle
+          color: $red
           &:hover
-            color: $mid-grey
+            color: $red
+          h5
+            margin: 0
+            padding: 0
   .experten-interview
     margin-top: 30px
     @include row()
