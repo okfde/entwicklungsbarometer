@@ -18,6 +18,11 @@ class @Peacekeeping extends @D3Graph
     @xAxis = d3.svg.axis()
     .scale(@xScale)
     .orient("bottom")
+    .ticks(4)
+    @yGrid = d3.svg.axis()
+      .scale(@yScale)
+      .orient("left")
+      .ticks(5)
   parseDateFromYear: (year) ->
     new Date(year,0,1)
 
@@ -54,6 +59,10 @@ class @Peacekeeping extends @D3Graph
       .attr("class", "x axis")
       .attr("transform", "translate(0," + @options.height + ")")
       .call(@xAxis)
+      groups.append("g")
+      .attr("class", "grid")
+      .call(@yGrid.tickSize(-@options.height, 0, 0)
+                  .tickFormat(""))
       groups.append("text")
       .attr("class","name")
       .text((d) -> d[0].country)
