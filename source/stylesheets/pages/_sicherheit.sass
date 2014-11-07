@@ -45,3 +45,15 @@ section#panzer
   #ngos
     @include span-columns(11)
     @include shift(1)
+#peacekeeping
+  svg.countries
+    margin: 10px 0
+    g.axis.y
+      display: none
+    &:nth-child(4n+1) g.axis.y
+      display: block
+    &.germany
+      .line
+        stroke: $red
+      text.name
+        fill: $red

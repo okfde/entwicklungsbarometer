@@ -15,6 +15,7 @@ class @Peacekeeping extends @D3Graph
     @yAxis = d3.svg.axis()
     .scale(@yScale)
     .orient("left")
+    .ticks(5)
     @xAxis = d3.svg.axis()
     .scale(@xScale)
     .orient("bottom")
@@ -50,7 +51,7 @@ class @Peacekeeping extends @D3Graph
 
     @draw = (data) ->
       groups = @countries.enter().append('svg')
-      .attr('class', (d) -> "#{d[0].country} countries")
+      .attr('class', (d) -> "#{d[0].country.toLowerCase()} countries")
       .attr('width', @options.width + @options.margin.left + @options.margin.right)
       .attr('height', @options.height + @options.margin.top + @options.margin.bottom)
       .append("g")
@@ -69,10 +70,10 @@ class @Peacekeeping extends @D3Graph
       .attr('transform', "translate(#{@options.width/2},5)")
       .attr('text-anchor', 'middle')
 
-     # countries.append("g")
-     # .attr("class", "y axis")
-     # .attr("transform", "translate(0,0)")
-     # .call(@yAxis)
+      groups.append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(0,0)")
+      .call(@yAxis)
       groups.append("path").datum( (d) -> d).attr('d', @line).attr('class', 'line')
 
 
@@ -84,7 +85,7 @@ $ ->
   if $('#peacekeeping').length > 0
     peacekeepingPath = rootPath+"/data/peacekeeping_contributions.csv"
     d3.csv peacekeepingPath, (data) ->
-      options = { width: 200, height: 200, margin: { top: 10, left: 10, bottom: 20, right: 10 } }
+      options = { width: 200, height: 200, margin: { top: 10, left: 20, bottom: 20, right: 10 } }
       pk = new Peacekeeping(data, options)
       #pk.drawSingle('Germany')
       pk.drawMultiples()
