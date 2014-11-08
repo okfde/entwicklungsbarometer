@@ -1,41 +1,20 @@
-class @Peacekeeping extends @D3Graph
+class @Peacekeeping extends @D3Linechart
   constructor: (@rawData, @options = {}) ->
     @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40} })
 
   setDataKey: (key = 'per_capita') ->
     @dataKey = key
 
-  createAxisAndScales: (data) ->
-    @yScale = d3.scale.linear()
-          .range([@options.height, 0])
-          .domain(@yScaleDomain)
-    @xScale = d3.time.scale()
-          .range([0,@options.width])
-          .domain(@xScaleDomain)
-    @yAxis = d3.svg.axis()
-    .scale(@yScale)
-    .orient("left")
-    .ticks(5)
-    @xAxis = d3.svg.axis()
-    .scale(@xScale)
-    .orient("bottom")
-    .ticks(4)
-    @yGrid = d3.svg.axis()
-      .scale(@yScale)
-      .orient("left")
-      .ticks(5)
-  parseDateFromYear: (year) ->
-    new Date(year,0,1)
+  setDateKey: (key = 'date') ->
+    @dateKey = key
 
   setScalesAndDomain: (data)->
     @setDataKey()
+    @setDateKey('year')
     @setYDomain([0, d3.max(data, (d) => Math.ceil(parseFloat(d[@dataKey])) )])
     @setXDomain(d3.extent(data, (d) => @parseDateFromYear(d.year)))
-    @line = d3.svg.line()
-    .x((d) =>
-      @xScale(@parseDateFromYear(d.year)))
-    .y((d) =>
-      @yScale(d[@dataKey]))
+    @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
+    @
 
   drawSingle: (countryName) ->
     @data = _.filter(@rawData, (d) -> d.country == countryName)
@@ -44,7 +23,9 @@ class @Peacekeeping extends @D3Graph
 
   drawMultiples: ->
     @data = _.groupBy(@rawData, (d) -> d.country)
-    @data = _.map(@data, (data) => _.sortBy(data, (d) => @parseDateFromYear(d.year)))
+    @data = _.map(@data, (data) =>
+      _.sortBy(data, (d) => @parseDateFromYear(d.year))
+    )
     @setScalesAndDomain(@data[0])
     @createSvg = ->
       @countries = d3.select(@element).selectAll('svg.countries').data(@data)
