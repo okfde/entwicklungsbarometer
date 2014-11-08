@@ -2,6 +2,10 @@ class @Peacekeeping extends @D3Linechart
   constructor: (@rawData, @options = {}) ->
     @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40} })
 
+  setMeanData: (data) ->
+    @meanData = data
+    @meanData.forEach((d) => d.year = @parseDateFromYear(d.year))
+
   setDataKey: (key = 'per_capita') ->
     @dataKey = key
 
@@ -15,6 +19,11 @@ class @Peacekeeping extends @D3Linechart
     @setXDomain(d3.extent(data, (d) => @parseDateFromYear(d.year)))
     @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
     @
+
+  setMeanLine: ->
+    @meanLine = d3.svg.line()
+      .x((d) => debugger;@xScale(d[@dateKey]))
+      .y((d) => @yScale(d.mean))
 
   drawSingle: (countryName) ->
     @data = _.filter(@rawData, (d) -> d.country == countryName)
@@ -56,6 +65,7 @@ class @Peacekeeping extends @D3Linechart
       .attr("transform", "translate(0,0)")
       .call(@yAxis)
       groups.append("path").datum( (d) -> d).attr('d', @line).attr('class', 'line')
+      groups.append("path").datum( @meanData ).attr('d', @meanLine).attr('class', 'line mean')
 
 
   draw: (data) ->
@@ -64,11 +74,21 @@ class @Peacekeeping extends @D3Linechart
 
 $ ->
   if $('#peacekeeping').length > 0
-    peacekeepingPath = rootPath+"/data/peacekeeping_contributions.csv"
-    d3.csv peacekeepingPath, (data) ->
-      options = { width: 200, height: 200, margin: { top: 10, left: 20, bottom: 20, right: 10 } }
+    peacekeepingPath = "#{rootPath}/data/peacekeeping_contributions.csv"
+    peacekeepingMeanPath = "#{rootPath}/data/means.csv"
+    queue()
+    .defer(d3.csv, peacekeepingPath)
+    .defer(d3.csv, peacekeepingMeanPath)
+    .await (error, data, meanData) ->
+      options = {
+        width: 200
+        height: 200
+        margin: { top: 10, left: 20, bottom: 20, right: 10 }
+      }
       pk = new Peacekeeping(data, options)
+      pk.setMeanData(meanData)
       #pk.drawSingle('Germany')
+      pk.setMeanLine()
       pk.drawMultiples()
       pk.render('.contributions')
 
