@@ -9,10 +9,6 @@ class @D3Graph
     .append("g")
     .attr("transform", "translate(" + @options.margin.left + "," + @options.margin.top + ")")
 
-    @svgSelection.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + @options.height + ")")
-    .call(@xAxis)
 
   createAxisAndScales: (data) ->
     @yScale = d3.scale.linear()
@@ -28,6 +24,12 @@ class @D3Graph
     .scale(@xAxisScale)
     .orient("bottom")
 
+  appendAxis: ->
+    @svgSelection.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + @options.height + ")")
+    .call(@xAxis)
+
   setXDomain: (domain) ->
     @xScaleDomain = domain
 
@@ -42,6 +44,7 @@ class @D3Graph
   render: (@element) ->
     @createAxisAndScales(@data)
     @createSvg()
+    @appendAxis()
     @draw(@data)
 
   update: (@data) ->
