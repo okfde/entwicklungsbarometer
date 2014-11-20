@@ -1,15 +1,30 @@
 .sub-indikator
   h1
-    margin-bottom: 0.5em
+    margin-bottom: 0.3em
     padding-bottom: 0.75em
     border-bottom: 1px dashed $dark-grey
-  h2
-    padding: 0.5em
-    margin: 0 0 0.75em 0
+  h4
+    font-size: 1em
+    color: $white
+  .navbar
+    padding: 0.2em
     border-bottom: 1px dashed $dark-grey
-    font-size: 1.75em
-    color: $light-blue
-  .nav
+    text-align: center
+    margin-bottom: 0.75em
+    +clearfix
+    ul.nav
+      display: inline-block
+      li
+        float: left
+        padding: 0.5em
+        margin: 0 0.5em
+        background: $light-blue
+        &.active
+          background: none
+          border: 1px solid $light-blue
+          h4
+            color: $light-blue
+
     .prev, .next
       width: 80px
       height: 1.75em
