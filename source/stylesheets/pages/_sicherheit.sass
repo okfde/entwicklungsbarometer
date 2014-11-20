@@ -54,3 +54,13 @@ section#panzer
   #ngos
     @include span-columns(11)
     @include shift(1)
+
+
+#multiples
+  svg
+    circle
+      fill: blue
+      &.value-1
+        fill: $light-blue
+      &.value-2
+        fill: $red

@@ -73,3 +73,7 @@ $ ->
       trs.append('td').text((d) -> formatCurrency(d.ruestung))
       trs.append('td').text((d) -> formatCurrency(d.gesamt - d.Gesamt_2012)).attr('class', (d) -> changeDiffClass(d.gesamt - d.Gesamt_2012))
       trs.append('td').text((d) -> formatCurrency(d.ruestung - d.Ruestung_2012)).attr('class', (d) -> changeDiffClass(d.ruestung - d.Ruestung_2012))
+      data = [{gesamt_ruestung: 266,not_free_ruestung:8}]
+      lm = new @LargeMultiples(data)
+      lm.setValueKeys("gesamt_ruestung","not_free_ruestung")
+      lm.render("#multiples")
