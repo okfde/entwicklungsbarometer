@@ -31,7 +31,7 @@ class @LargeMultiples extends @D3Graph
   draw: (data) ->
     data = (data[0] for num in [data[0][@value1Key]..1])
     teiler = Math.floor(@options.width/(2*@options.circles.radius + @options.circles.padding))
-    graphGroup = @svgSelection.selectAll('g.graphs').data(data)
+    graphGroup = @svgSelection.selectAll('g.multiples').data(data)
     graphGroup.enter().append("g")
       .attr("class", "multiples")
       .attr("transform", (d,i) =>
@@ -39,10 +39,14 @@ class @LargeMultiples extends @D3Graph
         translateY = @options.height - (Math.ceil((i+1) / teiler)*(@options.circles.padding+2*@options.circles.radius))
         "translate(#{translateX},#{translateY})"
       )
+    graphGroup.exit().remove()
     circle = graphGroup.append("circle")
       .attr("r",@options.circles.radius)
       .attr("class", (d,i) => if(i >= d[@value2Key]) then @valueClass1 else @valueClass2)
 
   render: (@element) ->
     @createSvg()
+    @draw(@data)
+
+  update: (@data) ->
     @draw(@data)
