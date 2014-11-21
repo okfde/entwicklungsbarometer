@@ -14,6 +14,19 @@ title: Entwicklungsbarometer - Rüstung
         %li
           %h4 Anteil Waffenhandel am GDP
     #multiples
+      .multiple
+        %h5 Exporte in nicht-freie Länder
+        #not_free
+      .multiple
+        %h5 Exporte in freie Länder
+        #free
+      .multiple
+        %h5 Exporte in teilweise-freie Länder
+        #partial_free
+      %form
+        %input(type="radio" name="ruestung-chart" value="f" checked="checked") free
+        %input(type="radio" name="ruestung-chart" value="pf") partial free
+        %input(type="radio" name="ruestung-chart" value="nf") not free
     %h5 Rüstungsexportländer 2013
     .ruestung-2013-chart
       .chart

@@ -3,6 +3,28 @@ formatCurrency = d3.numberFormat("$,.2f")
 @formatCountry = (countryString) ->
   countryString.replace(" ","")
 
+getGesamtExportsFreeAndNotFree = (data) ->
+  not_free_data = _.filter(data, (d) -> d.status == "NF")
+  free_data = _.filter(data, (d) -> d.status == "F")
+  partial_free_data = _.filter(data, (d) -> d.status == "PF")
+  not_free_ruestung = _.reduce(not_free_data,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
+  free_ruestung = _.reduce(free_data,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
+  partial_free_ruestung = _.reduce(partial_free_data,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
+  all_ruestung = _.reduce(data,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
+  { not_free: not_free_ruestung, all: all_ruestung, free: free_ruestung, partial_free: partial_free_ruestung }
+
+getNumberReducedByMagnitude = (number, magnitude) ->
+  Math.ceil(number/magnitude)
+
+generateDataForLargeMultipleFreeNotFreeRuestung = (data) ->
+  freeNotFreeObject = getGesamtExportsFreeAndNotFree(data)
+  freeNotFreeArray = [freeNotFreeObject.not_free, freeNotFreeObject.all, freeNotFreeObject.partial_free_ruestung, freeNotFreeObject.free]
+  magnitudeFreeNotFree = magnitude(d3.min(freeNotFreeArray))
+  freeNotFreeObject.not_free = getNumberReducedByMagnitude(freeNotFreeObject.not_free, magnitudeFreeNotFree)*5
+  freeNotFreeObject.all = getNumberReducedByMagnitude(freeNotFreeObject.all, magnitudeFreeNotFree)*5
+  freeNotFreeObject.free = getNumberReducedByMagnitude(freeNotFreeObject.free, magnitudeFreeNotFree)*5
+  freeNotFreeObject.partial_free = getNumberReducedByMagnitude(freeNotFreeObject.partial_free, magnitudeFreeNotFree)*5
+  freeNotFreeObject
 changeDiffClass = (value) ->
   if value != 0
     if value > 0 then "positive" else "negative"
@@ -10,10 +32,12 @@ $ ->
   if $('#ruestung').length > 0
     export2012_13Path = rootPath+"/data/exporte_2012_2013.csv"
     gesamt2013Path = rootPath+"/data/gesamt_exporte_2013.csv"
+    exporte2013Path = rootPath+"/data/exporte_2013.csv"
     queue()
     .defer(d3.csv, export2012_13Path)
     .defer(d3.csv, gesamt2013Path)
-    .await (error, @data, gesamt) ->
+    .defer(d3.csv, exporte2013Path)
+    .await (error, @data, gesamt, exporte2013) ->
       ruestung2013 = _.filter(@data,(num) -> num.ruestung > 0)
       ruestung2013 = _.sortBy(ruestung2013, (num) -> -num.ruestung)
       gesamtRuestung2013 = _.reduce(ruestung2013,((sum, d) -> return sum + parseInt(d.ruestung)), 0)
@@ -73,7 +97,26 @@ $ ->
       trs.append('td').text((d) -> formatCurrency(d.ruestung))
       trs.append('td').text((d) -> formatCurrency(d.gesamt - d.Gesamt_2012)).attr('class', (d) -> changeDiffClass(d.gesamt - d.Gesamt_2012))
       trs.append('td').text((d) -> formatCurrency(d.ruestung - d.Ruestung_2012)).attr('class', (d) -> changeDiffClass(d.ruestung - d.Ruestung_2012))
-      data = [{gesamt_ruestung: 266,not_free_ruestung:8}]
-      lm = new @LargeMultiples(data)
-      lm.setValueKeys("gesamt_ruestung","not_free_ruestung")
-      lm.render("#multiples")
+      multiplesData = generateDataForLargeMultipleFreeNotFreeRuestung(exporte2013)
+      multipleOptions = { height: 100, circles: { radius: 8, padding: 5 } }
+      lm_free = new @LargeMultiples([multiplesData], multipleOptions)
+      lm_free.setValueKeys("all","free")
+      lm_free.render("#multiples #free")
+      lm_not_free = new @LargeMultiples([multiplesData], multipleOptions)
+      lm_not_free.setValueKeys("all","not_free")
+      lm_not_free.render("#multiples #not_free")
+      lm_partial_free = new @LargeMultiples([multiplesData], multipleOptions)
+      lm_partial_free.setValueKeys("all","partial_free")
+      lm_partial_free.render("#multiples #partial_free")
+      $('#multiples form input').change (e) ->
+        if(this.value == 'f')
+          lm.setValueKeys("all","free")
+          lm.render([multiplesData])
+        else if(this.value == 'pf')
+          lm.setValueKeys("all","partial_free")
+          lm.render([multiplesData])
+        else
+          lm.setValueKeys("all","not_free")
+          lm.render([multiplesData])
+
+
