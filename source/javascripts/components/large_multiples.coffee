@@ -24,25 +24,33 @@ class @LargeMultiples extends @D3Graph
     @value1Key = value1
     @value2Key = value2
 
-  setValueClasses: (class1, class2) ->
-    @valueClass1 = class1
-    @valueClass2 = class2
+  setValueClasses: (valueClasses) ->
+    @valueClasses = valueClasses
+
+  valueClasss: (d,i) =>
+    for value in @valueClasses
+      if i in value.range
+        className = value.className
+    className
 
   draw: (data) ->
     data = (data[0] for num in [data[0][@value1Key]..1])
     teiler = Math.floor(@options.width/(2*@options.circles.radius + @options.circles.padding))
     graphGroup = @svgSelection.selectAll('g.multiples').data(data)
     graphGroup.enter().append("g")
+    graphGroup
       .attr("class", "multiples")
       .attr("transform", (d,i) =>
         translateX = (i % teiler)*(2*@options.circles.radius+@options.circles.padding)
         translateY = @options.height - (Math.ceil((i+1) / teiler)*(@options.circles.padding+2*@options.circles.radius))
         "translate(#{translateX},#{translateY})"
       )
-    graphGroup.exit().remove()
-    circle = graphGroup.append("circle")
+    graphGroup.selectAll("circle").remove()
+    graphGroup
+      .append("circle")
       .attr("r",@options.circles.radius)
-      .attr("class", (d,i) => if(i >= d[@value2Key]) then @valueClass1 else @valueClass2)
+      .attr("class",@valueClasss)
+    graphGroup.exit().remove()
 
   render: (@element) ->
     @createSvg()
