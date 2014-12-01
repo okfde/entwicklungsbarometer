@@ -60,7 +60,15 @@ section#panzer
   svg
     circle
       fill: blue
-      &.value-1
-        fill: $light-blue
-      &.value-2
+      &.free
+        fill: $green
+      &.not-free
         fill: $red
+      &.partial-free
+        fill: $light-blue
+  .legend
+    svg
+      width: 50%
+      height: 80px
+    circle
+      radius: 3
