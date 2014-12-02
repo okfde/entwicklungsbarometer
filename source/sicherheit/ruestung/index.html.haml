@@ -28,30 +28,34 @@ title: Entwicklungsbarometer - Rüstung
           %g(transform="translate(0,56)")
             %circle.not-free(r=8 cx=8 cy=0)
             %text(dx=24 dy=5) Exporte in Nicht-Freie Länder
-      %form
-        %input(type="radio" name="ruestung-chart" value="2013" checked="checked") 2013
-        %input(type="radio" name="ruestung-chart" value="all") 1999-2013
-    %h5 Rüstungsexportländer 2013
-    .ruestung-2013-chart
-      .chart
-      %form
-        %input(type="radio" name="ruestung-chart" value="2013" checked="checked") 2013
-        %input(type="radio" name="ruestung-chart" value="2012") 2012
-    .ruestung-2013-table
-      #exporte-2013
-    .explanation
-      %p Frieden und Sicherheit sind wesentliche Voraussetzung für Entwicklung. Bewaffnete Konflikte zerstören weltweit die Lebensgrundlagen von Menschen. Die Produktion von Waren und Dienstleistungen bricht ein, die Gesundheitsversorgung und das Bildungsystem brechen zusammen und Menschen verlassen ihre Heimat und suchen in Flüchtlingslagern und im Ausland Schutz. Die negativen Folgen von Krieg und bewaffneten Konflikten auf Entwicklung und Armutsbekämpfung sind zahlreich. Die meisten Entwicklungsländer produzieren ihre Waffen nicht selber, sondern erhalten Waffenlieferungen von Industrieländern. Vor allem wenn Entwicklungsländer nicht demokratisch regiert werden, besteht ein hohes Risiko, dass Waffenlieferung bewaffnete Konflikte und Krieg fördern. Waffenexporte in nicht-demokratische Staaten sind daher grundsätzlich kritisch zu betrachten.
-    %h5 Alle Exporte nach Ländern im Jahr 2013
-    .export-2013-table
-      #all-exports
-    .export-2013-explanation
-      %p Länder die laut Freedom Index als nicht-frei gekenzeichnet sind.
-    %h3
-      Rüstungsexporte 2013 in nicht-freie Länder:
-      .gesamt-ruestung
-      von
-      .gesamt
-      Rüstungsexporten
+      .export-volumes
+        %h2
+        %h6 Zeitraum
+        %form
+          %input(type="radio" name="ruestung-chart" value="2013" checked="checked") 2013
+          %input(type="radio" name="ruestung-chart" value="all") 1999-2013
+    .export-countries
+      %h5 Rüstungsexportländer 2013
+      .ruestung-2013-chart
+        .chart
+        %form
+          %input(type="radio" name="ruestung-chart" value="2013" checked="checked") 2013
+          %input(type="radio" name="ruestung-chart" value="2012") 2012
+      .ruestung-2013-table
+        #exporte-2013
+      .explanation
+        %p Frieden und Sicherheit sind wesentliche Voraussetzung für Entwicklung. Bewaffnete Konflikte zerstören weltweit die Lebensgrundlagen von Menschen. Die Produktion von Waren und Dienstleistungen bricht ein, die Gesundheitsversorgung und das Bildungsystem brechen zusammen und Menschen verlassen ihre Heimat und suchen in Flüchtlingslagern und im Ausland Schutz. Die negativen Folgen von Krieg und bewaffneten Konflikten auf Entwicklung und Armutsbekämpfung sind zahlreich. Die meisten Entwicklungsländer produzieren ihre Waffen nicht selber, sondern erhalten Waffenlieferungen von Industrieländern. Vor allem wenn Entwicklungsländer nicht demokratisch regiert werden, besteht ein hohes Risiko, dass Waffenlieferung bewaffnete Konflikte und Krieg fördern. Waffenexporte in nicht-demokratische Staaten sind daher grundsätzlich kritisch zu betrachten.
+      %h5 Alle Exporte nach Ländern im Jahr 2013
+      .export-2013-table
+        #all-exports
+      .export-2013-explanation
+        %p Länder die laut Freedom Index als nicht-frei gekenzeichnet sind.
+      %h3
+        Rüstungsexporte 2013 in nicht-freie Länder:
+        .gesamt-ruestung
+        von
+        .gesamt
+        Rüstungsexporten
   .ngos
     %h3 NGOs
     %ul
