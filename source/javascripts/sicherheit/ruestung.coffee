@@ -3,34 +3,6 @@ formatCurrency = d3.numberFormat("$,.2f")
 @formatCountry = (countryString) ->
   countryString.replace(" ","")
 
-getNumberReducedByMagnitude = (number, magnitude) ->
-  Math.round(number/magnitude)
-
-generateDataForLargeMultipleFreeNotFreeRuestung = (data, year, multiplokator=15) ->
-  freedomIndexObject = _.findWhere(data, { time: year })
-  freeNotFreeArray = [parseInt(freedomIndexObject.not_free), parseInt(freedomIndexObject.sum), parseInt(freedomIndexObject.partial_free), parseInt(freedomIndexObject.free)]
-  magnitudeFreeNotFree = magnitude(d3.min(freeNotFreeArray))
-  freedomIndexObject.not_free = getNumberReducedByMagnitude(freedomIndexObject.not_free, magnitudeFreeNotFree)*multiplokator
-  freedomIndexObject.sum = getNumberReducedByMagnitude(freedomIndexObject.sum, magnitudeFreeNotFree)*multiplokator
-  freedomIndexObject.free = getNumberReducedByMagnitude(freedomIndexObject.free, magnitudeFreeNotFree)*multiplokator
-  freedomIndexObject.partial_free = getNumberReducedByMagnitude(freedomIndexObject.partial_free, magnitudeFreeNotFree)*multiplokator
-  freedomIndexObject
-
-valueClassesForData = (data) ->
-  [
-    {
-      range: [0...data.free]
-      className: "free"
-    },
-    {
-      range: [data.free...(data.free+data.partial_free)]
-      className: "partial-free"
-    },
-    {
-      range: [(data.free+data.partial_free)...data.sum]
-      className: "not-free"
-    }
-  ]
 
 changeDiffClass = (value) ->
   if value != 0
@@ -107,22 +79,4 @@ $ ->
       trs.append('td').text((d) -> formatCurrency(d.gesamt - d.Gesamt_2012)).attr('class', (d) -> changeDiffClass(d.gesamt - d.Gesamt_2012))
       trs.append('td').text((d) -> formatCurrency(d.ruestung - d.Ruestung_2012)).attr('class', (d) -> changeDiffClass(d.ruestung - d.Ruestung_2012))
 
-      generateDataForLargeMultipleFreeNotFreeRuestung(freedomIndexExports, "all", 15)
-      multiplesData = generateDataForLargeMultipleFreeNotFreeRuestung(freedomIndexExports, "2013", 5)
-      multipleOptions = { height: 100, circles: { radius: 8, padding: 5 } }
-      largeMultiple = new @LargeMultiples([multiplesData], multipleOptions)
-      largeMultiple.setValueKeys("sum","free")
-
-      largeMultiple.setValueClasses(valueClassesForData(multiplesData))
-      largeMultiple.render("#multiples #multiple-exports")
-      $('#multiples form input').change (e) ->
-        if(this.value == 'all')
-          multiplesData = _.findWhere(freedomIndexExports, { time: 'all' })
-          largeMultiple.setValueClasses(valueClassesForData(multiplesData))
-          largeMultiple.update([multiplesData])
-        else
-          multiplesData = _.findWhere(freedomIndexExports, { time: '2013' })
-          largeMultiple.setValueClasses(valueClassesForData(multiplesData))
-          largeMultiple.update([multiplesData])
-
-
+      @drawFreedomIndexPointVisualization(freedomIndexExports)
