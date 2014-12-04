@@ -8,6 +8,18 @@ class @D3Linechart extends @D3Graph
     .attr("transform", "translate(0,0)")
     .call(@yAxis)
 
+  createMeanLine: ->
+    @meanLine = @svgSelection.append("g")
+      .attr("class","mean")
+      .append("path")
+      .datum( @meanData )
+      .attr('d', @meanLine)
+      .attr('class', 'line mean')
+
+  setMeanData: (data) ->
+    @meanData = data
+    @meanData.forEach((d) => d.year = @parseDateFromYear(d.year))
+
   setDataKey: (key = 'value') ->
     @dataKey = key
 
@@ -26,6 +38,11 @@ class @D3Linechart extends @D3Graph
       @xScale(d[@dateKey]))
     .y((d) =>
       @yScale(d[@dataKey]))
+
+  setMeanLine: ->
+    @meanLine = d3.svg.line()
+      .x((d) => @xScale(d[@dateKey]))
+      .y((d) => @yScale(d.mean))
 
   setScales: ->
     @yScale = d3.scale.linear()
@@ -71,4 +88,5 @@ class @D3Linechart extends @D3Graph
     @createAxisAndScales(@data)
     @createSvg()
     @createYAxis()
+    @createMeanLine()
     @draw(@data)
