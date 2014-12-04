@@ -2,6 +2,12 @@ class @D3Linechart extends @D3Graph
   constructor: (@data, @options = {}) ->
     @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
 
+  setDataKey: (key = 'value') ->
+    @dataKey = key
+
+  setDateKey: (key = 'date') ->
+    @dateKey = key
+
   setLine: ->
     @line = d3.svg.line()
     .x((d) =>
