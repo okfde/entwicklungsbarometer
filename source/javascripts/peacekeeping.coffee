@@ -41,8 +41,8 @@ class @Peacekeeping extends @D3Linechart
 
 $ ->
   if $('#peacekeeping').length > 0
-    peacekeepingPath = "#{rootPath}/data/peacekeeping_contributions.csv"
-    peacekeepingMeanPath = "#{rootPath}/data/means.csv"
+    peacekeepingPath = "#{rootPath}/data/security/peacekeeping/peacekeeping_contributions.csv"
+    peacekeepingMeanPath = "#{rootPath}/data/security/peacekeeping/means.csv"
     queue()
     .defer(d3.csv, peacekeepingPath)
     .defer(d3.csv, peacekeepingMeanPath)
