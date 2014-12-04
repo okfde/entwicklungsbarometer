@@ -45,3 +45,30 @@ section#panzer
   #ngos
     @include span-columns(11)
     @include shift(1)
+#peacekeeping
+  .voronoi path
+    fill: none
+    pointer-events: all
+  svg.countries, g.countries, g.mean
+    margin: 10px 0
+    .line
+      stroke: #dcdcdc
+      &.country-hover
+        stroke: #777
+        stroke-width: 2
+    &.germany
+      .line
+        stroke: $red
+      text.name
+        fill: $red
+    .line.mean
+      stroke: $green
+      stroke-width: 0.7
+  .focus
+    circle
+      fill: none
+      stroke: #777
+    text
+      text-anchor: middle
+      font-size: 0.8em
+      font-weight: bold
