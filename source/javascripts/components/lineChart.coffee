@@ -44,6 +44,17 @@ class @D3Linechart extends @D3Graph
       .x((d) => @xScale(d[@dateKey]))
       .y((d) => @yScale(d.mean))
 
+  setVoronoi: ->
+    @voronoi = d3.geom.voronoi()
+      .x((d) =>
+        @xScale(d[@dateKey]))
+      .y((d) =>
+        @yScale(d[@dataKey]))
+      .clipExtent([
+        [-@options.margin.left, -@options.margin.top],
+        [@options.width + @options.margin.right, @options.height + @options.margin.bottom]
+      ])
+
   setScales: ->
     @yScale = d3.scale.linear()
           .range([@options.height, 0])
@@ -68,6 +79,34 @@ class @D3Linechart extends @D3Graph
       .orient("left")
       .ticks(@options.ticks.y)
 
+  createFocusElement: ->
+    @focus = @svgSelection.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(-100,-100)")
+    @focus.append("circle").attr("r", 4.5)
+    @focus.append("text")
+          .attr("y", -15)
+
+  createOverlay: ->
+    @voronoiGroup = @svgSelection.append("g")
+          .attr("class", "voronoi")
+    @voronoiGroup.selectAll("path")
+      .data(@voronoi(_.flatten(@data)))
+      .enter().append("path")
+      .attr("d", (d) -> if d? then "M#{d.join("L")}Z" else "")
+      .datum((d) -> if d? then d.point)
+      .on("mouseover", @mouseover)
+      .on("mouseout", @mouseout)
+
+  mouseout: (d) =>
+    d3.select(@lineClassForElement(d)).classed("hover", false)
+    @focus.attr("transform", "translate(-100,-100)")
+
+  mouseover: (d) =>
+    d3.select(@lineClassForElement(d)).classed("hover", true)
+    @focus.attr("transform", "translate(#{@xScale(d[@dateKey])},#{@yScale(d[@dataKey])})")
+    @focus.select("text").text("#{Math.round(d[@dataKey])}")
+
   draw: (data) ->
     graphGroup = @svgSelection.selectAll("g.#{@lineClass}").data(data)
     graphs = graphGroup.enter().append("g")
@@ -77,6 +116,7 @@ class @D3Linechart extends @D3Graph
 
   createAxisAndScales: ->
     @setLine()
+    @setVoronoi()
     @setScales()
     @setAxis()
     @setGrid()
@@ -90,3 +130,5 @@ class @D3Linechart extends @D3Graph
     @createYAxis()
     @createMeanLine()
     @draw(@data)
+    @createFocusElement()
+    @createOverlay()
