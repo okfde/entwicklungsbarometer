@@ -1,6 +1,6 @@
 class @D3Linechart extends @D3Graph
   constructor: (@data, @options = {}) ->
-    @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40} })
+    @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
 
   setLine: ->
     @line = d3.svg.line()
@@ -21,17 +21,17 @@ class @D3Linechart extends @D3Graph
     @yAxis = d3.svg.axis()
     .scale(@yScale)
     .orient("left")
-    .ticks(5)
+    .ticks(@options.ticks.y)
     @xAxis = d3.svg.axis()
     .scale(@xScale)
     .orient("bottom")
-    .ticks(4)
+    .ticks(@options.ticks.x)
 
   setGrid: ->
     @yGrid = d3.svg.axis()
       .scale(@yScale)
       .orient("left")
-      .ticks(5)
+      .ticks(@options.ticks.y)
 
   createAxisAndScales: ->
     @setLine()
