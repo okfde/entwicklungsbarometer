@@ -1,76 +1,43 @@
 class @Peacekeeping extends @D3Linechart
   constructor: (@rawData, @options = {}) ->
-    @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40} })
+    @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 7, x: 8 } })
 
-  setMeanData: (data) ->
-    @meanData = data
-    @meanData.forEach((d) => d.year = @parseDateFromYear(d.year))
-
-  setDataKey: (key = 'per_capita') ->
-    @dataKey = key
-
-  setDateKey: (key = 'date') ->
-    @dateKey = key
+  lineClassForElement:  (d) ->
+    d[0].country.toLowerCase()
 
   setScalesAndDomain: (data)->
-    @setDataKey()
+    @setDataKey('per_capita')
     @setDateKey('year')
     @setYDomain([0, d3.max(data, (d) => Math.ceil(parseFloat(d[@dataKey])) )])
     @setXDomain(d3.extent(data, (d) => @parseDateFromYear(d.year)))
-    @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
     @
 
-  setMeanLine: ->
-    @meanLine = d3.svg.line()
-      .x((d) => debugger;@xScale(d[@dateKey]))
-      .y((d) => @yScale(d.mean))
+  dataFormat: ->
+    d3.numberFormat(",.2f")
+  mouseout: (d) =>
+    d3.select(".#{d.country.toLowerCase()} path").classed("country-hover", false)
+    @focus.attr("transform", "translate(-100,-100)")
+
+  mouseover: (d) =>
+    d3.select(".#{d.country.toLowerCase()} path").classed("country-hover", true)
+    @focus.attr("transform", "translate(#{@xScale(d[@dateKey])},#{@yScale(d[@dataKey])})")
+    @focus.select("text").text("#{d.country}: $#{@dataFormat()(d[@dataKey])} Mio")
 
   drawSingle: (countryName) ->
-    @data = _.filter(@rawData, (d) -> d.country == countryName)
-    @data = _.sortBy(@data, (d) => @parseDateFromYear(d.year))
-    @setScalesAndDomain(@data)
+    data = _.filter(@rawData, (d) -> d.country == countryName)
+    data = _.sortBy(data, (d) => @parseDateFromYear(d.year))
+    @data = [data]
+    @setScalesAndDomain(@data[0])
+    @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
 
-  drawMultiples: ->
-    @data = _.groupBy(@rawData, (d) -> d.country)
+  drawSpecific: (countries = []) ->
+    @data = _.filter(@rawData, (d) -> _.contains(countries, d.country))
+    @data = _.groupBy(@data, (d) -> d.country)
     @data = _.map(@data, (data) =>
       _.sortBy(data, (d) => @parseDateFromYear(d.year))
     )
     @setScalesAndDomain(@data[0])
-    @createSvg = ->
-      @countries = d3.select(@element).selectAll('svg.countries').data(@data)
-
-    @draw = (data) ->
-      groups = @countries.enter().append('svg')
-      .attr('class', (d) -> "#{d[0].country.toLowerCase()} countries")
-      .attr('width', @options.width + @options.margin.left + @options.margin.right)
-      .attr('height', @options.height + @options.margin.top + @options.margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + @options.margin.left + "," + @options.margin.top + ")")
-      groups.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + @options.height + ")")
-      .call(@xAxis)
-      groups.append("g")
-      .attr("class", "grid")
-      .call(@yGrid.tickSize(-@options.height, 0, 0)
-                  .tickFormat(""))
-      groups.append("text")
-      .attr("class","name")
-      .text((d) -> d[0].country)
-      .attr('transform', "translate(#{@options.width/2},5)")
-      .attr('text-anchor', 'middle')
-
-      groups.append("g")
-      .attr("class", "y axis")
-      .attr("transform", "translate(0,0)")
-      .call(@yAxis)
-      groups.append("path").datum( (d) -> d).attr('d', @line).attr('class', 'line')
-      groups.append("path").datum( @meanData ).attr('d', @meanLine).attr('class', 'line mean')
-
-
-  draw: (data) ->
-    graphGroup = @svgSelection.selectAll('g.graphs')
-    @svgSelection.append("path").attr('class', 'line').datum(data).attr("d", @line)
+    @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
 
 $ ->
   if $('#peacekeeping').length > 0
@@ -81,14 +48,13 @@ $ ->
     .defer(d3.csv, peacekeepingMeanPath)
     .await (error, data, meanData) ->
       options = {
-        width: 200
-        height: 200
-        margin: { top: 10, left: 20, bottom: 20, right: 10 }
+        width: 800
+        height: 400
+        margin: { top: 20, left: 20, bottom: 20, right: 80 }
       }
       pk = new Peacekeeping(data, options)
       pk.setMeanData(meanData)
-      #pk.drawSingle('Germany')
+      pk.drawSpecific(['Germany', '','Norway','Denmark','Poland'])
+      pk.setLineClass("countries")
       pk.setMeanLine()
-      pk.drawMultiples()
       pk.render('.contributions')
-
