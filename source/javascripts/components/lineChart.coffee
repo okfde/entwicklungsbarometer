@@ -2,6 +2,12 @@ class @D3Linechart extends @D3Graph
   constructor: (@data, @options = {}) ->
     @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
 
+  createYAxis: ->
+    @svgSelection.append("g")
+    .attr("class", "y axis")
+    .attr("transform", "translate(0,0)")
+    .call(@yAxis)
+
   setDataKey: (key = 'value') ->
     @dataKey = key
 
@@ -48,3 +54,8 @@ class @D3Linechart extends @D3Graph
   parseDateFromYear: (year) ->
     new Date(year,0,1)
 
+  render: (@element) ->
+    @createAxisAndScales(@data)
+    @createSvg()
+    @createYAxis()
+    @draw(@data)
