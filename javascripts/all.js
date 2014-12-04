@@ -20187,9 +20187,421 @@ d3.numberFormat = locale_de_DE.numberFormat
 
 }).call(this);
 (function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.D3Linechart = (function(_super) {
+    __extends(D3Linechart, _super);
+
+    function D3Linechart(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.mouseover = __bind(this.mouseover, this);
+      this.mouseout = __bind(this.mouseout, this);
+      this.options = _.defaults(this.options, {
+        width: 200,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        },
+        ticks: {
+          y: 5,
+          x: 4
+        }
+      });
+    }
+
+    D3Linechart.prototype.createYAxis = function() {
+      return this.svgSelection.append("g").attr("class", "y axis").attr("transform", "translate(0,0)").call(this.yAxis);
+    };
+
+    D3Linechart.prototype.createMeanLine = function() {
+      return this.meanLine = this.svgSelection.append("g").attr("class", "mean").append("path").datum(this.meanData).attr('d', this.meanLine).attr('class', 'line mean');
+    };
+
+    D3Linechart.prototype.setMeanData = function(data) {
+      this.meanData = data;
+      return this.meanData.forEach((function(_this) {
+        return function(d) {
+          return d.year = _this.parseDateFromYear(d.year);
+        };
+      })(this));
+    };
+
+    D3Linechart.prototype.setDataKey = function(key) {
+      if (key == null) {
+        key = 'value';
+      }
+      return this.dataKey = key;
+    };
+
+    D3Linechart.prototype.setDateKey = function(key) {
+      if (key == null) {
+        key = 'date';
+      }
+      return this.dateKey = key;
+    };
+
+    D3Linechart.prototype.setLineClass = function(key) {
+      if (key == null) {
+        key = 'lines';
+      }
+      return this.lineClass = key;
+    };
+
+    D3Linechart.prototype.lineClassForElement = function(d) {
+      return d[this.dataKey];
+    };
+
+    D3Linechart.prototype.setLine = function() {
+      return this.line = d3.svg.line().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d[_this.dataKey]);
+        };
+      })(this));
+    };
+
+    D3Linechart.prototype.setMeanLine = function() {
+      return this.meanLine = d3.svg.line().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d.mean);
+        };
+      })(this));
+    };
+
+    D3Linechart.prototype.setVoronoi = function() {
+      return this.voronoi = d3.geom.voronoi().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d[_this.dataKey]);
+        };
+      })(this)).clipExtent([[-this.options.margin.left, -this.options.margin.top], [this.options.width + this.options.margin.right, this.options.height + this.options.margin.bottom]]);
+    };
+
+    D3Linechart.prototype.setScales = function() {
+      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain(this.yScaleDomain);
+      return this.xScale = d3.time.scale().range([0, this.options.width]).domain(this.xScaleDomain);
+    };
+
+    D3Linechart.prototype.setAxis = function() {
+      this.yAxis = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
+      return this.xAxis = d3.svg.axis().scale(this.xScale).orient("bottom").ticks(this.options.ticks.x);
+    };
+
+    D3Linechart.prototype.setGrid = function() {
+      return this.yGrid = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
+    };
+
+    D3Linechart.prototype.createFocusElement = function() {
+      this.focus = this.svgSelection.append("g").attr("class", "focus").attr("transform", "translate(-100,-100)");
+      this.focus.append("circle").attr("r", 4.5);
+      return this.focus.append("text").attr("y", -15);
+    };
+
+    D3Linechart.prototype.createOverlay = function() {
+      this.voronoiGroup = this.svgSelection.append("g").attr("class", "voronoi");
+      return this.voronoiGroup.selectAll("path").data(this.voronoi(_.flatten(this.data))).enter().append("path").attr("d", function(d) {
+        if (d != null) {
+          return "M" + (d.join("L")) + "Z";
+        } else {
+          return "";
+        }
+      }).datum(function(d) {
+        if (d != null) {
+          return d.point;
+        }
+      }).on("mouseover", this.mouseover).on("mouseout", this.mouseout);
+    };
+
+    D3Linechart.prototype.mouseout = function(d) {
+      d3.select(this.lineClassForElement(d)).classed("hover", false);
+      return this.focus.attr("transform", "translate(-100,-100)");
+    };
+
+    D3Linechart.prototype.mouseover = function(d) {
+      d3.select(this.lineClassForElement(d)).classed("hover", true);
+      this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
+      return this.focus.select("text").text("" + (Math.round(d[this.dataKey])));
+    };
+
+    D3Linechart.prototype.draw = function(data) {
+      var graphGroup, graphs, line;
+      graphGroup = this.svgSelection.selectAll("g." + this.lineClass).data(data);
+      graphs = graphGroup.enter().append("g").attr('class', (function(_this) {
+        return function(d) {
+          return "" + _this.lineClass + " " + (_this.lineClassForElement(d));
+        };
+      })(this));
+      line = graphs.append("path");
+      return line.attr('class', 'line').attr("d", this.line);
+    };
+
+    D3Linechart.prototype.createAxisAndScales = function() {
+      this.setLine();
+      this.setVoronoi();
+      this.setScales();
+      this.setAxis();
+      return this.setGrid();
+    };
+
+    D3Linechart.prototype.parseDateFromYear = function(year) {
+      return new Date(year, 0, 1);
+    };
+
+    D3Linechart.prototype.render = function(element) {
+      this.element = element;
+      this.createAxisAndScales(this.data);
+      this.createSvg();
+      this.createYAxis();
+      this.createMeanLine();
+      this.draw(this.data);
+      this.createFocusElement();
+      return this.createOverlay();
+    };
+
+    return D3Linechart;
+
+  })(this.D3Graph);
+
+}).call(this);
+(function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.LineMultiples = (function(_super) {
+    __extends(LineMultiples, _super);
+
+    function LineMultiples(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.options = _.defaults(this.options, {
+        width: 200,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        },
+        ticks: {
+          y: 5,
+          x: 4
+        }
+      });
+    }
+
+    LineMultiples.prototype.drawMultiples = function() {
+      this.data = _.groupBy(this.rawData, function(d) {
+        return d.country;
+      });
+      this.data = _.map(this.data, (function(_this) {
+        return function(data) {
+          return _.sortBy(data, function(d) {
+            return _this.parseDateFromYear(d.year);
+          });
+        };
+      })(this));
+      this.data.forEach((function(_this) {
+        return function(d) {
+          return d.forEach(function(d) {
+            return d.year = _this.parseDateFromYear(d.year);
+          });
+        };
+      })(this));
+      return this.setScalesAndDomain(this.data[0]);
+    };
+
+    LineMultiples.prototype.createSvg = function() {
+      return this.countries = d3.select(this.element).selectAll('svg.countries').data(this.data);
+    };
+
+    LineMultiples.prototype.draw = function(data) {
+      var groups;
+      groups = this.countries.enter().append('svg').attr('class', function(d) {
+        return "" + (d[0].country.toLowerCase()) + " countries";
+      }).attr('width', this.options.width + this.options.margin.left + this.options.margin.right).attr('height', this.options.height + this.options.margin.top + this.options.margin.bottom).append("g").attr("transform", "translate(" + this.options.margin.left + "," + this.options.margin.top + ")");
+      groups.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
+      groups.append("g").attr("class", "grid").call(this.yGrid.tickSize(-this.options.height, 0, 0).tickFormat(""));
+      groups.append("text").attr("class", "name").text(function(d) {
+        return d[0].country;
+      }).attr('transform', "translate(" + (this.options.width / 2) + ",5)").attr('text-anchor', 'middle');
+      groups.append("g").attr("class", "y axis").attr("transform", "translate(0,0)").call(this.yAxis);
+      groups.append("path").datum(function(d) {
+        return d;
+      }).attr('d', this.line).attr('class', 'line');
+      return groups.append("path").datum(this.meanData).attr('d', this.meanLine).attr('class', 'line mean');
+    };
+
+    return LineMultiples;
+
+  })(this.D3Linechart);
+
+}).call(this);
+(function() {
   $(function() {
     if ($('#main').length > 0) {
       return cdi_index('.cdi-index-overall');
+    }
+  });
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.Peacekeeping = (function(_super) {
+    __extends(Peacekeeping, _super);
+
+    function Peacekeeping(rawData, options) {
+      this.rawData = rawData;
+      this.options = options != null ? options : {};
+      this.mouseover = __bind(this.mouseover, this);
+      this.mouseout = __bind(this.mouseout, this);
+      this.options = _.defaults(this.options, {
+        width: 200,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        },
+        ticks: {
+          y: 7,
+          x: 8
+        }
+      });
+    }
+
+    Peacekeeping.prototype.lineClassForElement = function(d) {
+      return d[0].country.toLowerCase();
+    };
+
+    Peacekeeping.prototype.setScalesAndDomain = function(data) {
+      this.setDataKey('per_capita');
+      this.setDateKey('year');
+      this.setYDomain([
+        0, d3.max(data, (function(_this) {
+          return function(d) {
+            return Math.ceil(parseFloat(d[_this.dataKey]));
+          };
+        })(this))
+      ]);
+      this.setXDomain(d3.extent(data, (function(_this) {
+        return function(d) {
+          return _this.parseDateFromYear(d.year);
+        };
+      })(this)));
+      return this;
+    };
+
+    Peacekeeping.prototype.dataFormat = function() {
+      return d3.numberFormat(",.2f");
+    };
+
+    Peacekeeping.prototype.mouseout = function(d) {
+      d3.select("." + (d.country.toLowerCase()) + " path").classed("country-hover", false);
+      return this.focus.attr("transform", "translate(-100,-100)");
+    };
+
+    Peacekeeping.prototype.mouseover = function(d) {
+      d3.select("." + (d.country.toLowerCase()) + " path").classed("country-hover", true);
+      this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
+      return this.focus.select("text").text("" + d.country + ": $" + (this.dataFormat()(d[this.dataKey])) + " Mio");
+    };
+
+    Peacekeeping.prototype.drawSingle = function(countryName) {
+      var data;
+      data = _.filter(this.rawData, function(d) {
+        return d.country === countryName;
+      });
+      data = _.sortBy(data, (function(_this) {
+        return function(d) {
+          return _this.parseDateFromYear(d.year);
+        };
+      })(this));
+      this.data = [data];
+      this.setScalesAndDomain(this.data[0]);
+      return this.data.forEach((function(_this) {
+        return function(d) {
+          return d.forEach(function(d) {
+            return d.year = _this.parseDateFromYear(d.year);
+          });
+        };
+      })(this));
+    };
+
+    Peacekeeping.prototype.drawSpecific = function(countries) {
+      if (countries == null) {
+        countries = [];
+      }
+      this.data = _.filter(this.rawData, function(d) {
+        return _.contains(countries, d.country);
+      });
+      this.data = _.groupBy(this.data, function(d) {
+        return d.country;
+      });
+      this.data = _.map(this.data, (function(_this) {
+        return function(data) {
+          return _.sortBy(data, function(d) {
+            return _this.parseDateFromYear(d.year);
+          });
+        };
+      })(this));
+      this.setScalesAndDomain(this.data[0]);
+      return this.data.forEach((function(_this) {
+        return function(d) {
+          return d.forEach(function(d) {
+            return d.year = _this.parseDateFromYear(d.year);
+          });
+        };
+      })(this));
+    };
+
+    return Peacekeeping;
+
+  })(this.D3Linechart);
+
+  $(function() {
+    var peacekeepingMeanPath, peacekeepingPath;
+    if ($('#peacekeeping').length > 0) {
+      peacekeepingPath = "" + rootPath + "/data/security/peacekeeping/peacekeeping_contributions.csv";
+      peacekeepingMeanPath = "" + rootPath + "/data/security/peacekeeping/means.csv";
+      return queue().defer(d3.csv, peacekeepingPath).defer(d3.csv, peacekeepingMeanPath).await(function(error, data, meanData) {
+        var options, pk;
+        options = {
+          width: 800,
+          height: 400,
+          margin: {
+            top: 20,
+            left: 20,
+            bottom: 20,
+            right: 80
+          }
+        };
+        pk = new Peacekeeping(data, options);
+        pk.setMeanData(meanData);
+        pk.drawSpecific(['Germany', '', 'Norway', 'Denmark', 'Poland']);
+        pk.setLineClass("countries");
+        pk.setMeanLine();
+        return pk.render('.contributions');
+      });
     }
   });
 
