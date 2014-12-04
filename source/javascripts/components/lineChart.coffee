@@ -14,6 +14,12 @@ class @D3Linechart extends @D3Graph
   setDateKey: (key = 'date') ->
     @dateKey = key
 
+  setLineClass: (key = 'lines') ->
+    @lineClass = key
+
+  lineClassForElement: (d) ->
+    d[@dataKey]
+
   setLine: ->
     @line = d3.svg.line()
     .x((d) =>
@@ -44,6 +50,13 @@ class @D3Linechart extends @D3Graph
       .scale(@yScale)
       .orient("left")
       .ticks(@options.ticks.y)
+
+  draw: (data) ->
+    graphGroup = @svgSelection.selectAll("g.#{@lineClass}").data(data)
+    graphs = graphGroup.enter().append("g")
+      .attr('class', (d) => "#{@lineClass} #{@lineClassForElement(d)}")
+    line = graphs.append("path")
+    line.attr('class', 'line').attr("d", @line)
 
   createAxisAndScales: ->
     @setLine()
