@@ -118,7 +118,7 @@
 
   $(function() {
     var peacekeepingMeanPath, peacekeepingPath;
-    if ($('#peacekeeping').length > 0) {
+    if ($('#peacekeeping .contributions').length > 0) {
       peacekeepingPath = "" + rootPath + "/data/security/peacekeeping/peacekeeping_contributions.csv";
       peacekeepingMeanPath = "" + rootPath + "/data/security/peacekeeping/means.csv";
       return queue().defer(d3.csv, peacekeepingPath).defer(d3.csv, peacekeepingMeanPath).await(function(error, data, meanData) {

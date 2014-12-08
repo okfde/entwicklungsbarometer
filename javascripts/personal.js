@@ -13,13 +13,13 @@
       this.mouseover = __bind(this.mouseover, this);
       this.mouseout = __bind(this.mouseout, this);
       this.options = _.defaults(this.options, {
-        width: 200,
-        height: 200,
+        width: 800,
+        height: 300,
         margin: {
           top: 40,
           right: 30,
           bottom: 150,
-          left: 40
+          left: 80
         },
         ticks: {
           y: 7,
@@ -33,12 +33,12 @@
     };
 
     PeacekeepingPersonal.prototype.setScalesAndDomain = function(data) {
-      this.setDataKey('Total');
+      this.setDataKey('TotalPercent');
       this.setDateKey('year');
       this.setYDomain([
         0, d3.max(data, function(d) {
           return d3.max(d, function(d) {
-            return parseFloat(d.Total);
+            return d.TotalPercent;
           });
         })
       ]);
@@ -67,6 +67,13 @@
           });
         };
       })(this));
+      this.data.forEach((function(_this) {
+        return function(d) {
+          return d.forEach(function(d) {
+            return d.TotalPercent = parseFloat(d.TotalCost) * 100;
+          });
+        };
+      })(this));
       this.setScalesAndDomain(this.data);
       return this.data.forEach((function(_this) {
         return function(d) {
@@ -77,15 +84,19 @@
       })(this));
     };
 
+    PeacekeepingPersonal.prototype.dataFormat = function() {
+      return d3.numberFormat(",.3f");
+    };
+
     PeacekeepingPersonal.prototype.mouseout = function(d) {
-      d3.select("." + (d.country.toLowerCase()) + " path").classed("country-hover", false);
+      d3.select("." + (d.Country.toLowerCase()) + " path").classed("country-hover", false);
       return this.focus.attr("transform", "translate(-100,-100)");
     };
 
     PeacekeepingPersonal.prototype.mouseover = function(d) {
-      d3.select("." + (d.country.toLowerCase()) + " path").classed("country-hover", true);
+      d3.select("." + (d.Country.toLowerCase()) + " path").classed("country-hover", true);
       this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
-      return this.focus.select("text").text("" + d.country + ": $" + (this.dataFormat()(d[this.dataKey])) + " Mio");
+      return this.focus.select("text").text("" + d.Country + ": " + (this.dataFormat()(d[this.dataKey])) + " % of GDP");
     };
 
     return PeacekeepingPersonal;
@@ -97,18 +108,8 @@
     if ($('#personal').length > 0) {
       personalPath = "" + rootPath + "/data/security/peacekeeping/peacekeepingPersonal.csv";
       return d3.csv(personalPath, function(data) {
-        var countries, options, personal;
-        options = {
-          width: 800,
-          height: 400,
-          margin: {
-            top: 20,
-            left: 20,
-            bottom: 20,
-            right: 80
-          }
-        };
-        countries = ['Austria', 'Finnland', 'Germany', 'EU'];
+        var countries, personal;
+        countries = ['Austria', 'Finland', 'Germany', 'Luxembourg', 'EU', 'Slovakia'];
         personal = new PeacekeepingPersonal(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);
