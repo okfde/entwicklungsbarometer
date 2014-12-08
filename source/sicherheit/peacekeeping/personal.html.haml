@@ -1,16 +1,10 @@
 ---
 title: Entwicklungsbarometer - Peacekeeping Personal
+nav: personal
 ---
 #sicherheit.indikator.sub-indikator
   = link_to "/sicherheit/index.html" do
     %h1.sicherheit Sicherheit
   #peacekeeping
-    .navbar
-      %ul.nav
-        %li
-          = link_to "/sicherheit/peacekeeping/index.html" do
-            %h4 Finanzbeiträge UN Peacekeeping
-        %li.active
-          = link_to "/sicherheit/peacekeeping/personal.html" do
-            %h4 Personal für UN Peacekeeping in US$
+    = partial "partials/peacekeeping_nav"
     #personal
