@@ -8,13 +8,15 @@ title: Entwicklungsbarometer - Freedom Index
     .navbar
       %ul.nav
         %li
-          %h4 Waffenexporte in nicht-demokratische Staaten
+          = link_to "/sicherheit/ruestung/index.html" do
+            %h4 Schädliche Waffenexporte
         %li
           %h4 Deutsche Waffenexporte im Detail
         %li
           %h4 Anteil Waffenhandel am GDP
         %li.active
-          %h4 Anteil kritische Waffenexporte am GDP
+          = link_to "/sicherheit/ruestung/freedom-index.html" do
+            %h4 Anteil kritische Waffenexporte am GDP
     #multiples
       .multiple
         #multiple-exports

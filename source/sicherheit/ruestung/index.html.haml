@@ -8,11 +8,15 @@ title: Entwicklungsbarometer - Rüstung
     .navbar
       %ul.nav
         %li.active
-          %h4 Schädliche Waffenexporte
+          = link_to "/sicherheit/ruestung/index.html" do
+            %h4 Schädliche Waffenexporte
         %li
           %h4 Deutsche Waffenexporte im Detail
         %li
           %h4 Anteil Waffenhandel am GDP
+        %li
+          = link_to "/sicherheit/ruestung/freedom-index.html" do
+            %h4 Anteil kritische Waffenexporte am GDP
   .exports-percent-gdp.barchart
   %h2 Schädliche Waffenexporte
   .explanation
