@@ -1,6 +1,6 @@
 class PeacekeepingPersonal extends @D3Linechart
   constructor: (@rawData, @options = {}) ->
-    @options = _.defaults(@options, { width: 800, height: 300, margin: {top: 40, right: 30, bottom: 150, left: 80}, ticks: { y: 7, x: 8 } })
+    @options = _.defaults(@options, { width: 800, height: 300, margin: {top: 40, right: 30, bottom: 50, left: 80}, ticks: { y: 7, x: 8 } })
 
   lineClassForElement:  (d) ->
     d[0].Country.toLowerCase()
