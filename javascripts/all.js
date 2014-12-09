@@ -21057,8 +21057,13 @@ d3.numberFormat = locale_de_DE.numberFormat
     if ($('#ruestung').length > 0) {
       exportPath = "" + rootPath + "/data/security/armsexports/weighted_exports_historical.csv";
       return d3.csv(exportPath, function(data) {
-        var exportChart;
-        exportChart = new this.Barchart(data);
+        var exportChart, options;
+        options = {
+          rotate: {
+            x: true
+          }
+        };
+        exportChart = new this.Barchart(data, options);
         _.map(data, function(d) {
           return d.WeightedExports = parseFloat(d.WeightedExports) * (-1);
         });
