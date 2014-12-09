@@ -40,7 +40,7 @@ class @Peacekeeping extends @D3Linechart
     @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
 
 $ ->
-  if $('#peacekeeping').length > 0
+  if $('#peacekeeping .contributions').length > 0
     peacekeepingPath = "#{rootPath}/data/security/peacekeeping/peacekeeping_contributions.csv"
     peacekeepingMeanPath = "#{rootPath}/data/security/peacekeeping/means.csv"
     queue()
