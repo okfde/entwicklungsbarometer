@@ -1,0 +1,42 @@
+---
+title: Entwicklungsbarometer - Freedom Index
+---
+#sicherheit.indikator.sub-indikator
+  = link_to "/sicherheit/index.html" do
+    %h1.sicherheit Sicherheit
+  #freedom-index
+    .navbar
+      %ul.nav
+        %li
+          %h4 Waffenexporte in nicht-demokratische Staaten
+        %li
+          %h4 Deutsche Waffenexporte im Detail
+        %li
+          %h4 Anteil Waffenhandel am GDP
+        %li.active
+          %h4 Anteil kritische Waffenexporte am GDP
+    #multiples
+      .multiple
+        #multiple-exports
+      .legend
+        %svg
+          %g(transform="translate(0,8)")
+            %circle.free(r=8 cx=8 cy=0)
+            %text(dx=24 dy=5) Exporte in Freie Länder
+          %g(transform="translate(0,32)")
+            %circle.partial-free(r=8 cy=0 cx=8)
+            %text(dx=24 dy=5) Exporte in Halb-Länder
+          %g(transform="translate(0,56)")
+            %circle.not-free(r=8 cx=8 cy=0)
+            %text(dx=24 dy=5) Exporte in Nicht-Freie Länder
+      .export-volumes
+        %h2
+        %h6 Zeitraum
+        %form
+          %input(type="radio" name="ruestung-chart" value="2013" checked="checked") 2013
+          %input(type="radio" name="ruestung-chart" value="all") 1999-2013
+    %h2 Anteil kritische Waffenexporte am GDP
+    .explanation
+      %p Waffenexporte deutscher Unternehmen sind immer wieder Gegenstand öffentlicher Diskussionen. Insbesondere die Exporte von Waffen in Krisenländer oder in Länder mit autoritären Regimen wird in der Öffentlichkeit kritisiert. Überlegungen der Bundesregierung zu einer restriktiveren Lizenzpraxis bei Waffenexporten werden in der Wirtschaft oft mit dem Hinweis auf Arbeitsplätze und den Wirtschaftsstandort Deutschland zurückgewiesen. Diese Visualisierung zeigt, dass eine Einschränkung der Waffenexporte auf unkritische Länder nur einen geringen Einfluss auf die Waffenexporte der deutschen Wirtschaft insgesamt hat.
+    .explanation
+      %p Die Daten zu den Waffenexporten deutscher Unternehmen stammen vom Bonn International Center for Conversion. Die Einteilung der Empfängerländer nach frei, halb-frei und nicht-frei wurde vom Freedom in the World Index vom Freedom House übernommen. dieser Index bewertet die Einhaltung von politischen und bürgerlichen Rechten in Anlehnung an die Menschenrechtserklärung der Vereinten Nationen von 1948.

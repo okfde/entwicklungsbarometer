@@ -54,3 +54,8 @@ valueClassesForData = (data) ->
       largeMultiple.update([multiplesData])
       $('.export-volumes h2').text("$#{formatCurrency(sum2013)}")
 
+$ ->
+  if $('#freedom-index').length > 0
+    freedomIndexExportsPath = rootPath+"/data/freedom_index_exports.csv"
+    d3.csv freedomIndexExportsPath, (data) ->
+      @drawFreedomIndexPointVisualization(data)

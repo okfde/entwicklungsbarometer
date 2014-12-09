@@ -12,12 +12,10 @@ $ ->
     export2012_13Path = rootPath+"/data/exporte_2012_2013.csv"
     gesamt2013Path = rootPath+"/data/gesamt_exporte_2013.csv"
     exporte2013Path = rootPath+"/data/exporte_2013.csv"
-    freedomIndexExportsPath = rootPath+"/data/freedom_index_exports.csv"
     queue()
     .defer(d3.csv, export2012_13Path)
     .defer(d3.csv, gesamt2013Path)
     .defer(d3.csv, exporte2013Path)
-    .defer(d3.csv, freedomIndexExportsPath)
     .await (error, @data, gesamt, exporte2013, freedomIndexExports) ->
       ruestung2013 = _.filter(@data,(num) -> num.ruestung > 0)
       ruestung2013 = _.sortBy(ruestung2013, (num) -> -num.ruestung)
@@ -79,4 +77,3 @@ $ ->
       trs.append('td').text((d) -> formatCurrency(d.gesamt - d.Gesamt_2012)).attr('class', (d) -> changeDiffClass(d.gesamt - d.Gesamt_2012))
       trs.append('td').text((d) -> formatCurrency(d.ruestung - d.Ruestung_2012)).attr('class', (d) -> changeDiffClass(d.ruestung - d.Ruestung_2012))
 
-      @drawFreedomIndexPointVisualization(freedomIndexExports)
