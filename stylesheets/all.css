@@ -1822,36 +1822,37 @@ section#panzer {
   .explanation #ngos:last-child {
     margin-right: 0; }
 
-/* line 58, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-#peacekeeping .voronoi path {
+/* line 57, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+.voronoi path {
   fill: none;
   pointer-events: all; }
+
 /* line 61, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-#peacekeeping svg.countries, #peacekeeping g.countries, #peacekeeping g.mean {
+.linegraph svg.countries, .linegraph g.countries, .linegraph g.mean {
   margin: 10px 0; }
   /* line 63, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #peacekeeping svg.countries .line, #peacekeeping g.countries .line, #peacekeeping g.mean .line {
+  .linegraph svg.countries .line, .linegraph g.countries .line, .linegraph g.mean .line {
     stroke: gainsboro; }
     /* line 65, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-    #peacekeeping svg.countries .line.country-hover, #peacekeeping g.countries .line.country-hover, #peacekeeping g.mean .line.country-hover {
+    .linegraph svg.countries .line.country-hover, .linegraph g.countries .line.country-hover, .linegraph g.mean .line.country-hover {
       stroke: #777777;
       stroke-width: 2; }
   /* line 69, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #peacekeeping svg.countries.germany .line, #peacekeeping g.countries.germany .line, #peacekeeping g.mean.germany .line {
+  .linegraph svg.countries.germany .line, .linegraph g.countries.germany .line, .linegraph g.mean.germany .line {
     stroke: #cd2400; }
   /* line 71, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #peacekeeping svg.countries.germany text.name, #peacekeeping g.countries.germany text.name, #peacekeeping g.mean.germany text.name {
+  .linegraph svg.countries.germany text.name, .linegraph g.countries.germany text.name, .linegraph g.mean.germany text.name {
     fill: #cd2400; }
   /* line 73, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  #peacekeeping svg.countries .line.mean, #peacekeeping g.countries .line.mean, #peacekeeping g.mean .line.mean {
+  .linegraph svg.countries .line.mean, .linegraph g.countries .line.mean, .linegraph g.mean .line.mean {
     stroke: #98bc5c;
     stroke-width: 0.7; }
 /* line 77, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-#peacekeeping .focus circle {
+.linegraph .focus circle {
   fill: none;
   stroke: #777777; }
 /* line 80, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-#peacekeeping .focus text {
+.linegraph .focus text {
   text-anchor: middle;
   font-size: 0.8em;
   font-weight: bold; }
