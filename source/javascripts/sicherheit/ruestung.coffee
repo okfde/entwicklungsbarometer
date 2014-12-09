@@ -4,6 +4,7 @@ $ ->
     d3.csv exportPath, (data) ->
       exportChart = new @Barchart(data)
       _.map(data, (d) -> d.WeightedExports = parseFloat(d.WeightedExports)*(-1))
+      data = _.sortBy(data, (d) -> d.WeightedExports)
       exportChart.setXDomain(data.map((d) -> d.Country))
       exportChart.setYDomain(d3.extent(data, (d) -> parseFloat(d.WeightedExports)))
       exportChart.setValueKey('WeightedExports')
