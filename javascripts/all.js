@@ -20146,10 +20146,12 @@ d3.numberFormat = locale_de_DE.numberFormat
           x: 4
         },
         rotate: {
-          x: true,
+          x: false,
           y: false
-        }
+        },
+        showExtent: false
       });
+      this.extentClass = "extent";
     }
 
     Barchart.prototype.createYAxis = function() {
@@ -20170,10 +20172,18 @@ d3.numberFormat = locale_de_DE.numberFormat
       return this.groupKey = key;
     };
 
+    Barchart.prototype.showExtent = function() {
+      return this.countries.append('rect').attr('y', 0).attr('width', this.xScale.rangeBand()).attr('height', this.options.height).attr('class', this.extentClass);
+    };
+
+    Barchart.prototype.rotateLabels = function(axis) {
+      return this.svgSelection.select("g." + axis + ".axis").selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
+    };
+
     Barchart.prototype.draw = function(data) {
-      var countries, values;
-      countries = this.svgSelection.selectAll('g.countries').data(this.data);
-      countries.enter().append('g').attr('class', (function(_this) {
+      var values;
+      this.countries = this.svgSelection.selectAll('g.countries').data(this.data);
+      this.countries.enter().append('g').attr('class', (function(_this) {
         return function(d) {
           return "countries " + d[_this.groupKey];
         };
@@ -20182,7 +20192,10 @@ d3.numberFormat = locale_de_DE.numberFormat
           return "translate(" + (_this.xScale(d[_this.groupKey])) + ",0)";
         };
       })(this));
-      values = countries.append('rect');
+      if (this.options.showExtent) {
+        this.showExtent();
+      }
+      values = this.countries.append('rect');
       values.attr('y', (function(_this) {
         return function(d) {
           return _this.yScale(d[_this.valueKey]);
@@ -20192,7 +20205,7 @@ d3.numberFormat = locale_de_DE.numberFormat
           return _this.options.height - _this.yScale(d[_this.valueKey]);
         };
       })(this));
-      countries.append('text').text((function(_this) {
+      this.countries.append('text').text((function(_this) {
         return function(d) {
           return d[_this.valueKey];
         };
@@ -20202,7 +20215,7 @@ d3.numberFormat = locale_de_DE.numberFormat
         };
       })(this)).attr('x', this.xScale.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
       if (this.options.rotate.x) {
-        return this.svgSelection.select('g.x.axis').selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
+        return this.rotateLabels("x");
       }
     };
 
@@ -21049,6 +21062,9 @@ d3.numberFormat = locale_de_DE.numberFormat
         _.map(data, function(d) {
           return d.WeightedExports = parseFloat(d.WeightedExports) * (-1);
         });
+        data = _.sortBy(data, function(d) {
+          return d.WeightedExports;
+        });
         exportChart.setXDomain(data.map(function(d) {
           return d.Country;
         }));
@@ -21208,6 +21224,42 @@ d3.numberFormat = locale_de_DE.numberFormat
         }).attr('class', function(d) {
           return changeDiffClass(d.ruestung - d.Ruestung_2012);
         });
+      });
+    }
+  });
+
+}).call(this);
+(function() {
+  $(function() {
+    var saferworldPath;
+    if ($('#transparenz .saferworld').length > 0) {
+      saferworldPath = "" + rootPath + "/data/security/transparenz/saferworld.csv";
+      return d3.csv(saferworldPath, function(data) {
+        var options, saferworldChart;
+        options = {
+          showExtent: true,
+          rotate: {
+            x: true
+          }
+        };
+        saferworldChart = new this.Barchart(data, options);
+        _.map(data, function(d) {
+          return d.Average = parseInt(d.Average);
+        });
+        data = _.sortBy(data, function(d) {
+          return d.Average;
+        });
+        saferworldChart.setXDomain(data.map(function(d) {
+          return d.Country;
+        }));
+        saferworldChart.setYDomain([
+          d3.min(data, function(d) {
+            return d.Average;
+          }), 100
+        ]);
+        saferworldChart.setValueKey('Average');
+        saferworldChart.setGroupKey('Country');
+        return saferworldChart.render('.saferworld');
       });
     }
   });

@@ -9,6 +9,9 @@
         _.map(data, function(d) {
           return d.WeightedExports = parseFloat(d.WeightedExports) * (-1);
         });
+        data = _.sortBy(data, function(d) {
+          return d.WeightedExports;
+        });
         exportChart.setXDomain(data.map(function(d) {
           return d.Country;
         }));

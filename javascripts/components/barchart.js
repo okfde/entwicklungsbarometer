@@ -22,10 +22,12 @@
           x: 4
         },
         rotate: {
-          x: true,
+          x: false,
           y: false
-        }
+        },
+        showExtent: false
       });
+      this.extentClass = "extent";
     }
 
     Barchart.prototype.createYAxis = function() {
@@ -46,10 +48,18 @@
       return this.groupKey = key;
     };
 
+    Barchart.prototype.showExtent = function() {
+      return this.countries.append('rect').attr('y', 0).attr('width', this.xScale.rangeBand()).attr('height', this.options.height).attr('class', this.extentClass);
+    };
+
+    Barchart.prototype.rotateLabels = function(axis) {
+      return this.svgSelection.select("g." + axis + ".axis").selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
+    };
+
     Barchart.prototype.draw = function(data) {
-      var countries, values;
-      countries = this.svgSelection.selectAll('g.countries').data(this.data);
-      countries.enter().append('g').attr('class', (function(_this) {
+      var values;
+      this.countries = this.svgSelection.selectAll('g.countries').data(this.data);
+      this.countries.enter().append('g').attr('class', (function(_this) {
         return function(d) {
           return "countries " + d[_this.groupKey];
         };
@@ -58,7 +68,10 @@
           return "translate(" + (_this.xScale(d[_this.groupKey])) + ",0)";
         };
       })(this));
-      values = countries.append('rect');
+      if (this.options.showExtent) {
+        this.showExtent();
+      }
+      values = this.countries.append('rect');
       values.attr('y', (function(_this) {
         return function(d) {
           return _this.yScale(d[_this.valueKey]);
@@ -68,7 +81,7 @@
           return _this.options.height - _this.yScale(d[_this.valueKey]);
         };
       })(this));
-      countries.append('text').text((function(_this) {
+      this.countries.append('text').text((function(_this) {
         return function(d) {
           return d[_this.valueKey];
         };
@@ -78,7 +91,7 @@
         };
       })(this)).attr('x', this.xScale.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
       if (this.options.rotate.x) {
-        return this.svgSelection.select('g.x.axis').selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
+        return this.rotateLabels("x");
       }
     };
 
