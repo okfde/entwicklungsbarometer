@@ -16,8 +16,7 @@
     }
 
     D3Graph.prototype.createSvg = function() {
-      this.svgSelection || (this.svgSelection = d3.select(this.element).append('svg').attr('width', this.options.width + this.options.margin.left + this.options.margin.right).attr('height', this.options.height + this.options.margin.top + this.options.margin.bottom).append("g").attr("transform", "translate(" + this.options.margin.left + "," + this.options.margin.top + ")"));
-      return this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
+      return this.svgSelection || (this.svgSelection = d3.select(this.element).append('svg').attr('width', this.options.width + this.options.margin.left + this.options.margin.right).attr('height', this.options.height + this.options.margin.top + this.options.margin.bottom).append("g").attr("transform", "translate(" + this.options.margin.left + "," + this.options.margin.top + ")"));
     };
 
     D3Graph.prototype.createAxisAndScales = function(data) {
@@ -25,6 +24,10 @@
       this.xScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain(this.xScaleDomain);
       this.xAxisScale = d3.scale.ordinal().rangeRoundBands([0, this.options.width], .1).domain(this.xScaleDomain);
       return this.xAxis = d3.svg.axis().scale(this.xAxisScale).orient("bottom");
+    };
+
+    D3Graph.prototype.appendAxis = function() {
+      return this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
     };
 
     D3Graph.prototype.setXDomain = function(domain) {
@@ -50,6 +53,7 @@
       this.element = element;
       this.createAxisAndScales(this.data);
       this.createSvg();
+      this.appendAxis();
       return this.draw(this.data);
     };
 
