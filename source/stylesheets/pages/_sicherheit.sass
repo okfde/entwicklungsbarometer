@@ -45,6 +45,34 @@ section#panzer
   #ngos
     @include span-columns(11)
     @include shift(1)
+
+#multiples
+  margin-bottom: 1.5em
+  +clearfix
+  svg
+    circle
+      fill: blue
+      &.free
+        fill: $green
+      &.not-free
+        fill: $red
+      &.partial-free
+        fill: $light-blue
+  .legend
+    @include span-columns(5)
+    @include row()
+    svg
+      margin: 0 0 0 90px
+      width: 100%
+      height: 80px
+  .export-volumes
+    @include span-columns(5)
+    h2
+      margin: 0 0 0.8em 0
+      padding: 0
+  .export-countries
+    @include row()
+
 .voronoi path
   fill: none
   pointer-events: all
