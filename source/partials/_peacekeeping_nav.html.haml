@@ -1,0 +1,16 @@
+---
+---
+.navbar
+  %ul.nav
+    - index_active = ''
+    - personal_active = ''
+    - if current_page.data.nav == 'index'
+      - index_active = 'active'
+    - if current_page.data.nav == 'personal'
+      - personal_active = 'active'
+    %li(class= index_active)
+      = link_to "/sicherheit/peacekeeping/index.html" do
+        %h4 Finanzbeiträge für UN Peacebuilding
+    %li(class= personal_active)
+      = link_to "/sicherheit/peacekeeping/personal.html" do
+        %h4 Gesamtbeiträge für UN Peacebuilding
