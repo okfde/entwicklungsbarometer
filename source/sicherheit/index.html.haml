@@ -4,7 +4,6 @@ block: "sicherheit"
 ---
 #sicherheit.indikator
   %h1.sicherheit Sicherheit
-  %h4 Wie gut ist Sicherheitspolitik für die Welt?
   #graphic
   .sub-indikatoren
     %h1
@@ -21,7 +20,7 @@ block: "sicherheit"
         = link_to "/sicherheit/friedensfoerderung/index.html" do
           %h5 Zivile Friedensförderung
       %li
-        %a
+        = link_to "/sicherheit/transparenz/index.html" do
           %h5 Transparenz des Waffenexports
   .cdi
     #cdi-index
@@ -39,7 +38,7 @@ block: "sicherheit"
     %h3 NGOs im Bereich Sicherheit
     %ul
       %li
-        %img
+        = image_tag 'logos/bicc.png'
         = partial 'partials/security/bicc'
       %li
         %img
