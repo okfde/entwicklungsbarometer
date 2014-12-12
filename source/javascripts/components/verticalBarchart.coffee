@@ -33,6 +33,7 @@ class @VerticalBarchart extends @Barchart
       .attr('class', @extentClass)
 
   drawValueText: ->
+    @countries.selectAll('text').remove()
     @countries.append('text')
       .text((d) => d[@valueKey])
       .attr('x', (d) => @xScale(d[@valueKey])+ 10 )

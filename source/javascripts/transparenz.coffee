@@ -10,9 +10,12 @@ class @Saferworld extends @Barchart
     @setXDomain(@data.map((d) -> d.Country))
     @setYDomain([d3.min(@data, (d) -> d.Average),100])
 
-  setupSubscoreChart: ->
+  setSubscoreChart: (chart) ->
+    @subViz = chart
 
-  mouseover: (d) ->
+  mouseover: (d) =>
+    @subViz.setValueKey(d.Country)
+    @subViz.update(@subViz.data)
 
 saferworlSubViz = (data) ->
   options = { width: 300, margin: { top: 20, bottom: 20, right: 20, left: 550 }, showExtent: true, rotate: { x: true } }
@@ -22,6 +25,7 @@ saferworlSubViz = (data) ->
   subViz.setYDomain(data.map((d) -> d.Indikator))
   subViz.setXDomain([d3.min(data, (d) -> d.Germany),100])
   subViz.render('.saferworld-sub')
+  subViz
 
 showSaferworldViz = ->
   saferworldPath = "#{rootPath}/data/security/transparenz/saferworld.csv"
@@ -31,9 +35,10 @@ showSaferworldViz = ->
     .defer(d3.csv, saferworldSubPath)
     .await (error, saferWorld, saferWorldByIndikator) ->
       options = { showExtent: true, rotate: { x: true } }
+      saferworlSubViz = saferworlSubViz(saferWorldByIndikator)
       saferworldChart = new @Saferworld(saferWorld, options)
       saferworldChart.dataSetup()
-      saferworlSubViz = saferworlSubViz(saferWorldByIndikator)
+      saferworldChart.setSubscoreChart(saferworlSubViz)
       saferworldChart.render('.saferworld')
 
 $ ->
