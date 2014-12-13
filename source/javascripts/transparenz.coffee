@@ -18,12 +18,25 @@ class @Saferworld extends @Barchart
     @subViz.update(@subViz.data)
 
 saferworlSubViz = (data) ->
-  options = { width: 300, margin: { top: 20, bottom: 20, right: 20, left: 550 }, showExtent: true, rotate: { x: true } }
+  options = { width: $('.saferworld-sub').width(), margin: { top: 50, bottom: 20, right: 20, left: 20 }, showExtent: true, rotate: { x: true } }
   subViz = new VerticalBarchart(data, options)
   subViz.setValueKey('Germany')
   subViz.setGroupKey('Indikator')
   subViz.setYDomain(data.map((d) -> d.Indikator))
   subViz.setXDomain([d3.min(data, (d) -> d.Germany),100])
+  subViz.drawValueText = ->
+    @countries.selectAll('text').remove()
+    @countries.append('text')
+      .text((d) => d[@valueKey])
+      .attr('x', (d) => @xScale(100)+ 10 )
+      .attr('y', @yScale.rangeBand()/2 + 2)
+      .attr('text-anchor', 'middle')
+      .attr('class', 'label')
+    @countries.append('text')
+      .text((d,i) => @yScale.domain()[i])
+      .attr('y', @yScale.rangeBand()/2 + 4)
+      .attr('x', 10)
+
   subViz.render('.saferworld-sub')
   subViz
 
