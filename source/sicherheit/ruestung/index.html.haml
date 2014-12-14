@@ -1,22 +1,21 @@
 ---
 title: Entwicklungsbarometer - Rüstung
+navigation:
+  - link: "/sicherheit/ruestung/index.html"
+    title: Kritische Waffenexporte
+    active: true
+  - link: ""
+    title: Deutsche Waffenexporte im Detail
+  - link: ""
+    title: Anteil Waffenhandel am GDP
+  - link: "/sicherheit/ruestung/freedom-index.html"
+    title: Anteil kritische Waffenexporte am GDP
 ---
 #sicherheit.indikator.sub-indikator
   = link_to "/sicherheit/index.html" do
     %h1.sicherheit Sicherheit
   #ruestung
-    .navbar
-      %ul.nav
-        %li.active
-          = link_to "/sicherheit/ruestung/index.html" do
-            %h4 Kritische Waffenexporte
-        %li
-          %h4 Deutsche Waffenexporte im Detail
-        %li
-          %h4 Anteil Waffenhandel am GDP
-        %li
-          = link_to "/sicherheit/ruestung/freedom-index.html" do
-            %h4 Anteil kritische Waffenexporte am GDP
+    = partial "partials/sub_nav"
   .exports-percent-gdp.barchart
   %h2 Kritische Waffenexporte
   .explanation

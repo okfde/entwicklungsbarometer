@@ -1,0 +1,12 @@
+---
+---
+.navbar
+  %ul.nav
+    - current_page.data.navigation.each do |nav|
+      - if nav.active
+        - active_class = 'active'
+      - else
+        - active_class = ''
+      %li(class= active_class)
+        = link_to nav.link do
+          %h4= nav.title
