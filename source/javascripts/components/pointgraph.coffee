@@ -1,4 +1,4 @@
-class @LargeMultiples extends @D3Graph
+class @PointGraph extends @D3Graph
   constructor: (@data, @options = {}) ->
     @options = _.defaults(@options, {
       width: 900
