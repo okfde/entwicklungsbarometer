@@ -56,7 +56,7 @@ class @CDISubIndex
     @draw(@data)
   update: (@data) ->
     @draw(data)
-@updateSubIndex = (data, countryName='Germany') ->
+@updateSubIndex = (data, countryName='Deutschland') ->
   if($('.cdi-country-sub-index').length > 0)
     country = _.rest(_.values(_.findWhere(data, {Country: countryName})))
     @subIndex = $('.cdi-index-overall').data('cdi-sub')
@@ -72,8 +72,8 @@ class @CDISubIndex
     width = $(element).width() - margin.left - margin.right
     height = 300
     subHeight = 200
-    country = _.rest(_.values(_.findWhere(data, {Country: 'Germany'})))
-    categories = _.rest(_.keys(_.findWhere(data, {Country: 'Germany'})))
+    country = _.rest(_.values(_.findWhere(data, {Country: 'Deutschland'})))
+    categories = _.rest(_.keys(_.findWhere(data, {Country: 'Deutschland'})))
     subindexMargin = { left: 80, right: 25, top: 20, bottom: 1 }
     subIndexoptions = {height: 250, width: $('.cdi-country-sub-index').width()-margin.left-margin.right, margin: subindexMargin}
     @subIndex = new CDISubIndex(country, categories, subIndexoptions)
