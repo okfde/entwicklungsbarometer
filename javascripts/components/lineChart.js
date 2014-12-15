@@ -179,6 +179,7 @@
       this.element = element;
       this.createAxisAndScales(this.data);
       this.createSvg();
+      this.appendAxis();
       this.createYAxis();
       this.createMeanLine();
       this.draw(this.data);
