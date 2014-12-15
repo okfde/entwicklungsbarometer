@@ -127,6 +127,7 @@ class @D3Linechart extends @D3Graph
   render: (@element) ->
     @createAxisAndScales(@data)
     @createSvg()
+    @appendAxis()
     @createYAxis()
     @createMeanLine()
     @draw(@data)
