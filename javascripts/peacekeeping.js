@@ -135,7 +135,7 @@
         };
         pk = new Peacekeeping(data, options);
         pk.setMeanData(meanData);
-        pk.drawSpecific(['Germany', '', 'Norway', 'Denmark', 'Poland']);
+        pk.drawSpecific(['Deutschland', '', 'Norwegen', 'Dänemark', 'Polen']);
         pk.setLineClass("countries");
         pk.setMeanLine();
         return pk.render('.contributions');

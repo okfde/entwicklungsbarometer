@@ -1500,7 +1500,7 @@ h3 {
   #cdi-index .axis text {
     font-size: 14px; }
   /* line 13, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
-  #cdi-index .Germany rect.score {
+  #cdi-index .Deutschland rect.score {
     fill: #cd2400; }
   /* line 16, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/components/_cdi-index.sass */
   #cdi-index rect.score {
@@ -1913,10 +1913,10 @@ section#panzer {
       stroke: #777777;
       stroke-width: 2; }
   /* line 88, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  .linegraph svg.countries.germany .line, .linegraph g.countries.germany .line, .linegraph g.mean.germany .line {
+  .linegraph svg.countries.deutschland .line, .linegraph g.countries.deutschland .line, .linegraph g.mean.deutschland .line {
     stroke: #cd2400; }
   /* line 90, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-  .linegraph svg.countries.germany text.name, .linegraph g.countries.germany text.name, .linegraph g.mean.germany text.name {
+  .linegraph svg.countries.deutschland text.name, .linegraph g.countries.deutschland text.name, .linegraph g.mean.deutschland text.name {
     fill: #cd2400; }
   /* line 92, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
   .linegraph svg.countries .line.mean, .linegraph g.countries .line.mean, .linegraph g.mean .line.mean {
@@ -1936,7 +1936,7 @@ section#panzer {
 .barchart .axis text {
   font-size: 14px; }
 /* line 106, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
-.barchart .Germany rect {
+.barchart .Deutschland rect {
   fill: #cd2400; }
 /* line 109, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
 .barchart rect {

@@ -98,7 +98,7 @@
   this.updateSubIndex = function(data, countryName) {
     var country;
     if (countryName == null) {
-      countryName = 'Germany';
+      countryName = 'Deutschland';
     }
     if ($('.cdi-country-sub-index').length > 0) {
       country = _.rest(_.values(_.findWhere(data, {
@@ -132,10 +132,10 @@
       height = 300;
       subHeight = 200;
       country = _.rest(_.values(_.findWhere(data, {
-        Country: 'Germany'
+        Country: 'Deutschland'
       })));
       categories = _.rest(_.keys(_.findWhere(data, {
-        Country: 'Germany'
+        Country: 'Deutschland'
       })));
       subindexMargin = {
         left: 80,

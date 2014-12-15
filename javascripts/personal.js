@@ -109,7 +109,7 @@
       personalPath = "" + rootPath + "/data/security/peacekeeping/peacekeepingPersonal.csv";
       return d3.csv(personalPath, function(data) {
         var countries, personal;
-        countries = ['Austria', 'Finland', 'Germany', 'Luxembourg', 'EU', 'Slovakia'];
+        countries = ['Österreich', 'Finnland', 'Deutschland', 'Luxemburg', 'EU', 'Slowakei'];
         personal = new PeacekeepingPersonal(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);

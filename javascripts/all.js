@@ -19961,7 +19961,7 @@ d3.numberFormat = locale_de_DE.numberFormat
   this.updateSubIndex = function(data, countryName) {
     var country;
     if (countryName == null) {
-      countryName = 'Germany';
+      countryName = 'Deutschland';
     }
     if ($('.cdi-country-sub-index').length > 0) {
       country = _.rest(_.values(_.findWhere(data, {
@@ -19995,10 +19995,10 @@ d3.numberFormat = locale_de_DE.numberFormat
       height = 300;
       subHeight = 200;
       country = _.rest(_.values(_.findWhere(data, {
-        Country: 'Germany'
+        Country: 'Deutschland'
       })));
       categories = _.rest(_.keys(_.findWhere(data, {
-        Country: 'Germany'
+        Country: 'Deutschland'
       })));
       subindexMargin = {
         left: 80,
@@ -20807,7 +20807,7 @@ d3.numberFormat = locale_de_DE.numberFormat
         };
         pk = new Peacekeeping(data, options);
         pk.setMeanData(meanData);
-        pk.drawSpecific(['Germany', '', 'Norway', 'Denmark', 'Poland']);
+        pk.drawSpecific(['Deutschland', '', 'Norwegen', 'Dänemark', 'Polen']);
         pk.setLineClass("countries");
         pk.setMeanLine();
         return pk.render('.contributions');
@@ -20927,7 +20927,7 @@ d3.numberFormat = locale_de_DE.numberFormat
       personalPath = "" + rootPath + "/data/security/peacekeeping/peacekeepingPersonal.csv";
       return d3.csv(personalPath, function(data) {
         var countries, personal;
-        countries = ['Austria', 'Finland', 'Germany', 'Luxembourg', 'EU', 'Slovakia'];
+        countries = ['Österreich', 'Finnland', 'Deutschland', 'Luxemburg', 'EU', 'Slowakei'];
         personal = new PeacekeepingPersonal(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);
@@ -21374,7 +21374,7 @@ d3.numberFormat = locale_de_DE.numberFormat
       zivilePath = "" + rootPath + "/data/security/friedensfoerderung/zivile.csv";
       return d3.csv(zivilePath, function(data) {
         var countries, personal;
-        countries = ['Austria', 'United States', 'Germany', 'United Kingdom', 'Norway'];
+        countries = ['Österreich', 'Vereinigte Staaten von Amerika', 'Deutschland', 'Vereinigted Königreich', 'Norwegen'];
         personal = new ZivileFriedensfoerderung(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);

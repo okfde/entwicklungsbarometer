@@ -102,7 +102,7 @@
       zivilePath = "" + rootPath + "/data/security/friedensfoerderung/zivile.csv";
       return d3.csv(zivilePath, function(data) {
         var countries, personal;
-        countries = ['Austria', 'United States', 'Germany', 'United Kingdom', 'Norway'];
+        countries = ['Österreich', 'Vereinigte Staaten von Amerika', 'Deutschland', 'Vereinigted Königreich', 'Norwegen'];
         personal = new ZivileFriedensfoerderung(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);
