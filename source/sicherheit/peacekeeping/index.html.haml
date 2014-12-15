@@ -1,12 +1,17 @@
 ---
 title: Entwicklungsbarometer - Peacekeeping
-nav: index
+navigation:
+  - link: "/sicherheit/peacekeeping/index.html"
+    title: Finanzbeiträge für UN Peacebuilding
+    active: true
+  - link: "/sicherheit/peacekeeping/personal.html"
+    title: Gesamtbeiträge für UN Peacebuilding
 ---
 #sicherheit.indikator.sub-indikator
   = link_to "/sicherheit/index.html" do
     %h1.sicherheit Sicherheit
   #peacekeeping
-    = partial "partials/peacekeeping_nav"
+    = partial "partials/sub_nav"
     .contributions.linegraph
     %h2 Finanzbeiträge für UN Peacebuilding
     .explanation
