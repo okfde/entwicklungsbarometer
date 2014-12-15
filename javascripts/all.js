@@ -21375,7 +21375,7 @@ d3.numberFormat = locale_de_DE.numberFormat
       zivilePath = "" + rootPath + "/data/security/friedensfoerderung/zivile.csv";
       return d3.csv(zivilePath, function(data) {
         var countries, personal;
-        countries = ['Österreich', 'Vereinigte Staaten von Amerika', 'Deutschland', 'Vereinigted Königreich', 'Norwegen'];
+        countries = ['Österreich', 'USA', 'Deutschland', 'Vereinigtes Königreich', 'Norwegen'];
         personal = new ZivileFriedensfoerderung(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);
