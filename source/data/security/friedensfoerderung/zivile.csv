@@ -3,7 +3,7 @@
 "2","Österreich","2004",18
 "3","Belgien","2004",26
 "4","Kanada","2004",58
-"5","Tschechische Republik","2004",0
+"5","Tschechien","2004",0
 "6","Dänemark","2004",1
 "7","Finnland","2004",11
 "8","Frankreich","2004",9
@@ -23,13 +23,13 @@
 "22","Spanien","2004",25
 "23","Schweden","2004",12
 "24","Schweiz","2004",25
-"25","Vereinigted Königreich","2004",12
-"26","Vereinigte Staaten von Amerika","2004",871
+"25","Vereinigtes Königreich","2004",12
+"26","USA","2004",871
 "27","Australien","2005",31
 "28","Österreich","2005",23
 "29","Belgien","2005",14
 "30","Kanada","2005",58
-"31","Tschechische Republik","2005",0
+"31","Tschechien","2005",0
 "32","Dänemark","2005",8
 "33","Finnland","2005",28
 "34","Frankreich","2005",8
@@ -49,13 +49,13 @@
 "48","Spanien","2005",20
 "49","Schweden","2005",42
 "50","Schweiz","2005",65
-"51","Vereinigted Königreich","2005",15
-"52","Vereinigte Staaten von Amerika","2005",793
+"51","Vereinigtes Königreich","2005",15
+"52","USA","2005",793
 "53","Australien","2006",77
 "54","Österreich","2006",24
 "55","Belgien","2006",16
 "56","Kanada","2006",46
-"57","Tschechische Republik","2006",0
+"57","Tschechien","2006",0
 "58","Dänemark","2006",11
 "59","Finnland","2006",32
 "60","Frankreich","2006",13
@@ -75,13 +75,13 @@
 "74","Spanien","2006",22
 "75","Schweden","2006",63
 "76","Schweiz","2006",64
-"77","Vereinigted Königreich","2006",10
-"78","Vereinigte Staaten von Amerika","2006",597
+"77","Vereinigtes Königreich","2006",10
+"78","USA","2006",597
 "79","Australien","2007",78
 "80","Österreich","2007",7
 "81","Belgien","2007",23
 "82","Kanada","2007",33
-"83","Tschechische Republik","2007",0
+"83","Tschechien","2007",0
 "84","Dänemark","2007",30
 "85","Finnland","2007",21
 "86","Frankreich","2007",28
@@ -101,13 +101,13 @@
 "100","Spanien","2007",148
 "101","Schweden","2007",120
 "102","Schweiz","2007",65
-"103","Vereinigted Königreich","2007",222
-"104","Vereinigte Staaten von Amerika","2007",1024
+"103","Vereinigtes Königreich","2007",222
+"104","USA","2007",1024
 "105","Australien","2008",59
 "106","Österreich","2008",25
 "107","Belgien","2008",37
 "108","Kanada","2008",214
-"109","Tschechische Republik","2008",0
+"109","Tschechien","2008",0
 "110","Dänemark","2008",31
 "111","Finnland","2008",38
 "112","Frankreich","2008",45
@@ -127,13 +127,13 @@
 "126","Spanien","2008",48
 "127","Schweden","2008",144
 "128","Schweiz","2008",90
-"129","Vereinigted Königreich","2008",293
-"130","Vereinigte Staaten von Amerika","2008",896
+"129","Vereinigtes Königreich","2008",293
+"130","USA","2008",896
 "131","Australien","2009",42
 "132","Österreich","2009",21
 "133","Belgien","2009",32
 "134","Kanada","2009",164
-"135","Tschechische Republik","2009",0
+"135","Tschechien","2009",0
 "136","Dänemark","2009",71
 "137","Finnland","2009",68
 "138","Frankreich","2009",52
@@ -153,13 +153,13 @@
 "152","Spanien","2009",42
 "153","Schweden","2009",145
 "154","Schweiz","2009",74
-"155","Vereinigted Königreich","2009",537
-"156","Vereinigte Staaten von Amerika","2009",893
+"155","Vereinigtes Königreich","2009",537
+"156","USA","2009",893
 "157","Australien","2010",66
 "158","Österreich","2010",21
 "159","Belgien","2010",26
 "160","Kanada","2010",159
-"161","Tschechische Republik","2010",0
+"161","Tschechien","2010",0
 "162","Dänemark","2010",49
 "163","Finnland","2010",65
 "164","Frankreich","2010",59
@@ -179,13 +179,13 @@
 "178","Spanien","2010",35
 "179","Schweden","2010",158
 "180","Schweiz","2010",80
-"181","Vereinigted Königreich","2010",230
-"182","Vereinigte Staaten von Amerika","2010",799
+"181","Vereinigtes Königreich","2010",230
+"182","USA","2010",799
 "183","Australien","2011",109
 "184","Österreich","2011",10
 "185","Belgien","2011",29
 "186","Kanada","2011",137
-"187","Tschechische Republik","2011",6
+"187","Tschechien","2011",6
 "188","Dänemark","2011",49
 "189","Finnland","2011",59
 "190","Frankreich","2011",63
@@ -205,13 +205,13 @@
 "204","Spanien","2011",72
 "205","Schweden","2011",134
 "206","Schweiz","2011",108
-"207","Vereinigted Königreich","2011",257
-"208","Vereinigte Staaten von Amerika","2011",603
+"207","Vereinigtes Königreich","2011",257
+"208","USA","2011",603
 "209","Australien","2012",71
 "210","Österreich","2012",11
 "211","Belgien","2012",12
 "212","Kanada","2012",86
-"213","Tschechische Republik","2012",10
+"213","Tschechien","2012",10
 "214","Dänemark","2012",43
 "215","Finnland","2012",46
 "216","Frankreich","2012",35
@@ -231,5 +231,5 @@
 "230","Spanien","2012",35
 "231","Schweden","2012",189
 "232","Schweiz","2012",114
-"233","Vereinigted Königreich","2012",241
-"234","Vereinigte Staaten von Amerika","2012",737
+"233","Vereinigtes Königreich","2012",241
+"234","USA","2012",737

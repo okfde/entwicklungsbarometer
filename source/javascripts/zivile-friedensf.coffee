@@ -40,7 +40,7 @@ $ ->
   if $('#friedensfoerderung .zivile').length > 0
     zivilePath = "#{rootPath}/data/security/friedensfoerderung/zivile.csv"
     d3.csv zivilePath, (data) ->
-      countries = ['Österreich', 'Vereinigte Staaten von Amerika', 'Deutschland', 'Vereinigted Königreich', 'Norwegen']
+      countries = ['Österreich', 'USA', 'Deutschland', 'Vereinigtes Königreich', 'Norwegen']
       personal = new ZivileFriedensfoerderung(data)
       personal.setLineClass('countries')
       personal.drawPersonal(countries)
