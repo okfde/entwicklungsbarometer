@@ -1,6 +1,6 @@
 class @D3Linechart extends @D3Graph
   constructor: (@data, @options = {}) ->
-    @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
+    @options = _.defaults(@options, { width: 800, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
 
   appendAxis: ->
     @svgSelection.append("g")
@@ -106,6 +106,9 @@ class @D3Linechart extends @D3Graph
       .orient("left")
       .ticks(@options.ticks.y)
 
+  setVoronoiData: ->
+    @voronoiData = _.flatten(@data)
+
   createFocusElement: ->
     @focus = @svgSelection.append("g")
     .attr("class", "focus")
@@ -118,7 +121,7 @@ class @D3Linechart extends @D3Graph
     @voronoiGroup = @svgSelection.append("g")
           .attr("class", "voronoi")
     @voronoiGroup.selectAll("path")
-      .data(@voronoi(_.flatten(@data)))
+      .data(@voronoi(@voronoiData))
       .enter().append("path")
       .attr("d", (d) -> if d? then "M#{d.join("L")}Z" else "")
       .datum((d) -> if d? then d.point)
@@ -147,6 +150,7 @@ class @D3Linechart extends @D3Graph
     @setScales()
     @setAxis()
     @setGrid()
+    @setVoronoiData()
 
   parseDateFromYear: (year) ->
     new Date(year,0,1)
