@@ -5,4 +5,5 @@
 #= require queue-async
 #= require cdi_index
 #= require components/d3graph
+#= require components/lineChart
 #= require_tree .
