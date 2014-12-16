@@ -17,14 +17,17 @@ class @Saferworld extends @Barchart
     @subViz.setValueKey(d.Country)
     @subViz.update(@subViz.data)
 
-saferworlSubViz = (data) ->
-  options = { width: $('.saferworld-sub').width(), margin: { top: 50, bottom: 20, right: 20, left: 20 }, showExtent: true, rotate: { x: true } }
-  subViz = new VerticalBarchart(data, options)
-  subViz.setValueKey('Germany')
-  subViz.setGroupKey('Indikator')
-  subViz.setYDomain(data.map((d) -> d.Indikator))
-  subViz.setXDomain([d3.min(data, (d) -> d.Germany),100])
-  subViz.drawValueText = ->
+class @SaferWorlSubViz extends @VerticalBarchart
+  constructor: (@data, @options = {}) ->
+    super(@data, @options)
+
+  setup: ->
+    @setValueKey('Germany')
+    @setGroupKey('Indikator')
+    @setYDomain(@data.map((d) -> d.Indikator))
+    @setXDomain([d3.min(@data, (d) -> d.Germany),100])
+
+  drawValueText: ->
     @countries.selectAll('text').remove()
     @countries.append('text')
       .text((d) => d[@valueKey])
@@ -35,9 +38,16 @@ saferworlSubViz = (data) ->
     @countries.append('text')
       .text((d,i) => @yScale.domain()[i])
       .attr('y', @yScale.rangeBand()/2 + 4)
-      .attr('x', 10)
+      .attr('x', 5)
 
-  subViz.render('.saferworld-sub')
+  mouseover: (d) ->
+    $('.saferworld-sub .description').html(d.Description)
+
+saferworlSubViz = (data) ->
+  options = { width: $('.saferworld-sub').width(), margin: { top: 50, bottom: 10, right: 20, left: 0 }, showExtent: true, rotate: { x: true } }
+  subViz = new @SaferWorlSubViz(data, options)
+  subViz.setup()
+  subViz.render('.saferworld-sub .barchart')
   subViz
 
 showSaferworldViz = ->
