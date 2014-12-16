@@ -1,6 +1,6 @@
 class PeacekeepingPersonal extends @D3Linechart
   constructor: (@rawData, @options = {}) ->
-    @options = _.defaults(@options, { width: 800, height: 300, margin: {top: 40, right: 30, bottom: 50, left: 80}, ticks: { y: 7, x: 8 } })
+    @options = _.defaults(@options, { width: 800, height: 300, margin: {top: 40, right: 90, bottom: 40, left: 90}, ticks: { y: 7, x: 8 } })
 
   lineClassForElement:  (d) ->
     d[0].Country.toLowerCase()
@@ -36,7 +36,7 @@ class PeacekeepingPersonal extends @D3Linechart
   mouseover: (d) =>
     d3.select(".#{d.Country.toLowerCase()} path").classed("country-hover", true)
     @focus.attr("transform", "translate(#{@xScale(d[@dateKey])},#{@yScale(d[@dataKey])})")
-    @focus.select("text").text("#{d.Country}: #{@dataFormat()(d[@dataKey])} % of GDP")
+    @focus.select("text").text("#{d.Country}: #{@dataFormat()(d[@dataKey])} % des BIP")
 $ ->
   if $('#personal').length > 0
     personalPath = "#{rootPath}/data/security/peacekeeping/peacekeepingPersonal.csv"
@@ -44,5 +44,7 @@ $ ->
       countries = ['Österreich', 'Finnland', 'Deutschland', 'Luxemburg','EU', 'Slowakei']
       personal = new PeacekeepingPersonal(data)
       personal.setLineClass('countries')
+      personal.setYAxisDescription('in % des BIP')
+      personal.setXAxisDescription('Jahr')
       personal.drawPersonal(countries)
       personal.render('#personal')
