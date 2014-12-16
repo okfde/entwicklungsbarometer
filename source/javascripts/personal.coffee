@@ -41,7 +41,7 @@ $ ->
   if $('#personal').length > 0
     personalPath = "#{rootPath}/data/security/peacekeeping/peacekeepingPersonal.csv"
     d3.csv personalPath, (data) ->
-      countries = ['Austria', 'Finland', 'Germany', 'Luxembourg','EU', 'Slovakia']
+      countries = ['Österreich', 'Finnland', 'Deutschland', 'Luxemburg','EU', 'Slowakei']
       personal = new PeacekeepingPersonal(data)
       personal.setLineClass('countries')
       personal.drawPersonal(countries)

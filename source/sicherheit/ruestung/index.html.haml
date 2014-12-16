@@ -1,25 +1,25 @@
 ---
 title: Entwicklungsbarometer - Rüstung
+navigation:
+  - link: "/sicherheit/ruestung/index.html"
+    title: Kritische Waffenexporte
+    active: true
+  - link: ""
+    title: Deutsche Waffenexporte im Detail
+  - link: ""
+    title: Anteil Waffenhandel am GDP
+  - link: "/sicherheit/ruestung/freedom-index.html"
+    title: Anteil kritische Waffenexporte am GDP
 ---
 #sicherheit.indikator.sub-indikator
   = link_to "/sicherheit/index.html" do
     %h1.sicherheit Sicherheit
   #ruestung
-    .navbar
-      %ul.nav
-        %li.active
-          = link_to "/sicherheit/ruestung/index.html" do
-            %h4 Kritische Waffenexporte
-        %li
-          %h4 Deutsche Waffenexporte im Detail
-        %li
-          %h4 Anteil Waffenhandel am GDP
-        %li
-          = link_to "/sicherheit/ruestung/freedom-index.html" do
-            %h4 Anteil kritische Waffenexporte am GDP
+    = partial "partials/sub_nav"
   .exports-percent-gdp.barchart
   %h2 Kritische Waffenexporte
   .explanation
     %p Frieden und Sicherheit sind wesentliche Voraussetzung für Entwicklung. Bewaffnete Konflikte zerstören weltweit die Lebensgrundlagen von Menschen. Die Produktion von Waren und Dienstleistungen bricht ein, die Gesundheitsversorgung und das Bildungsystem brechen zusammen und Menschen verlassen ihre Heimat und suchen in Flüchtlingslagern und im Ausland Schutz. Die negativen Folgen von Krieg und bewaffneten Konflikten auf Entwicklung und Armutsbekämpfung sind zahlreich. Die meisten Entwicklungsländer produzieren ihre Waffen nicht selber, sondern erhalten Waffenlieferungen von Industrieländern. Vor allem wenn Entwicklungsländer nicht demokratisch regiert werden, besteht ein hohes Risiko, dass Waffenlieferung bewaffnete Konflikte und Krieg fördern. Waffenexporte in nicht-demokratische Staaten sind daher grundsätzlich kritisch zu betrachten.
   .explanation
+    %h3 Informationen zu den Daten
     %p Dieser Indikator ist vom Commitment to Development Index des Centers for Global Development übernommen. Die Daten werden vom Center for Global Development direkt aus Regierungsdokumenten gewonnen. Waffenexporte der OECD Länder an ärmere Länder und nach drei Kriterien gewichtet: das Ranking der Empfängerländer im Voice and Accountability Indikator im Weltbank Governance Index, der Anteil an Militärausgaben am Bruttoinlandsprodukt sowie Bruttoinlandsprodukt pro Kopf. Exporte in Länder mit einer unterdurchschnittlichen Governance Bewertung, überdurchschnittlich hohen Militärausgaben und unterdurchschnittlichem Pro-Kopf BSP fallen bei der Bewertung stärker ins Gewicht. Länder, die ihre Waffenexporte nicht offenlegen, werden mit 0 bewertet.
