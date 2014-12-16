@@ -22,10 +22,10 @@ class @SaferWorlSubViz extends @VerticalBarchart
     super(@data, @options)
 
   setup: ->
-    @setValueKey('Germany')
+    @setValueKey('Deutschland')
     @setGroupKey('Indikator')
     @setYDomain(@data.map((d) -> d.Indikator))
-    @setXDomain([d3.min(@data, (d) -> d.Germany),100])
+    @setXDomain([d3.min(@data, (d) -> d.Deutschland),100])
 
   drawValueText: ->
     @countries.selectAll('text').remove()
