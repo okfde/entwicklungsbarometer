@@ -1,21 +1,33 @@
 ---
-title: Entwicklungsbarometer - Freedom Index
+title: Entwicklungsbarometer - Anteil Waffenhandel am BIP
+navigation:
+  - link: "/sicherheit/ruestung/index.html"
+    title: Kritische Waffenexporte
+  - link: ""
+    title: Deutsche Waffenexporte im Detail
+  - link: "/sicherheit/ruestung/german-gdp.html"
+    title: Anteil Waffenhandel am BIP
+    active: true
+  - link: "/sicherheit/ruestung/freedom-index.html"
+    title: Anteil kritische Waffenexporte am GDP
 ---
 #sicherheit.indikator.sub-indikator
   = link_to "/sicherheit/index.html" do
     %h1.sicherheit Sicherheit
   #german-gdp
-    .navbar
-      %ul.nav
-        %li
-          = link_to "/sicherheit/ruestung/index.html" do
-            %h4 Kritische Waffenexporte
-        %li
-          %h4 Deutsche Waffenexporte im Detail
-        %li.active
-          = link_to "/sicherheit/ruestung/german-gdp.html" do
-            %h4 Anteil Waffenhandel am GDP
-        %li
-          = link_to "/sicherheit/ruestung/freedom-index.html" do
-            %h4 Anteil kritische Waffenexporte am GDP
+    = partial "partials/sub_nav"
     .point-graph.german-gdp
+    .legend
+      %svg
+        %g(transform="translate(0,8)")
+          %circle(r=8 cx=8 cy=0)
+          %text(dx=24 dy=5) Andere Anteile am BIP
+        %g(transform="translate(0, 32)")
+          %circle.german-exports-gdp(r=8 cx=8 cy=0)
+          %text(dx=24 dy=5) Anteil Waffenhandel am BIP
+    %h2 Anteil Waffenhandel am GDP
+    .explanation
+      %p Im internationalen Vergleich ist Deutschland einer wichtigsten Exporteure von Waffen. Deutschland gehört auch zu den Ländern, die am meisten Waffen an nicht-demokratische Länder exportieren. In der Debatte um Waffenexporte wird von der Industrie gerne auf die Bedeutung der Waffenindustrie für die deutsche Wirtschaft hingewiesen. Die bis 2011 vorliegenden Daten zeigen jedoch, dass die Waffenexporte weniger als 1% des Bruttoinlandprodukts ausmachen.
+    .explanation
+      %h3 Informationen zu den Daten
+      %p Die hier dargestellten Daten zur Waffenindustrie stammen aus dem Bericht des WIFOR Instituts der Technischen Universität Berlin “Quantifizierung der volkswirtschaftlichen Bedeutung der Sicherheits- und Verteidigungsindustrie für den deutschen Wirtschaftsstandort” vom November 2012. Die Datenquelle für die übrigen Daten ist das statistische Bundesamt Destasis.
