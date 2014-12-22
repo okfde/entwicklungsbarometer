@@ -6,17 +6,4 @@ $ ->
       center_lat: 51.27
       center_lon: 10.84
       zoom: 6
-    ).done((vis, layers) ->
-      subLayer = layers[1].getSubLayer(0)
-      layers[1].setInteraction(true)
-      layers[1].on 'featureOver', (e, latlng, pos, data, layerNumber) ->
-        cartodb.log.log(e, latlng, pos, data, layerNumber)
-      vis.addOverlay({
-        type: 'tooltip',
-        position: 'top|center',
-        template: '<p>{{name_to_display}}</p>'
-      })
-      return
-    ).error (err) ->
-      console.log err
-      return
+    )
