@@ -1,6 +1,6 @@
 class ZivileFriedensfoerderung extends @D3Linechart
   constructor: (@rawData, @options = {}) ->
-    @options = _.defaults(@options, { width: 800, height: 300, margin: {top: 40, right: 80, bottom: 50, left: 80}, ticks: { y: 7, x: 8 } })
+    @options = _.defaults(@options, { width: 800, height: 300, margin: {top: 40, right: 80, bottom: 40, left: 80}, ticks: { y: 7, x: 8 } })
 
   lineClassForElement:  (d) ->
     d[0].Country.toLowerCase()
@@ -40,8 +40,10 @@ $ ->
   if $('#friedensfoerderung .zivile').length > 0
     zivilePath = "#{rootPath}/data/security/friedensfoerderung/zivile.csv"
     d3.csv zivilePath, (data) ->
-      countries = ['Austria', 'United States', 'Germany', 'United Kingdom', 'Norway']
+      countries = ['Österreich', 'USA', 'Deutschland', 'Vereinigtes Königreich', 'Norwegen']
       personal = new ZivileFriedensfoerderung(data)
       personal.setLineClass('countries')
       personal.drawPersonal(countries)
+      personal.setYAxisDescription('in Mio $')
+      personal.setXAxisDescription('Jahr')
       personal.render('#friedensfoerderung .zivile')

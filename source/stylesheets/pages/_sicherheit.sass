@@ -77,6 +77,8 @@ section#panzer
   fill: none
   pointer-events: all
 .linegraph
+  text.description
+    font-size: 14px
   svg.countries, g.countries, g.mean
     margin: 10px 0
     .line
@@ -84,7 +86,7 @@ section#panzer
       &.country-hover
         stroke: #777
         stroke-width: 2
-    &.germany
+    &.deutschland
       .line
         stroke: $red
       text.name
@@ -103,9 +105,9 @@ section#panzer
 .barchart
   .axis text
     font-size: 14px
-  .Germany rect
+  .Deutschland rect
     fill: $red
-  .Germany text
+  .Deutschland text
   rect
     fill: $light-blue
   .label
