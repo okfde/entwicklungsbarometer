@@ -73,6 +73,14 @@ section#panzer
   .export-countries
     @include row()
 
+.exporteure.map
+  @include span-columns(12)
+  @include row()
+  +clearfix
+#exporteure-map
+  @include span-columns(12)
+  height: 500px
+
 .voronoi path
   fill: none
   pointer-events: all
@@ -114,3 +122,4 @@ section#panzer
     font-size: 0.6em
   rect.extent
     fill: #f3f3f3
+
