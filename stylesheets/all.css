@@ -2113,6 +2113,18 @@ section#panzer {
   #friedensfoerderung .legend .militaerisch rect {
     fill: #aec7e8; }
 
+/* line 170, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#bicc-map #map-container h2 {
+  padding: 0;
+  margin: 0; }
+/* line 173, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_sicherheit.sass */
+#bicc-map #map-container h3 {
+  text-align: left;
+  text-transform: none;
+  display: block;
+  margin: 0;
+  padding: 0; }
+
 /* line 2, /Development/work/okf/entwicklungsbarometer/website/source/stylesheets/pages/_experten.sass */
 #experten .headline {
   float: left;

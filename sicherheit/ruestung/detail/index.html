@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    rootPath = '';
+  </script>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>Entwicklungsbarometer - Rüstung</title>
+    <link href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css" rel="stylesheet" type="text/css" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="../../../stylesheets/biccmap.css" rel="stylesheet" type="text/css" /><link href="../../../stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="../../../stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <header class='navigation'>
+      <div class='navigation-wrapper'>
+        <div class='logo'>
+          <a href="../../../"><img src="../../../images/logo.svg" />
+          </a>
+        </div>
+        <a class='mobile-logo' href='javascript:void(0)'>
+          <img alt='' src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png'>
+        </a>
+        <a class='navigation-menu-button' href=''>MENU</a>
+        <ul class='navigation-menu'>
+          <li class='nav-link more'>
+            <a href="../../../">Indikatoren</a>
+            <ul class='submenu'>
+              <li>
+                <a href="../../">Sicherheit</a>
+              </li>
+              <li>
+                <a>Technologie</a>
+              </li>
+              <li>
+                <a>Umwelt</a>
+              </li>
+              <li>
+                <a>Migration</a>
+              </li>
+              <li>
+                <a>Investitionspolitik</a>
+              </li>
+              <li>
+                <a>Entwicklungszusammenarbeit</a>
+              </li>
+              <li>
+                <a>Handel</a>
+              </li>
+            </ul>
+          </li>
+          <li class='nav-link'>
+            <a href="../../../experten/">Experten</a>
+          </li>
+          <li class='nav-link'>
+            <a href='javascript:void(0)'>Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class='breadcrump'></div>
+  </head>
+  <body>
+    <div class='content'>
+      <div class='indikator sub-indikator' id='sicherheit'>
+        <a href="../../"><h1 class='sicherheit'>Sicherheit</h1>
+        </a>
+        <div id='bicc-map'>
+          <div class='navbar'>
+            <ul class='nav'>
+              <li class=''>
+                <a href="../"><h4>Kritische Waffenexporte</h4>
+                </a>
+              </li>
+              <li class='active'>
+                <a href="./"><h4>Deutsche Waffenexporte im Detail</h4>
+                </a>
+              </li>
+              <li class=''>
+                <a href="../german-gdp/"><h4>Anteil Waffenhandel am GDP</h4>
+                </a>
+              </li>
+              <li class=''>
+                <a href="../freedom-index/"><h4>Anteil kritische Waffenexporte am GDP</h4>
+                </a>
+              </li>
+              <li class=''>
+                <a href="../exporteure/"><h4>Waffenexporteure in Deutschland</h4>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id='map-container'>
+            <div id='map'>
+              <div class='search' data-bind='visible: search'>
+                <input data-bind="value: searchCountry, valueUpdate: 'keyup'" placeholder='Search for a country'>
+                <ul data-bind='visible: searchedCountries().length &gt; 0, foreach: searchedCountries'>
+                  <li>
+                    <a data-bind='text: name, click: $parent.zoomToCountry'></a>
+                  </li>
+                </ul>
+              </div>
+              <div id='legend'>
+                <div class='code-of-conduct' data-bind="visible: activeLayer().value != 'gmi'">
+                  <h5>Code of Conduct</h5>
+                  <ul>
+                    <li>
+                      <div class='circle green'></div>
+                      <b>
+                        uncritical
+                      </b>
+                    </li>
+                    <li>
+                      <div class='circle yellow'></div>
+                      <b>
+                        possibly critical
+                      </b>
+                    </li>
+                    <li>
+                      <div class='circle red'></div>
+                      <b>
+                        critial
+                      </b>
+                    </li>
+                    <li>
+                      <div class='circle white'></div>
+                      <b>
+                        not considered
+                      </b>
+                    </li>
+                  </ul>
+                </div>
+                <div class='gmi' data-bind="visible: activeLayer().value == 'gmi'">
+                  <h5>GMI</h5>
+                  <ul>
+                    <li>
+                      <div class='circle gmi-1'></div>
+                      <b>Rank 1-30</b>
+                    </li>
+                    <li>
+                      <div class='circle gmi-2'></div>
+                      <b>Rank 31-60</b>
+                    </li>
+                    <li>
+                      <div class='circle gmi-3'></div>
+                      <b>Rank 61-90</b>
+                    </li>
+                    <li>
+                      <div class='circle gmi-4'></div>
+                      <b>Rank 91-120</b>
+                    </li>
+                    <li>
+                      <div class='circle gmi-5'></div>
+                      <b>Rank > 120</b>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div data-bind='visible: explanation().length &gt; 0' id='filter-explanation'>
+                <p data-bind='text: explanation'></p>
+              </div>
+              <div id='filter'>
+                <div id='type-filter'>
+                  <ul data-bind='foreach: layers'>
+                    <li data-bind='css: { active: $parent.activeLayer() == $data},click: $parent.showLayer, event: { mouseover: $parent.showExplanation, mouseout: $parent.showCurrentExplanation }'>
+                      <div class='indicator' data-bind='text: text '></div>
+                    </li>
+                  </ul>
+                </div>
+                <div id='volume'></div>
+              </div>
+            </div>
+            <div id='misc'>
+              <div id='info'>
+                <p data-bind="visible: countryName() == ''">Hover over countries to see more details; click to lock current country; close info window to release lock</p>
+                <div class='country-info' data-bind='visible: countryName().length &gt; 0'>
+                  <h2>German Arms Exports</h2>
+                  <h3 class='country' data-bind='text: countryName'></h3>
+                  <ul class='exports'>
+                    <li class='title first'>
+                      Arms Export Licences
+                    </li>
+                    <li class='yes-no'>
+                      <div class='title'>
+                        Approved licenses
+                      </div>
+                      <div class='value'>
+                        <span data-bind='text: yesNoText(armsExports())'></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class='title'>
+                        Volume in 2013
+                      </div>
+                      <div class='value' data-bind='text: formatToMillions(exports2013())'></div>
+                    </li>
+                    <li class='sum last' data-bind='visible: armsExports'>
+                      <div class='title'>
+                        Volume 1999-2013
+                      </div>
+                      <div class='value' data-bind='text: formatToMillions(germanArmsExport())'></div>
+                    </li>
+                    <li class='title'>
+                      Exports of Weapons of war
+                    </li>
+                    <li class='yes-no'>
+                      <div class='title'>
+                        Actual exports
+                      </div>
+                      <div class='value'>
+                        <span data-bind='text: yesNoText(weaponsExports())'></span>
+                      </div>
+                    </li>
+                    <li data-bind='visible: weaponsExports'>
+                      <div class='title'>
+                        Volume in 2013
+                      </div>
+                      <div class='value' data-bind='text: formatToMillions(warWeapons2013())'></div>
+                    </li>
+                    <li class='sum last' data-bind='visible: weaponsExports'>
+                      <div class='title'>
+                        Volume 1999-2013
+                      </div>
+                      <div class='value' data-bind='text: formatToMillions(germanWeaponsExport())'></div>
+                    </li>
+                  </ul>
+                  <div class='ranks'>
+                    <ul class='rank gmi'>
+                      <li class='title'>GMI-Rank</li>
+                      <li class='value' data-bind='text: gmiRank'></li>
+                      <li>of</li>
+                      <li class='count' data-bind='text: gmiCountryCount'></li>
+                    </ul>
+                  </div>
+                  <h5>EU Common Position for Arms Exports</h5>
+                  <h6>Export criteria</h6>
+                  <ul class='categories'>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Arms Embargos
+                      </div>
+                      <ul class='signal' data-bind='with: armsEmbargo'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Human Rights
+                      </div>
+                      <ul class='signal' data-bind='with: humanRights'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Internal Conflict
+                      </div>
+                      <ul class='signal' data-bind='with: internalConflict'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Regional Security
+                      </div>
+                      <ul class='signal' data-bind='with: regionalSecurity'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Security of Member States
+                      </div>
+                      <ul class='signal' data-bind='with: securityMemberStates'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Membership in UN Conventions
+                      </div>
+                      <ul class='signal' data-bind='with: membershipUN'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Arms Export Control
+                      </div>
+                      <ul class='signal' data-bind='with: armsExportControl'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                    <li class='category'>
+                      <div class='category-title'>
+                        Military/ Non-military Balance
+                      </div>
+                      <ul class='signal' data-bind='with: militaryBalance'>
+                        <li class='light red' data-bind='css: { active: redActive }'></li>
+                        <li class='light yellow' data-bind='css: { active: yellowActive }'></li>
+                        <li class='light green' data-bind='css: { active: greenActive }'></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class='details'>
+                    <ul>
+                      <li>
+                        <a href='http://ruestungsexport.info/index.php/laenderportraits' target='_blank'>
+                          <i class='fa fa-info-circle'></i>
+                          Country Portraits
+                        </a>
+                      </li>
+                      <li>
+                        <a data-bind='attr: { href: countryReportLink }' target='_blank'>
+                          <i class='fa fa-info-circle'></i>
+                          Country details
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class='footer'>
+      <div class='footer-logo'>
+        <a target="_blank" href="http://okfn.de"><img src="../../../images/logos/OKFLogo.png" />
+        </a>
+      </div>
+      <div class='footer-links'>
+        <ul>
+          <li>
+            <a href='javascript:void(0)'>Kontakt</a>
+          </li>
+          <li>
+            <a href='javascript:void(0)'>Über das Projekt</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href='javascript:void(0)'>Spenden</a>
+          </li>
+          <li>
+            <a href='javascript:void(0)'>Impressum</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href='javascript:void(0)'>Daten</a>
+          </li>
+          <li>
+            <a href='javascript:void(0)'>Code</a>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+    </footer>
+    <script src='http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js'></script>
+    <script src="../../../javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>

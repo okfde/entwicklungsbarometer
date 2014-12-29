@@ -1,7 +1,7 @@
 (function() {
   var formatCurrency, generateDataForPointGraphFreeNotFreeRuestung, getNumberReducedByMagnitude, valueClassesForData;
 
-  formatCurrency = d3.numberFormat(",");
+  formatCurrency = locale_de_DE.numberFormat(",");
 
   getNumberReducedByMagnitude = function(number, magnitude) {
     return Math.round(number / magnitude);

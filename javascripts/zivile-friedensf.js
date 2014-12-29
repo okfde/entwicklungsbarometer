@@ -78,7 +78,7 @@
     };
 
     ZivileFriedensfoerderung.prototype.dataFormat = function() {
-      return d3.numberFormat(",.");
+      return locale_de_DE.numberFormat(",.");
     };
 
     ZivileFriedensfoerderung.prototype.mouseout = function(d) {

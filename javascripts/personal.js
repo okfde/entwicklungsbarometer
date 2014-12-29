@@ -85,7 +85,7 @@
     };
 
     PeacekeepingPersonal.prototype.dataFormat = function() {
-      return d3.numberFormat(",.3f");
+      return locale_de_DE.numberFormat(",.3f");
     };
 
     PeacekeepingPersonal.prototype.mouseout = function(d) {

@@ -50,7 +50,7 @@
     };
 
     Peacekeeping.prototype.dataFormat = function() {
-      return d3.numberFormat(",.2f");
+      return locale_de_DE.numberFormat(",.2f");
     };
 
     Peacekeeping.prototype.mouseout = function(d) {
