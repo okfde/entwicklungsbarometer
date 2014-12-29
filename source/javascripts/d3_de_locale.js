@@ -12,4 +12,3 @@ locale_de_DE = d3.locale({
   months: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
   shortMonths: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 });
-d3.numberFormat = locale_de_DE.numberFormat
