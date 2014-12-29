@@ -21096,10 +21096,11 @@ L.easyButton = function( btnIcon , btnFunction , btnTitle , btnMap ) {
 
   $(function() {
     var country;
-    country = new Country();
-    return ko.applyBindings(country);
+    if($('#bicc-map').length > 0) {
+      country = new Country();
+      return ko.applyBindings(country);
+    }
   });
-
 }).call(this);
 (function() {
 
