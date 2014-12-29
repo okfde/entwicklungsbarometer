@@ -1,0 +1,947 @@
+name,acronym,created_at,updated_at,invalid,reviewed,dataset,id,canonical
+Afghanistan,AF,2014-02-06T10:16:30.364342,2014-02-06T10:16:30.364355,False,True,iso-countries,1,
+Albania,AL,2014-02-06T10:16:30.452877,2014-02-06T10:16:30.452887,False,True,iso-countries,2,
+Algeria,DZ,2014-02-06T10:16:30.463923,2014-02-06T10:16:30.463933,False,True,iso-countries,3,
+Andorra,AD,2014-02-06T10:16:30.474178,2014-02-06T10:16:30.474184,False,True,iso-countries,4,
+Angola,AO,2014-02-06T10:16:30.480121,2014-02-06T10:16:30.480125,False,True,iso-countries,5,
+Antigua and Barbuda,AG,2014-02-06T10:16:30.487211,2014-02-06T10:16:30.487216,False,True,iso-countries,6,
+Argentina,AR,2014-02-06T10:16:30.492083,2014-02-06T10:16:30.492087,False,True,iso-countries,7,
+Armenia,AM,2014-02-06T10:16:30.500893,2014-02-06T10:16:30.500903,False,True,iso-countries,8,
+Australia,AU,2014-02-06T10:16:30.509579,2014-02-06T10:16:30.509586,False,True,iso-countries,9,
+Austria,AT,2014-02-06T10:16:30.519666,2014-02-06T10:16:30.519676,False,True,iso-countries,10,
+Azerbaijan,AZ,2014-02-06T10:16:30.531616,2014-02-06T10:16:30.531625,False,True,iso-countries,11,
+"Bahamas, The",BS,2014-02-06T10:16:30.543048,2014-02-06T10:16:30.543057,False,True,iso-countries,12,
+Bahrain,BH,2014-02-06T10:16:30.555177,2014-02-06T10:16:30.555189,False,True,iso-countries,13,
+Bangladesh,BD,2014-02-06T10:16:30.567245,2014-02-06T10:16:30.567256,False,True,iso-countries,14,
+Barbados,BB,2014-02-06T10:16:30.573299,2014-02-06T10:16:30.573304,False,True,iso-countries,15,
+Belarus,BY,2014-02-06T10:16:30.579116,2014-02-06T10:16:30.579121,False,True,iso-countries,16,
+Belgium,BE,2014-02-06T10:16:30.584714,2014-02-06T10:16:30.584720,False,True,iso-countries,17,
+Belize,BZ,2014-02-06T10:16:30.590760,2014-02-06T10:16:30.590765,False,True,iso-countries,18,
+Benin,BJ,2014-02-06T10:16:30.596535,2014-02-06T10:16:30.596541,False,True,iso-countries,19,
+Bhutan,BT,2014-02-06T10:16:30.602084,2014-02-06T10:16:30.602089,False,True,iso-countries,20,
+Bolivia,BO,2014-02-06T10:16:30.607762,2014-02-06T10:16:30.607768,False,True,iso-countries,21,
+Bosnia and Herzegovina,BA,2014-02-06T10:16:30.613663,2014-02-06T10:16:30.613669,False,True,iso-countries,22,
+Botswana,BW,2014-02-06T10:16:30.619774,2014-02-06T10:16:30.619779,False,True,iso-countries,23,
+Brazil,BR,2014-02-06T10:16:30.625520,2014-02-06T10:16:30.625526,False,True,iso-countries,24,
+Brunei,BN,2014-02-06T10:16:30.631359,2014-02-06T10:16:30.631364,False,True,iso-countries,25,
+Bulgaria,BG,2014-02-06T10:16:30.637279,2014-02-06T10:16:30.637285,False,True,iso-countries,26,
+Burkina Faso,BF,2014-02-06T10:16:30.642993,2014-02-06T10:16:30.642999,False,True,iso-countries,27,
+Burundi,BI,2014-02-06T10:16:30.648966,2014-02-06T10:16:30.648972,False,True,iso-countries,28,
+Cambodia,KH,2014-02-06T10:16:30.654732,2014-02-06T10:16:30.654738,False,True,iso-countries,29,
+Cameroon,CM,2014-02-06T10:16:30.660496,2014-02-06T10:16:30.660501,False,True,iso-countries,30,
+Canada,CA,2014-02-06T10:16:30.666416,2014-02-06T10:16:30.666421,False,True,iso-countries,31,
+Cape Verde,CV,2014-02-06T10:16:30.672120,2014-02-06T10:16:30.672125,False,True,iso-countries,32,
+Central African Republic,CF,2014-02-06T10:16:30.678366,2014-02-06T10:16:30.678372,False,True,iso-countries,33,
+Chad,TD,2014-02-06T10:16:30.684221,2014-02-06T10:16:30.684227,False,True,iso-countries,34,
+Chile,CL,2014-02-06T10:16:30.689866,2014-02-06T10:16:30.689871,False,True,iso-countries,35,
+"China, People's Republic of",CN,2014-02-06T10:16:30.695775,2014-02-06T10:16:30.695781,False,True,iso-countries,36,
+Colombia,CO,2014-02-06T10:16:30.701539,2014-02-06T10:16:30.701545,False,True,iso-countries,37,
+Comoros,KM,2014-02-06T10:16:30.707481,2014-02-06T10:16:30.707487,False,True,iso-countries,38,
+"Congo, (Congo  Kinshasa)",CD,2014-02-06T10:16:30.713163,2014-02-06T10:16:30.713168,False,True,iso-countries,39,
+"Congo, (Congo  Brazzaville)",CG,2014-02-06T10:16:30.718889,2014-02-06T10:16:30.718894,False,True,iso-countries,40,
+Costa Rica,CR,2014-02-06T10:16:30.724953,2014-02-06T10:16:30.724959,False,True,iso-countries,41,
+Cote d'Ivoire (Ivory Coast),CI,2014-02-06T10:16:30.730405,2014-02-06T10:16:30.730410,False,True,iso-countries,42,
+Croatia,HR,2014-02-06T10:16:30.736232,2014-02-06T10:16:30.736246,False,True,iso-countries,43,
+Cuba,CU,2014-02-06T10:16:30.743458,2014-02-06T10:16:30.743464,False,True,iso-countries,44,
+Cyprus,CY,2014-02-06T10:16:30.749440,2014-02-06T10:16:30.749445,False,True,iso-countries,45,
+Czech Republic,CZ,2014-02-06T10:16:30.754989,2014-02-06T10:16:30.754994,False,True,iso-countries,46,
+Denmark,DK,2014-02-06T10:16:30.760326,2014-02-06T10:16:30.760331,False,True,iso-countries,47,
+Djibouti,DJ,2014-02-06T10:16:30.765798,2014-02-06T10:16:30.765803,False,True,iso-countries,48,
+Dominica,DM,2014-02-06T10:16:30.771056,2014-02-06T10:16:30.771061,False,True,iso-countries,49,
+Dominican Republic,DO,2014-02-06T10:16:30.776425,2014-02-06T10:16:30.776430,False,True,iso-countries,50,
+Ecuador,EC,2014-02-06T10:16:30.782069,2014-02-06T10:16:30.782075,False,True,iso-countries,51,
+Egypt,EG,2014-02-06T10:16:30.790007,2014-02-06T10:16:30.790012,False,True,iso-countries,52,
+El Salvador,SV,2014-02-06T10:16:30.796772,2014-02-06T10:16:30.796782,False,True,iso-countries,53,
+Equatorial Guinea,GQ,2014-02-06T10:16:30.805978,2014-02-06T10:16:30.805987,False,True,iso-countries,54,
+Eritrea,ER,2014-02-06T10:16:30.813248,2014-02-06T10:16:30.813255,False,True,iso-countries,55,
+Estonia,EE,2014-02-06T10:16:30.820509,2014-02-06T10:16:30.820516,False,True,iso-countries,56,
+Ethiopia,ET,2014-02-06T10:16:30.827553,2014-02-06T10:16:30.827561,False,True,iso-countries,57,
+Fiji,FJ,2014-02-06T10:16:30.834740,2014-02-06T10:16:30.834747,False,True,iso-countries,58,
+Finland,FI,2014-02-06T10:16:30.841615,2014-02-06T10:16:30.841622,False,True,iso-countries,59,
+France,FR,2014-02-06T10:16:30.848792,2014-02-06T10:16:30.848800,False,True,iso-countries,60,
+Gabon,GA,2014-02-06T10:16:30.856014,2014-02-06T10:16:30.856021,False,True,iso-countries,61,
+"Gambia, The",GM,2014-02-06T10:16:30.862951,2014-02-06T10:16:30.862959,False,True,iso-countries,62,
+Georgia,GE,2014-02-06T10:16:30.870428,2014-02-06T10:16:30.870435,False,True,iso-countries,63,
+Germany,DE,2014-02-06T10:16:30.877295,2014-02-06T10:16:30.877303,False,True,iso-countries,64,
+Ghana,GH,2014-02-06T10:16:30.884087,2014-02-06T10:16:30.884095,False,True,iso-countries,65,
+Greece,GR,2014-02-06T10:16:30.891304,2014-02-06T10:16:30.891311,False,True,iso-countries,66,
+Grenada,GD,2014-02-06T10:16:30.898145,2014-02-06T10:16:30.898153,False,True,iso-countries,67,
+Guatemala,GT,2014-02-06T10:16:30.905388,2014-02-06T10:16:30.905397,False,True,iso-countries,68,
+Guinea,GN,2014-02-06T10:16:30.912334,2014-02-06T10:16:30.912342,False,True,iso-countries,69,
+Guinea-Bissau,GW,2014-02-06T10:16:30.919170,2014-02-06T10:16:30.919177,False,True,iso-countries,70,
+Guyana,GY,2014-02-06T10:16:30.926463,2014-02-06T10:16:30.926471,False,True,iso-countries,71,
+Haiti,HT,2014-02-06T10:16:30.933336,2014-02-06T10:16:30.933343,False,True,iso-countries,72,
+Honduras,HN,2014-02-06T10:16:30.940489,2014-02-06T10:16:30.940496,False,True,iso-countries,73,
+Hungary,HU,2014-02-06T10:16:30.947458,2014-02-06T10:16:30.947465,False,True,iso-countries,74,
+Iceland,IS,2014-02-06T10:16:30.954150,2014-02-06T10:16:30.954158,False,True,iso-countries,75,
+India,IN,2014-02-06T10:16:30.961526,2014-02-06T10:16:30.961535,False,True,iso-countries,76,
+Indonesia,ID,2014-02-06T10:16:30.968434,2014-02-06T10:16:30.968442,False,True,iso-countries,77,
+Iran,IR,2014-02-06T10:16:30.975561,2014-02-06T10:16:30.975568,False,True,iso-countries,78,
+Iraq,IQ,2014-02-06T10:16:30.982447,2014-02-06T10:16:30.982455,False,True,iso-countries,79,
+Ireland,IE,2014-02-06T10:16:30.989353,2014-02-06T10:16:30.989361,False,True,iso-countries,80,
+Israel,IL,2014-02-06T10:16:30.996794,2014-02-06T10:16:30.996801,False,True,iso-countries,81,
+Italy,IT,2014-02-06T10:16:31.004143,2014-02-06T10:16:31.004150,False,True,iso-countries,82,
+Jamaica,JM,2014-02-06T10:16:31.011908,2014-02-06T10:16:31.011916,False,True,iso-countries,83,
+Japan,JP,2014-02-06T10:16:31.019257,2014-02-06T10:16:31.019265,False,True,iso-countries,84,
+Jordan,JO,2014-02-06T10:16:31.026358,2014-02-06T10:16:31.026366,False,True,iso-countries,85,
+Kazakhstan,KZ,2014-02-06T10:16:31.034058,2014-02-06T10:16:31.034066,False,True,iso-countries,86,
+Kenya,KE,2014-02-06T10:16:31.041205,2014-02-06T10:16:31.041211,False,True,iso-countries,87,
+Kiribati,KI,2014-02-06T10:16:31.047420,2014-02-06T10:16:31.047426,False,True,iso-countries,88,
+"Korea, North",KP,2014-02-06T10:16:31.053384,2014-02-06T10:16:31.053390,False,True,iso-countries,89,
+"Korea, South",KR,2014-02-06T10:16:31.059116,2014-02-06T10:16:31.059122,False,True,iso-countries,90,
+Kuwait,KW,2014-02-06T10:16:31.065367,2014-02-06T10:16:31.065372,False,True,iso-countries,91,
+Kyrgyzstan,KG,2014-02-06T10:16:31.073712,2014-02-06T10:16:31.073723,False,True,iso-countries,92,
+Laos,LA,2014-02-06T10:16:31.080943,2014-02-06T10:16:31.080949,False,True,iso-countries,93,
+Latvia,LV,2014-02-06T10:16:31.087903,2014-02-06T10:16:31.087910,False,True,iso-countries,94,
+Lebanon,LB,2014-02-06T10:16:31.094781,2014-02-06T10:16:31.094788,False,True,iso-countries,95,
+Lesotho,LS,2014-02-06T10:16:31.102026,2014-02-06T10:16:31.102033,False,True,iso-countries,96,
+Liberia,LR,2014-02-06T10:16:31.108926,2014-02-06T10:16:31.108933,False,True,iso-countries,97,
+Libya,LY,2014-02-06T10:16:31.116113,2014-02-06T10:16:31.116121,False,True,iso-countries,98,
+Liechtenstein,LI,2014-02-06T10:16:31.123049,2014-02-06T10:16:31.123056,False,True,iso-countries,99,
+Lithuania,LT,2014-02-06T10:16:31.129949,2014-02-06T10:16:31.129956,False,True,iso-countries,100,
+Luxembourg,LU,2014-02-06T10:16:31.137027,2014-02-06T10:16:31.137035,False,True,iso-countries,101,
+Macedonia,MK,2014-02-06T10:16:31.155223,2014-02-06T10:16:31.155229,False,True,iso-countries,102,
+Madagascar,MG,2014-02-06T10:16:31.162099,2014-02-06T10:16:31.162107,False,True,iso-countries,103,
+Malawi,MW,2014-02-06T10:16:31.169431,2014-02-06T10:16:31.169437,False,True,iso-countries,104,
+Malaysia,MY,2014-02-06T10:16:31.175676,2014-02-06T10:16:31.175683,False,True,iso-countries,105,
+Maldives,MV,2014-02-06T10:16:31.182059,2014-02-06T10:16:31.182065,False,True,iso-countries,106,
+Mali,ML,2014-02-06T10:16:31.187934,2014-02-06T10:16:31.187940,False,True,iso-countries,107,
+Malta,MT,2014-02-06T10:16:31.193736,2014-02-06T10:16:31.193742,False,True,iso-countries,108,
+Marshall Islands,MH,2014-02-06T10:16:31.200015,2014-02-06T10:16:31.200021,False,True,iso-countries,109,
+Mauritania,MR,2014-02-06T10:16:31.205988,2014-02-06T10:16:31.205994,False,True,iso-countries,110,
+Mauritius,MU,2014-02-06T10:16:31.212222,2014-02-06T10:16:31.212228,False,True,iso-countries,111,
+Mexico,MX,2014-02-06T10:16:31.218351,2014-02-06T10:16:31.218357,False,True,iso-countries,112,
+Micronesia,FM,2014-02-06T10:16:31.224297,2014-02-06T10:16:31.224303,False,True,iso-countries,113,
+Moldova,MD,2014-02-06T10:16:31.232537,2014-02-06T10:16:31.232552,False,True,iso-countries,114,
+Monaco,MC,2014-02-06T10:16:31.243753,2014-02-06T10:16:31.243763,False,True,iso-countries,115,
+Mongolia,MN,2014-02-06T10:16:31.254865,2014-02-06T10:16:31.254876,False,True,iso-countries,116,
+Montenegro,ME,2014-02-06T10:16:31.266990,2014-02-06T10:16:31.267000,False,True,iso-countries,117,
+Morocco,MA,2014-02-06T10:16:31.278683,2014-02-06T10:16:31.278693,False,True,iso-countries,118,
+Mozambique,MZ,2014-02-06T10:16:31.290666,2014-02-06T10:16:31.290675,False,True,iso-countries,119,
+Myanmar (Burma),MM,2014-02-06T10:16:31.302459,2014-02-06T10:16:31.302469,False,True,iso-countries,120,
+Namibia,NA,2014-02-06T10:16:31.313858,2014-02-06T10:16:31.313868,False,True,iso-countries,121,
+Nauru,NR,2014-02-06T10:16:31.324822,2014-02-06T10:16:31.324828,False,True,iso-countries,122,
+Nepal,NP,2014-02-06T10:16:31.330204,2014-02-06T10:16:31.330210,False,True,iso-countries,123,
+Netherlands,NL,2014-02-06T10:16:31.336128,2014-02-06T10:16:31.336134,False,True,iso-countries,124,
+New Zealand,NZ,2014-02-06T10:16:31.341683,2014-02-06T10:16:31.341688,False,True,iso-countries,125,
+Nicaragua,NI,2014-02-06T10:16:31.347128,2014-02-06T10:16:31.347134,False,True,iso-countries,126,
+Niger,NE,2014-02-06T10:16:31.352840,2014-02-06T10:16:31.352846,False,True,iso-countries,127,
+Nigeria,NG,2014-02-06T10:16:31.358190,2014-02-06T10:16:31.358195,False,True,iso-countries,128,
+Norway,NO,2014-02-06T10:16:31.363525,2014-02-06T10:16:31.363531,False,True,iso-countries,129,
+Oman,OM,2014-02-06T10:16:31.369053,2014-02-06T10:16:31.369059,False,True,iso-countries,130,
+Pakistan,PK,2014-02-06T10:16:31.374335,2014-02-06T10:16:31.374340,False,True,iso-countries,131,
+Palau,PW,2014-02-06T10:16:31.379955,2014-02-06T10:16:31.379961,False,True,iso-countries,132,
+Panama,PA,2014-02-06T10:16:31.385310,2014-02-06T10:16:31.385315,False,True,iso-countries,133,
+Papua New Guinea,PG,2014-02-06T10:16:31.390689,2014-02-06T10:16:31.390694,False,True,iso-countries,134,
+Paraguay,PY,2014-02-06T10:16:31.396399,2014-02-06T10:16:31.396404,False,True,iso-countries,135,
+Peru,PE,2014-02-06T10:16:31.401978,2014-02-06T10:16:31.401985,False,True,iso-countries,136,
+Philippines,PH,2014-02-06T10:16:31.407774,2014-02-06T10:16:31.407781,False,True,iso-countries,137,
+Poland,PL,2014-02-06T10:16:31.414966,2014-02-06T10:16:31.414974,False,True,iso-countries,138,
+Portugal,PT,2014-02-06T10:16:31.420795,2014-02-06T10:16:31.420801,False,True,iso-countries,139,
+Qatar,QA,2014-02-06T10:16:31.426752,2014-02-06T10:16:31.426758,False,True,iso-countries,140,
+Romania,RO,2014-02-06T10:16:31.432636,2014-02-06T10:16:31.432641,False,True,iso-countries,141,
+Russia,RU,2014-02-06T10:16:31.438473,2014-02-06T10:16:31.438479,False,True,iso-countries,142,
+Rwanda,RW,2014-02-06T10:16:31.444386,2014-02-06T10:16:31.444392,False,True,iso-countries,143,
+Saint Kitts and Nevis,KN,2014-02-06T10:16:31.450041,2014-02-06T10:16:31.450047,False,True,iso-countries,144,
+Saint Lucia,LC,2014-02-06T10:16:31.455429,2014-02-06T10:16:31.455435,False,True,iso-countries,145,
+Saint Vincent and the Grenadines,VC,2014-02-06T10:16:31.461129,2014-02-06T10:16:31.461135,False,True,iso-countries,146,
+Samoa,WS,2014-02-06T10:16:31.466470,2014-02-06T10:16:31.466476,False,True,iso-countries,147,
+San Marino,SM,2014-02-06T10:16:31.472103,2014-02-06T10:16:31.472108,False,True,iso-countries,148,
+Sao Tome and Principe,ST,2014-02-06T10:16:31.477475,2014-02-06T10:16:31.477480,False,True,iso-countries,149,
+Saudi Arabia,SA,2014-02-06T10:16:31.482822,2014-02-06T10:16:31.482828,False,True,iso-countries,150,
+Senegal,SN,2014-02-06T10:16:31.488387,2014-02-06T10:16:31.488392,False,True,iso-countries,151,
+Serbia,RS,2014-02-06T10:16:31.493698,2014-02-06T10:16:31.493703,False,True,iso-countries,152,
+Seychelles,SC,2014-02-06T10:16:31.499255,2014-02-06T10:16:31.499262,False,True,iso-countries,153,
+Sierra Leone,SL,2014-02-06T10:16:31.505530,2014-02-06T10:16:31.505536,False,True,iso-countries,154,
+Singapore,SG,2014-02-06T10:16:31.511434,2014-02-06T10:16:31.511440,False,True,iso-countries,155,
+Slovakia,SK,2014-02-06T10:16:31.517675,2014-02-06T10:16:31.517681,False,True,iso-countries,156,
+Slovenia,SI,2014-02-06T10:16:31.523387,2014-02-06T10:16:31.523392,False,True,iso-countries,157,
+Solomon Islands,SB,2014-02-06T10:16:31.529114,2014-02-06T10:16:31.529119,False,True,iso-countries,158,
+Somalia,SO,2014-02-06T10:16:31.534885,2014-02-06T10:16:31.534890,False,True,iso-countries,159,
+South Africa,ZA,2014-02-06T10:16:31.540634,2014-02-06T10:16:31.540639,False,True,iso-countries,160,
+Spain,ES,2014-02-06T10:16:31.549082,2014-02-06T10:16:31.549093,False,True,iso-countries,161,
+Sri Lanka,LK,2014-02-06T10:16:31.557361,2014-02-06T10:16:31.557368,False,True,iso-countries,162,
+Sudan,SD,2014-02-06T10:16:31.565609,2014-02-06T10:16:31.565617,False,True,iso-countries,163,
+Suriname,SR,2014-02-06T10:16:31.573072,2014-02-06T10:16:31.573080,False,True,iso-countries,164,
+Swaziland,SZ,2014-02-06T10:16:31.580383,2014-02-06T10:16:31.580390,False,True,iso-countries,165,
+Sweden,SE,2014-02-06T10:16:31.587633,2014-02-06T10:16:31.587640,False,True,iso-countries,166,
+Switzerland,CH,2014-02-06T10:16:31.595183,2014-02-06T10:16:31.595190,False,True,iso-countries,167,
+Syria,SY,2014-02-06T10:16:31.602455,2014-02-06T10:16:31.602463,False,True,iso-countries,168,
+Tajikistan,TJ,2014-02-06T10:16:31.609846,2014-02-06T10:16:31.609853,False,True,iso-countries,169,
+Tanzania,TZ,2014-02-06T10:16:31.617653,2014-02-06T10:16:31.617661,False,True,iso-countries,170,
+Thailand,TH,2014-02-06T10:16:31.624697,2014-02-06T10:16:31.624704,False,True,iso-countries,171,
+Timor-Leste (East Timor),TL,2014-02-06T10:16:31.632344,2014-02-06T10:16:31.632351,False,True,iso-countries,172,
+Togo,TG,2014-02-06T10:16:31.639679,2014-02-06T10:16:31.639709,False,True,iso-countries,173,
+Tonga,TO,2014-02-06T10:16:31.647067,2014-02-06T10:16:31.647074,False,True,iso-countries,174,
+Trinidad and Tobago,TT,2014-02-06T10:16:31.654778,2014-02-06T10:16:31.654785,False,True,iso-countries,175,
+Tunisia,TN,2014-02-06T10:16:31.661896,2014-02-06T10:16:31.661903,False,True,iso-countries,176,
+Turkey,TR,2014-02-06T10:16:31.669073,2014-02-06T10:16:31.669081,False,True,iso-countries,177,
+Turkmenistan,TM,2014-02-06T10:16:31.676618,2014-02-06T10:16:31.676625,False,True,iso-countries,178,
+Tuvalu,TV,2014-02-06T10:16:31.683992,2014-02-06T10:16:31.683999,False,True,iso-countries,179,
+Uganda,UG,2014-02-06T10:16:31.691750,2014-02-06T10:16:31.691757,False,True,iso-countries,180,
+Ukraine,UA,2014-02-06T10:16:31.699057,2014-02-06T10:16:31.699065,False,True,iso-countries,181,
+United Arab Emirates,AE,2014-02-06T10:16:31.706283,2014-02-06T10:16:31.706292,False,True,iso-countries,182,
+United Kingdom,GB,2014-02-06T10:16:31.713737,2014-02-06T10:16:31.713745,False,True,iso-countries,183,
+United States,US,2014-02-06T10:16:31.720849,2014-02-06T10:16:31.720856,False,True,iso-countries,184,
+Uruguay,UY,2014-02-06T10:16:31.727757,2014-02-06T10:16:31.727765,False,True,iso-countries,185,
+Uzbekistan,UZ,2014-02-06T10:16:31.735117,2014-02-06T10:16:31.735124,False,True,iso-countries,186,
+Vanuatu,VU,2014-02-06T10:16:31.742096,2014-02-06T10:16:31.742111,False,True,iso-countries,187,
+Vatican City,VA,2014-02-06T10:16:31.749718,2014-02-06T10:16:31.749726,False,True,iso-countries,188,
+Venezuela,VE,2014-02-06T10:16:31.756892,2014-02-06T10:16:31.756900,False,True,iso-countries,189,
+Vietnam,VN,2014-02-06T10:16:31.763813,2014-02-06T10:16:31.763820,False,True,iso-countries,190,
+Yemen,YE,2014-02-06T10:16:31.771148,2014-02-06T10:16:31.771155,False,True,iso-countries,191,
+Zambia,ZM,2014-02-06T10:16:31.778069,2014-02-06T10:16:31.778076,False,True,iso-countries,192,
+Zimbabwe,ZW,2014-02-06T10:16:31.785020,2014-02-06T10:16:31.785027,False,True,iso-countries,193,
+Abkhazia,GE,2014-02-06T10:16:31.792352,2014-02-06T10:16:31.792360,False,True,iso-countries,194,
+"China, Republic of (Taiwan)",TW,2014-02-06T10:16:31.799331,2014-02-06T10:16:31.799338,False,True,iso-countries,195,
+Nagorno-Karabakh,AZ,2014-02-06T10:16:31.806016,2014-02-06T10:16:31.806022,False,True,iso-countries,196,
+Northern Cyprus,CY,2014-02-06T10:16:31.811552,2014-02-06T10:16:31.811558,False,True,iso-countries,197,
+Pridnestrovie (Transnistria),MD,2014-02-06T10:16:31.817271,2014-02-06T10:16:31.817277,False,True,iso-countries,198,
+Somaliland,SO,2014-02-06T10:16:31.822971,2014-02-06T10:16:31.822977,False,True,iso-countries,199,
+South Ossetia,GE,2014-02-06T10:16:31.828722,2014-02-06T10:16:31.828727,False,True,iso-countries,200,
+Ashmore and Cartier Islands,AU,2014-02-06T10:16:31.835108,2014-02-06T10:16:31.835113,False,True,iso-countries,201,
+Christmas Island,CX,2014-02-06T10:16:31.854923,2014-02-06T10:16:31.854929,False,True,iso-countries,202,
+Cocos (Keeling) Islands,CC,2014-02-06T10:16:31.861973,2014-02-06T10:16:31.861980,False,True,iso-countries,203,
+Coral Sea Islands,AU,2014-02-06T10:16:31.868561,2014-02-06T10:16:31.868569,False,True,iso-countries,204,
+Heard Island and McDonald Islands,HM,2014-02-06T10:16:31.875470,2014-02-06T10:16:31.875477,False,True,iso-countries,205,
+Norfolk Island,NF,2014-02-06T10:16:31.882829,2014-02-06T10:16:31.882837,False,True,iso-countries,206,
+New Caledonia,NC,2014-02-06T10:16:31.889811,2014-02-06T10:16:31.889818,False,True,iso-countries,207,
+French Polynesia,PF,2014-02-06T10:16:31.896685,2014-02-06T10:16:31.896693,False,True,iso-countries,208,
+Mayotte,YT,2014-02-06T10:16:31.903951,2014-02-06T10:16:31.903958,False,True,iso-countries,209,
+Saint Barthelemy,GP,2014-02-06T10:16:31.910653,2014-02-06T10:16:31.910660,False,True,iso-countries,210,
+Saint Martin,GP,2014-02-06T10:16:31.917473,2014-02-06T10:16:31.917481,False,True,iso-countries,211,
+Saint Pierre and Miquelon,PM,2014-02-06T10:16:31.924222,2014-02-06T10:16:31.924230,False,True,iso-countries,212,
+Wallis and Futuna,WF,2014-02-06T10:16:31.930807,2014-02-06T10:16:31.930813,False,True,iso-countries,213,
+French Southern and Antarctic Lands,TF,2014-02-06T10:16:31.937294,2014-02-06T10:16:31.937301,False,True,iso-countries,214,
+Clipperton Island,PF,2014-02-06T10:16:31.943122,2014-02-06T10:16:31.943128,False,True,iso-countries,215,
+Bouvet Island,BV,2014-02-06T10:16:31.949221,2014-02-06T10:16:31.949227,False,True,iso-countries,216,
+Cook Islands,CK,2014-02-06T10:16:31.955191,2014-02-06T10:16:31.955198,False,True,iso-countries,217,
+Niue,NU,2014-02-06T10:16:31.960866,2014-02-06T10:16:31.960872,False,True,iso-countries,218,
+Tokelau,TK,2014-02-06T10:16:31.966729,2014-02-06T10:16:31.966735,False,True,iso-countries,219,
+Guernsey,GG,2014-02-06T10:16:31.972813,2014-02-06T10:16:31.972819,False,True,iso-countries,220,
+Isle of Man,IM,2014-02-06T10:16:31.978692,2014-02-06T10:16:31.978698,False,True,iso-countries,221,
+Jersey,JE,2014-02-06T10:16:31.984970,2014-02-06T10:16:31.984976,False,True,iso-countries,222,
+Anguilla,AI,2014-02-06T10:16:31.991644,2014-02-06T10:16:31.991653,False,True,iso-countries,223,
+Bermuda,BM,2014-02-06T10:16:31.999471,2014-02-06T10:16:31.999477,False,True,iso-countries,224,
+British Indian Ocean Territory,IO,2014-02-06T10:16:32.035607,2014-02-06T10:16:32.035619,False,True,iso-countries,225,
+British Sovereign Base Areas,,2014-02-06T10:16:32.045381,2014-02-06T10:16:32.045397,False,True,iso-countries,226,
+British Virgin Islands,VG,2014-02-06T10:16:32.057421,2014-02-06T10:16:32.057433,False,True,iso-countries,227,
+Cayman Islands,KY,2014-02-06T10:16:32.068696,2014-02-06T10:16:32.068702,False,True,iso-countries,228,
+Falkland Islands (Islas Malvinas),FK,2014-02-06T10:16:32.074525,2014-02-06T10:16:32.074531,False,True,iso-countries,229,
+Gibraltar,GI,2014-02-06T10:16:32.080339,2014-02-06T10:16:32.080345,False,True,iso-countries,230,
+Montserrat,MS,2014-02-06T10:16:32.085898,2014-02-06T10:16:32.085903,False,True,iso-countries,231,
+Pitcairn Islands,PN,2014-02-06T10:16:32.091394,2014-02-06T10:16:32.091400,False,True,iso-countries,232,
+Saint Helena,SH,2014-02-06T10:16:32.097252,2014-02-06T10:16:32.097258,False,True,iso-countries,233,
+South Georgia & South Sandwich Islands,GS,2014-02-06T10:16:32.102849,2014-02-06T10:16:32.102855,False,True,iso-countries,234,
+Turks and Caicos Islands,TC,2014-02-06T10:16:32.108847,2014-02-06T10:16:32.108853,False,True,iso-countries,235,
+Northern Mariana Islands,MP,2014-02-06T10:16:32.114443,2014-02-06T10:16:32.114448,False,True,iso-countries,236,
+Puerto Rico,PR,2014-02-06T10:16:32.120399,2014-02-06T10:16:32.120404,False,True,iso-countries,237,
+American Samoa,AS,2014-02-06T10:16:32.126511,2014-02-06T10:16:32.126517,False,True,iso-countries,238,
+Baker Island,UM,2014-02-06T10:16:32.132440,2014-02-06T10:16:32.132446,False,True,iso-countries,239,
+Guam,GU,2014-02-06T10:16:32.138462,2014-02-06T10:16:32.138468,False,True,iso-countries,240,
+Howland Island,UM,2014-02-06T10:16:32.144386,2014-02-06T10:16:32.144392,False,True,iso-countries,241,
+Jarvis Island,UM,2014-02-06T10:16:32.150176,2014-02-06T10:16:32.150182,False,True,iso-countries,242,
+Johnston Atoll,UM,2014-02-06T10:16:32.156034,2014-02-06T10:16:32.156040,False,True,iso-countries,243,
+Kingman Reef,UM,2014-02-06T10:16:32.161776,2014-02-06T10:16:32.161781,False,True,iso-countries,244,
+Midway Islands,UM,2014-02-06T10:16:32.167472,2014-02-06T10:16:32.167477,False,True,iso-countries,245,
+Navassa Island,UM,2014-02-06T10:16:32.173017,2014-02-06T10:16:32.173022,False,True,iso-countries,246,
+Palmyra Atoll,UM,2014-02-06T10:16:32.178454,2014-02-06T10:16:32.178459,False,True,iso-countries,247,
+U.S. Virgin Islands,VI,2014-02-06T10:16:32.184303,2014-02-06T10:16:32.184309,False,True,iso-countries,248,
+Wake Island,UM,2014-02-06T10:16:32.189790,2014-02-06T10:16:32.189795,False,True,iso-countries,249,
+Hong Kong,HK,2014-02-06T10:16:32.195496,2014-02-06T10:16:32.195503,False,True,iso-countries,250,
+Macau,MO,2014-02-06T10:16:32.201060,2014-02-06T10:16:32.201066,False,True,iso-countries,251,
+Faroe Islands,FO,2014-02-06T10:16:32.206495,2014-02-06T10:16:32.206500,False,True,iso-countries,252,
+Greenland,GL,2014-02-06T10:16:32.212365,2014-02-06T10:16:32.212370,False,True,iso-countries,253,
+French Guiana,GF,2014-02-06T10:16:32.217878,2014-02-06T10:16:32.217883,False,True,iso-countries,254,
+Guadeloupe,GP,2014-02-06T10:16:32.223549,2014-02-06T10:16:32.223554,False,True,iso-countries,255,
+Martinique,MQ,2014-02-06T10:16:32.229132,2014-02-06T10:16:32.229138,False,True,iso-countries,256,
+Reunion,RE,2014-02-06T10:16:32.234615,2014-02-06T10:16:32.234620,False,True,iso-countries,257,
+Aland,AX,2014-02-06T10:16:32.241109,2014-02-06T10:16:32.241116,False,True,iso-countries,258,
+Aruba,AW,2014-02-06T10:16:32.247030,2014-02-06T10:16:32.247036,False,True,iso-countries,259,
+Netherlands Antilles,AN,2014-02-06T10:16:32.252893,2014-02-06T10:16:32.252899,False,True,iso-countries,260,
+Svalbard,SJ,2014-02-06T10:16:32.258630,2014-02-06T10:16:32.258636,False,True,iso-countries,261,
+Ascension,AC,2014-02-06T10:16:32.264330,2014-02-06T10:16:32.264335,False,True,iso-countries,262,
+Tristan da Cunha,TA,2014-02-06T10:16:32.269887,2014-02-06T10:16:32.269892,False,True,iso-countries,263,
+Australian Antarctic Territory,AQ,2014-02-06T10:16:32.275292,2014-02-06T10:16:32.275296,False,True,iso-countries,264,
+Ross Dependency,AQ,2014-02-06T10:16:32.280961,2014-02-06T10:16:32.280966,False,True,iso-countries,265,
+Peter I Island,AQ,2014-02-06T10:16:32.287803,2014-02-06T10:16:32.287809,False,True,iso-countries,266,
+Queen Maud Land,AQ,2014-02-06T10:16:32.296552,2014-02-06T10:16:32.296559,False,True,iso-countries,267,
+British Antarctic Territory,AQ,2014-02-06T10:16:32.304288,2014-02-06T10:16:32.304295,False,True,iso-countries,268,
+South Sudan,SS,2014-02-06T10:16:32.311447,2014-02-06T10:16:32.311455,False,True,iso-countries,269,
+Kosovo,XK,2014-02-06T10:16:32.322481,2014-02-06T10:16:32.322488,False,True,iso-countries,270,
+Palestine,PS,2014-02-06T10:16:32.329491,2014-02-06T10:16:32.329498,False,True,iso-countries,271,
+China,,2014-02-06T10:16:54.717289,2014-02-06T10:16:54.717297,False,True,iso-countries,272,"China, People's Republic of"
+Congo (Democratic Republic of),,2014-02-06T10:16:54.738242,2014-02-06T10:16:54.738248,False,True,iso-countries,273,"Congo, (Congo  Kinshasa)"
+Congo,,2014-02-06T10:16:54.748135,2014-02-06T10:16:54.748141,False,True,iso-countries,274,"Congo, (Congo  Brazzaville)"
+Ivory coast,,2014-02-06T10:16:54.761228,2014-02-06T10:16:54.761234,False,True,iso-countries,275,Cote d'Ivoire (Ivory Coast)
+Gambia (the),,2014-02-06T10:16:54.879316,2014-02-06T10:16:54.879327,False,True,iso-countries,276,"Gambia, The"
+South Korea,,2014-02-06T10:16:55.013782,2014-02-06T10:16:55.013788,False,True,iso-countries,277,"Korea, South"
+Macedonia (the former Yugoslav Republic of),,2014-02-06T10:16:55.099777,2014-02-06T10:16:55.099787,False,True,iso-countries,278,Macedonia
+Myanmar,,2014-02-06T10:16:55.199966,2014-02-06T10:16:55.199973,False,True,iso-countries,279,Myanmar (Burma)
+Sao Tome and Prncipe,,2014-02-06T10:16:55.351600,2014-02-06T10:16:55.351608,False,True,iso-countries,280,Sao Tome and Principe
+Serbia (Republic of),,2014-02-06T10:16:55.373898,2014-02-06T10:16:55.373906,False,True,iso-countries,281,Serbia
+East Timor,,2014-02-06T10:16:55.478336,2014-02-06T10:16:55.478344,False,True,iso-countries,282,Timor-Leste (East Timor)
+Taiwan,,2014-02-06T10:16:55.610500,2014-02-06T10:16:55.610507,False,True,iso-countries,283,"China, Republic of (Taiwan)"
+Faeroe Islands,,2014-02-06T10:16:55.925894,2014-02-06T10:16:55.925901,False,True,iso-countries,284,Faroe Islands
+Slovak Republic,,2014-02-06T10:17:32.483986,2014-02-06T10:17:32.483992,False,True,iso-countries,423,Slovakia
+Montenegro (Republic of),,2014-02-06T10:16:56.017374,2014-02-06T10:16:56.017382,False,True,iso-countries,285,Montenegro
+Kosovo (under UN Security Council Resolution 1244/99),,2014-02-06T10:16:56.030191,2014-02-06T10:16:56.030198,False,True,iso-countries,286,Kosovo
+Occupied Territories - Palestine,,2014-02-06T10:16:56.043192,2014-02-06T10:16:56.043199,False,True,iso-countries,287,Palestine
+Islamic State of Afghanistan,,2014-02-06T10:17:30.772118,2014-02-06T10:17:30.772124,False,True,iso-countries,288,Afghanistan
+Republic of Albania,,2014-02-06T10:17:30.811288,2014-02-06T10:17:30.811294,False,True,iso-countries,289,Albania
+People's Democratic Republic of Algeria,,2014-02-06T10:17:30.821745,2014-02-06T10:17:30.821751,False,True,iso-countries,290,Algeria
+Principality of Andorra,,2014-02-06T10:17:30.831986,2014-02-06T10:17:30.831993,False,True,iso-countries,291,Andorra
+Republic of Angola,,2014-02-06T10:17:30.841939,2014-02-06T10:17:30.841945,False,True,iso-countries,292,Angola
+Argentine Republic,,2014-02-06T10:17:30.855177,2014-02-06T10:17:30.855184,False,True,iso-countries,293,Argentina
+Republic of Armenia,,2014-02-06T10:17:30.865041,2014-02-06T10:17:30.865048,False,True,iso-countries,294,Armenia
+Commonwealth of Australia,,2014-02-06T10:17:30.874610,2014-02-06T10:17:30.874615,False,True,iso-countries,295,Australia
+Republic of Austria,,2014-02-06T10:17:30.884777,2014-02-06T10:17:30.884783,False,True,iso-countries,296,Austria
+Republic of Azerbaijan,,2014-02-06T10:17:30.894434,2014-02-06T10:17:30.894440,False,True,iso-countries,297,Azerbaijan
+Commonwealth of The Bahamas,,2014-02-06T10:17:30.904723,2014-02-06T10:17:30.904730,False,True,iso-countries,298,"Bahamas, The"
+Kingdom of Bahrain,,2014-02-06T10:17:30.914661,2014-02-06T10:17:30.914666,False,True,iso-countries,299,Bahrain
+People's Republic of Bangladesh,,2014-02-06T10:17:30.928838,2014-02-06T10:17:30.928843,False,True,iso-countries,300,Bangladesh
+Republic of Belarus,,2014-02-06T10:17:30.941240,2014-02-06T10:17:30.941246,False,True,iso-countries,301,Belarus
+Kingdom of Belgium,,2014-02-06T10:17:30.951481,2014-02-06T10:17:30.951486,False,True,iso-countries,302,Belgium
+Republic of Benin,,2014-02-06T10:17:30.967810,2014-02-06T10:17:30.967818,False,True,iso-countries,303,Benin
+Kingdom of Bhutan,,2014-02-06T10:17:30.980215,2014-02-06T10:17:30.980222,False,True,iso-countries,304,Bhutan
+Republic of Bolivia,,2014-02-06T10:17:30.992659,2014-02-06T10:17:30.992668,False,True,iso-countries,305,Bolivia
+Republic of Botswana,,2014-02-06T10:17:31.011374,2014-02-06T10:17:31.011381,False,True,iso-countries,306,Botswana
+Federative Republic of Brazil,,2014-02-06T10:17:31.023249,2014-02-06T10:17:31.023257,False,True,iso-countries,307,Brazil
+Negara Brunei Darussalam,,2014-02-06T10:17:31.035294,2014-02-06T10:17:31.035301,False,True,iso-countries,308,Brunei
+Republic of Bulgaria,,2014-02-06T10:17:31.047390,2014-02-06T10:17:31.047398,False,True,iso-countries,309,Bulgaria
+Republic of Burundi,,2014-02-06T10:17:31.062477,2014-02-06T10:17:31.062484,False,True,iso-countries,310,Burundi
+Kingdom of Cambodia,,2014-02-06T10:17:31.074681,2014-02-06T10:17:31.074689,False,True,iso-countries,311,Cambodia
+Republic of Cameroon,,2014-02-06T10:17:31.086350,2014-02-06T10:17:31.086358,False,True,iso-countries,312,Cameroon
+Republic of Cape Verde,,2014-02-06T10:17:31.101941,2014-02-06T10:17:31.101948,False,True,iso-countries,313,Cape Verde
+Republic of Chad,,2014-02-06T10:17:31.117539,2014-02-06T10:17:31.117547,False,True,iso-countries,314,Chad
+Republic of Chile,,2014-02-06T10:17:31.129847,2014-02-06T10:17:31.129854,False,True,iso-countries,315,Chile
+People's Republic of China,,2014-02-06T10:17:31.142002,2014-02-06T10:17:31.142010,False,True,iso-countries,316,"China, People's Republic of"
+Republic of Colombia,,2014-02-06T10:17:31.154261,2014-02-06T10:17:31.154268,False,True,iso-countries,317,Colombia
+Union of Comoros,,2014-02-06T10:17:31.166119,2014-02-06T10:17:31.166127,False,True,iso-countries,318,Comoros
+Democratic Republic of the Congo,,2014-02-06T10:17:31.178372,2014-02-06T10:17:31.178380,False,True,iso-countries,319,"Congo, (Congo  Kinshasa)"
+Republic of the Congo,,2014-02-06T10:17:31.190803,2014-02-06T10:17:31.190810,False,True,iso-countries,320,"Congo, (Congo  Brazzaville)"
+Republic of Costa Rica,,2014-02-06T10:17:31.202670,2014-02-06T10:17:31.202677,False,True,iso-countries,321,Costa Rica
+Republic of Cote d'Ivoire,,2014-02-06T10:17:31.212599,2014-02-06T10:17:31.212605,False,True,iso-countries,322,Cote d'Ivoire (Ivory Coast)
+Republic of Croatia,,2014-02-06T10:17:31.222246,2014-02-06T10:17:31.222252,False,True,iso-countries,323,Croatia
+Republic of Cuba,,2014-02-06T10:17:31.232081,2014-02-06T10:17:31.232088,False,True,iso-countries,324,Cuba
+Republic of Cyprus,,2014-02-06T10:17:31.247001,2014-02-06T10:17:31.247011,False,True,iso-countries,325,Cyprus
+Kingdom of Denmark,,2014-02-06T10:17:31.262923,2014-02-06T10:17:31.262930,False,True,iso-countries,326,Denmark
+Republic of Djibouti,,2014-02-06T10:17:31.274261,2014-02-06T10:17:31.274269,False,True,iso-countries,327,Djibouti
+Commonwealth of Dominica,,2014-02-06T10:17:31.286054,2014-02-06T10:17:31.286062,False,True,iso-countries,328,Dominica
+Republic of Ecuador,,2014-02-06T10:17:31.300553,2014-02-06T10:17:31.300560,False,True,iso-countries,329,Ecuador
+Arab Republic of Egypt,,2014-02-06T10:17:31.312320,2014-02-06T10:17:31.312327,False,True,iso-countries,330,Egypt
+Republic of El Salvador,,2014-02-06T10:17:31.323881,2014-02-06T10:17:31.323889,False,True,iso-countries,331,El Salvador
+Republic of Equatorial Guinea,,2014-02-06T10:17:31.335491,2014-02-06T10:17:31.335499,False,True,iso-countries,332,Equatorial Guinea
+State of Eritrea,,2014-02-06T10:17:31.345866,2014-02-06T10:17:31.345872,False,True,iso-countries,333,Eritrea
+Republic of Estonia,,2014-02-06T10:17:31.355626,2014-02-06T10:17:31.355633,False,True,iso-countries,334,Estonia
+Federal Democratic Republic of Ethiopia,,2014-02-06T10:17:31.365541,2014-02-06T10:17:31.365548,False,True,iso-countries,335,Ethiopia
+Republic of the Fiji Islands,,2014-02-06T10:17:31.375254,2014-02-06T10:17:31.375261,False,True,iso-countries,336,Fiji
+Republic of Finland,,2014-02-06T10:17:31.384838,2014-02-06T10:17:31.384843,False,True,iso-countries,337,Finland
+French Republic,,2014-02-06T10:17:31.394686,2014-02-06T10:17:31.394694,False,True,iso-countries,338,France
+Gabonese Republic,,2014-02-06T10:17:31.411211,2014-02-06T10:17:31.411221,False,True,iso-countries,339,Gabon
+Republic of The Gambia,,2014-02-06T10:17:31.432413,2014-02-06T10:17:31.432425,False,True,iso-countries,340,"Gambia, The"
+Republic of Georgia,,2014-02-06T10:17:31.452576,2014-02-06T10:17:31.452584,False,True,iso-countries,341,Georgia
+Federal Republic of Germany,,2014-02-06T10:17:31.472963,2014-02-06T10:17:31.472972,False,True,iso-countries,342,Germany
+Republic of Ghana,,2014-02-06T10:17:31.493036,2014-02-06T10:17:31.493046,False,True,iso-countries,343,Ghana
+Hellenic Republic,,2014-02-06T10:17:31.512500,2014-02-06T10:17:31.512509,False,True,iso-countries,344,Greece
+Republic of Guatemala,,2014-02-06T10:17:31.537007,2014-02-06T10:17:31.537017,False,True,iso-countries,345,Guatemala
+Republic of Guinea,,2014-02-06T10:17:31.554664,2014-02-06T10:17:31.554670,False,True,iso-countries,346,Guinea
+Republic of Guinea-Bissau,,2014-02-06T10:17:31.564449,2014-02-06T10:17:31.564455,False,True,iso-countries,347,Guinea-Bissau
+Co-operative Republic of Guyana,,2014-02-06T10:17:31.573673,2014-02-06T10:17:31.573679,False,True,iso-countries,348,Guyana
+Republic of Haiti,,2014-02-06T10:17:31.582780,2014-02-06T10:17:31.582786,False,True,iso-countries,349,Haiti
+Republic of Honduras,,2014-02-06T10:17:31.591887,2014-02-06T10:17:31.591893,False,True,iso-countries,350,Honduras
+Republic of Hungary,,2014-02-06T10:17:31.600991,2014-02-06T10:17:31.600997,False,True,iso-countries,351,Hungary
+Republic of Iceland,,2014-02-06T10:17:31.610098,2014-02-06T10:17:31.610104,False,True,iso-countries,352,Iceland
+Republic of India,,2014-02-06T10:17:31.618977,2014-02-06T10:17:31.618982,False,True,iso-countries,353,India
+MV,,2014-02-06T10:17:59.887650,2014-02-06T10:17:59.887658,False,True,iso-countries,593,Maldives
+Republic of Indonesia,,2014-02-06T10:17:31.628068,2014-02-06T10:17:31.628074,False,True,iso-countries,354,Indonesia
+Islamic Republic of Iran,,2014-02-06T10:17:31.637737,2014-02-06T10:17:31.637743,False,True,iso-countries,355,Iran
+Republic of Iraq,,2014-02-06T10:17:31.647542,2014-02-06T10:17:31.647548,False,True,iso-countries,356,Iraq
+State of Israel,,2014-02-06T10:17:31.659791,2014-02-06T10:17:31.659798,False,True,iso-countries,357,Israel
+Italian Republic,,2014-02-06T10:17:31.669260,2014-02-06T10:17:31.669266,False,True,iso-countries,358,Italy
+Hashemite Kingdom of Jordan,,2014-02-06T10:17:31.684370,2014-02-06T10:17:31.684376,False,True,iso-countries,359,Jordan
+Republic of Kazakhstan,,2014-02-06T10:17:31.693810,2014-02-06T10:17:31.693816,False,True,iso-countries,360,Kazakhstan
+Republic of Kenya,,2014-02-06T10:17:31.703268,2014-02-06T10:17:31.703273,False,True,iso-countries,361,Kenya
+Republic of Kiribati,,2014-02-06T10:17:31.712730,2014-02-06T10:17:31.712735,False,True,iso-countries,362,Kiribati
+Democratic People's Republic of Korea,,2014-02-06T10:17:31.722260,2014-02-06T10:17:31.722266,False,True,iso-countries,363,"Korea, North"
+Republic of Korea,,2014-02-06T10:17:31.732324,2014-02-06T10:17:31.732330,False,True,iso-countries,364,"Korea, South"
+State of Kuwait,,2014-02-06T10:17:31.744803,2014-02-06T10:17:31.744809,False,True,iso-countries,365,Kuwait
+Kyrgyz Republic,,2014-02-06T10:17:31.754633,2014-02-06T10:17:31.754639,False,True,iso-countries,366,Kyrgyzstan
+Lao People's Democratic Republic,,2014-02-06T10:17:31.764867,2014-02-06T10:17:31.764872,False,True,iso-countries,367,Laos
+Republic of Latvia,,2014-02-06T10:17:31.775073,2014-02-06T10:17:31.775080,False,True,iso-countries,368,Latvia
+Lebanese Republic,,2014-02-06T10:17:31.787471,2014-02-06T10:17:31.787479,False,True,iso-countries,369,Lebanon
+Kingdom of Lesotho,,2014-02-06T10:17:31.799990,2014-02-06T10:17:31.799997,False,True,iso-countries,370,Lesotho
+Republic of Liberia,,2014-02-06T10:17:31.812364,2014-02-06T10:17:31.812372,False,True,iso-countries,371,Liberia
+Great Socialist People's Libyan Arab Jamahiriya,,2014-02-06T10:17:31.825047,2014-02-06T10:17:31.825055,False,True,iso-countries,372,Libya
+Principality of Liechtenstein,,2014-02-06T10:17:31.836747,2014-02-06T10:17:31.836754,False,True,iso-countries,373,Liechtenstein
+Republic of Lithuania,,2014-02-06T10:17:31.848891,2014-02-06T10:17:31.848899,False,True,iso-countries,374,Lithuania
+Grand Duchy of Luxembourg,,2014-02-06T10:17:31.861104,2014-02-06T10:17:31.861111,False,True,iso-countries,375,Luxembourg
+Republic of Macedonia,,2014-02-06T10:17:31.904415,2014-02-06T10:17:31.904421,False,True,iso-countries,376,Macedonia
+Republic of Madagascar,,2014-02-06T10:17:31.916722,2014-02-06T10:17:31.916730,False,True,iso-countries,377,Madagascar
+Republic of Malawi,,2014-02-06T10:17:31.928626,2014-02-06T10:17:31.928633,False,True,iso-countries,378,Malawi
+Republic of Maldives,,2014-02-06T10:17:31.943551,2014-02-06T10:17:31.943559,False,True,iso-countries,379,Maldives
+Republic of Mali,,2014-02-06T10:17:31.955122,2014-02-06T10:17:31.955130,False,True,iso-countries,380,Mali
+Republic of Malta,,2014-02-06T10:17:31.967132,2014-02-06T10:17:31.967139,False,True,iso-countries,381,Malta
+Republic of the Marshall Islands,,2014-02-06T10:17:31.979176,2014-02-06T10:17:31.979184,False,True,iso-countries,382,Marshall Islands
+Islamic Republic of Mauritania,,2014-02-06T10:17:31.991411,2014-02-06T10:17:31.991419,False,True,iso-countries,383,Mauritania
+Republic of Mauritius,,2014-02-06T10:17:32.003673,2014-02-06T10:17:32.003681,False,True,iso-countries,384,Mauritius
+United Mexican States,,2014-02-06T10:17:32.016432,2014-02-06T10:17:32.016439,False,True,iso-countries,385,Mexico
+Federated States of Micronesia,,2014-02-06T10:17:32.028668,2014-02-06T10:17:32.028676,False,True,iso-countries,386,Micronesia
+Republic of Moldova,,2014-02-06T10:17:32.038779,2014-02-06T10:17:32.038785,False,True,iso-countries,387,Moldova
+Principality of Monaco,,2014-02-06T10:17:32.048725,2014-02-06T10:17:32.048730,False,True,iso-countries,388,Monaco
+Republic of Montenegro,,2014-02-06T10:17:32.063022,2014-02-06T10:17:32.063027,False,True,iso-countries,389,Montenegro
+Kingdom of Morocco,,2014-02-06T10:17:32.075657,2014-02-06T10:17:32.075664,False,True,iso-countries,390,Morocco
+Republic of Mozambique,,2014-02-06T10:17:32.087601,2014-02-06T10:17:32.087609,False,True,iso-countries,391,Mozambique
+Union of Myanmar,,2014-02-06T10:17:32.099453,2014-02-06T10:17:32.099460,False,True,iso-countries,392,Myanmar (Burma)
+Republic of Namibia,,2014-02-06T10:17:32.110944,2014-02-06T10:17:32.110952,False,True,iso-countries,393,Namibia
+Republic of Nauru,,2014-02-06T10:17:32.122505,2014-02-06T10:17:32.122512,False,True,iso-countries,394,Nauru
+Kingdom of the Netherlands,,2014-02-06T10:17:32.136968,2014-02-06T10:17:32.136975,False,True,iso-countries,395,Netherlands
+Republic of Nicaragua,,2014-02-06T10:17:32.150931,2014-02-06T10:17:32.150938,False,True,iso-countries,396,Nicaragua
+Republic of Niger,,2014-02-06T10:17:32.161648,2014-02-06T10:17:32.161656,False,True,iso-countries,397,Niger
+Federal Republic of Nigeria,,2014-02-06T10:17:32.172515,2014-02-06T10:17:32.172521,False,True,iso-countries,398,Nigeria
+Kingdom of Norway,,2014-02-06T10:17:32.182778,2014-02-06T10:17:32.182784,False,True,iso-countries,399,Norway
+Sultanate of Oman,,2014-02-06T10:17:32.193326,2014-02-06T10:17:32.193333,False,True,iso-countries,400,Oman
+Islamic Republic of Pakistan,,2014-02-06T10:17:32.203661,2014-02-06T10:17:32.203666,False,True,iso-countries,401,Pakistan
+Republic of Palau,,2014-02-06T10:17:32.213932,2014-02-06T10:17:32.213939,False,True,iso-countries,402,Palau
+Republic of Panama,,2014-02-06T10:17:32.226852,2014-02-06T10:17:32.226863,False,True,iso-countries,403,Panama
+Independent State of Papua New Guinea,,2014-02-06T10:17:32.243621,2014-02-06T10:17:32.243630,False,True,iso-countries,404,Papua New Guinea
+Republic of Paraguay,,2014-02-06T10:17:32.264229,2014-02-06T10:17:32.264239,False,True,iso-countries,405,Paraguay
+Republic of Peru,,2014-02-06T10:17:32.284580,2014-02-06T10:17:32.284590,False,True,iso-countries,406,Peru
+Republic of the Philippines,,2014-02-06T10:17:32.303700,2014-02-06T10:17:32.303710,False,True,iso-countries,407,Philippines
+Republic of Poland,,2014-02-06T10:17:32.324475,2014-02-06T10:17:32.324487,False,True,iso-countries,408,Poland
+Portuguese Republic,,2014-02-06T10:17:32.338403,2014-02-06T10:17:32.338409,False,True,iso-countries,409,Portugal
+State of Qatar,,2014-02-06T10:17:32.348008,2014-02-06T10:17:32.348014,False,True,iso-countries,410,Qatar
+Russian Federation,,2014-02-06T10:17:32.359846,2014-02-06T10:17:32.359851,False,True,iso-countries,411,Russia
+Republic of Rwanda,,2014-02-06T10:17:32.369835,2014-02-06T10:17:32.369841,False,True,iso-countries,412,Rwanda
+Federation of Saint Kitts and Nevis,,2014-02-06T10:17:32.379797,2014-02-06T10:17:32.379803,False,True,iso-countries,413,Saint Kitts and Nevis
+Independent State of Samoa,,2014-02-06T10:17:32.394056,2014-02-06T10:17:32.394062,False,True,iso-countries,414,Samoa
+Republic of San Marino,,2014-02-06T10:17:32.403922,2014-02-06T10:17:32.403928,False,True,iso-countries,415,San Marino
+Democratic Republic of Sao Tome and Principe,,2014-02-06T10:17:32.413923,2014-02-06T10:17:32.413929,False,True,iso-countries,416,Sao Tome and Principe
+Kingdom of Saudi Arabia,,2014-02-06T10:17:32.423767,2014-02-06T10:17:32.423774,False,True,iso-countries,417,Saudi Arabia
+Republic of Senegal,,2014-02-06T10:17:32.433727,2014-02-06T10:17:32.433732,False,True,iso-countries,418,Senegal
+Republic of Serbia,,2014-02-06T10:17:32.444253,2014-02-06T10:17:32.444259,False,True,iso-countries,419,Serbia
+Republic of Seychelles,,2014-02-06T10:17:32.454267,2014-02-06T10:17:32.454273,False,True,iso-countries,420,Seychelles
+Republic of Sierra Leone,,2014-02-06T10:17:32.464060,2014-02-06T10:17:32.464066,False,True,iso-countries,421,Sierra Leone
+Republic of Singapore,,2014-02-06T10:17:32.474089,2014-02-06T10:17:32.474094,False,True,iso-countries,422,Singapore
+Republic of Slovenia,,2014-02-06T10:17:32.493949,2014-02-06T10:17:32.493955,False,True,iso-countries,424,Slovenia
+Republic of South Africa,,2014-02-06T10:17:32.510932,2014-02-06T10:17:32.510937,False,True,iso-countries,425,South Africa
+Kingdom of Spain,,2014-02-06T10:17:32.521555,2014-02-06T10:17:32.521563,False,True,iso-countries,426,Spain
+Democratic Socialist Republic of Sri Lanka,,2014-02-06T10:17:32.531720,2014-02-06T10:17:32.531727,False,True,iso-countries,427,Sri Lanka
+Republic of the Sudan,,2014-02-06T10:17:32.542474,2014-02-06T10:17:32.542481,False,True,iso-countries,428,Sudan
+Republic of Suriname,,2014-02-06T10:17:32.554181,2014-02-06T10:17:32.554188,False,True,iso-countries,429,Suriname
+Kingdom of Swaziland,,2014-02-06T10:17:32.565811,2014-02-06T10:17:32.565818,False,True,iso-countries,430,Swaziland
+Kingdom of Sweden,,2014-02-06T10:17:32.578434,2014-02-06T10:17:32.578441,False,True,iso-countries,431,Sweden
+Swiss Confederation,,2014-02-06T10:17:32.590841,2014-02-06T10:17:32.590849,False,True,iso-countries,432,Switzerland
+Syrian Arab Republic,,2014-02-06T10:17:32.603045,2014-02-06T10:17:32.603053,False,True,iso-countries,433,Syria
+Republic of Tajikistan,,2014-02-06T10:17:32.615589,2014-02-06T10:17:32.615597,False,True,iso-countries,434,Tajikistan
+United Republic of Tanzania,,2014-02-06T10:17:32.627519,2014-02-06T10:17:32.627526,False,True,iso-countries,435,Tanzania
+Kingdom of Thailand,,2014-02-06T10:17:32.640001,2014-02-06T10:17:32.640009,False,True,iso-countries,436,Thailand
+Democratic Republic of Timor-Leste,,2014-02-06T10:17:32.652119,2014-02-06T10:17:32.652127,False,True,iso-countries,437,Timor-Leste (East Timor)
+Togolese Republic,,2014-02-06T10:17:32.664138,2014-02-06T10:17:32.664146,False,True,iso-countries,438,Togo
+Kingdom of Tonga,,2014-02-06T10:17:32.676032,2014-02-06T10:17:32.676039,False,True,iso-countries,439,Tonga
+Republic of Trinidad and Tobago,,2014-02-06T10:17:32.688236,2014-02-06T10:17:32.688243,False,True,iso-countries,440,Trinidad and Tobago
+Tunisian Republic,,2014-02-06T10:17:32.700360,2014-02-06T10:17:32.700368,False,True,iso-countries,441,Tunisia
+Republic of Turkey,,2014-02-06T10:17:32.712244,2014-02-06T10:17:32.712253,False,True,iso-countries,442,Turkey
+Republic of Uganda,,2014-02-06T10:17:32.731139,2014-02-06T10:17:32.731147,False,True,iso-countries,443,Uganda
+United Kingdom of Great Britain and Northern Ireland,,2014-02-06T10:17:32.752120,2014-02-06T10:17:32.752127,False,True,iso-countries,444,United Kingdom
+United States of America,,2014-02-06T10:17:32.764821,2014-02-06T10:17:32.764829,False,True,iso-countries,445,United States
+Oriental Republic of Uruguay,,2014-02-06T10:17:32.776873,2014-02-06T10:17:32.776880,False,True,iso-countries,446,Uruguay
+Republic of Uzbekistan,,2014-02-06T10:17:32.788614,2014-02-06T10:17:32.788621,False,True,iso-countries,447,Uzbekistan
+Republic of Vanuatu,,2014-02-06T10:17:32.800679,2014-02-06T10:17:32.800687,False,True,iso-countries,448,Vanuatu
+State of the Vatican City,,2014-02-06T10:17:32.811466,2014-02-06T10:17:32.811472,False,True,iso-countries,449,Vatican City
+Bolivarian Republic of Venezuela,,2014-02-06T10:17:32.821367,2014-02-06T10:17:32.821373,False,True,iso-countries,450,Venezuela
+Socialist Republic of Vietnam,,2014-02-06T10:17:32.831066,2014-02-06T10:17:32.831082,False,True,iso-countries,451,Vietnam
+Republic of Yemen,,2014-02-06T10:17:32.841354,2014-02-06T10:17:32.841362,False,True,iso-countries,452,Yemen
+Republic of Zambia,,2014-02-06T10:17:32.852423,2014-02-06T10:17:32.852430,False,True,iso-countries,453,Zambia
+Republic of Zimbabwe,,2014-02-06T10:17:32.863984,2014-02-06T10:17:32.863991,False,True,iso-countries,454,Zimbabwe
+Republic of Abkhazia,,2014-02-06T10:17:32.875513,2014-02-06T10:17:32.875521,False,True,iso-countries,455,Abkhazia
+Republic of China,,2014-02-06T10:17:32.887073,2014-02-06T10:17:32.887081,False,True,iso-countries,456,"China, Republic of (Taiwan)"
+Nagorno-Karabakh Republic,,2014-02-06T10:17:32.899071,2014-02-06T10:17:32.899079,False,True,iso-countries,457,Nagorno-Karabakh
+Turkish Republic of Northern Cyprus,,2014-02-06T10:17:32.911236,2014-02-06T10:17:32.911243,False,True,iso-countries,458,Northern Cyprus
+Pridnestrovian Moldavian Republic,,2014-02-06T10:17:32.923375,2014-02-06T10:17:32.923383,False,True,iso-countries,459,Pridnestrovie (Transnistria)
+Republic of Somaliland,,2014-02-06T10:17:32.934782,2014-02-06T10:17:32.934789,False,True,iso-countries,460,Somaliland
+Republic of South Ossetia,,2014-02-06T10:17:32.945601,2014-02-06T10:17:32.945607,False,True,iso-countries,461,South Ossetia
+Territory of Ashmore and Cartier Islands,,2014-02-06T10:17:32.956321,2014-02-06T10:17:32.956328,False,True,iso-countries,462,Ashmore and Cartier Islands
+Territory of Christmas Island,,2014-02-06T10:17:32.981599,2014-02-06T10:17:32.981605,False,True,iso-countries,463,Christmas Island
+Territory of Cocos (Keeling) Islands,,2014-02-06T10:17:32.993071,2014-02-06T10:17:32.993081,False,True,iso-countries,464,Cocos (Keeling) Islands
+Coral Sea Islands Territory,,2014-02-06T10:17:33.010408,2014-02-06T10:17:33.010419,False,True,iso-countries,465,Coral Sea Islands
+Territory of Heard Island and McDonald Islands,,2014-02-06T10:17:33.029599,2014-02-06T10:17:33.029608,False,True,iso-countries,466,Heard Island and McDonald Islands
+Territory of Norfolk Island,,2014-02-06T10:17:33.050012,2014-02-06T10:17:33.050022,False,True,iso-countries,467,Norfolk Island
+Overseas Country of French Polynesia,,2014-02-06T10:17:33.076083,2014-02-06T10:17:33.076089,False,True,iso-countries,468,French Polynesia
+Departmental Collectivity of Mayotte,,2014-02-06T10:17:33.086196,2014-02-06T10:17:33.086202,False,True,iso-countries,469,Mayotte
+Collectivity of Saint Barthelemy,,2014-02-06T10:17:33.096085,2014-02-06T10:17:33.096091,False,True,iso-countries,470,Saint Barthelemy
+Collectivity of Saint Martin,,2014-02-06T10:17:33.105736,2014-02-06T10:17:33.105742,False,True,iso-countries,471,Saint Martin
+Territorial Collectivity of Saint Pierre and Miquelon,,2014-02-06T10:17:33.116002,2014-02-06T10:17:33.116008,False,True,iso-countries,472,Saint Pierre and Miquelon
+Collectivity of the Wallis and Futuna Islands,,2014-02-06T10:17:33.126141,2014-02-06T10:17:33.126148,False,True,iso-countries,473,Wallis and Futuna
+Territory of the French Southern and Antarctic Lands,,2014-02-06T10:17:33.136097,2014-02-06T10:17:33.136103,False,True,iso-countries,474,French Southern and Antarctic Lands
+Bailiwick of Guernsey,,2014-02-06T10:17:33.159023,2014-02-06T10:17:33.159029,False,True,iso-countries,475,Guernsey
+Bailiwick of Jersey,,2014-02-06T10:17:33.171361,2014-02-06T10:17:33.171366,False,True,iso-countries,476,Jersey
+Commonwealth of The Northern Mariana Islands,,2014-02-06T10:17:33.213315,2014-02-06T10:17:33.213321,False,True,iso-countries,477,Northern Mariana Islands
+Commonwealth of Puerto Rico,,2014-02-06T10:17:33.222759,2014-02-06T10:17:33.222765,False,True,iso-countries,478,Puerto Rico
+Territory of American Samoa,,2014-02-06T10:17:33.232411,2014-02-06T10:17:33.232417,False,True,iso-countries,479,American Samoa
+Territory of Guam,,2014-02-06T10:17:33.244461,2014-02-06T10:17:33.244467,False,True,iso-countries,480,Guam
+United States Virgin Islands,,2014-02-06T10:17:33.274620,2014-02-06T10:17:33.274625,False,True,iso-countries,481,U.S. Virgin Islands
+Hong Kong Special Administrative Region,,2014-02-06T10:17:33.287163,2014-02-06T10:17:33.287169,False,True,iso-countries,482,Hong Kong
+Macau Special Administrative Region,,2014-02-06T10:17:33.298822,2014-02-06T10:17:33.298829,False,True,iso-countries,483,Macau
+Overseas Region of Guiana,,2014-02-06T10:17:33.318465,2014-02-06T10:17:33.318472,False,True,iso-countries,484,French Guiana
+Overseas Region of Guadeloupe,,2014-02-06T10:17:33.330734,2014-02-06T10:17:33.330742,False,True,iso-countries,485,Guadeloupe
+Overseas Region of Martinique,,2014-02-06T10:17:33.343679,2014-02-06T10:17:33.343724,False,True,iso-countries,486,Martinique
+Overseas Region of Reunion,,2014-02-06T10:17:33.356913,2014-02-06T10:17:33.356921,False,True,iso-countries,487,Reunion
+AF,,2014-02-06T10:17:58.550179,2014-02-06T10:17:58.550186,False,True,iso-countries,488,Afghanistan
+AL,,2014-02-06T10:17:58.605801,2014-02-06T10:17:58.605806,False,True,iso-countries,489,Albania
+DZ,,2014-02-06T10:17:58.615961,2014-02-06T10:17:58.615966,False,True,iso-countries,490,Algeria
+AD,,2014-02-06T10:17:58.626610,2014-02-06T10:17:58.626616,False,True,iso-countries,491,Andorra
+AO,,2014-02-06T10:17:58.636445,2014-02-06T10:17:58.636451,False,True,iso-countries,492,Angola
+AG,,2014-02-06T10:17:58.664873,2014-02-06T10:17:58.664880,False,True,iso-countries,493,Antigua and Barbuda
+AR,,2014-02-06T10:17:58.674721,2014-02-06T10:17:58.674727,False,True,iso-countries,494,Argentina
+AM,,2014-02-06T10:17:58.684357,2014-02-06T10:17:58.684363,False,True,iso-countries,495,Armenia
+AT,,2014-02-06T10:17:58.704884,2014-02-06T10:17:58.704890,False,True,iso-countries,497,Austria
+BS,,2014-02-06T10:17:58.725399,2014-02-06T10:17:58.725405,False,True,iso-countries,499,"Bahamas, The"
+BH,,2014-02-06T10:17:58.735849,2014-02-06T10:17:58.735856,False,True,iso-countries,500,Bahrain
+BD,,2014-02-06T10:17:58.747507,2014-02-06T10:17:58.747514,False,True,iso-countries,501,Bangladesh
+BB,,2014-02-06T10:17:58.759000,2014-02-06T10:17:58.759006,False,True,iso-countries,502,Barbados
+BY,,2014-02-06T10:17:58.768402,2014-02-06T10:17:58.768408,False,True,iso-countries,503,Belarus
+BE,,2014-02-06T10:17:58.777525,2014-02-06T10:17:58.777531,False,True,iso-countries,504,Belgium
+BZ,,2014-02-06T10:17:58.787743,2014-02-06T10:17:58.787748,False,True,iso-countries,505,Belize
+BJ,,2014-02-06T10:17:58.808377,2014-02-06T10:17:58.808389,False,True,iso-countries,506,Benin
+BT,,2014-02-06T10:17:58.823799,2014-02-06T10:17:58.823807,False,True,iso-countries,507,Bhutan
+BO,,2014-02-06T10:17:58.836319,2014-02-06T10:17:58.836326,False,True,iso-countries,508,Bolivia
+BA,,2014-02-06T10:17:58.848831,2014-02-06T10:17:58.848838,False,True,iso-countries,509,Bosnia and Herzegovina
+BW,,2014-02-06T10:17:58.861302,2014-02-06T10:17:58.861309,False,True,iso-countries,510,Botswana
+BR,,2014-02-06T10:17:58.873648,2014-02-06T10:17:58.873656,False,True,iso-countries,511,Brazil
+BN,,2014-02-06T10:17:58.886262,2014-02-06T10:17:58.886269,False,True,iso-countries,512,Brunei
+BG,,2014-02-06T10:17:58.898608,2014-02-06T10:17:58.898615,False,True,iso-countries,513,Bulgaria
+BF,,2014-02-06T10:17:58.910447,2014-02-06T10:17:58.910455,False,True,iso-countries,514,Burkina Faso
+BI,,2014-02-06T10:17:58.922324,2014-02-06T10:17:58.922331,False,True,iso-countries,515,Burundi
+KH,,2014-02-06T10:17:58.933817,2014-02-06T10:17:58.933825,False,True,iso-countries,516,Cambodia
+CM,,2014-02-06T10:17:58.945655,2014-02-06T10:17:58.945662,False,True,iso-countries,517,Cameroon
+CA,,2014-02-06T10:17:58.957490,2014-02-06T10:17:58.957497,False,True,iso-countries,518,Canada
+CV,,2014-02-06T10:17:58.969374,2014-02-06T10:17:58.969381,False,True,iso-countries,519,Cape Verde
+CF,,2014-02-06T10:17:58.981738,2014-02-06T10:17:58.981746,False,True,iso-countries,520,Central African Republic
+TD,,2014-02-06T10:17:58.993969,2014-02-06T10:17:58.993977,False,True,iso-countries,521,Chad
+CL,,2014-02-06T10:17:59.005445,2014-02-06T10:17:59.005453,False,True,iso-countries,522,Chile
+CN,,2014-02-06T10:17:59.017979,2014-02-06T10:17:59.017986,False,True,iso-countries,523,"China, People's Republic of"
+CO,,2014-02-06T10:17:59.030682,2014-02-06T10:17:59.030690,False,True,iso-countries,524,Colombia
+KM,,2014-02-06T10:17:59.043217,2014-02-06T10:17:59.043225,False,True,iso-countries,525,Comoros
+CD,,2014-02-06T10:17:59.053672,2014-02-06T10:17:59.053678,False,True,iso-countries,526,"Congo, (Congo  Kinshasa)"
+CG,,2014-02-06T10:17:59.064070,2014-02-06T10:17:59.064077,False,True,iso-countries,527,"Congo, (Congo  Brazzaville)"
+CR,,2014-02-06T10:17:59.074700,2014-02-06T10:17:59.074707,False,True,iso-countries,528,Costa Rica
+CI,,2014-02-06T10:17:59.089993,2014-02-06T10:17:59.090005,False,True,iso-countries,529,Cote d'Ivoire (Ivory Coast)
+HR,,2014-02-06T10:17:59.101967,2014-02-06T10:17:59.101975,False,True,iso-countries,530,Croatia
+CU,,2014-02-06T10:17:59.113382,2014-02-06T10:17:59.113389,False,True,iso-countries,531,Cuba
+CZ,,2014-02-06T10:17:59.136782,2014-02-06T10:17:59.136789,False,True,iso-countries,533,Czech Republic
+DK,,2014-02-06T10:17:59.148457,2014-02-06T10:17:59.148465,False,True,iso-countries,534,Denmark
+DJ,,2014-02-06T10:17:59.159988,2014-02-06T10:17:59.159995,False,True,iso-countries,535,Djibouti
+DM,,2014-02-06T10:17:59.171443,2014-02-06T10:17:59.171450,False,True,iso-countries,536,Dominica
+DO,,2014-02-06T10:17:59.182845,2014-02-06T10:17:59.182852,False,True,iso-countries,537,Dominican Republic
+EC,,2014-02-06T10:17:59.193280,2014-02-06T10:17:59.193290,False,True,iso-countries,538,Ecuador
+EG,,2014-02-06T10:17:59.203551,2014-02-06T10:17:59.203557,False,True,iso-countries,539,Egypt
+SV,,2014-02-06T10:17:59.213296,2014-02-06T10:17:59.213303,False,True,iso-countries,540,El Salvador
+GQ,,2014-02-06T10:17:59.223340,2014-02-06T10:17:59.223346,False,True,iso-countries,541,Equatorial Guinea
+ER,,2014-02-06T10:17:59.232985,2014-02-06T10:17:59.232991,False,True,iso-countries,542,Eritrea
+EE,,2014-02-06T10:17:59.243979,2014-02-06T10:17:59.243986,False,True,iso-countries,543,Estonia
+ET,,2014-02-06T10:17:59.261079,2014-02-06T10:17:59.261088,False,True,iso-countries,544,Ethiopia
+FJ,,2014-02-06T10:17:59.282508,2014-02-06T10:17:59.282521,False,True,iso-countries,545,Fiji
+FI,,2014-02-06T10:17:59.302617,2014-02-06T10:17:59.302627,False,True,iso-countries,546,Finland
+FR,,2014-02-06T10:17:59.323188,2014-02-06T10:17:59.323199,False,True,iso-countries,547,France
+GA,,2014-02-06T10:17:59.342964,2014-02-06T10:17:59.342975,False,True,iso-countries,548,Gabon
+GM,,2014-02-06T10:17:59.362963,2014-02-06T10:17:59.362973,False,True,iso-countries,549,"Gambia, The"
+DE,,2014-02-06T10:17:59.403612,2014-02-06T10:17:59.403622,False,True,iso-countries,551,Germany
+GH,,2014-02-06T10:17:59.424448,2014-02-06T10:17:59.424459,False,True,iso-countries,552,Ghana
+GR,,2014-02-06T10:17:59.435715,2014-02-06T10:17:59.435721,False,True,iso-countries,553,Greece
+GD,,2014-02-06T10:17:59.445549,2014-02-06T10:17:59.445554,False,True,iso-countries,554,Grenada
+GT,,2014-02-06T10:17:59.455007,2014-02-06T10:17:59.455012,False,True,iso-countries,555,Guatemala
+GN,,2014-02-06T10:17:59.465138,2014-02-06T10:17:59.465143,False,True,iso-countries,556,Guinea
+GW,,2014-02-06T10:17:59.475042,2014-02-06T10:17:59.475048,False,True,iso-countries,557,Guinea-Bissau
+GY,,2014-02-06T10:17:59.485087,2014-02-06T10:17:59.485093,False,True,iso-countries,558,Guyana
+HT,,2014-02-06T10:17:59.495148,2014-02-06T10:17:59.495154,False,True,iso-countries,559,Haiti
+HN,,2014-02-06T10:17:59.505217,2014-02-06T10:17:59.505223,False,True,iso-countries,560,Honduras
+HU,,2014-02-06T10:17:59.515064,2014-02-06T10:17:59.515070,False,True,iso-countries,561,Hungary
+IS,,2014-02-06T10:17:59.524879,2014-02-06T10:17:59.524884,False,True,iso-countries,562,Iceland
+IN,,2014-02-06T10:17:59.534607,2014-02-06T10:17:59.534612,False,True,iso-countries,563,India
+ID,,2014-02-06T10:17:59.544625,2014-02-06T10:17:59.544631,False,True,iso-countries,564,Indonesia
+IR,,2014-02-06T10:17:59.554709,2014-02-06T10:17:59.554715,False,True,iso-countries,565,Iran
+IQ,,2014-02-06T10:17:59.563941,2014-02-06T10:17:59.563947,False,True,iso-countries,566,Iraq
+IE,,2014-02-06T10:17:59.573721,2014-02-06T10:17:59.573727,False,True,iso-countries,567,Ireland
+IL,,2014-02-06T10:17:59.583348,2014-02-06T10:17:59.583354,False,True,iso-countries,568,Israel
+IT,,2014-02-06T10:17:59.592889,2014-02-06T10:17:59.592895,False,True,iso-countries,569,Italy
+JM,,2014-02-06T10:17:59.603181,2014-02-06T10:17:59.603188,False,True,iso-countries,570,Jamaica
+JP,,2014-02-06T10:17:59.613310,2014-02-06T10:17:59.613315,False,True,iso-countries,571,Japan
+JO,,2014-02-06T10:17:59.622452,2014-02-06T10:17:59.622456,False,True,iso-countries,572,Jordan
+KZ,,2014-02-06T10:17:59.631595,2014-02-06T10:17:59.631601,False,True,iso-countries,573,Kazakhstan
+KE,,2014-02-06T10:17:59.640616,2014-02-06T10:17:59.640622,False,True,iso-countries,574,Kenya
+KI,,2014-02-06T10:17:59.650701,2014-02-06T10:17:59.650707,False,True,iso-countries,575,Kiribati
+KP,,2014-02-06T10:17:59.664058,2014-02-06T10:17:59.664066,False,True,iso-countries,576,"Korea, North"
+KR,,2014-02-06T10:17:59.676417,2014-02-06T10:17:59.676425,False,True,iso-countries,577,"Korea, South"
+KW,,2014-02-06T10:17:59.688939,2014-02-06T10:17:59.688946,False,True,iso-countries,578,Kuwait
+KG,,2014-02-06T10:17:59.701487,2014-02-06T10:17:59.701494,False,True,iso-countries,579,Kyrgyzstan
+LA,,2014-02-06T10:17:59.713586,2014-02-06T10:17:59.713594,False,True,iso-countries,580,Laos
+LV,,2014-02-06T10:17:59.726152,2014-02-06T10:17:59.726160,False,True,iso-countries,581,Latvia
+LB,,2014-02-06T10:17:59.738624,2014-02-06T10:17:59.738632,False,True,iso-countries,582,Lebanon
+LS,,2014-02-06T10:17:59.750935,2014-02-06T10:17:59.750942,False,True,iso-countries,583,Lesotho
+LR,,2014-02-06T10:17:59.763268,2014-02-06T10:17:59.763276,False,True,iso-countries,584,Liberia
+LY,,2014-02-06T10:17:59.775634,2014-02-06T10:17:59.775642,False,True,iso-countries,585,Libya
+LI,,2014-02-06T10:17:59.788543,2014-02-06T10:17:59.788550,False,True,iso-countries,586,Liechtenstein
+LT,,2014-02-06T10:17:59.801315,2014-02-06T10:17:59.801323,False,True,iso-countries,587,Lithuania
+LU,,2014-02-06T10:17:59.813666,2014-02-06T10:17:59.813673,False,True,iso-countries,588,Luxembourg
+MK,,2014-02-06T10:17:59.839528,2014-02-06T10:17:59.839534,False,True,iso-countries,589,Macedonia
+MG,,2014-02-06T10:17:59.851867,2014-02-06T10:17:59.851875,False,True,iso-countries,590,Madagascar
+MW,,2014-02-06T10:17:59.863881,2014-02-06T10:17:59.863889,False,True,iso-countries,591,Malawi
+MY,,2014-02-06T10:17:59.875561,2014-02-06T10:17:59.875569,False,True,iso-countries,592,Malaysia
+ML,,2014-02-06T10:17:59.898783,2014-02-06T10:17:59.898789,False,True,iso-countries,594,Mali
+MT,,2014-02-06T10:17:59.908472,2014-02-06T10:17:59.908478,False,True,iso-countries,595,Malta
+MH,,2014-02-06T10:17:59.917894,2014-02-06T10:17:59.917899,False,True,iso-countries,596,Marshall Islands
+MR,,2014-02-06T10:17:59.928797,2014-02-06T10:17:59.928803,False,True,iso-countries,597,Mauritania
+MU,,2014-02-06T10:17:59.940701,2014-02-06T10:17:59.940708,False,True,iso-countries,598,Mauritius
+MX,,2014-02-06T10:17:59.952389,2014-02-06T10:17:59.952396,False,True,iso-countries,599,Mexico
+FM,,2014-02-06T10:17:59.963846,2014-02-06T10:17:59.963853,False,True,iso-countries,600,Micronesia
+MC,,2014-02-06T10:17:59.987367,2014-02-06T10:17:59.987374,False,True,iso-countries,602,Monaco
+MN,,2014-02-06T10:17:59.998771,2014-02-06T10:17:59.998778,False,True,iso-countries,603,Mongolia
+ME,,2014-02-06T10:18:00.009941,2014-02-06T10:18:00.009948,False,True,iso-countries,604,Montenegro
+MA,,2014-02-06T10:18:00.022338,2014-02-06T10:18:00.022345,False,True,iso-countries,605,Morocco
+MZ,,2014-02-06T10:18:00.033157,2014-02-06T10:18:00.033163,False,True,iso-countries,606,Mozambique
+MM,,2014-02-06T10:18:00.043033,2014-02-06T10:18:00.043039,False,True,iso-countries,607,Myanmar (Burma)
+NA,,2014-02-06T10:18:00.052529,2014-02-06T10:18:00.052536,False,True,iso-countries,608,Namibia
+NR,,2014-02-06T10:18:00.062487,2014-02-06T10:18:00.062493,False,True,iso-countries,609,Nauru
+NP,,2014-02-06T10:18:00.072321,2014-02-06T10:18:00.072327,False,True,iso-countries,610,Nepal
+NL,,2014-02-06T10:18:00.082366,2014-02-06T10:18:00.082372,False,True,iso-countries,611,Netherlands
+NZ,,2014-02-06T10:18:00.093215,2014-02-06T10:18:00.093220,False,True,iso-countries,612,New Zealand
+NI,,2014-02-06T10:18:00.102725,2014-02-06T10:18:00.102730,False,True,iso-countries,613,Nicaragua
+NE,,2014-02-06T10:18:00.112443,2014-02-06T10:18:00.112447,False,True,iso-countries,614,Niger
+NG,,2014-02-06T10:18:00.125662,2014-02-06T10:18:00.125669,False,True,iso-countries,615,Nigeria
+NO,,2014-02-06T10:18:00.144785,2014-02-06T10:18:00.144795,False,True,iso-countries,616,Norway
+OM,,2014-02-06T10:18:00.165614,2014-02-06T10:18:00.165624,False,True,iso-countries,617,Oman
+PK,,2014-02-06T10:18:00.186224,2014-02-06T10:18:00.186234,False,True,iso-countries,618,Pakistan
+PW,,2014-02-06T10:18:00.206937,2014-02-06T10:18:00.206948,False,True,iso-countries,619,Palau
+PA,,2014-02-06T10:18:00.227788,2014-02-06T10:18:00.227799,False,True,iso-countries,620,Panama
+PG,,2014-02-06T10:18:00.248693,2014-02-06T10:18:00.248703,False,True,iso-countries,621,Papua New Guinea
+PY,,2014-02-06T10:18:00.268280,2014-02-06T10:18:00.268289,False,True,iso-countries,622,Paraguay
+PE,,2014-02-06T10:18:00.289119,2014-02-06T10:18:00.289129,False,True,iso-countries,623,Peru
+PH,,2014-02-06T10:18:00.309817,2014-02-06T10:18:00.309830,False,True,iso-countries,624,Philippines
+PL,,2014-02-06T10:18:00.322881,2014-02-06T10:18:00.322887,False,True,iso-countries,625,Poland
+PT,,2014-02-06T10:18:00.332656,2014-02-06T10:18:00.332662,False,True,iso-countries,626,Portugal
+QA,,2014-02-06T10:18:00.342511,2014-02-06T10:18:00.342517,False,True,iso-countries,627,Qatar
+RO,,2014-02-06T10:18:00.352218,2014-02-06T10:18:00.352223,False,True,iso-countries,628,Romania
+RU,,2014-02-06T10:18:00.362123,2014-02-06T10:18:00.362129,False,True,iso-countries,629,Russia
+RW,,2014-02-06T10:18:00.372571,2014-02-06T10:18:00.372577,False,True,iso-countries,630,Rwanda
+KN,,2014-02-06T10:18:00.382424,2014-02-06T10:18:00.382431,False,True,iso-countries,631,Saint Kitts and Nevis
+LC,,2014-02-06T10:18:00.391824,2014-02-06T10:18:00.391829,False,True,iso-countries,632,Saint Lucia
+VC,,2014-02-06T10:18:00.401278,2014-02-06T10:18:00.401283,False,True,iso-countries,633,Saint Vincent and the Grenadines
+WS,,2014-02-06T10:18:00.410815,2014-02-06T10:18:00.410821,False,True,iso-countries,634,Samoa
+SM,,2014-02-06T10:18:00.420440,2014-02-06T10:18:00.420446,False,True,iso-countries,635,San Marino
+ST,,2014-02-06T10:18:00.429913,2014-02-06T10:18:00.429919,False,True,iso-countries,636,Sao Tome and Principe
+SA,,2014-02-06T10:18:00.439630,2014-02-06T10:18:00.439635,False,True,iso-countries,637,Saudi Arabia
+SN,,2014-02-06T10:18:00.449155,2014-02-06T10:18:00.449161,False,True,iso-countries,638,Senegal
+RS,,2014-02-06T10:18:00.459128,2014-02-06T10:18:00.459134,False,True,iso-countries,639,Serbia
+SC,,2014-02-06T10:18:00.468975,2014-02-06T10:18:00.468981,False,True,iso-countries,640,Seychelles
+SL,,2014-02-06T10:18:00.478968,2014-02-06T10:18:00.478974,False,True,iso-countries,641,Sierra Leone
+SG,,2014-02-06T10:18:00.492668,2014-02-06T10:18:00.492675,False,True,iso-countries,642,Singapore
+SK,,2014-02-06T10:18:00.504280,2014-02-06T10:18:00.504287,False,True,iso-countries,643,Slovakia
+SI,,2014-02-06T10:18:00.514311,2014-02-06T10:18:00.514318,False,True,iso-countries,644,Slovenia
+SB,,2014-02-06T10:18:00.524954,2014-02-06T10:18:00.524961,False,True,iso-countries,645,Solomon Islands
+ZA,,2014-02-06T10:18:00.549670,2014-02-06T10:18:00.549678,False,True,iso-countries,647,South Africa
+ES,,2014-02-06T10:18:00.562071,2014-02-06T10:18:00.562078,False,True,iso-countries,648,Spain
+LK,,2014-02-06T10:18:00.574480,2014-02-06T10:18:00.574488,False,True,iso-countries,649,Sri Lanka
+SD,,2014-02-06T10:18:00.586525,2014-02-06T10:18:00.586532,False,True,iso-countries,650,Sudan
+SR,,2014-02-06T10:18:00.598256,2014-02-06T10:18:00.598264,False,True,iso-countries,651,Suriname
+SZ,,2014-02-06T10:18:00.609422,2014-02-06T10:18:00.609430,False,True,iso-countries,652,Swaziland
+SE,,2014-02-06T10:18:00.621047,2014-02-06T10:18:00.621055,False,True,iso-countries,653,Sweden
+CH,,2014-02-06T10:18:00.632651,2014-02-06T10:18:00.632659,False,True,iso-countries,654,Switzerland
+SY,,2014-02-06T10:18:00.644181,2014-02-06T10:18:00.644189,False,True,iso-countries,655,Syria
+TJ,,2014-02-06T10:18:00.655325,2014-02-06T10:18:00.655334,False,True,iso-countries,656,Tajikistan
+TZ,,2014-02-06T10:18:00.667026,2014-02-06T10:18:00.667034,False,True,iso-countries,657,Tanzania
+TH,,2014-02-06T10:18:00.678637,2014-02-06T10:18:00.678644,False,True,iso-countries,658,Thailand
+TL,,2014-02-06T10:18:00.690154,2014-02-06T10:18:00.690161,False,True,iso-countries,659,Timor-Leste (East Timor)
+TG,,2014-02-06T10:18:00.701912,2014-02-06T10:18:00.701919,False,True,iso-countries,660,Togo
+TO,,2014-02-06T10:18:00.714040,2014-02-06T10:18:00.714047,False,True,iso-countries,661,Tonga
+TT,,2014-02-06T10:18:00.726665,2014-02-06T10:18:00.726673,False,True,iso-countries,662,Trinidad and Tobago
+TN,,2014-02-06T10:18:00.738827,2014-02-06T10:18:00.738835,False,True,iso-countries,663,Tunisia
+TR,,2014-02-06T10:18:00.750795,2014-02-06T10:18:00.750802,False,True,iso-countries,664,Turkey
+TM,,2014-02-06T10:18:00.762353,2014-02-06T10:18:00.762361,False,True,iso-countries,665,Turkmenistan
+TV,,2014-02-06T10:18:00.774577,2014-02-06T10:18:00.774585,False,True,iso-countries,666,Tuvalu
+UG,,2014-02-06T10:18:00.786725,2014-02-06T10:18:00.786733,False,True,iso-countries,667,Uganda
+UA,,2014-02-06T10:18:00.797555,2014-02-06T10:18:00.797560,False,True,iso-countries,668,Ukraine
+AE,,2014-02-06T10:18:00.807064,2014-02-06T10:18:00.807070,False,True,iso-countries,669,United Arab Emirates
+GB,,2014-02-06T10:18:00.816908,2014-02-06T10:18:00.816914,False,True,iso-countries,670,United Kingdom
+US,,2014-02-06T10:18:00.827828,2014-02-06T10:18:00.827835,False,True,iso-countries,671,United States
+UY,,2014-02-06T10:18:00.839108,2014-02-06T10:18:00.839115,False,True,iso-countries,672,Uruguay
+UZ,,2014-02-06T10:18:00.850872,2014-02-06T10:18:00.850879,False,True,iso-countries,673,Uzbekistan
+VU,,2014-02-06T10:18:00.862659,2014-02-06T10:18:00.862666,False,True,iso-countries,674,Vanuatu
+VA,,2014-02-06T10:18:00.874600,2014-02-06T10:18:00.874607,False,True,iso-countries,675,Vatican City
+VE,,2014-02-06T10:18:00.886599,2014-02-06T10:18:00.886606,False,True,iso-countries,676,Venezuela
+VN,,2014-02-06T10:18:00.898816,2014-02-06T10:18:00.898823,False,True,iso-countries,677,Vietnam
+YE,,2014-02-06T10:18:00.910402,2014-02-06T10:18:00.910409,False,True,iso-countries,678,Yemen
+ZM,,2014-02-06T10:18:00.922145,2014-02-06T10:18:00.922151,False,True,iso-countries,679,Zambia
+ZW,,2014-02-06T10:18:00.932981,2014-02-06T10:18:00.932988,False,True,iso-countries,680,Zimbabwe
+TW,,2014-02-06T10:18:00.948601,2014-02-06T10:18:00.948605,False,True,iso-countries,681,"China, Republic of (Taiwan)"
+AZ,,2014-02-06T10:17:58.715460,2014-02-06T10:18:00.996306,False,True,iso-countries,498,Nagorno-Karabakh
+CY,,2014-02-06T10:17:59.125040,2014-02-06T10:18:00.996821,False,True,iso-countries,532,Northern Cyprus
+GE,,2014-02-06T10:17:59.382953,2014-02-06T10:18:00.997325,False,True,iso-countries,550,South Ossetia
+MD,,2014-02-06T10:17:59.975659,2014-02-06T10:18:00.997878,False,True,iso-countries,601,Pridnestrovie (Transnistria)
+SO,,2014-02-06T10:18:00.535999,2014-02-06T10:18:00.998436,False,True,iso-countries,646,Somaliland
+CX,,2014-02-06T10:18:01.025802,2014-02-06T10:18:01.025812,False,True,iso-countries,682,Christmas Island
+CC,,2014-02-06T10:18:01.046601,2014-02-06T10:18:01.046611,False,True,iso-countries,683,Cocos (Keeling) Islands
+AU,,2014-02-06T10:17:58.694518,2014-02-06T10:18:01.077299,False,True,iso-countries,496,Coral Sea Islands
+HM,,2014-02-06T10:18:01.077858,2014-02-06T10:18:01.077868,False,True,iso-countries,684,Heard Island and McDonald Islands
+NF,,2014-02-06T10:18:01.097278,2014-02-06T10:18:01.097285,False,True,iso-countries,685,Norfolk Island
+NC,,2014-02-06T10:18:01.107104,2014-02-06T10:18:01.107110,False,True,iso-countries,686,New Caledonia
+YT,,2014-02-06T10:18:01.126734,2014-02-06T10:18:01.126740,False,True,iso-countries,688,Mayotte
+PM,,2014-02-06T10:18:01.151439,2014-02-06T10:18:01.151443,False,True,iso-countries,690,Saint Pierre and Miquelon
+WF,,2014-02-06T10:18:01.161107,2014-02-06T10:18:01.161113,False,True,iso-countries,691,Wallis and Futuna
+TF,,2014-02-06T10:18:01.170529,2014-02-06T10:18:01.170534,False,True,iso-countries,692,French Southern and Antarctic Lands
+PF,,2014-02-06T10:18:01.116629,2014-02-06T10:18:01.185481,False,True,iso-countries,687,Clipperton Island
+BV,,2014-02-06T10:18:01.185890,2014-02-06T10:18:01.185894,False,True,iso-countries,693,Bouvet Island
+CK,,2014-02-06T10:18:01.195594,2014-02-06T10:18:01.195600,False,True,iso-countries,694,Cook Islands
+NU,,2014-02-06T10:18:01.205616,2014-02-06T10:18:01.205621,False,True,iso-countries,695,Niue
+TK,,2014-02-06T10:18:01.216205,2014-02-06T10:18:01.216210,False,True,iso-countries,696,Tokelau
+GG,,2014-02-06T10:18:01.226100,2014-02-06T10:18:01.226106,False,True,iso-countries,697,Guernsey
+IM,,2014-02-06T10:18:01.235592,2014-02-06T10:18:01.235598,False,True,iso-countries,698,Isle of Man
+JE,,2014-02-06T10:18:01.245611,2014-02-06T10:18:01.245616,False,True,iso-countries,699,Jersey
+AI,,2014-02-06T10:18:01.255304,2014-02-06T10:18:01.255310,False,True,iso-countries,700,Anguilla
+BM,,2014-02-06T10:18:01.264943,2014-02-06T10:18:01.264948,False,True,iso-countries,701,Bermuda
+IO,,2014-02-06T10:18:01.277514,2014-02-06T10:18:01.277522,False,True,iso-countries,702,British Indian Ocean Territory
+VG,,2014-02-06T10:18:01.293447,2014-02-06T10:18:01.293453,False,True,iso-countries,703,British Virgin Islands
+KY,,2014-02-06T10:18:01.302861,2014-02-06T10:18:01.302866,False,True,iso-countries,704,Cayman Islands
+FK,,2014-02-06T10:18:01.312310,2014-02-06T10:18:01.312315,False,True,iso-countries,705,Falkland Islands (Islas Malvinas)
+GI,,2014-02-06T10:18:01.325372,2014-02-06T10:18:01.325382,False,True,iso-countries,706,Gibraltar
+MS,,2014-02-06T10:18:01.344029,2014-02-06T10:18:01.344042,False,True,iso-countries,707,Montserrat
+PN,,2014-02-06T10:18:01.357775,2014-02-06T10:18:01.357783,False,True,iso-countries,708,Pitcairn Islands
+SH,,2014-02-06T10:18:01.370258,2014-02-06T10:18:01.370266,False,True,iso-countries,709,Saint Helena
+GS,,2014-02-06T10:18:01.383054,2014-02-06T10:18:01.383061,False,True,iso-countries,710,South Georgia & South Sandwich Islands
+TC,,2014-02-06T10:18:01.395831,2014-02-06T10:18:01.395839,False,True,iso-countries,711,Turks and Caicos Islands
+MP,,2014-02-06T10:18:01.408374,2014-02-06T10:18:01.408381,False,True,iso-countries,712,Northern Mariana Islands
+PR,,2014-02-06T10:18:01.421325,2014-02-06T10:18:01.421332,False,True,iso-countries,713,Puerto Rico
+AS,,2014-02-06T10:18:01.434138,2014-02-06T10:18:01.434145,False,True,iso-countries,714,American Samoa
+GU,,2014-02-06T10:18:01.459722,2014-02-06T10:18:01.459733,False,True,iso-countries,716,Guam
+VI,,2014-02-06T10:18:01.521628,2014-02-06T10:18:01.521633,False,True,iso-countries,717,U.S. Virgin Islands
+UM,,2014-02-06T10:18:01.447075,2014-02-06T10:18:01.541188,False,True,iso-countries,715,Wake Island
+HK,,2014-02-06T10:18:01.541766,2014-02-06T10:18:01.541770,False,True,iso-countries,718,Hong Kong
+MO,,2014-02-06T10:18:01.554648,2014-02-06T10:18:01.554656,False,True,iso-countries,719,Macau
+FO,,2014-02-06T10:18:01.566609,2014-02-06T10:18:01.566617,False,True,iso-countries,720,Faroe Islands
+GL,,2014-02-06T10:18:01.579078,2014-02-06T10:18:01.579085,False,True,iso-countries,721,Greenland
+GF,,2014-02-06T10:18:01.589814,2014-02-06T10:18:01.589820,False,True,iso-countries,722,French Guiana
+GP,,2014-02-06T10:18:01.136431,2014-02-06T10:18:01.604946,False,True,iso-countries,689,Guadeloupe
+MQ,,2014-02-06T10:18:01.605349,2014-02-06T10:18:01.605353,False,True,iso-countries,723,Martinique
+RE,,2014-02-06T10:18:01.618652,2014-02-06T10:18:01.618663,False,True,iso-countries,724,Reunion
+AX,,2014-02-06T10:18:01.637008,2014-02-06T10:18:01.637015,False,True,iso-countries,725,Aland
+AW,,2014-02-06T10:18:01.648884,2014-02-06T10:18:01.648892,False,True,iso-countries,726,Aruba
+AN,,2014-02-06T10:18:01.660593,2014-02-06T10:18:01.660600,False,True,iso-countries,727,Netherlands Antilles
+SJ,,2014-02-06T10:18:01.672596,2014-02-06T10:18:01.672603,False,True,iso-countries,728,Svalbard
+AC,,2014-02-06T10:18:01.683819,2014-02-06T10:18:01.683826,False,True,iso-countries,729,Ascension
+TA,,2014-02-06T10:18:01.696195,2014-02-06T10:18:01.696202,False,True,iso-countries,730,Tristan da Cunha
+AQ,,2014-02-06T10:18:01.708178,2014-02-06T10:18:01.741304,False,True,iso-countries,731,British Antarctic Territory
+SS,,2014-02-06T10:18:01.741751,2014-02-06T10:18:01.741754,False,True,iso-countries,732,South Sudan
+XK,,2014-02-06T10:18:01.756913,2014-02-06T10:18:01.756920,False,True,iso-countries,733,Kosovo
+PS,,2014-02-06T10:18:01.766838,2014-02-06T10:18:01.766844,False,True,iso-countries,734,Palestine
+AFN,,2014-02-06T10:18:15.543824,2014-02-06T10:18:15.543837,False,True,iso-countries,735,Afghanistan
+ALL,,2014-02-06T10:18:15.590358,2014-02-06T10:18:15.590364,False,True,iso-countries,736,Albania
+DZD,,2014-02-06T10:18:15.602999,2014-02-06T10:18:15.603007,False,True,iso-countries,737,Algeria
+AOA,,2014-02-06T10:18:15.628778,2014-02-06T10:18:15.628786,False,True,iso-countries,739,Angola
+ARS,,2014-02-06T10:18:15.654492,2014-02-06T10:18:15.654500,False,True,iso-countries,741,Argentina
+AZN,,2014-02-06T10:18:15.694131,2014-02-06T10:18:15.694135,False,True,iso-countries,744,Azerbaijan
+BSD,,2014-02-06T10:18:15.703606,2014-02-06T10:18:15.703613,False,True,iso-countries,745,"Bahamas, The"
+BHD,,2014-02-06T10:18:15.716114,2014-02-06T10:18:15.716122,False,True,iso-countries,746,Bahrain
+BDT,,2014-02-06T10:18:15.729297,2014-02-06T10:18:15.729304,False,True,iso-countries,747,Bangladesh
+BBD,,2014-02-06T10:18:15.740739,2014-02-06T10:18:15.740747,False,True,iso-countries,748,Barbados
+BYR,,2014-02-06T10:18:15.752602,2014-02-06T10:18:15.752610,False,True,iso-countries,749,Belarus
+BZD,,2014-02-06T10:18:15.771497,2014-02-06T10:18:15.771502,False,True,iso-countries,750,Belize
+BTN,,2014-02-06T10:18:15.794787,2014-02-06T10:18:15.794794,False,True,iso-countries,752,Bhutan
+BOB,,2014-02-06T10:18:15.806948,2014-02-06T10:18:15.806954,False,True,iso-countries,753,Bolivia
+BAM,,2014-02-06T10:18:15.817793,2014-02-06T10:18:15.817799,False,True,iso-countries,754,Bosnia and Herzegovina
+BWP,,2014-02-06T10:18:15.828086,2014-02-06T10:18:15.828092,False,True,iso-countries,755,Botswana
+BRL,,2014-02-06T10:18:15.838516,2014-02-06T10:18:15.838522,False,True,iso-countries,756,Brazil
+BND,,2014-02-06T10:18:15.848951,2014-02-06T10:18:15.848957,False,True,iso-countries,757,Brunei
+BGN,,2014-02-06T10:18:15.859190,2014-02-06T10:18:15.859196,False,True,iso-countries,758,Bulgaria
+BIF,,2014-02-06T10:18:15.876297,2014-02-06T10:18:15.876302,False,True,iso-countries,759,Burundi
+KHR,,2014-02-06T10:18:15.889182,2014-02-06T10:18:15.889189,False,True,iso-countries,760,Cambodia
+CAD,,2014-02-06T10:18:15.921471,2014-02-06T10:18:15.921481,False,True,iso-countries,762,Canada
+CVE,,2014-02-06T10:18:15.942266,2014-02-06T10:18:15.942276,False,True,iso-countries,763,Cape Verde
+CLP,,2014-02-06T10:18:15.985001,2014-02-06T10:18:15.985011,False,True,iso-countries,764,Chile
+CNY,,2014-02-06T10:18:16.006098,2014-02-06T10:18:16.006109,False,True,iso-countries,765,"China, People's Republic of"
+COP,,2014-02-06T10:18:16.026253,2014-02-06T10:18:16.026263,False,True,iso-countries,766,Colombia
+KMF,,2014-02-06T10:18:16.046743,2014-02-06T10:18:16.046752,False,True,iso-countries,767,Comoros
+CDF,,2014-02-06T10:18:16.067525,2014-02-06T10:18:16.067537,False,True,iso-countries,768,"Congo, (Congo  Kinshasa)"
+CRC,,2014-02-06T10:18:16.092200,2014-02-06T10:18:16.092204,False,True,iso-countries,769,Costa Rica
+HRK,,2014-02-06T10:18:16.108007,2014-02-06T10:18:16.108011,False,True,iso-countries,770,Croatia
+CUP,,2014-02-06T10:18:16.118262,2014-02-06T10:18:16.118268,False,True,iso-countries,771,Cuba
+CZK,,2014-02-06T10:18:16.138901,2014-02-06T10:18:16.138907,False,True,iso-countries,773,Czech Republic
+DJF,,2014-02-06T10:18:16.159190,2014-02-06T10:18:16.159197,False,True,iso-countries,775,Djibouti
+AMD,,2014-02-06T10:18:15.667926,2014-02-06T10:18:17.793645,False,True,iso-countries,742,Nagorno-Karabakh
+DOP,,2014-02-06T10:18:16.176067,2014-02-06T10:18:16.176071,False,True,iso-countries,776,Dominican Republic
+EGP,,2014-02-06T10:18:16.196040,2014-02-06T10:18:16.196046,False,True,iso-countries,778,Egypt
+ERN,,2014-02-06T10:18:16.217946,2014-02-06T10:18:16.217950,False,True,iso-countries,779,Eritrea
+EEK,,2014-02-06T10:18:16.228195,2014-02-06T10:18:16.228200,False,True,iso-countries,780,Estonia
+ETB,,2014-02-06T10:18:16.237689,2014-02-06T10:18:16.237695,False,True,iso-countries,781,Ethiopia
+FJD,,2014-02-06T10:18:16.247357,2014-02-06T10:18:16.247363,False,True,iso-countries,782,Fiji
+CYP,,2014-02-06T10:18:16.128592,2014-02-06T10:18:17.988839,False,True,iso-countries,772,British Sovereign Base Areas
+XAF,,2014-02-06T10:18:15.902306,2014-02-06T10:18:16.276377,False,True,iso-countries,761,Gabon
+GMD,,2014-02-06T10:18:16.276701,2014-02-06T10:18:16.276706,False,True,iso-countries,783,"Gambia, The"
+GEL,,2014-02-06T10:18:16.286502,2014-02-06T10:18:16.286507,False,True,iso-countries,784,Georgia
+GHC,,2014-02-06T10:18:16.304060,2014-02-06T10:18:16.304069,False,True,iso-countries,785,Ghana
+XCD,,2014-02-06T10:18:15.641685,2014-02-06T10:18:18.042140,False,True,iso-countries,740,Montserrat
+USD,,2014-02-06T10:18:16.185893,2014-02-06T10:18:18.131167,False,True,iso-countries,777,U.S. Virgin Islands
+DKK,,2014-02-06T10:18:16.148971,2014-02-06T10:18:18.195611,False,True,iso-countries,774,Greenland
+GTQ,,2014-02-06T10:18:16.336709,2014-02-06T10:18:16.336713,False,True,iso-countries,786,Guatemala
+GNF,,2014-02-06T10:18:16.349239,2014-02-06T10:18:16.349247,False,True,iso-countries,787,Guinea
+GYD,,2014-02-06T10:18:16.369901,2014-02-06T10:18:16.369906,False,True,iso-countries,788,Guyana
+HTG,,2014-02-06T10:18:16.381988,2014-02-06T10:18:16.381995,False,True,iso-countries,789,Haiti
+HNL,,2014-02-06T10:18:16.394753,2014-02-06T10:18:16.394761,False,True,iso-countries,790,Honduras
+HUF,,2014-02-06T10:18:16.407494,2014-02-06T10:18:16.407502,False,True,iso-countries,791,Hungary
+ISK,,2014-02-06T10:18:16.420374,2014-02-06T10:18:16.420382,False,True,iso-countries,792,Iceland
+INR,,2014-02-06T10:18:16.432892,2014-02-06T10:18:16.432900,False,True,iso-countries,793,India
+IDR,,2014-02-06T10:18:16.445756,2014-02-06T10:18:16.445764,False,True,iso-countries,794,Indonesia
+IRR,,2014-02-06T10:18:16.458624,2014-02-06T10:18:16.458632,False,True,iso-countries,795,Iran
+IQD,,2014-02-06T10:18:16.471354,2014-02-06T10:18:16.471362,False,True,iso-countries,796,Iraq
+ILS,,2014-02-06T10:18:16.491609,2014-02-06T10:18:16.491614,False,True,iso-countries,797,Israel
+THB,,2014-02-06T10:18:17.479624,2014-02-06T10:18:17.479630,False,True,iso-countries,866,Thailand
+JMD,,2014-02-06T10:18:16.511503,2014-02-06T10:18:16.511508,False,True,iso-countries,798,Jamaica
+JPY,,2014-02-06T10:18:16.524089,2014-02-06T10:18:16.524097,False,True,iso-countries,799,Japan
+JOD,,2014-02-06T10:18:16.536548,2014-02-06T10:18:16.536556,False,True,iso-countries,800,Jordan
+KZT,,2014-02-06T10:18:16.549673,2014-02-06T10:18:16.549681,False,True,iso-countries,801,Kazakhstan
+KES,,2014-02-06T10:18:16.561995,2014-02-06T10:18:16.562002,False,True,iso-countries,802,Kenya
+KPW,,2014-02-06T10:18:16.577625,2014-02-06T10:18:16.577629,False,True,iso-countries,803,"Korea, North"
+KRW,,2014-02-06T10:18:16.587335,2014-02-06T10:18:16.587343,False,True,iso-countries,804,"Korea, South"
+KWD,,2014-02-06T10:18:16.599074,2014-02-06T10:18:16.599081,False,True,iso-countries,805,Kuwait
+KGS,,2014-02-06T10:18:16.610334,2014-02-06T10:18:16.610342,False,True,iso-countries,806,Kyrgyzstan
+LAK,,2014-02-06T10:18:16.622074,2014-02-06T10:18:16.622081,False,True,iso-countries,807,Laos
+LVL,,2014-02-06T10:18:16.633815,2014-02-06T10:18:16.633823,False,True,iso-countries,808,Latvia
+LBP,,2014-02-06T10:18:16.645582,2014-02-06T10:18:16.645589,False,True,iso-countries,809,Lebanon
+LSL,,2014-02-06T10:18:16.656548,2014-02-06T10:18:16.656555,False,True,iso-countries,810,Lesotho
+LRD,,2014-02-06T10:18:16.668080,2014-02-06T10:18:16.668087,False,True,iso-countries,811,Liberia
+LYD,,2014-02-06T10:18:16.679352,2014-02-06T10:18:16.679360,False,True,iso-countries,812,Libya
+LTL,,2014-02-06T10:18:16.701344,2014-02-06T10:18:16.701351,False,True,iso-countries,814,Lithuania
+MKD,,2014-02-06T10:18:16.732676,2014-02-06T10:18:16.732682,False,True,iso-countries,815,Macedonia
+MGA,,2014-02-06T10:18:16.742466,2014-02-06T10:18:16.742472,False,True,iso-countries,816,Madagascar
+MWK,,2014-02-06T10:18:16.754612,2014-02-06T10:18:16.754622,False,True,iso-countries,817,Malawi
+MYR,,2014-02-06T10:18:16.770690,2014-02-06T10:18:16.770697,False,True,iso-countries,818,Malaysia
+MVR,,2014-02-06T10:18:16.790870,2014-02-06T10:18:16.790881,False,True,iso-countries,819,Maldives
+MTL,,2014-02-06T10:18:16.824819,2014-02-06T10:18:16.824828,False,True,iso-countries,820,Malta
+MRO,,2014-02-06T10:18:16.842354,2014-02-06T10:18:16.842358,False,True,iso-countries,821,Mauritania
+MUR,,2014-02-06T10:18:16.852234,2014-02-06T10:18:16.852240,False,True,iso-countries,822,Mauritius
+MXN,,2014-02-06T10:18:16.861526,2014-02-06T10:18:16.861532,False,True,iso-countries,823,Mexico
+MDL,,2014-02-06T10:18:16.876386,2014-02-06T10:18:16.876390,False,True,iso-countries,824,Moldova
+MNT,,2014-02-06T10:18:16.890786,2014-02-06T10:18:16.890790,False,True,iso-countries,825,Mongolia
+MAD,,2014-02-06T10:18:16.905385,2014-02-06T10:18:16.905389,False,True,iso-countries,826,Morocco
+MZM,,2014-02-06T10:18:16.915004,2014-02-06T10:18:16.915009,False,True,iso-countries,827,Mozambique
+MMK,,2014-02-06T10:18:16.924421,2014-02-06T10:18:16.924426,False,True,iso-countries,828,Myanmar (Burma)
+NAD,,2014-02-06T10:18:16.934339,2014-02-06T10:18:16.934345,False,True,iso-countries,829,Namibia
+NPR,,2014-02-06T10:18:16.971592,2014-02-06T10:18:16.971596,False,True,iso-countries,830,Nepal
+NIO,,2014-02-06T10:18:16.996975,2014-02-06T10:18:16.996980,False,True,iso-countries,832,Nicaragua
+NGN,,2014-02-06T10:18:17.014406,2014-02-06T10:18:17.014410,False,True,iso-countries,833,Nigeria
+OMR,,2014-02-06T10:18:17.036152,2014-02-06T10:18:17.036158,False,True,iso-countries,835,Oman
+PKR,,2014-02-06T10:18:17.046551,2014-02-06T10:18:17.046557,False,True,iso-countries,836,Pakistan
+PAB,,2014-02-06T10:18:17.068741,2014-02-06T10:18:17.068746,False,True,iso-countries,837,Panama
+PGK,,2014-02-06T10:18:17.081386,2014-02-06T10:18:17.081395,False,True,iso-countries,838,Papua New Guinea
+PYG,,2014-02-06T10:18:17.093982,2014-02-06T10:18:17.093990,False,True,iso-countries,839,Paraguay
+PEN,,2014-02-06T10:18:17.106540,2014-02-06T10:18:17.106548,False,True,iso-countries,840,Peru
+PHP,,2014-02-06T10:18:17.119767,2014-02-06T10:18:17.119775,False,True,iso-countries,841,Philippines
+PLN,,2014-02-06T10:18:17.132396,2014-02-06T10:18:17.132403,False,True,iso-countries,842,Poland
+QAR,,2014-02-06T10:18:17.152568,2014-02-06T10:18:17.152572,False,True,iso-countries,843,Qatar
+RON,,2014-02-06T10:18:17.165242,2014-02-06T10:18:17.165250,False,True,iso-countries,844,Romania
+RWF,,2014-02-06T10:18:17.190105,2014-02-06T10:18:17.190112,False,True,iso-countries,846,Rwanda
+WST,,2014-02-06T10:18:17.223261,2014-02-06T10:18:17.223265,False,True,iso-countries,847,Samoa
+STD,,2014-02-06T10:18:17.243262,2014-02-06T10:18:17.243266,False,True,iso-countries,848,Sao Tome and Principe
+SAR,,2014-02-06T10:18:17.256075,2014-02-06T10:18:17.256082,False,True,iso-countries,849,Saudi Arabia
+RSD,,2014-02-06T10:18:17.276538,2014-02-06T10:18:17.276542,False,True,iso-countries,850,Serbia
+SCR,,2014-02-06T10:18:17.289095,2014-02-06T10:18:17.289103,False,True,iso-countries,851,Seychelles
+SLL,,2014-02-06T10:18:17.302122,2014-02-06T10:18:17.302129,False,True,iso-countries,852,Sierra Leone
+SGD,,2014-02-06T10:18:17.313154,2014-02-06T10:18:17.313160,False,True,iso-countries,853,Singapore
+SKK,,2014-02-06T10:18:17.323573,2014-02-06T10:18:17.323579,False,True,iso-countries,854,Slovakia
+SBD,,2014-02-06T10:18:17.342673,2014-02-06T10:18:17.342677,False,True,iso-countries,855,Solomon Islands
+SOS,,2014-02-06T10:18:17.356857,2014-02-06T10:18:17.356864,False,True,iso-countries,856,Somalia
+ZAR,,2014-02-06T10:18:17.368668,2014-02-06T10:18:17.368676,False,True,iso-countries,857,South Africa
+LKR,,2014-02-06T10:18:17.387158,2014-02-06T10:18:17.387162,False,True,iso-countries,858,Sri Lanka
+SDD,,2014-02-06T10:18:17.398336,2014-02-06T10:18:17.398344,False,True,iso-countries,859,Sudan
+SRD,,2014-02-06T10:18:17.409799,2014-02-06T10:18:17.409806,False,True,iso-countries,860,Suriname
+SZL,,2014-02-06T10:18:17.421033,2014-02-06T10:18:17.421040,False,True,iso-countries,861,Swaziland
+SEK,,2014-02-06T10:18:17.432536,2014-02-06T10:18:17.432543,False,True,iso-countries,862,Sweden
+CHF,,2014-02-06T10:18:16.690889,2014-02-06T10:18:17.448645,False,True,iso-countries,813,Switzerland
+SYP,,2014-02-06T10:18:17.449057,2014-02-06T10:18:17.449061,False,True,iso-countries,863,Syria
+TJS,,2014-02-06T10:18:17.459070,2014-02-06T10:18:17.459076,False,True,iso-countries,864,Tajikistan
+TZS,,2014-02-06T10:18:17.469250,2014-02-06T10:18:17.469256,False,True,iso-countries,865,Tanzania
+XOF,,2014-02-06T10:18:15.782895,2014-02-06T10:18:17.500714,False,True,iso-countries,751,Togo
+TOP,,2014-02-06T10:18:17.501948,2014-02-06T10:18:17.501953,False,True,iso-countries,867,Tonga
+TTD,,2014-02-06T10:18:17.514395,2014-02-06T10:18:17.514400,False,True,iso-countries,868,Trinidad and Tobago
+TND,,2014-02-06T10:18:17.528343,2014-02-06T10:18:17.528349,False,True,iso-countries,869,Tunisia
+TMM,,2014-02-06T10:18:17.567580,2014-02-06T10:18:17.567590,False,True,iso-countries,871,Turkmenistan
+UGX,,2014-02-06T10:18:17.600117,2014-02-06T10:18:17.600125,False,True,iso-countries,872,Uganda
+UAH,,2014-02-06T10:18:17.620092,2014-02-06T10:18:17.620097,False,True,iso-countries,873,Ukraine
+AED,,2014-02-06T10:18:17.639662,2014-02-06T10:18:17.639672,False,True,iso-countries,874,United Arab Emirates
+GBP,,2014-02-06T10:18:17.657351,2014-02-06T10:18:17.657357,False,True,iso-countries,875,United Kingdom
+UYU,,2014-02-06T10:18:17.673825,2014-02-06T10:18:17.673828,False,True,iso-countries,876,Uruguay
+UZS,,2014-02-06T10:18:17.684132,2014-02-06T10:18:17.684138,False,True,iso-countries,877,Uzbekistan
+VUV,,2014-02-06T10:18:17.694595,2014-02-06T10:18:17.694601,False,True,iso-countries,878,Vanuatu
+VEB,,2014-02-06T10:18:17.711493,2014-02-06T10:18:17.711497,False,True,iso-countries,879,Venezuela
+VND,,2014-02-06T10:18:17.721403,2014-02-06T10:18:17.721409,False,True,iso-countries,880,Vietnam
+YER,,2014-02-06T10:18:17.731093,2014-02-06T10:18:17.731098,False,True,iso-countries,881,Yemen
+ZMK,,2014-02-06T10:18:17.741021,2014-02-06T10:18:17.741027,False,True,iso-countries,882,Zambia
+ZWD,,2014-02-06T10:18:17.751343,2014-02-06T10:18:17.751348,False,True,iso-countries,883,Zimbabwe
+RUB,,2014-02-06T10:18:17.177479,2014-02-06T10:18:17.767195,False,True,iso-countries,845,Abkhazia
+TWD,,2014-02-06T10:18:17.767669,2014-02-06T10:18:17.767674,False,True,iso-countries,884,"China, Republic of (Taiwan)"
+TRY,,2014-02-06T10:18:17.547010,2014-02-06T10:18:17.794000,False,True,iso-countries,870,Northern Cyprus
+RUB and GEL,,2014-02-06T10:18:17.794331,2014-02-06T10:18:17.794334,False,True,iso-countries,885,South Ossetia
+AUD,,2014-02-06T10:18:15.678850,2014-02-06T10:18:17.826486,False,True,iso-countries,743,Norfolk Island
+XPF,,2014-02-06T10:18:17.826915,2014-02-06T10:18:17.915964,False,True,iso-countries,886,Wallis and Futuna
+GGP,,2014-02-06T10:18:17.916292,2014-02-06T10:18:17.916296,False,True,iso-countries,887,Guernsey
+IMP,,2014-02-06T10:18:17.928295,2014-02-06T10:18:17.928302,False,True,iso-countries,888,Isle of Man
+JEP,,2014-02-06T10:18:17.940635,2014-02-06T10:18:17.940643,False,True,iso-countries,889,Jersey
+BMD,,2014-02-06T10:18:17.959909,2014-02-06T10:18:17.959913,False,True,iso-countries,890,Bermuda
+KYD,,2014-02-06T10:18:17.989705,2014-02-06T10:18:17.989709,False,True,iso-countries,891,Cayman Islands
+FKP,,2014-02-06T10:18:18.002408,2014-02-06T10:18:18.002416,False,True,iso-countries,892,Falkland Islands (Islas Malvinas)
+GIP,,2014-02-06T10:18:18.014746,2014-02-06T10:18:18.014753,False,True,iso-countries,893,Gibraltar
+NZD,,2014-02-06T10:18:16.987025,2014-02-06T10:18:18.042760,False,True,iso-countries,831,Pitcairn Islands
+HKD,,2014-02-06T10:18:18.131767,2014-02-06T10:18:18.131772,False,True,iso-countries,895,Hong Kong
+MOP,,2014-02-06T10:18:18.143607,2014-02-06T10:18:18.143613,False,True,iso-countries,896,Macau
+EUR,,2014-02-06T10:18:15.615461,2014-02-06T10:18:18.194998,False,True,iso-countries,738,Aland
+AWG,,2014-02-06T10:18:18.195996,2014-02-06T10:18:18.196001,False,True,iso-countries,897,Aruba
+ANG,,2014-02-06T10:18:18.208168,2014-02-06T10:18:18.208176,False,True,iso-countries,898,Netherlands Antilles
+NOK,,2014-02-06T10:18:17.025104,2014-02-06T10:18:18.262758,False,True,iso-countries,834,Svalbard
+SHP,,2014-02-06T10:18:18.043169,2014-02-06T10:18:18.263368,False,True,iso-countries,894,Tristan da Cunha
+Deutschland,,2014-02-06T10:29:45.453225,2014-02-06T10:30:12.533291,False,True,iso-countries,899,Germany
+,,2014-02-06T10:34:48.639277,2014-02-06T10:35:02.580680,True,True,iso-countries,900,
+ Commission Department,,2014-02-06T10:34:48.826208,2014-02-06T10:35:08.330223,True,True,iso-countries,901,
+ESTONIA,,2014-02-06T13:29:10.475978,2014-02-06T13:29:40.939518,False,True,iso-countries,921,Estonia
+FRANCE,,2014-02-06T13:29:10.828465,2014-02-06T13:29:44.730641,False,True,iso-countries,923,France
+IRAQ,,2014-02-06T13:29:12.011576,2014-02-06T13:29:47.978336,False,True,iso-countries,929,Iraq
+"MOLDOVA, REPUBLIC OF",,2014-02-06T13:29:15.107625,2014-02-06T13:30:36.037905,False,True,iso-countries,945,Moldova
+"MACEDONIA, FORMER YUGOSLAV REPUBLIC OF",,2014-02-06T13:29:14.167881,2014-02-06T13:30:41.695285,False,True,iso-countries,940,Macedonia
+PHILIPPINES,,2014-02-06T13:29:16.337221,2014-02-06T13:31:28.371447,False,True,iso-countries,952,Philippines
+INDIA,,2014-02-06T13:29:11.804572,2014-02-06T13:31:32.498575,False,True,iso-countries,928,India
+SLOVAKIA,,2014-02-06T13:29:17.612820,2014-02-06T13:31:42.193093,False,True,iso-countries,958,Slovakia
+AUSTRALIA,,2014-02-06T13:29:07.225616,2014-02-06T13:31:50.757099,False,True,iso-countries,904,Australia
+DENMARK,,2014-02-06T13:29:09.901321,2014-02-06T13:31:57.552052,False,True,iso-countries,918,Denmark
+LIECHTENSTEIN,,2014-02-06T13:29:13.623986,2014-02-06T13:32:00.899825,False,True,iso-countries,937,Liechtenstein
+HONG KONG,,2014-02-06T13:29:11.409099,2014-02-06T13:32:05.025877,False,True,iso-countries,926,Hong Kong
+BULGARIA,,2014-02-06T13:29:08.508520,2014-02-06T13:32:13.732652,False,True,iso-countries,910,Bulgaria
+ITALY,,2014-02-06T13:29:12.672253,2014-02-06T13:32:18.338847,False,True,iso-countries,932,Italy
+"CONGO, DEMOCRATIC REPUBLIC OF",,2014-02-06T13:34:37.064370,2014-02-06T13:35:11.331183,False,True,iso-countries,969,"Congo, (Congo  Kinshasa)"
+BOSNIA-HERZEGOVINA,,2014-02-06T13:34:36.550030,2014-02-06T13:35:15.287023,False,True,iso-countries,968,Bosnia and Herzegovina
+"KOREA, REPUBLIC OF",,2014-02-06T13:34:38.572011,2014-02-06T13:35:31.674126,False,True,iso-countries,970,"Korea, South"
+UNITED STATES,,2014-02-06T13:29:19.210609,2014-02-06T13:29:32.207907,False,True,iso-countries,967,United States
+HUNGARY,,2014-02-06T13:29:11.614932,2014-02-06T13:29:27.596062,False,True,iso-countries,927,Hungary
+PALESTINIAN OCCUPIED TERRITORY,,2014-02-06T13:34:39.838340,2014-02-06T13:34:55.018789,False,True,iso-countries,972,Palestine
+LITUANIA,,2014-02-06T13:34:38.876780,2014-02-06T13:35:35.043802,False,True,iso-countries,971,Lithuania
+UK,,2014-02-06T13:40:20.839856,2014-02-06T13:40:39.587845,False,True,iso-countries,973,United Kingdom
+,,2014-02-06T13:40:21.103222,2014-02-06T13:40:42.767017,True,True,iso-countries,974,
+,,2014-02-06T13:45:36.130680,2014-02-06T13:45:52.115384,True,True,iso-countries,975,
+DOMINIQUE,,2014-02-07T22:45:28.169532,2014-04-20T12:30:02.005709,False,True,iso-countries,978,Dominica
+"SYRIA, ARAB REPUBLIC",,2014-02-07T22:45:32.235910,2014-04-20T12:30:06.068404,False,True,iso-countries,982,Syria
+SAINT MARINO,,2014-02-07T22:45:31.452674,2014-04-20T12:30:09.928251,False,True,iso-countries,981,Saint Martin
+UNITED STATES MINOR OUTLYING ISLANDS,,2014-02-07T22:45:32.643659,2014-04-20T12:30:36.177598,False,True,iso-countries,983,United States
+COTE D'IVOIRE,,2014-02-07T22:45:27.676496,2014-04-20T12:30:44.639130,False,True,iso-countries,977,Cote d'Ivoire (Ivory Coast)
+Runion,,2014-02-08T08:02:58.655742,2014-04-20T12:30:48.710292,False,True,iso-countries,985,Reunion
+ALAND ISLANDS,,2014-02-07T22:45:25.126055,2014-04-20T12:30:56.880442,False,True,iso-countries,976,Aland
+FRENCH GUYANA,,2014-02-07T22:45:28.663114,2014-04-20T12:31:01.932020,False,True,iso-countries,979,French Guiana
+"RUSSIA, FEDERATION OF",,2014-02-07T22:45:31.373655,2014-04-20T12:31:05.157614,False,True,iso-countries,980,Russia
+,,2014-02-08T01:35:05.516223,2014-04-20T12:31:08.288906,True,True,iso-countries,984,
+,,2014-03-24T23:45:58.919153,2014-04-20T12:30:18.611156,True,True,iso-countries,11637,
+,,2014-03-24T05:01:14.466587,2014-04-20T12:30:23.338647,True,True,iso-countries,11636,
+1A,,2014-04-16T14:33:53.330170,2014-04-20T12:30:26.700914,True,True,iso-countries,11671,
+SX,,2014-04-21T10:32:41.371370,2014-04-21T10:32:41.371382,False,False,iso-countries,11673,
+Curacao,,2014-04-21T10:23:50.319282,2014-04-28T21:56:29.303515,False,True,iso-countries,11672,
+,,2014-05-15T21:02:18.314205,2014-05-15T21:02:18.314213,False,False,iso-countries,24210,
+CW,,2014-05-16T09:23:15.537442,2014-05-16T09:23:15.537456,False,False,iso-countries,24211,
+,,2014-07-07T09:14:25.006300,2014-07-07T09:14:25.006307,False,False,iso-countries,30777,
+Côte d'Ivoire,,2014-02-06T10:17:59.089993,2014-02-06T10:17:59.090005,False,True,iso-countries,30778,Cote d'Ivoire (Ivory Coast)
+Viet Nam,,2014-02-06T10:17:32.831066,2014-02-06T10:17:32.831082,False,True,iso-countries,30779,Vietnam
+Brunei Darussalam,,2014-02-06T10:17:31.035294,2014-02-06T10:17:31.035301,False,True,iso-countries,30780,Brunei

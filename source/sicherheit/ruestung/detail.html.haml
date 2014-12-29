@@ -1,0 +1,187 @@
+---
+title: Entwicklungsbarometer - Rüstung
+navigation:
+  - link: "/sicherheit/ruestung/index.html"
+    title: Kritische Waffenexporte
+  - link: "/sicherheit/ruestung/detail.html"
+    title: Deutsche Waffenexporte im Detail
+    active: true
+  - link: "/sicherheit/ruestung/german-gdp.html"
+    title: Anteil Waffenhandel am GDP
+  - link: "/sicherheit/ruestung/freedom-index.html"
+    title: Anteil kritische Waffenexporte am GDP
+  - link: "/sicherheit/ruestung/exporteure.html"
+    title: Waffenexporteure in Deutschland
+---
+#sicherheit.indikator.sub-indikator
+  = link_to "/sicherheit/index.html" do
+    %h1.sicherheit Sicherheit
+  #bicc-map
+    = partial "partials/sub_nav"
+    #map-container
+      #map
+        .search(data-bind="visible: search")
+          %input(data-bind="value: searchCountry, valueUpdate: 'keyup'" placeholder="Search for a country")
+          %ul(data-bind="visible: searchedCountries().length > 0, foreach: searchedCountries")
+            %li
+              %a(data-bind="text: name, click: $parent.zoomToCountry")
+        #legend
+          .code-of-conduct(data-bind="visible: activeLayer().value != 'gmi'")
+            %h5 Code of Conduct
+            %ul
+              %li
+                .circle.green
+                %b
+                  uncritical
+              %li
+                .circle.yellow
+                %b
+                  possibly critical
+              %li
+                .circle.red
+                %b
+                  critial
+              %li
+                .circle.white
+                %b
+                  not considered
+          .gmi(data-bind="visible: activeLayer().value == 'gmi'")
+            %h5 GMI
+            %ul
+              %li
+                .circle.gmi-1
+                %b Rank 1-30
+              %li
+                .circle.gmi-2
+                %b Rank 31-60
+              %li
+                .circle.gmi-3
+                %b Rank 61-90
+              %li
+                .circle.gmi-4
+                %b Rank 91-120
+              %li
+                .circle.gmi-5
+                %b Rank > 120
+
+        #filter-explanation(data-bind="visible: explanation().length > 0")
+          %p(data-bind="text: explanation")
+        #filter
+          #type-filter
+            %ul(data-bind="foreach: layers")
+              %li(data-bind="css: { active: $parent.activeLayer() == $data},click: $parent.showLayer, event: { mouseover: $parent.showExplanation, mouseout: $parent.showCurrentExplanation }")
+                .indicator(data-bind="text: text ")
+          #volume
+      #misc
+        #info
+          %p(data-bind="visible: countryName() == ''") Hover over countries to see more details; click to lock current country; close info window to release lock
+          .country-info(data-bind="visible: countryName().length > 0")
+            %h2 German Arms Exports
+            %h3.country(data-bind="text: countryName")
+            %ul.exports
+              %li.title.first
+                Arms Export Licences
+              %li.yes-no
+                .title
+                  Approved licenses
+                .value
+                  %span(data-bind="text: yesNoText(armsExports())")
+              %li
+                .title
+                  Volume in 2013
+                .value(data-bind="text: formatToMillions(exports2013())")
+              %li.sum.last(data-bind="visible: armsExports")
+                .title
+                  Volume 1999-2013
+                .value(data-bind="text: formatToMillions(germanArmsExport())")
+              %li.title
+                Exports of Weapons of war
+              %li.yes-no
+                .title
+                  Actual exports
+                .value
+                  %span(data-bind="text: yesNoText(weaponsExports())")
+              %li(data-bind="visible: weaponsExports")
+                .title
+                  Volume in 2013
+                .value(data-bind="text: formatToMillions(warWeapons2013())")
+              %li.sum.last(data-bind="visible: weaponsExports")
+                .title
+                  Volume 1999-2013
+                .value(data-bind="text: formatToMillions(germanWeaponsExport())")
+            .ranks
+              %ul.rank.gmi
+                %li.title GMI-Rank
+                %li.value(data-bind="text: gmiRank")
+                %li of
+                %li.count(data-bind="text: gmiCountryCount")
+            %h5 EU Common Position for Arms Exports
+            %h6 Export criteria
+            %ul.categories
+              %li.category
+                .category-title
+                  Arms Embargos
+                %ul.signal(data-bind="with: armsEmbargo")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Human Rights
+                %ul.signal(data-bind="with: humanRights")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Internal Conflict
+                %ul.signal(data-bind="with: internalConflict")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Regional Security
+                %ul.signal(data-bind="with: regionalSecurity")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Security of Member States
+                %ul.signal(data-bind="with: securityMemberStates")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Membership in UN Conventions
+                %ul.signal(data-bind="with: membershipUN")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Arms Export Control
+                %ul.signal(data-bind="with: armsExportControl")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+              %li.category
+                .category-title
+                  Military/ Non-military Balance
+                %ul.signal(data-bind="with: militaryBalance")
+                  %li.light.red(data-bind="css: { active: redActive }")
+                  %li.light.yellow(data-bind="css: { active: yellowActive }")
+                  %li.light.green(data-bind="css: { active: greenActive }")
+            .details
+              %ul
+                %li
+                  %a(href="http://ruestungsexport.info/index.php/laenderportraits" target="_blank")
+                    %i.fa.fa-info-circle
+                    Country Portraits
+                %li
+                  %a(data-bind="attr: { href: countryReportLink }" target="_blank")
+                    %i.fa.fa-info-circle
+                    Country details
+
