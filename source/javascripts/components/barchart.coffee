@@ -30,25 +30,45 @@ class @Barchart extends @D3Graph
     .attr("transform", "rotate(90)")
     .style("text-anchor", "start")
 
-  draw: (data) ->
-    @countries = @svgSelection.selectAll('g.countries').data(@data)
-    @countries
-      .enter()
-      .append('g')
-      .attr('class', (d) => "countries #{d[@groupKey]}")
-      .attr('transform', (d) => "translate(#{@xScale(d[@groupKey])},0)")
-    if @options.showExtent
-      @showExtent()
+  mouseover: (d) ->
+    @
+
+  drawValues: ->
     values = @countries.append('rect')
     values
       .attr('y', (d) => @yScale(d[@valueKey]))
       .attr('width', @xScale.rangeBand())
       .attr('height', (d,i) => @options.height - @yScale(d[@valueKey]))
+    values
+
+  drawGroups: ->
+    @countries
+      .enter()
+      .append('g')
+      .attr('class', (d) => "countries #{d[@groupKey]}")
+      .attr('transform', (d) => "translate(#{@xScale(d[@groupKey])},0)")
+      .on("mouseover", @mouseover)
+
+  drawValueText: ->
     @countries.append('text')
       .text((d) => d[@valueKey])
       .attr('y', (d) => @yScale(d[@valueKey]) - 10)
       .attr('x', @xScale.rangeBand()/2)
       .attr('text-anchor', 'middle')
       .attr('class', 'label')
+
+  draw: (data) ->
+    @countries = @svgSelection.selectAll('g.countries').data(@data)
+    @drawGroups()
+    if @options.showExtent
+      @showExtent()
+    @drawValues()
+    @drawValueText()
+
+  render: (@element) ->
+    @createAxisAndScales(@data)
+    @createSvg()
+    @draw(@data)
+    @appendAxis()
     if @options.rotate.x
       @rotateLabels("x")

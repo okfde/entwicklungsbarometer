@@ -111,10 +111,28 @@ section#panzer
     fill: $red
   rect
     fill: $light-blue
+    cursor: pointer
+    &.extent
+      fill: #f3f3f3
+  text
+    font-size: 0.8em
   .label
     font-size: 0.6em
   rect.extent
     fill: #f3f3f3
+
+.saferworld
+  @include span-columns(10 of 12)
+.saferworld-sub
+  @include span-columns(2 of 12)
+  @include omega()
+  text
+    cursor: pointer
+  .axis
+    display: none
+  .description
+    font-size: 0.8em
+    text-align: left
 
 #german-gdp
   circle

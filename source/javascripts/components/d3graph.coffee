@@ -44,8 +44,8 @@ class @D3Graph
   render: (@element) ->
     @createAxisAndScales(@data)
     @createSvg()
-    @appendAxis()
     @draw(@data)
+    @appendAxis()
 
   update: (@data) ->
     @createAxisAndScales(@data)
