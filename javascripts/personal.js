@@ -17,9 +17,9 @@
         height: 300,
         margin: {
           top: 40,
-          right: 30,
-          bottom: 50,
-          left: 80
+          right: 90,
+          bottom: 40,
+          left: 90
         },
         ticks: {
           y: 7,
@@ -96,7 +96,7 @@
     PeacekeepingPersonal.prototype.mouseover = function(d) {
       d3.select("." + (d.Country.toLowerCase()) + " path").classed("country-hover", true);
       this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
-      return this.focus.select("text").text("" + d.Country + ": " + (this.dataFormat()(d[this.dataKey])) + " % of GDP");
+      return this.focus.select("text").text("" + d.Country + ": " + (this.dataFormat()(d[this.dataKey])) + " % des BIP");
     };
 
     return PeacekeepingPersonal;
@@ -112,6 +112,8 @@
         countries = ['Österreich', 'Finnland', 'Deutschland', 'Luxemburg', 'EU', 'Slowakei'];
         personal = new PeacekeepingPersonal(data);
         personal.setLineClass('countries');
+        personal.setYAxisDescription('in % des BIP');
+        personal.setXAxisDescription('Jahr');
         personal.drawPersonal(countries);
         return personal.render('#personal');
       });

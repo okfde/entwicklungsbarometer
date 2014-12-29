@@ -56,21 +56,12 @@
       return this.svgSelection.select("g." + axis + ".axis").selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
     };
 
-    Barchart.prototype.draw = function(data) {
+    Barchart.prototype.mouseover = function(d) {
+      return this;
+    };
+
+    Barchart.prototype.drawValues = function() {
       var values;
-      this.countries = this.svgSelection.selectAll('g.countries').data(this.data);
-      this.countries.enter().append('g').attr('class', (function(_this) {
-        return function(d) {
-          return "countries " + d[_this.groupKey];
-        };
-      })(this)).attr('transform', (function(_this) {
-        return function(d) {
-          return "translate(" + (_this.xScale(d[_this.groupKey])) + ",0)";
-        };
-      })(this));
-      if (this.options.showExtent) {
-        this.showExtent();
-      }
       values = this.countries.append('rect');
       values.attr('y', (function(_this) {
         return function(d) {
@@ -81,7 +72,23 @@
           return _this.options.height - _this.yScale(d[_this.valueKey]);
         };
       })(this));
-      this.countries.append('text').text((function(_this) {
+      return values;
+    };
+
+    Barchart.prototype.drawGroups = function() {
+      return this.countries.enter().append('g').attr('class', (function(_this) {
+        return function(d) {
+          return "countries " + d[_this.groupKey];
+        };
+      })(this)).attr('transform', (function(_this) {
+        return function(d) {
+          return "translate(" + (_this.xScale(d[_this.groupKey])) + ",0)";
+        };
+      })(this)).on("mouseover", this.mouseover);
+    };
+
+    Barchart.prototype.drawValueText = function() {
+      return this.countries.append('text').text((function(_this) {
         return function(d) {
           return d[_this.valueKey];
         };
@@ -90,6 +97,24 @@
           return _this.yScale(d[_this.valueKey]) - 10;
         };
       })(this)).attr('x', this.xScale.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
+    };
+
+    Barchart.prototype.draw = function(data) {
+      this.countries = this.svgSelection.selectAll('g.countries').data(this.data);
+      this.drawGroups();
+      if (this.options.showExtent) {
+        this.showExtent();
+      }
+      this.drawValues();
+      return this.drawValueText();
+    };
+
+    Barchart.prototype.render = function(element) {
+      this.element = element;
+      this.createAxisAndScales(this.data);
+      this.createSvg();
+      this.draw(this.data);
+      this.appendAxis();
       if (this.options.rotate.x) {
         return this.rotateLabels("x");
       }

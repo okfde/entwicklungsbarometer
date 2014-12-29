@@ -6,7 +6,7 @@
   <head>
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
-    <title>Entwicklungsbarometer - Freedom Index</title>
+    <title>Entwicklungsbarometer - Anteil Waffenhandel am BIP</title>
     <link href='http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css' rel='stylesheet'>
     <link href="../../../stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="../../../stylesheets/all.css" rel="stylesheet" type="text/css" />
     <header class='navigation'>
@@ -62,7 +62,7 @@
       <div class='indikator sub-indikator' id='sicherheit'>
         <a href="../../"><h1 class='sicherheit'>Sicherheit</h1>
         </a>
-        <div id='freedom-index'>
+        <div id='german-gdp'>
           <div class='navbar'>
             <ul class='nav'>
               <li class=''>
@@ -73,12 +73,12 @@
                 <a href=""><h4>Deutsche Waffenexporte im Detail</h4>
                 </a>
               </li>
-              <li class=''>
-                <a href="../german-gdp/"><h4>Anteil Waffenhandel am GDP</h4>
+              <li class='active'>
+                <a href="./"><h4>Anteil Waffenhandel am GDP</h4>
                 </a>
               </li>
-              <li class='active'>
-                <a href="./"><h4>Anteil kritische Waffenexporte am GDP</h4>
+              <li class=''>
+                <a href="../freedom-index/"><h4>Anteil kritische Waffenexporte am GDP</h4>
                 </a>
               </li>
               <li class=''>
@@ -87,42 +87,26 @@
               </li>
             </ul>
           </div>
-          <div id='multiples'>
-            <div class='multiple'>
-              <div id='multiple-exports'></div>
-            </div>
-            <div class='legend'>
-              <svg>
-                <g transform='translate(0,8)'>
-                  <circle class='free' cx='8' cy='0' r='8'></circle>
-                  <text dx='24' dy='5'>Exporte in Freie Länder</text>
-                </g>
-                <g transform='translate(0,32)'>
-                  <circle class='partial-free' cx='8' cy='0' r='8'></circle>
-                  <text dx='24' dy='5'>Exporte in Halb-Länder</text>
-                </g>
-                <g transform='translate(0,56)'>
-                  <circle class='not-free' cx='8' cy='0' r='8'></circle>
-                  <text dx='24' dy='5'>Exporte in Nicht-Freie Länder</text>
-                </g>
-              </svg>
-            </div>
-            <div class='export-volumes'>
-              <h2></h2>
-              <h6>Zeitraum</h6>
-              <form>
-                <input checked='checked' name='ruestung-chart' type='radio' value='2013'>2013</input>
-                <input name='ruestung-chart' type='radio' value='all'>1999-2013</input>
-              </form>
-            </div>
+          <div class='point-graph german-gdp'></div>
+          <div class='legend'>
+            <svg>
+              <g transform='translate(0,8)'>
+                <circle cx='8' cy='0' r='8'></circle>
+                <text dx='24' dy='5'>Andere Anteile am BIP</text>
+              </g>
+              <g transform='translate(0, 32)'>
+                <circle class='german-exports-gdp' cx='8' cy='0' r='8'></circle>
+                <text dx='24' dy='5'>Anteil Waffenhandel am BIP</text>
+              </g>
+            </svg>
           </div>
-          <h2>Anteil kritische Waffenexporte am GDP</h2>
+          <h2>Anteil Waffenhandel am GDP</h2>
           <div class='explanation'>
-            <p>Waffenexporte deutscher Unternehmen sind immer wieder Gegenstand öffentlicher Diskussionen. Insbesondere die Exporte von Waffen in Krisenländer oder in Länder mit autoritären Regimen wird in der Öffentlichkeit kritisiert. Überlegungen der Bundesregierung zu einer restriktiveren Lizenzpraxis bei Waffenexporten werden in der Wirtschaft oft mit dem Hinweis auf Arbeitsplätze und den Wirtschaftsstandort Deutschland zurückgewiesen. Diese Visualisierung zeigt, dass eine Einschränkung der Waffenexporte auf unkritische Länder nur einen geringen Einfluss auf die Waffenexporte der deutschen Wirtschaft insgesamt hat.</p>
+            <p>Im internationalen Vergleich ist Deutschland einer wichtigsten Exporteure von Waffen. Deutschland gehört auch zu den Ländern, die am meisten Waffen an nicht-demokratische Länder exportieren. In der Debatte um Waffenexporte wird von der Industrie gerne auf die Bedeutung der Waffenindustrie für die deutsche Wirtschaft hingewiesen. Die bis 2011 vorliegenden Daten zeigen jedoch, dass die Waffenexporte weniger als 1% des Bruttoinlandprodukts ausmachen.</p>
           </div>
           <div class='explanation'>
             <h3>Informationen zu den Daten</h3>
-            <p>Die Daten zu den Waffenexporten deutscher Unternehmen stammen vom Bonn International Center for Conversion. Die Einteilung der Empfängerländer nach frei, halb-frei und nicht-frei wurde vom Freedom in the World Index vom Freedom House übernommen. dieser Index bewertet die Einhaltung von politischen und bürgerlichen Rechten in Anlehnung an die Menschenrechtserklärung der Vereinten Nationen von 1948.</p>
+            <p>Die hier dargestellten Daten zur Waffenindustrie stammen aus dem Bericht des WIFOR Instituts der Technischen Universität Berlin “Quantifizierung der volkswirtschaftlichen Bedeutung der Sicherheits- und Verteidigungsindustrie für den deutschen Wirtschaftsstandort” vom November 2012. Die Datenquelle für die übrigen Daten ist das statistische Bundesamt Destasis.</p>
           </div>
         </div>
       </div>

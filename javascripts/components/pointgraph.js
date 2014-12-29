@@ -4,10 +4,10 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
-  this.LargeMultiples = (function(_super) {
-    __extends(LargeMultiples, _super);
+  this.PointGraph = (function(_super) {
+    __extends(PointGraph, _super);
 
-    function LargeMultiples(data, options) {
+    function PointGraph(data, options) {
       this.data = data;
       this.options = options != null ? options : {};
       this.valueClasss = __bind(this.valueClasss, this);
@@ -31,16 +31,16 @@
       this.valueClass2 = "value-2";
     }
 
-    LargeMultiples.prototype.setValueKeys = function(value1, value2) {
+    PointGraph.prototype.setValueKeys = function(value1, value2) {
       this.value1Key = value1;
       return this.value2Key = value2;
     };
 
-    LargeMultiples.prototype.setValueClasses = function(valueClasses) {
+    PointGraph.prototype.setValueClasses = function(valueClasses) {
       return this.valueClasses = valueClasses;
     };
 
-    LargeMultiples.prototype.valueClasss = function(d, i) {
+    PointGraph.prototype.valueClasss = function(d, i) {
       var className, value, _i, _len, _ref;
       _ref = this.valueClasses;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -52,7 +52,7 @@
       return className;
     };
 
-    LargeMultiples.prototype.draw = function(data) {
+    PointGraph.prototype.draw = function(data) {
       var graphGroup, num, teiler;
       data = (function() {
         var _i, _ref, _results;
@@ -78,18 +78,18 @@
       return graphGroup.exit().remove();
     };
 
-    LargeMultiples.prototype.render = function(element) {
+    PointGraph.prototype.render = function(element) {
       this.element = element;
       this.createSvg();
       return this.draw(this.data);
     };
 
-    LargeMultiples.prototype.update = function(data) {
+    PointGraph.prototype.update = function(data) {
       this.data = data;
       return this.draw(this.data);
     };
 
-    return LargeMultiples;
+    return PointGraph;
 
   })(this.D3Graph);
 

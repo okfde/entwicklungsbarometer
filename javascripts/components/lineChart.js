@@ -12,7 +12,7 @@
       this.mouseover = __bind(this.mouseover, this);
       this.mouseout = __bind(this.mouseout, this);
       this.options = _.defaults(this.options, {
-        width: 200,
+        width: 800,
         height: 200,
         margin: {
           top: 40,
@@ -27,8 +27,14 @@
       });
     }
 
-    D3Linechart.prototype.createYAxis = function() {
+    D3Linechart.prototype.appendAxis = function() {
+      this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
       return this.svgSelection.append("g").attr("class", "y axis").attr("transform", "translate(0,0)").call(this.yAxis);
+    };
+
+    D3Linechart.prototype.appendAxisDescription = function() {
+      this.svgSelection.append("text").attr('class', 'x description').attr("transform", "translate(" + (this.options.width / 2) + " ," + (this.options.height + this.options.margin.bottom) + ")").style("text-anchor", "middle").text(this.xAxisDescription);
+      return this.svgSelection.append("text").attr('class', 'y description').attr("transform", "rotate(-90)").attr('y', 0 - this.options.margin.left).attr('x', 0 - (this.options.height / 2)).style("text-anchor", "middle").attr("dy", "1em").text(this.yAxisDescription);
     };
 
     D3Linechart.prototype.createMeanLine = function() {
@@ -63,6 +69,20 @@
         key = 'lines';
       }
       return this.lineClass = key;
+    };
+
+    D3Linechart.prototype.setXAxisDescription = function(description) {
+      if (description == null) {
+        description = '';
+      }
+      return this.xAxisDescription = description;
+    };
+
+    D3Linechart.prototype.setYAxisDescription = function(description) {
+      if (description == null) {
+        description = '';
+      }
+      return this.yAxisDescription = description;
     };
 
     D3Linechart.prototype.lineClassForElement = function(d) {
@@ -119,6 +139,10 @@
       return this.yGrid = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
     };
 
+    D3Linechart.prototype.setVoronoiData = function() {
+      return this.voronoiData = _.flatten(this.data);
+    };
+
     D3Linechart.prototype.createFocusElement = function() {
       this.focus = this.svgSelection.append("g").attr("class", "focus").attr("transform", "translate(-100,-100)");
       this.focus.append("circle").attr("r", 4.5);
@@ -127,7 +151,7 @@
 
     D3Linechart.prototype.createOverlay = function() {
       this.voronoiGroup = this.svgSelection.append("g").attr("class", "voronoi");
-      return this.voronoiGroup.selectAll("path").data(this.voronoi(_.flatten(this.data))).enter().append("path").attr("d", function(d) {
+      return this.voronoiGroup.selectAll("path").data(this.voronoi(this.voronoiData)).enter().append("path").attr("d", function(d) {
         if (d != null) {
           return "M" + (d.join("L")) + "Z";
         } else {
@@ -168,7 +192,8 @@
       this.setVoronoi();
       this.setScales();
       this.setAxis();
-      return this.setGrid();
+      this.setGrid();
+      return this.setVoronoiData();
     };
 
     D3Linechart.prototype.parseDateFromYear = function(year) {
@@ -180,7 +205,7 @@
       this.createAxisAndScales(this.data);
       this.createSvg();
       this.appendAxis();
-      this.createYAxis();
+      this.appendAxisDescription();
       this.createMeanLine();
       this.draw(this.data);
       this.createFocusElement();

@@ -1,6 +1,0 @@
-#sicherheit.indikator.sub-indikator
-  = link_to "/sicherheit/index.html" do
-    %h1.sicherheit Sicherheit
-  #german-gdp
-    = partial "partials/sub_nav"
-    .point-graph.german-gdp

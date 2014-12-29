@@ -18,7 +18,7 @@
         margin: {
           top: 40,
           right: 80,
-          bottom: 50,
+          bottom: 40,
           left: 80
         },
         ticks: {
@@ -106,6 +106,8 @@
         personal = new ZivileFriedensfoerderung(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);
+        personal.setYAxisDescription('in Mio $');
+        personal.setXAxisDescription('Jahr');
         return personal.render('#friedensfoerderung .zivile');
       });
     }

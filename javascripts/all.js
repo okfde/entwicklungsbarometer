@@ -19969,6 +19969,9 @@ d3.numberFormat = locale_de_DE.numberFormat
       })));
       this.subIndex = $('.cdi-index-overall').data('cdi-sub');
       $('.cdi-country-sub-index .country-sub-label').text(countryName);
+      if ($('.fake-sub-index').length > 0) {
+        this.subIndex = $('.fake-sub-index').data('cdi-sub');
+      }
       return this.subIndex.update(country);
     }
   };
@@ -20044,9 +20047,12 @@ d3.numberFormat = locale_de_DE.numberFormat
       }).attr('x', x.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
       xAxis = d3.svg.axis().scale(x).orient("bottom");
       svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
-      if (key === 'Overall') {
+      if (key === 'Overall' || $('.fake-sub-index').length > 0) {
         this.subIndex.render('.cdi-country-sub-index .graph');
-        return $('.cdi-index-overall').data('cdi-sub', this.subIndex);
+        $('.cdi-index-overall').data('cdi-sub', this.subIndex);
+        if ($('.fake-sub-index').length > 0) {
+          return $('.fake-sub-index').data('cdi-sub', this.subIndex);
+        }
       }
     });
   };
@@ -20107,8 +20113,8 @@ d3.numberFormat = locale_de_DE.numberFormat
       this.element = element;
       this.createAxisAndScales(this.data);
       this.createSvg();
-      this.appendAxis();
-      return this.draw(this.data);
+      this.draw(this.data);
+      return this.appendAxis();
     };
 
     D3Graph.prototype.update = function(data) {
@@ -20120,6 +20126,314 @@ d3.numberFormat = locale_de_DE.numberFormat
     return D3Graph;
 
   })();
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.D3Linechart = (function(_super) {
+    __extends(D3Linechart, _super);
+
+    function D3Linechart(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.mouseover = __bind(this.mouseover, this);
+      this.mouseout = __bind(this.mouseout, this);
+      this.options = _.defaults(this.options, {
+        width: 800,
+        height: 200,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 150,
+          left: 40
+        },
+        ticks: {
+          y: 5,
+          x: 4
+        }
+      });
+    }
+
+    D3Linechart.prototype.appendAxis = function() {
+      this.svgSelection.append("g").attr("class", "x axis").attr("transform", "translate(0," + this.options.height + ")").call(this.xAxis);
+      return this.svgSelection.append("g").attr("class", "y axis").attr("transform", "translate(0,0)").call(this.yAxis);
+    };
+
+    D3Linechart.prototype.appendAxisDescription = function() {
+      this.svgSelection.append("text").attr('class', 'x description').attr("transform", "translate(" + (this.options.width / 2) + " ," + (this.options.height + this.options.margin.bottom) + ")").style("text-anchor", "middle").text(this.xAxisDescription);
+      return this.svgSelection.append("text").attr('class', 'y description').attr("transform", "rotate(-90)").attr('y', 0 - this.options.margin.left).attr('x', 0 - (this.options.height / 2)).style("text-anchor", "middle").attr("dy", "1em").text(this.yAxisDescription);
+    };
+
+    D3Linechart.prototype.createMeanLine = function() {
+      return this.meanLine = this.svgSelection.append("g").attr("class", "mean").append("path").datum(this.meanData).attr('d', this.meanLine).attr('class', 'line mean');
+    };
+
+    D3Linechart.prototype.setMeanData = function(data) {
+      this.meanData = data;
+      return this.meanData.forEach((function(_this) {
+        return function(d) {
+          return d.year = _this.parseDateFromYear(d.year);
+        };
+      })(this));
+    };
+
+    D3Linechart.prototype.setDataKey = function(key) {
+      if (key == null) {
+        key = 'value';
+      }
+      return this.dataKey = key;
+    };
+
+    D3Linechart.prototype.setDateKey = function(key) {
+      if (key == null) {
+        key = 'date';
+      }
+      return this.dateKey = key;
+    };
+
+    D3Linechart.prototype.setLineClass = function(key) {
+      if (key == null) {
+        key = 'lines';
+      }
+      return this.lineClass = key;
+    };
+
+    D3Linechart.prototype.setXAxisDescription = function(description) {
+      if (description == null) {
+        description = '';
+      }
+      return this.xAxisDescription = description;
+    };
+
+    D3Linechart.prototype.setYAxisDescription = function(description) {
+      if (description == null) {
+        description = '';
+      }
+      return this.yAxisDescription = description;
+    };
+
+    D3Linechart.prototype.lineClassForElement = function(d) {
+      return d[this.dataKey];
+    };
+
+    D3Linechart.prototype.setLine = function() {
+      return this.line = d3.svg.line().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d[_this.dataKey]);
+        };
+      })(this));
+    };
+
+    D3Linechart.prototype.setMeanLine = function() {
+      return this.meanLine = d3.svg.line().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d.mean);
+        };
+      })(this));
+    };
+
+    D3Linechart.prototype.setVoronoi = function() {
+      return this.voronoi = d3.geom.voronoi().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d[_this.dataKey]);
+        };
+      })(this)).clipExtent([[-this.options.margin.left, -this.options.margin.top], [this.options.width + this.options.margin.right, this.options.height + this.options.margin.bottom]]);
+    };
+
+    D3Linechart.prototype.setScales = function() {
+      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain(this.yScaleDomain);
+      return this.xScale = d3.time.scale().range([0, this.options.width]).domain(this.xScaleDomain);
+    };
+
+    D3Linechart.prototype.setAxis = function() {
+      this.yAxis = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
+      return this.xAxis = d3.svg.axis().scale(this.xScale).orient("bottom").ticks(this.options.ticks.x);
+    };
+
+    D3Linechart.prototype.setGrid = function() {
+      return this.yGrid = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
+    };
+
+    D3Linechart.prototype.setVoronoiData = function() {
+      return this.voronoiData = _.flatten(this.data);
+    };
+
+    D3Linechart.prototype.createFocusElement = function() {
+      this.focus = this.svgSelection.append("g").attr("class", "focus").attr("transform", "translate(-100,-100)");
+      this.focus.append("circle").attr("r", 4.5);
+      return this.focus.append("text").attr("y", -15);
+    };
+
+    D3Linechart.prototype.createOverlay = function() {
+      this.voronoiGroup = this.svgSelection.append("g").attr("class", "voronoi");
+      return this.voronoiGroup.selectAll("path").data(this.voronoi(this.voronoiData)).enter().append("path").attr("d", function(d) {
+        if (d != null) {
+          return "M" + (d.join("L")) + "Z";
+        } else {
+          return "";
+        }
+      }).datum(function(d) {
+        if (d != null) {
+          return d.point;
+        }
+      }).on("mouseover", this.mouseover).on("mouseout", this.mouseout);
+    };
+
+    D3Linechart.prototype.mouseout = function(d) {
+      d3.select(this.lineClassForElement(d)).classed("hover", false);
+      return this.focus.attr("transform", "translate(-100,-100)");
+    };
+
+    D3Linechart.prototype.mouseover = function(d) {
+      d3.select(this.lineClassForElement(d)).classed("hover", true);
+      this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
+      return this.focus.select("text").text("" + (Math.round(d[this.dataKey])));
+    };
+
+    D3Linechart.prototype.draw = function(data) {
+      var graphGroup, graphs, line;
+      graphGroup = this.svgSelection.selectAll("g." + this.lineClass).data(data);
+      graphs = graphGroup.enter().append("g").attr('class', (function(_this) {
+        return function(d) {
+          return "" + _this.lineClass + " " + (_this.lineClassForElement(d));
+        };
+      })(this));
+      line = graphs.append("path");
+      return line.attr('class', 'line').attr("d", this.line);
+    };
+
+    D3Linechart.prototype.createAxisAndScales = function() {
+      this.setLine();
+      this.setVoronoi();
+      this.setScales();
+      this.setAxis();
+      this.setGrid();
+      return this.setVoronoiData();
+    };
+
+    D3Linechart.prototype.parseDateFromYear = function(year) {
+      return new Date(year, 0, 1);
+    };
+
+    D3Linechart.prototype.render = function(element) {
+      this.element = element;
+      this.createAxisAndScales(this.data);
+      this.createSvg();
+      this.appendAxis();
+      this.appendAxisDescription();
+      this.createMeanLine();
+      this.draw(this.data);
+      this.createFocusElement();
+      return this.createOverlay();
+    };
+
+    return D3Linechart;
+
+  })(this.D3Graph);
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.AreaChart = (function(_super) {
+    __extends(AreaChart, _super);
+
+    function AreaChart(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.mouseover = __bind(this.mouseover, this);
+      this.mouseout = __bind(this.mouseout, this);
+      this.draw = __bind(this.draw, this);
+      AreaChart.__super__.constructor.call(this, this.data, this.options);
+    }
+
+    AreaChart.prototype.stack = function() {
+      return d3.layout.stack().values(function(d) {
+        return d.values;
+      });
+    };
+
+    AreaChart.prototype.area = function() {
+      return d3.svg.area().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d.date);
+        };
+      })(this)).y0((function(_this) {
+        return function(d) {
+          return _this.yScale(d.y0);
+        };
+      })(this)).y1((function(_this) {
+        return function(d) {
+          return _this.yScale(d.y0 + d.y);
+        };
+      })(this));
+    };
+
+    AreaChart.prototype.color = function() {
+      return d3.scale.category20().domain(["civic", "military"]);
+    };
+
+    AreaChart.prototype.draw = function(data) {
+      var zmf;
+      zmf = this.svgSelection.selectAll(".zmf").data(this.stack()(this.data)).enter().append("g").attr("class", "zmf");
+      return zmf.append("path").attr("class", "area").attr("d", (function(_this) {
+        return function(d) {
+          return _this.area()(d.values);
+        };
+      })(this)).style("fill", (function(_this) {
+        return function(d) {
+          return _this.color()(d.name);
+        };
+      })(this));
+    };
+
+    AreaChart.prototype.setVoronoi = function() {
+      return this.voronoi = d3.geom.voronoi().x((function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.dateKey]);
+        };
+      })(this)).y((function(_this) {
+        return function(d) {
+          return _this.yScale(d.y0 + d.y);
+        };
+      })(this)).clipExtent([[-this.options.margin.left, -this.options.margin.top], [this.options.width + this.options.margin.right, this.options.height + this.options.margin.bottom]]);
+    };
+
+    AreaChart.prototype.setVoronoiData = function() {
+      return this.voronoiData = _.flatten(this.data.map(function(d) {
+        return d.values;
+      }));
+    };
+
+    AreaChart.prototype.mouseout = function(d) {
+      return this.focus.attr("transform", "translate(-100,-100)");
+    };
+
+    AreaChart.prototype.mouseover = function(d) {
+      this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d.y + d.y0)) + ")");
+      return this.focus.select("text").text("$" + (Math.round(d[this.dataKey])) + " Mio").attr("text-anchor", "middle");
+    };
+
+    return AreaChart;
+
+  })(this.D3Linechart);
 
 }).call(this);
 (function() {
@@ -20180,21 +20494,12 @@ d3.numberFormat = locale_de_DE.numberFormat
       return this.svgSelection.select("g." + axis + ".axis").selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
     };
 
-    Barchart.prototype.draw = function(data) {
+    Barchart.prototype.mouseover = function(d) {
+      return this;
+    };
+
+    Barchart.prototype.drawValues = function() {
       var values;
-      this.countries = this.svgSelection.selectAll('g.countries').data(this.data);
-      this.countries.enter().append('g').attr('class', (function(_this) {
-        return function(d) {
-          return "countries " + d[_this.groupKey];
-        };
-      })(this)).attr('transform', (function(_this) {
-        return function(d) {
-          return "translate(" + (_this.xScale(d[_this.groupKey])) + ",0)";
-        };
-      })(this));
-      if (this.options.showExtent) {
-        this.showExtent();
-      }
       values = this.countries.append('rect');
       values.attr('y', (function(_this) {
         return function(d) {
@@ -20205,7 +20510,23 @@ d3.numberFormat = locale_de_DE.numberFormat
           return _this.options.height - _this.yScale(d[_this.valueKey]);
         };
       })(this));
-      this.countries.append('text').text((function(_this) {
+      return values;
+    };
+
+    Barchart.prototype.drawGroups = function() {
+      return this.countries.enter().append('g').attr('class', (function(_this) {
+        return function(d) {
+          return "countries " + d[_this.groupKey];
+        };
+      })(this)).attr('transform', (function(_this) {
+        return function(d) {
+          return "translate(" + (_this.xScale(d[_this.groupKey])) + ",0)";
+        };
+      })(this)).on("mouseover", this.mouseover);
+    };
+
+    Barchart.prototype.drawValueText = function() {
+      return this.countries.append('text').text((function(_this) {
         return function(d) {
           return d[_this.valueKey];
         };
@@ -20214,6 +20535,24 @@ d3.numberFormat = locale_de_DE.numberFormat
           return _this.yScale(d[_this.valueKey]) - 10;
         };
       })(this)).attr('x', this.xScale.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
+    };
+
+    Barchart.prototype.draw = function(data) {
+      this.countries = this.svgSelection.selectAll('g.countries').data(this.data);
+      this.drawGroups();
+      if (this.options.showExtent) {
+        this.showExtent();
+      }
+      this.drawValues();
+      return this.drawValueText();
+    };
+
+    Barchart.prototype.render = function(element) {
+      this.element = element;
+      this.createAxisAndScales(this.data);
+      this.createSvg();
+      this.draw(this.data);
+      this.appendAxis();
       if (this.options.rotate.x) {
         return this.rotateLabels("x");
       }
@@ -20293,296 +20632,6 @@ d3.numberFormat = locale_de_DE.numberFormat
 
 }).call(this);
 (function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
-
-  this.LargeMultiples = (function(_super) {
-    __extends(LargeMultiples, _super);
-
-    function LargeMultiples(data, options) {
-      this.data = data;
-      this.options = options != null ? options : {};
-      this.valueClasss = __bind(this.valueClasss, this);
-      this.options = _.defaults(this.options, {
-        width: 900,
-        height: 350,
-        margin: {
-          top: 40,
-          right: 30,
-          bottom: 10,
-          left: 40
-        },
-        circles: {
-          radius: 12,
-          padding: 10
-        }
-      });
-      this.value1Key = "key1";
-      this.value2Key = "key2";
-      this.valueClass1 = "value-1";
-      this.valueClass2 = "value-2";
-    }
-
-    LargeMultiples.prototype.setValueKeys = function(value1, value2) {
-      this.value1Key = value1;
-      return this.value2Key = value2;
-    };
-
-    LargeMultiples.prototype.setValueClasses = function(valueClasses) {
-      return this.valueClasses = valueClasses;
-    };
-
-    LargeMultiples.prototype.valueClasss = function(d, i) {
-      var className, value, _i, _len, _ref;
-      _ref = this.valueClasses;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        value = _ref[_i];
-        if (__indexOf.call(value.range, i) >= 0) {
-          className = value.className;
-        }
-      }
-      return className;
-    };
-
-    LargeMultiples.prototype.draw = function(data) {
-      var graphGroup, num, teiler;
-      data = (function() {
-        var _i, _ref, _results;
-        _results = [];
-        for (num = _i = _ref = data[0][this.value1Key]; _ref <= 1 ? _i <= 1 : _i >= 1; num = _ref <= 1 ? ++_i : --_i) {
-          _results.push(data[0]);
-        }
-        return _results;
-      }).call(this);
-      teiler = Math.floor(this.options.width / (2 * this.options.circles.radius + this.options.circles.padding));
-      graphGroup = this.svgSelection.selectAll('g.multiples').data(data);
-      graphGroup.enter().append("g");
-      graphGroup.attr("class", "multiples").attr("transform", (function(_this) {
-        return function(d, i) {
-          var translateX, translateY;
-          translateX = (i % teiler) * (2 * _this.options.circles.radius + _this.options.circles.padding);
-          translateY = _this.options.height - (Math.ceil((i + 1) / teiler) * (_this.options.circles.padding + 2 * _this.options.circles.radius));
-          return "translate(" + translateX + "," + translateY + ")";
-        };
-      })(this));
-      graphGroup.selectAll("circle").remove();
-      graphGroup.append("circle").attr("r", this.options.circles.radius).attr("class", this.valueClasss);
-      return graphGroup.exit().remove();
-    };
-
-    LargeMultiples.prototype.render = function(element) {
-      this.element = element;
-      this.createSvg();
-      return this.draw(this.data);
-    };
-
-    LargeMultiples.prototype.update = function(data) {
-      this.data = data;
-      return this.draw(this.data);
-    };
-
-    return LargeMultiples;
-
-  })(this.D3Graph);
-
-}).call(this);
-(function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
-  this.D3Linechart = (function(_super) {
-    __extends(D3Linechart, _super);
-
-    function D3Linechart(data, options) {
-      this.data = data;
-      this.options = options != null ? options : {};
-      this.mouseover = __bind(this.mouseover, this);
-      this.mouseout = __bind(this.mouseout, this);
-      this.options = _.defaults(this.options, {
-        width: 200,
-        height: 200,
-        margin: {
-          top: 40,
-          right: 30,
-          bottom: 150,
-          left: 40
-        },
-        ticks: {
-          y: 5,
-          x: 4
-        }
-      });
-    }
-
-    D3Linechart.prototype.createYAxis = function() {
-      return this.svgSelection.append("g").attr("class", "y axis").attr("transform", "translate(0,0)").call(this.yAxis);
-    };
-
-    D3Linechart.prototype.createMeanLine = function() {
-      return this.meanLine = this.svgSelection.append("g").attr("class", "mean").append("path").datum(this.meanData).attr('d', this.meanLine).attr('class', 'line mean');
-    };
-
-    D3Linechart.prototype.setMeanData = function(data) {
-      this.meanData = data;
-      return this.meanData.forEach((function(_this) {
-        return function(d) {
-          return d.year = _this.parseDateFromYear(d.year);
-        };
-      })(this));
-    };
-
-    D3Linechart.prototype.setDataKey = function(key) {
-      if (key == null) {
-        key = 'value';
-      }
-      return this.dataKey = key;
-    };
-
-    D3Linechart.prototype.setDateKey = function(key) {
-      if (key == null) {
-        key = 'date';
-      }
-      return this.dateKey = key;
-    };
-
-    D3Linechart.prototype.setLineClass = function(key) {
-      if (key == null) {
-        key = 'lines';
-      }
-      return this.lineClass = key;
-    };
-
-    D3Linechart.prototype.lineClassForElement = function(d) {
-      return d[this.dataKey];
-    };
-
-    D3Linechart.prototype.setLine = function() {
-      return this.line = d3.svg.line().x((function(_this) {
-        return function(d) {
-          return _this.xScale(d[_this.dateKey]);
-        };
-      })(this)).y((function(_this) {
-        return function(d) {
-          return _this.yScale(d[_this.dataKey]);
-        };
-      })(this));
-    };
-
-    D3Linechart.prototype.setMeanLine = function() {
-      return this.meanLine = d3.svg.line().x((function(_this) {
-        return function(d) {
-          return _this.xScale(d[_this.dateKey]);
-        };
-      })(this)).y((function(_this) {
-        return function(d) {
-          return _this.yScale(d.mean);
-        };
-      })(this));
-    };
-
-    D3Linechart.prototype.setVoronoi = function() {
-      return this.voronoi = d3.geom.voronoi().x((function(_this) {
-        return function(d) {
-          return _this.xScale(d[_this.dateKey]);
-        };
-      })(this)).y((function(_this) {
-        return function(d) {
-          return _this.yScale(d[_this.dataKey]);
-        };
-      })(this)).clipExtent([[-this.options.margin.left, -this.options.margin.top], [this.options.width + this.options.margin.right, this.options.height + this.options.margin.bottom]]);
-    };
-
-    D3Linechart.prototype.setScales = function() {
-      this.yScale = d3.scale.linear().range([this.options.height, 0]).domain(this.yScaleDomain);
-      return this.xScale = d3.time.scale().range([0, this.options.width]).domain(this.xScaleDomain);
-    };
-
-    D3Linechart.prototype.setAxis = function() {
-      this.yAxis = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
-      return this.xAxis = d3.svg.axis().scale(this.xScale).orient("bottom").ticks(this.options.ticks.x);
-    };
-
-    D3Linechart.prototype.setGrid = function() {
-      return this.yGrid = d3.svg.axis().scale(this.yScale).orient("left").ticks(this.options.ticks.y);
-    };
-
-    D3Linechart.prototype.createFocusElement = function() {
-      this.focus = this.svgSelection.append("g").attr("class", "focus").attr("transform", "translate(-100,-100)");
-      this.focus.append("circle").attr("r", 4.5);
-      return this.focus.append("text").attr("y", -15);
-    };
-
-    D3Linechart.prototype.createOverlay = function() {
-      this.voronoiGroup = this.svgSelection.append("g").attr("class", "voronoi");
-      return this.voronoiGroup.selectAll("path").data(this.voronoi(_.flatten(this.data))).enter().append("path").attr("d", function(d) {
-        if (d != null) {
-          return "M" + (d.join("L")) + "Z";
-        } else {
-          return "";
-        }
-      }).datum(function(d) {
-        if (d != null) {
-          return d.point;
-        }
-      }).on("mouseover", this.mouseover).on("mouseout", this.mouseout);
-    };
-
-    D3Linechart.prototype.mouseout = function(d) {
-      d3.select(this.lineClassForElement(d)).classed("hover", false);
-      return this.focus.attr("transform", "translate(-100,-100)");
-    };
-
-    D3Linechart.prototype.mouseover = function(d) {
-      d3.select(this.lineClassForElement(d)).classed("hover", true);
-      this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
-      return this.focus.select("text").text("" + (Math.round(d[this.dataKey])));
-    };
-
-    D3Linechart.prototype.draw = function(data) {
-      var graphGroup, graphs, line;
-      graphGroup = this.svgSelection.selectAll("g." + this.lineClass).data(data);
-      graphs = graphGroup.enter().append("g").attr('class', (function(_this) {
-        return function(d) {
-          return "" + _this.lineClass + " " + (_this.lineClassForElement(d));
-        };
-      })(this));
-      line = graphs.append("path");
-      return line.attr('class', 'line').attr("d", this.line);
-    };
-
-    D3Linechart.prototype.createAxisAndScales = function() {
-      this.setLine();
-      this.setVoronoi();
-      this.setScales();
-      this.setAxis();
-      return this.setGrid();
-    };
-
-    D3Linechart.prototype.parseDateFromYear = function(year) {
-      return new Date(year, 0, 1);
-    };
-
-    D3Linechart.prototype.render = function(element) {
-      this.element = element;
-      this.createAxisAndScales(this.data);
-      this.createSvg();
-      this.appendAxis();
-      this.createYAxis();
-      this.createMeanLine();
-      this.draw(this.data);
-      this.createFocusElement();
-      return this.createOverlay();
-    };
-
-    return D3Linechart;
-
-  })(this.D3Graph);
-
-}).call(this);
-(function() {
   var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
@@ -20653,6 +20702,177 @@ d3.numberFormat = locale_de_DE.numberFormat
     return LineMultiples;
 
   })(this.D3Linechart);
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  this.PointGraph = (function(_super) {
+    __extends(PointGraph, _super);
+
+    function PointGraph(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.valueClasss = __bind(this.valueClasss, this);
+      this.options = _.defaults(this.options, {
+        width: 900,
+        height: 350,
+        margin: {
+          top: 40,
+          right: 30,
+          bottom: 10,
+          left: 40
+        },
+        circles: {
+          radius: 12,
+          padding: 10
+        }
+      });
+      this.value1Key = "key1";
+      this.value2Key = "key2";
+      this.valueClass1 = "value-1";
+      this.valueClass2 = "value-2";
+    }
+
+    PointGraph.prototype.setValueKeys = function(value1, value2) {
+      this.value1Key = value1;
+      return this.value2Key = value2;
+    };
+
+    PointGraph.prototype.setValueClasses = function(valueClasses) {
+      return this.valueClasses = valueClasses;
+    };
+
+    PointGraph.prototype.valueClasss = function(d, i) {
+      var className, value, _i, _len, _ref;
+      _ref = this.valueClasses;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        value = _ref[_i];
+        if (__indexOf.call(value.range, i) >= 0) {
+          className = value.className;
+        }
+      }
+      return className;
+    };
+
+    PointGraph.prototype.draw = function(data) {
+      var graphGroup, num, teiler;
+      data = (function() {
+        var _i, _ref, _results;
+        _results = [];
+        for (num = _i = _ref = data[0][this.value1Key]; _ref <= 1 ? _i <= 1 : _i >= 1; num = _ref <= 1 ? ++_i : --_i) {
+          _results.push(data[0]);
+        }
+        return _results;
+      }).call(this);
+      teiler = Math.floor(this.options.width / (2 * this.options.circles.radius + this.options.circles.padding));
+      graphGroup = this.svgSelection.selectAll('g.multiples').data(data);
+      graphGroup.enter().append("g");
+      graphGroup.attr("class", "multiples").attr("transform", (function(_this) {
+        return function(d, i) {
+          var translateX, translateY;
+          translateX = (i % teiler) * (2 * _this.options.circles.radius + _this.options.circles.padding);
+          translateY = _this.options.height - (Math.ceil((i + 1) / teiler) * (_this.options.circles.padding + 2 * _this.options.circles.radius));
+          return "translate(" + translateX + "," + translateY + ")";
+        };
+      })(this));
+      graphGroup.selectAll("circle").remove();
+      graphGroup.append("circle").attr("r", this.options.circles.radius).attr("class", this.valueClasss);
+      return graphGroup.exit().remove();
+    };
+
+    PointGraph.prototype.render = function(element) {
+      this.element = element;
+      this.createSvg();
+      return this.draw(this.data);
+    };
+
+    PointGraph.prototype.update = function(data) {
+      this.data = data;
+      return this.draw(this.data);
+    };
+
+    return PointGraph;
+
+  })(this.D3Graph);
+
+}).call(this);
+(function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.VerticalBarchart = (function(_super) {
+    __extends(VerticalBarchart, _super);
+
+    function VerticalBarchart(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      VerticalBarchart.__super__.constructor.call(this, this.data, this.options);
+    }
+
+    VerticalBarchart.prototype.createAxisAndScales = function(data) {
+      this.yScale = d3.scale.ordinal().rangeRoundBands([0, this.options.height], .1).domain(this.yScaleDomain);
+      this.xScale = d3.scale.linear().range([0, this.options.width]).domain(this.xScaleDomain);
+      this.xAxisScale = d3.scale.linear().range([0, this.options.width]).domain(this.xScaleDomain);
+      this.yAxisScale = d3.scale.ordinal().rangeRoundBands([0, this.options.height], .1).domain(this.yScaleDomain);
+      this.xAxis = d3.svg.axis().scale(this.xAxisScale).orient("bottom");
+      return this.yAxis = d3.svg.axis().scale(this.yAxisScale).orient("left");
+    };
+
+    VerticalBarchart.prototype.appendAxis = function() {
+      return this.createYAxis();
+    };
+
+    VerticalBarchart.prototype.showExtent = function() {
+      return this.countries.append('rect').attr('x', 0).attr('height', this.yScale.rangeBand()).attr('width', this.options.width).attr('class', this.extentClass);
+    };
+
+    VerticalBarchart.prototype.drawValueText = function() {
+      this.countries.selectAll('text').remove();
+      return this.countries.append('text').text((function(_this) {
+        return function(d) {
+          return d[_this.valueKey];
+        };
+      })(this)).attr('x', (function(_this) {
+        return function(d) {
+          return _this.xScale(d[_this.valueKey]) + 10;
+        };
+      })(this)).attr('y', this.yScale.rangeBand() / 2 + 2).attr('text-anchor', 'middle').attr('class', 'label');
+    };
+
+    VerticalBarchart.prototype.drawGroups = function() {
+      return this.countries.enter().append('g').attr('class', (function(_this) {
+        return function(d) {
+          return "countries " + d[_this.groupKey];
+        };
+      })(this)).attr('transform', (function(_this) {
+        return function(d) {
+          return "translate(0," + (_this.yScale(d[_this.groupKey])) + ")";
+        };
+      })(this)).on("mouseover", this.mouseover);
+    };
+
+    VerticalBarchart.prototype.drawValues = function() {
+      var values;
+      values = this.countries.append('rect');
+      values.attr('y', (function(_this) {
+        return function(d) {
+          return _this.yScale(d[_this.valueKey]);
+        };
+      })(this)).attr('height', this.yScale.rangeBand()).attr('width', (function(_this) {
+        return function(d, i) {
+          return _this.xScale(d[_this.valueKey]);
+        };
+      })(this));
+      return values;
+    };
+
+    return VerticalBarchart;
+
+  })(this.Barchart);
 
 }).call(this);
 (function() {
@@ -20801,8 +21021,8 @@ d3.numberFormat = locale_de_DE.numberFormat
           height: 400,
           margin: {
             top: 20,
-            left: 20,
-            bottom: 20,
+            left: 80,
+            bottom: 40,
             right: 80
           }
         };
@@ -20810,6 +21030,8 @@ d3.numberFormat = locale_de_DE.numberFormat
         pk.setMeanData(meanData);
         pk.drawSpecific(['Deutschland', '', 'Norwegen', 'Dänemark', 'Polen']);
         pk.setLineClass("countries");
+        pk.setYAxisDescription('in Mio $');
+        pk.setXAxisDescription('Jahr');
         pk.setMeanLine();
         return pk.render('.contributions');
       });
@@ -20836,9 +21058,9 @@ d3.numberFormat = locale_de_DE.numberFormat
         height: 300,
         margin: {
           top: 40,
-          right: 30,
-          bottom: 50,
-          left: 80
+          right: 90,
+          bottom: 40,
+          left: 90
         },
         ticks: {
           y: 7,
@@ -20915,7 +21137,7 @@ d3.numberFormat = locale_de_DE.numberFormat
     PeacekeepingPersonal.prototype.mouseover = function(d) {
       d3.select("." + (d.Country.toLowerCase()) + " path").classed("country-hover", true);
       this.focus.attr("transform", "translate(" + (this.xScale(d[this.dateKey])) + "," + (this.yScale(d[this.dataKey])) + ")");
-      return this.focus.select("text").text("" + d.Country + ": " + (this.dataFormat()(d[this.dataKey])) + " % of GDP");
+      return this.focus.select("text").text("" + d.Country + ": " + (this.dataFormat()(d[this.dataKey])) + " % des BIP");
     };
 
     return PeacekeepingPersonal;
@@ -20931,6 +21153,8 @@ d3.numberFormat = locale_de_DE.numberFormat
         countries = ['Österreich', 'Finnland', 'Deutschland', 'Luxemburg', 'EU', 'Slowakei'];
         personal = new PeacekeepingPersonal(data);
         personal.setLineClass('countries');
+        personal.setYAxisDescription('in % des BIP');
+        personal.setXAxisDescription('Jahr');
         personal.drawPersonal(countries);
         return personal.render('#personal');
       });
@@ -20947,7 +21171,22 @@ d3.numberFormat = locale_de_DE.numberFormat
 
 }).call(this);
 (function() {
-  var formatCurrency, generateDataForLargeMultipleFreeNotFreeRuestung, getNumberReducedByMagnitude, valueClassesForData;
+  $(function() {
+    var layerUrl;
+    if ($('#exporteure').length > 0) {
+      layerUrl = 'http://frerichs.cartodb.com/api/v2/viz/7ac9ec4e-1d50-11e4-9308-0edbca4b5057/viz.json';
+      return cartodb.createVis("exporteure-map", layerUrl, {
+        tiles_loader: true,
+        center_lat: 51.27,
+        center_lon: 10.84,
+        zoom: 6
+      });
+    }
+  });
+
+}).call(this);
+(function() {
+  var formatCurrency, generateDataForPointGraphFreeNotFreeRuestung, getNumberReducedByMagnitude, valueClassesForData;
 
   formatCurrency = d3.numberFormat(",");
 
@@ -20955,7 +21194,7 @@ d3.numberFormat = locale_de_DE.numberFormat
     return Math.round(number / magnitude);
   };
 
-  generateDataForLargeMultipleFreeNotFreeRuestung = function(data, year, multiplokator) {
+  generateDataForPointGraphFreeNotFreeRuestung = function(data, year, multiplokator) {
     var freeNotFreeArray, freedomIndexObject, magnitudeFreeNotFree;
     if (multiplokator == null) {
       multiplokator = 15;
@@ -21001,15 +21240,15 @@ d3.numberFormat = locale_de_DE.numberFormat
   };
 
   this.drawFreedomIndexPointVisualization = function(data) {
-    var largeMultiple, multipleOptions, multiplesData, sum2013, sumAllTime;
+    var multipleOptions, multiplesData, pointGraph, sum2013, sumAllTime;
     sumAllTime = _.findWhere(data, {
       time: "all"
     }).sum;
     sum2013 = _.findWhere(data, {
       time: "2013"
     }).sum;
-    generateDataForLargeMultipleFreeNotFreeRuestung(data, "all", 15);
-    multiplesData = generateDataForLargeMultipleFreeNotFreeRuestung(data, "2013", 5);
+    generateDataForPointGraphFreeNotFreeRuestung(data, "all", 15);
+    multiplesData = generateDataForPointGraphFreeNotFreeRuestung(data, "2013", 5);
     multipleOptions = {
       height: 100,
       circles: {
@@ -21017,25 +21256,25 @@ d3.numberFormat = locale_de_DE.numberFormat
         padding: 5
       }
     };
-    largeMultiple = new this.LargeMultiples([multiplesData], multipleOptions);
-    largeMultiple.setValueKeys("sum", "free");
-    largeMultiple.setValueClasses(valueClassesForData(multiplesData));
-    largeMultiple.render("#multiples #multiple-exports");
+    pointGraph = new this.PointGraph([multiplesData], multipleOptions);
+    pointGraph.setValueKeys("sum", "free");
+    pointGraph.setValueClasses(valueClassesForData(multiplesData));
+    pointGraph.render("#multiples #multiple-exports");
     $('.export-volumes h2').text("$" + (formatCurrency(sum2013)));
     return $('#multiples form input').change(function(e) {
       if (this.value === 'all') {
         multiplesData = _.findWhere(data, {
           time: 'all'
         });
-        largeMultiple.setValueClasses(valueClassesForData(multiplesData));
-        largeMultiple.update([multiplesData]);
+        pointGraph.setValueClasses(valueClassesForData(multiplesData));
+        pointGraph.update([multiplesData]);
         return $('.export-volumes h2').text("$" + (formatCurrency(sumAllTime)));
       } else {
         multiplesData = _.findWhere(data, {
           time: '2013'
         });
-        largeMultiple.setValueClasses(valueClassesForData(multiplesData));
-        largeMultiple.update([multiplesData]);
+        pointGraph.setValueClasses(valueClassesForData(multiplesData));
+        pointGraph.update([multiplesData]);
         return $('.export-volumes h2').text("$" + (formatCurrency(sum2013)));
       }
     });
@@ -21047,6 +21286,103 @@ d3.numberFormat = locale_de_DE.numberFormat
       freedomIndexExportsPath = rootPath + "/data/freedom_index_exports.csv";
       return d3.csv(freedomIndexExportsPath, function(data) {
         return this.drawFreedomIndexPointVisualization(data);
+      });
+    }
+  });
+
+}).call(this);
+(function() {
+  var valueClassesForData, wertschoepfungPerYear;
+
+  valueClassesForData = function(data) {
+    var _i, _ref, _results;
+    return [
+      {
+        range: (function() {
+          _results = [];
+          for (var _i = _ref = 928 - data; _ref <= 928 ? _i < 928 : _i > 928; _ref <= 928 ? _i++ : _i--){ _results.push(_i); }
+          return _results;
+        }).apply(this),
+        className: "german-exports-gdp"
+      }
+    ];
+  };
+
+  wertschoepfungPerYear = function(data, year) {
+    if (year == null) {
+      year = "2013";
+    }
+    return _.findWhere(data, {
+      year: year
+    });
+  };
+
+  $(function() {
+    var gdpPath;
+    if ($('#german-gdp').length > 0) {
+      gdpPath = rootPath + "/data/security/gdp/wertschoepfung-magnitudes.csv";
+      return d3.csv(gdpPath, function(data) {
+        var options, pointGraph;
+        data = wertschoepfungPerYear(data, "2011");
+        options = {
+          height: 750,
+          circles: {
+            radius: 6,
+            padding: 5
+          }
+        };
+        pointGraph = new PointGraph([data], options);
+        pointGraph.setValueClasses(valueClassesForData(data["GDP.Ruestung"]));
+        pointGraph.setValueKeys("GDP", "GDP.Ruestung");
+        return pointGraph.render(".german-gdp");
+      });
+    }
+  });
+
+}).call(this);
+(function() {
+  $(function() {
+    var civilMilitaryPath;
+    if ($('#friedensfoerderung').length > 0) {
+      civilMilitaryPath = "" + rootPath + "/data/security/friedensfoerderung/military-civil-germany.csv";
+      return d3.csv(civilMilitaryPath, function(data) {
+        var chart, options, stackedData;
+        data.forEach(function(d) {
+          return d.year = new Date(d.year, 0, 1);
+        });
+        stackedData = ["civil", "military"].map(function(name) {
+          return {
+            name: name,
+            values: data.map(function(d) {
+              return {
+                date: d.year,
+                y: parseFloat(d[name])
+              };
+            })
+          };
+        });
+        options = {
+          width: $('.zmf').width(),
+          height: 300,
+          margin: {
+            top: 40,
+            right: 50,
+            left: 50,
+            bottom: 20
+          }
+        };
+        chart = new this.AreaChart(stackedData, options);
+        chart.setYDomain([
+          0, d3.max(data, function(d) {
+            return parseFloat(d.military) + parseFloat(d.civil);
+          })
+        ]);
+        chart.setXDomain(d3.extent(data, function(d) {
+          return d.year;
+        }));
+        chart.setDateKey("date");
+        chart.setDataKey("y");
+        return chart.render(".zmf");
       });
     }
   });
@@ -21236,37 +21572,145 @@ d3.numberFormat = locale_de_DE.numberFormat
 
 }).call(this);
 (function() {
-  $(function() {
-    var saferworldPath;
-    if ($('#transparenz .saferworld').length > 0) {
-      saferworldPath = "" + rootPath + "/data/security/transparenz/saferworld.csv";
-      return d3.csv(saferworldPath, function(data) {
-        var options, saferworldChart;
-        options = {
-          showExtent: true,
-          rotate: {
-            x: true
-          }
-        };
-        saferworldChart = new this.Barchart(data, options);
-        _.map(data, function(d) {
-          return d.Average = parseInt(d.Average);
-        });
-        data = _.sortBy(data, function(d) {
-          return d.Average;
-        });
-        saferworldChart.setXDomain(data.map(function(d) {
-          return d.Country;
-        }));
-        saferworldChart.setYDomain([
-          d3.min(data, function(d) {
-            return d.Average;
-          }), 100
-        ]);
-        saferworldChart.setValueKey('Average');
-        saferworldChart.setGroupKey('Country');
-        return saferworldChart.render('.saferworld');
+  var saferworlSubViz, showSaferworldViz,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  this.Saferworld = (function(_super) {
+    __extends(Saferworld, _super);
+
+    function Saferworld(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      this.mouseover = __bind(this.mouseover, this);
+      Saferworld.__super__.constructor.call(this, this.data, this.options);
+      this.setValueKey('Average');
+      this.setGroupKey('Country');
+    }
+
+    Saferworld.prototype.dataSetup = function() {
+      _.map(this.data, function(d) {
+        return d.Average = parseInt(d.Average);
       });
+      this.data = _.sortBy(this.data, function(d) {
+        return d.Average;
+      });
+      this.setXDomain(this.data.map(function(d) {
+        return d.Country;
+      }));
+      return this.setYDomain([
+        d3.min(this.data, function(d) {
+          return d.Average;
+        }), 100
+      ]);
+    };
+
+    Saferworld.prototype.setSubscoreChart = function(chart) {
+      return this.subViz = chart;
+    };
+
+    Saferworld.prototype.mouseover = function(d) {
+      this.subViz.setValueKey(d.Country);
+      return this.subViz.update(this.subViz.data);
+    };
+
+    return Saferworld;
+
+  })(this.Barchart);
+
+  this.SaferWorlSubViz = (function(_super) {
+    __extends(SaferWorlSubViz, _super);
+
+    function SaferWorlSubViz(data, options) {
+      this.data = data;
+      this.options = options != null ? options : {};
+      SaferWorlSubViz.__super__.constructor.call(this, this.data, this.options);
+    }
+
+    SaferWorlSubViz.prototype.setup = function() {
+      this.setValueKey('Deutschland');
+      this.setGroupKey('Indikator');
+      this.setYDomain(this.data.map(function(d) {
+        return d.Indikator;
+      }));
+      return this.setXDomain([
+        d3.min(this.data, function(d) {
+          return d.Deutschland;
+        }), 100
+      ]);
+    };
+
+    SaferWorlSubViz.prototype.drawValueText = function() {
+      this.countries.selectAll('text').remove();
+      this.countries.append('text').text((function(_this) {
+        return function(d) {
+          return d[_this.valueKey];
+        };
+      })(this)).attr('x', (function(_this) {
+        return function(d) {
+          return _this.xScale(100) + 10;
+        };
+      })(this)).attr('y', this.yScale.rangeBand() / 2 + 2).attr('text-anchor', 'middle').attr('class', 'label');
+      return this.countries.append('text').text((function(_this) {
+        return function(d, i) {
+          return _this.yScale.domain()[i];
+        };
+      })(this)).attr('y', this.yScale.rangeBand() / 2 + 4).attr('x', 5);
+    };
+
+    SaferWorlSubViz.prototype.mouseover = function(d) {
+      return $('.saferworld-sub .description').html(d.Description);
+    };
+
+    return SaferWorlSubViz;
+
+  })(this.VerticalBarchart);
+
+  saferworlSubViz = function(data) {
+    var options, subViz;
+    options = {
+      width: $('.saferworld-sub').width(),
+      margin: {
+        top: 50,
+        bottom: 10,
+        right: 20,
+        left: 0
+      },
+      showExtent: true,
+      rotate: {
+        x: true
+      }
+    };
+    subViz = new this.SaferWorlSubViz(data, options);
+    subViz.setup();
+    subViz.render('.saferworld-sub .barchart');
+    return subViz;
+  };
+
+  showSaferworldViz = function() {
+    var saferworldPath, saferworldSubPath;
+    saferworldPath = "" + rootPath + "/data/security/transparenz/saferworld.csv";
+    saferworldSubPath = "" + rootPath + "/data/security/transparenz/saferworld_by_indikator.csv";
+    return queue().defer(d3.csv, saferworldPath).defer(d3.csv, saferworldSubPath).await(function(error, saferWorld, saferWorldByIndikator) {
+      var options, saferworldChart;
+      options = {
+        showExtent: true,
+        rotate: {
+          x: true
+        }
+      };
+      saferworlSubViz = saferworlSubViz(saferWorldByIndikator);
+      saferworldChart = new this.Saferworld(saferWorld, options);
+      saferworldChart.dataSetup();
+      saferworldChart.setSubscoreChart(saferworlSubViz);
+      return saferworldChart.render('.saferworld');
+    });
+  };
+
+  $(function() {
+    if ($('#transparenz .saferworld').length > 0) {
+      return showSaferworldViz();
     }
   });
 
@@ -21291,7 +21735,7 @@ d3.numberFormat = locale_de_DE.numberFormat
         margin: {
           top: 40,
           right: 80,
-          bottom: 50,
+          bottom: 40,
           left: 80
         },
         ticks: {
@@ -21379,6 +21823,8 @@ d3.numberFormat = locale_de_DE.numberFormat
         personal = new ZivileFriedensfoerderung(data);
         personal.setLineClass('countries');
         personal.drawPersonal(countries);
+        personal.setYAxisDescription('in Mio $');
+        personal.setXAxisDescription('Jahr');
         return personal.render('#friedensfoerderung .zivile');
       });
     }

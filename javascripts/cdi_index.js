@@ -106,6 +106,9 @@
       })));
       this.subIndex = $('.cdi-index-overall').data('cdi-sub');
       $('.cdi-country-sub-index .country-sub-label').text(countryName);
+      if ($('.fake-sub-index').length > 0) {
+        this.subIndex = $('.fake-sub-index').data('cdi-sub');
+      }
       return this.subIndex.update(country);
     }
   };
@@ -181,9 +184,12 @@
       }).attr('x', x.rangeBand() / 2).attr('text-anchor', 'middle').attr('class', 'label');
       xAxis = d3.svg.axis().scale(x).orient("bottom");
       svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis).selectAll("text").attr("y", 0).attr("x", 9).attr("dy", ".30em").attr("transform", "rotate(90)").style("text-anchor", "start");
-      if (key === 'Overall') {
+      if (key === 'Overall' || $('.fake-sub-index').length > 0) {
         this.subIndex.render('.cdi-country-sub-index .graph');
-        return $('.cdi-index-overall').data('cdi-sub', this.subIndex);
+        $('.cdi-index-overall').data('cdi-sub', this.subIndex);
+        if ($('.fake-sub-index').length > 0) {
+          return $('.fake-sub-index').data('cdi-sub', this.subIndex);
+        }
       }
     });
   };

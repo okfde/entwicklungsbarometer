@@ -53,8 +53,8 @@
       this.element = element;
       this.createAxisAndScales(this.data);
       this.createSvg();
-      this.appendAxis();
-      return this.draw(this.data);
+      this.draw(this.data);
+      return this.appendAxis();
     };
 
     D3Graph.prototype.update = function(data) {
