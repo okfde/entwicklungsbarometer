@@ -3,7 +3,7 @@ formatCurrency = d3.numberFormat(",")
 getNumberReducedByMagnitude = (number, magnitude) ->
   Math.round(number/magnitude)
 
-generateDataForLargeMultipleFreeNotFreeRuestung = (data, year, multiplokator=15) ->
+generateDataForPointGraphFreeNotFreeRuestung = (data, year, multiplokator=15) ->
   freedomIndexObject = _.findWhere(data, { time: year })
   freeNotFreeArray = [parseInt(freedomIndexObject.not_free), parseInt(freedomIndexObject.sum), parseInt(freedomIndexObject.partial_free), parseInt(freedomIndexObject.free)]
   magnitudeFreeNotFree = magnitude(d3.min(freeNotFreeArray))
@@ -32,26 +32,26 @@ valueClassesForData = (data) ->
 @drawFreedomIndexPointVisualization = (data) ->
   sumAllTime= _.findWhere(data, { time: "all" }).sum
   sum2013 = _.findWhere(data, { time: "2013" }).sum
-  generateDataForLargeMultipleFreeNotFreeRuestung(data, "all", 15)
-  multiplesData = generateDataForLargeMultipleFreeNotFreeRuestung(data, "2013", 5)
+  generateDataForPointGraphFreeNotFreeRuestung(data, "all", 15)
+  multiplesData = generateDataForPointGraphFreeNotFreeRuestung(data, "2013", 5)
   multipleOptions = { height: 100, circles: { radius: 8, padding: 5 } }
-  largeMultiple = new @LargeMultiples([multiplesData], multipleOptions)
-  largeMultiple.setValueKeys("sum","free")
+  pointGraph = new @PointGraph([multiplesData], multipleOptions)
+  pointGraph.setValueKeys("sum","free")
 
-  largeMultiple.setValueClasses(valueClassesForData(multiplesData))
-  largeMultiple.render("#multiples #multiple-exports")
+  pointGraph.setValueClasses(valueClassesForData(multiplesData))
+  pointGraph.render("#multiples #multiple-exports")
   $('.export-volumes h2').text("$#{formatCurrency(sum2013)}")
 
   $('#multiples form input').change (e) ->
     if(this.value == 'all')
       multiplesData = _.findWhere(data, { time: 'all' })
-      largeMultiple.setValueClasses(valueClassesForData(multiplesData))
-      largeMultiple.update([multiplesData])
+      pointGraph.setValueClasses(valueClassesForData(multiplesData))
+      pointGraph.update([multiplesData])
       $('.export-volumes h2').text("$#{formatCurrency(sumAllTime)}")
     else
       multiplesData = _.findWhere(data, { time: '2013' })
-      largeMultiple.setValueClasses(valueClassesForData(multiplesData))
-      largeMultiple.update([multiplesData])
+      pointGraph.setValueClasses(valueClassesForData(multiplesData))
+      pointGraph.update([multiplesData])
       $('.export-volumes h2').text("$#{formatCurrency(sum2013)}")
 
 $ ->

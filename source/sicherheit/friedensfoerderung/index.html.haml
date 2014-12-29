@@ -1,15 +1,17 @@
 ---
 title: Entwicklungsbarometer - Zivile Friedensförderung
+navigation:
+  - link: "/sicherheit/friedensfoerderung/index.html"
+    title: Friedensförderung in der Entwicklungszusammenarbeit
+    active: true
+  - link: "/sicherheit/friedensfoerderung/friedensfinanzierung.html"
+    title: Friedensfinanzierung
 ---
 #sicherheit.indikator.sub-indikator
   = link_to "/sicherheit/index.html" do
     %h1.sicherheit Sicherheit
   #friedensfoerderung
-    .navbar
-      %ul.nav
-        %li.active
-          = link_to "/sicherheit/peacekeeping/" do
-            %h4 Friedensförderung in der Entwicklungszusammenarbeit
+    = partial "partials/sub_nav"
     .zivile.linegraph
 
     %h2 Friedensförderung in der Entwicklungszusammenarbeit

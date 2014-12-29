@@ -8,10 +8,11 @@
     %title= current_page.data.title || "The Middleman"
     %link(rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.11/themes/css/cartodb.css")
     = stylesheet_link_tag "normalize", "all"
-    = javascript_include_tag  "all"
     = partial "partials/navigation"
     = partial "partials/breadcrump"
+  %body
     .content
       = yield
     = partial "partials/footer"
     %script(src="http://libs.cartocdn.com/cartodb.js/v3/3.11/cartodb.js")
+    = javascript_include_tag  "all"
