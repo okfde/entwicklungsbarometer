@@ -116,6 +116,19 @@ section#panzer
   rect.extent
     fill: #f3f3f3
 
+#german-gdp
+  circle
+    fill: $light-blue
+    &.german-exports-gdp
+      fill: red
+  .legend
+    @include span-columns(12)
+    @include row()
+    +clearfix
+    svg
+      width: 100%
+      height: 80px
+      margin: 0 0 0.8em 0
 #friedensfoerderung
   .legend
     text-align: left
