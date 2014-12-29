@@ -13,7 +13,7 @@ class @Peacekeeping extends @D3Linechart
     @
 
   dataFormat: ->
-    d3.numberFormat(",.2f")
+    locale_de_DE.numberFormat(",.2f")
   mouseout: (d) =>
     d3.select(".#{d.country.toLowerCase()} path").classed("country-hover", false)
     @focus.attr("transform", "translate(-100,-100)")

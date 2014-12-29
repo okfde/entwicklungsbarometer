@@ -27,7 +27,7 @@ class PeacekeepingPersonal extends @D3Linechart
     @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
 
   dataFormat: ->
-    d3.numberFormat(",.3f")
+    locale_de_DE.numberFormat(",.3f")
 
   mouseout: (d) =>
     d3.select(".#{d.Country.toLowerCase()} path").classed("country-hover", false)

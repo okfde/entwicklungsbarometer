@@ -1,4 +1,4 @@
-formatCurrency = d3.numberFormat(",")
+formatCurrency = locale_de_DE.numberFormat(",")
 
 getNumberReducedByMagnitude = (number, magnitude) ->
   Math.round(number/magnitude)

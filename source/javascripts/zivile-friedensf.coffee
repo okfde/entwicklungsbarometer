@@ -26,7 +26,7 @@ class ZivileFriedensfoerderung extends @D3Linechart
     @data.forEach((d) => d.forEach((d) => d.year = @parseDateFromYear(d.year)))
 
   dataFormat: ->
-    d3.numberFormat(",.")
+    locale_de_DE.numberFormat(",.")
 
   mouseout: (d) =>
     d3.select(".#{d.Country.toLowerCase()} path").classed("country-hover", false)
