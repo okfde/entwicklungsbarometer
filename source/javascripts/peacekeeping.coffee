@@ -50,11 +50,13 @@ $ ->
       options = {
         width: 800
         height: 400
-        margin: { top: 20, left: 20, bottom: 20, right: 80 }
+        margin: { top: 20, left: 80, bottom: 40, right: 80 }
       }
       pk = new Peacekeeping(data, options)
       pk.setMeanData(meanData)
       pk.drawSpecific(['Deutschland', '','Norwegen','Dänemark','Polen'])
       pk.setLineClass("countries")
+      pk.setYAxisDescription('in Mio $')
+      pk.setXAxisDescription('Jahr')
       pk.setMeanLine()
       pk.render('.contributions')

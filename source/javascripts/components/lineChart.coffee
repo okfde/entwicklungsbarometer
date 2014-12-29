@@ -1,12 +1,33 @@
 class @D3Linechart extends @D3Graph
   constructor: (@data, @options = {}) ->
-    @options = _.defaults(@options, { width: 200, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
+    @options = _.defaults(@options, { width: 800, height: 200, margin: {top: 40, right: 30, bottom: 150, left: 40}, ticks: { y: 5, x: 4 } })
 
-  createYAxis: ->
+  appendAxis: ->
+    @svgSelection.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + @options.height + ")")
+    .call(@xAxis)
+
     @svgSelection.append("g")
     .attr("class", "y axis")
     .attr("transform", "translate(0,0)")
     .call(@yAxis)
+
+  appendAxisDescription: ->
+    @svgSelection.append("text")
+      .attr('class', 'x description')
+      .attr("transform", "translate(" + (@options.width / 2) + " ," + (@options.height + @options.margin.bottom) + ")")
+      .style("text-anchor", "middle")
+      .text(@xAxisDescription)
+
+    @svgSelection.append("text")
+      .attr('class', 'y description')
+      .attr("transform", "rotate(-90)")
+      .attr('y', 0 - @options.margin.left)
+      .attr('x', 0 - (@options.height / 2))
+      .style("text-anchor", "middle")
+      .attr("dy", "1em")
+      .text(@yAxisDescription)
 
   createMeanLine: ->
     @meanLine = @svgSelection.append("g")
@@ -28,6 +49,12 @@ class @D3Linechart extends @D3Graph
 
   setLineClass: (key = 'lines') ->
     @lineClass = key
+
+  setXAxisDescription: (description = '') ->
+    @xAxisDescription = description
+
+  setYAxisDescription: (description = '') ->
+    @yAxisDescription = description
 
   lineClassForElement: (d) ->
     d[@dataKey]
@@ -79,6 +106,9 @@ class @D3Linechart extends @D3Graph
       .orient("left")
       .ticks(@options.ticks.y)
 
+  setVoronoiData: ->
+    @voronoiData = _.flatten(@data)
+
   createFocusElement: ->
     @focus = @svgSelection.append("g")
     .attr("class", "focus")
@@ -91,7 +121,7 @@ class @D3Linechart extends @D3Graph
     @voronoiGroup = @svgSelection.append("g")
           .attr("class", "voronoi")
     @voronoiGroup.selectAll("path")
-      .data(@voronoi(_.flatten(@data)))
+      .data(@voronoi(@voronoiData))
       .enter().append("path")
       .attr("d", (d) -> if d? then "M#{d.join("L")}Z" else "")
       .datum((d) -> if d? then d.point)
@@ -120,6 +150,7 @@ class @D3Linechart extends @D3Graph
     @setScales()
     @setAxis()
     @setGrid()
+    @setVoronoiData()
 
   parseDateFromYear: (year) ->
     new Date(year,0,1)
@@ -128,7 +159,7 @@ class @D3Linechart extends @D3Graph
     @createAxisAndScales(@data)
     @createSvg()
     @appendAxis()
-    @createYAxis()
+    @appendAxisDescription()
     @createMeanLine()
     @draw(@data)
     @createFocusElement()
