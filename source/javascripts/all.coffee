@@ -3,7 +3,7 @@
 #= require d3_de_locale
 #= require underscore
 #= require queue-async
-#= require cdi_index
+#= require components/cdi_index
 #= require components/d3graph
 #= require components/lineChart
 #= require_tree .
