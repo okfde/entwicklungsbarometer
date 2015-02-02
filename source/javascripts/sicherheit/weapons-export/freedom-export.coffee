@@ -56,6 +56,6 @@ valueClassesForData = (data) ->
 
 $ ->
   if $('#freedom-index').length > 0
-    freedomIndexExportsPath = rootPath+"/data/freedom_index_exports.csv"
+    freedomIndexExportsPath = rootPath+"/data/security/freedom_index_exports.csv"
     d3.csv freedomIndexExportsPath, (data) ->
       @drawFreedomIndexPointVisualization(data)
