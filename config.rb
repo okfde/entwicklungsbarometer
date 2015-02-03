@@ -1,3 +1,6 @@
+set :protocol, "http://"
+set :host, "okfde.github.io/entwicklungsbarometer"
+set :port, 80
 ###
 # Compass
 ###
@@ -38,14 +41,24 @@
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  set :host, Middleman::PreviewServer.host
+  set :port, Middleman::PreviewServer.port
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def host_with_port
+    [host, optional_port].compact.join(':')
+  end
+
+  def optional_port
+    port unless port.to_i == 80
+  end
+
+  def iframe_embed(path, width=600, height=300)
+    "<iframe src='#{protocol + host_with_port + path}' width='#{width}' height='#{height}'></iframe>"
+  end
+end
 
 data.experten.each do |experte|
   proxy "/experten/#{experte.slug}.html", "/experten/experte.html", locals: { experte: experte }, ignore: true
